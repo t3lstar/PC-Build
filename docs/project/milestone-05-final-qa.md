@@ -1,6 +1,6 @@
 # Milestone 5 Final QA
 
-Status: Local QA complete pending checkpoint push. Last verified: 2026-07-13 15:24 BST.
+Status: Published QA complete. Last verified: 2026-07-13 15:27 BST.
 
 ## Purpose
 
@@ -8,11 +8,11 @@ Summarise the local Milestone 5 release state before pushing the local checkpoin
 
 ## Release State
 
-Milestone 5 implementation is complete locally. The GitHub issues remain open for local-first workflow reasons and should be closed only after the local commits are pushed and GitHub Actions passes.
+Milestone 5 implementation is pushed, GitHub Actions has passed, and the live GitHub Pages site has been verified.
 
 ## Local Commit Range
 
-The local branch is ahead of `origin/main` by eight commits:
+The milestone checkpoint was pushed to `main` and published through GitHub Pages.
 
 | Commit | Summary |
 | --- | --- |
@@ -31,6 +31,10 @@ The local branch is ahead of `origin/main` by eight commits:
 | --- | --- |
 | `./scripts/validate.sh all` | Passed. Documentation validation passed; MkDocs HTML build passed. |
 | `./scripts/build.sh all` | Passed. HTML and printable outputs built successfully. |
+| GitHub Actions run `29257976974` | Passed. Build job completed in 14 seconds; deploy job completed in 11 seconds. |
+| Live home page | HTTP 200 at `https://t3lstar.github.io/PC-Build/`. |
+| Live final QA page | HTTP 200 at `https://t3lstar.github.io/PC-Build/project/milestone-05-final-qa/`. |
+| Live connector appendix | HTTP 200 at `https://t3lstar.github.io/PC-Build/appendix/connectors-cables/`. |
 | Generated output policy | `site/` and `build/` are ignored and should not be committed. |
 | PDF generation | Deferred by project decision; `./scripts/build.sh pdf` reports the deferral. |
 | Active checkout | `/Users/simondawson/Herd/PC-Build`. |
@@ -45,23 +49,20 @@ The local branch is ahead of `origin/main` by eight commits:
 | `#7` | Complete and pushed | Closed |
 | `#8` | Complete and pushed | Closed |
 | `#9` | Complete and pushed | Closed |
-| `#10` | Complete locally | Open |
-| `#11` | Complete locally | Open |
-| `#12` | Complete locally | Open |
-| `#13` | Complete locally | Open |
+| `#10` | Published | Ready to close |
+| `#11` | Published | Ready to close |
+| `#12` | Published | Ready to close |
+| `#13` | Published | Ready to close |
 | `#14` | Complete and pushed | Closed |
-| `#15` | Complete locally | Open |
-| `#16` | Complete locally with PDF deferred | Open |
-| `#17` | Complete locally | Open |
-| `#18` | Complete locally after this QA page | Open |
+| `#15` | Published | Ready to close |
+| `#16` | Published with PDF deferred | Ready to close |
+| `#17` | Published | Ready to close |
+| `#18` | Published | Ready to close |
 
 ## Remaining Release Actions
 
-1. Push the local commits when the milestone checkpoint is approved.
-2. Wait for GitHub Actions to pass.
-3. Verify the live GitHub Pages site.
-4. Close issues `#10`, `#11`, `#12`, `#13`, `#15`, `#16`, `#17`, and `#18`.
-5. Mark the GitHub Milestone 5 milestone complete.
+1. Close issues `#10`, `#11`, `#12`, `#13`, `#15`, `#16`, `#17`, and `#18`.
+2. Mark the GitHub Milestone 5 milestone complete after issue closure.
 
 ## Known Warnings
 

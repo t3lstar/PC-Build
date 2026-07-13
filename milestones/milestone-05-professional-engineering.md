@@ -1,6 +1,6 @@
 # Milestone 5: Professional Engineering Edition
 
-Status: Complete locally; pending checkpoint push, GitHub Actions verification, live-site review, and issue closure.
+Status: Published; pending GitHub issue closure.
 
 GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/1
 
@@ -62,14 +62,14 @@ Raise the existing GitHub Pages manual into publication-quality engineering docu
 
 ## Acceptance Criteria
 
-- [x] HTML builds cleanly locally; GitHub Actions verification is pending the checkpoint push.
+- [x] HTML builds cleanly locally and in GitHub Actions.
 - [x] PDF generation is deferred by project decision; printable HTML builds reproducibly.
 - [x] No known broken internal links remain.
 - [x] Critical technical claims are verified or explicitly marked pending.
 - [x] Troubleshooting decision trees render correctly.
 - [x] Maintenance and benchmarking guidance is complete.
 - [x] Validation commands are documented and repeatable.
-- [ ] GitHub issues reflect delivered work after local commits are pushed and Actions passes.
+- [ ] GitHub issues reflect delivered work after post-deployment evidence is pushed and issues are closed.
 
 ## Validation Commands
 
@@ -122,7 +122,7 @@ Run the local validation wrapper when checking milestone changes:
 
 - [x] Deliverables are implemented or explicitly deferred with reasons.
 - [x] Validation report lists passed checks, warnings, limitations, and manual verification still required.
-- [ ] GitHub milestone and issues are current after checkpoint push and Actions verification.
+- [ ] GitHub milestone and issues are current after post-deployment evidence is pushed and issues are closed.
 - [x] Documentation remains suitable for a first-time PC builder.
 
 ## Completion Checklist

@@ -189,7 +189,7 @@ GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/1
 
 Tracking issues: https://github.com/t3lstar/PC-Build/issues/5 through https://github.com/t3lstar/PC-Build/issues/18
 
-Status: Complete locally; pending checkpoint push, GitHub Actions verification, live-site review, and issue closure.
+Status: Published; pending GitHub issue closure.
 
 Detailed plan: [milestones/milestone-05-professional-engineering.md](milestones/milestone-05-professional-engineering.md)
 
@@ -197,13 +197,13 @@ Raise the existing documentation to publication-quality engineering documentatio
 
 ### Acceptance Criteria
 
-- HTML builds cleanly locally; GitHub Actions verification is pending the checkpoint push.
+- HTML builds cleanly locally and in GitHub Actions.
 - PDF generation is deferred by project decision; printable HTML builds reproducibly.
 - Critical technical claims are verified or explicitly marked pending.
 - Troubleshooting decision trees render correctly.
 - Maintenance and benchmarking guidance is complete.
 - Validation commands are documented and repeatable.
-- GitHub issues `#10`, `#11`, `#12`, `#13`, `#15`, `#16`, `#17`, and `#18` remain open until local commits are pushed and Actions passes.
+- GitHub issues `#10`, `#11`, `#12`, `#13`, `#15`, `#16`, `#17`, and `#18` are ready to close after the post-deployment evidence commit is published.
 
 ## Milestone 6: Interactive Digital Twin Edition
 

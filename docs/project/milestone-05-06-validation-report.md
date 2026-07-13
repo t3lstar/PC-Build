@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:24 BST.
+Status: Active validation report. Last verified: 2026-07-13 15:27 BST.
 
 ## Passed Checks
 
@@ -61,6 +61,11 @@ Status: Active validation report. Last verified: 2026-07-13 15:24 BST.
 | GitHub issue state before checkpoint push | `gh issue list --repo t3lstar/PC-Build --label milestone-5 --state all --limit 40` | Issues `#5`-`#9` and `#14` are closed. Issues `#10`-`#13` and `#15`-`#18` remain open because their commits are local-only. |
 | Milestone 5 issue #18 final QA review | Manual review of `docs/project/milestone-05-final-qa.md`, `MILESTONES.md`, `milestones/milestone-05-professional-engineering.md`, and `mkdocs.yml` | Added final local QA summary, release state, commit list, validation evidence, issue state, remaining release actions, and known warnings. |
 | Local full validation after issue #18 final QA | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 0.95 seconds; shell wall-clock total was 1.550 seconds. |
+| Milestone 5 checkpoint push | `git push origin main` | Pushed commits `62f685a` through `8ac53e5` to `main`. |
+| GitHub Actions after Milestone 5 checkpoint push | Run `29257976974` | Passed. Build job completed in 14 seconds; deploy job completed in 11 seconds. |
+| Live GitHub Pages home page | `curl -L https://t3lstar.github.io/PC-Build/` | HTTP 200; page contains `Custom Gaming PC Build Manual`, `Connector and Cable Reference`, and `Milestone 5 Final QA`. |
+| Live GitHub Pages final QA page | `curl -L https://t3lstar.github.io/PC-Build/project/milestone-05-final-qa/` | HTTP 200; page contains `Milestone 5 Final QA`. |
+| Live GitHub Pages connector appendix | `curl -L https://t3lstar.github.io/PC-Build/appendix/connectors-cables/` | HTTP 200; page contains `Connector and Cable Reference`, `Motherboard Headers Used`, and `PSU Cable Reference`. |
 
 ## Warnings
 
