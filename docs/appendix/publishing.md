@@ -1,6 +1,6 @@
 # Publishing
 
-Status: Initial publication guidance. Last verified: 2026-07-13 11:47 BST.
+Status: Published HTML content. Last verified: 2026-07-13 15:16 BST.
 
 ## Purpose
 
@@ -41,10 +41,15 @@ Supported targets:
 | Node.js | 24 |
 | Python environment | Local `.venv` |
 | MkDocs output | `site/` |
+| Printable HTML output | `build/printable/` |
 
 Do not install MkDocs dependencies into system Python.
 
-PDF and standalone printable manual generation are deferred until after the GitHub Pages site is publication-ready. The `pdf` and `printable` script targets remain reserved for that later work.
+`site/` and `build/` are generated outputs and should not be committed. GitHub Pages publishes only the HTML site from `site/`; printable output is a local release artifact unless a future workflow publishes it deliberately.
+
+The printable target builds the same documentation into `build/printable/` using the tracked print CSS in `docs/assets/stylesheets/theme.css`.
+
+PDF generation is deferred by project decision. The script keeps the `pdf` target so the command surface remains stable, but it prints a deferred message instead of generating a PDF.
 
 ## GitHub Actions Flow
 
@@ -60,6 +65,8 @@ PDF and standalone printable manual generation are deferred until after the GitH
 ## Verification
 
 - Local `./scripts/build.sh html` succeeds.
+- Local `./scripts/build.sh printable` succeeds.
+- Local `./scripts/build.sh all` succeeds.
 - GitHub Actions build succeeds.
 - The deployed site returns HTTP 200.
 - Navigation includes all chapter and appendix pages.

@@ -50,6 +50,10 @@ Status: Active validation report. Last verified: 2026-07-13 15:16 BST.
 | Local full validation after issue #13 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 0.87 seconds; shell wall-clock total was 1.214 seconds. |
 | Milestone 5 issue #15 site and print styling review | Manual review of `mkdocs.yml`, `docs/assets/stylesheets/theme.css`, `MILESTONES.md`, and `milestones/milestone-05-professional-engineering.md` | Added Material code-copy/search/navigation features, print CSS, reduced-motion handling, table/diagram print rules, and documented that Astro Starlight migration is deferred to a future proof-of-concept. |
 | Local full validation after issue #15 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 0.86 seconds; shell wall-clock total was 1.200 seconds. |
+| Milestone 5 issue #16 HTML/printable build review | Manual review of `scripts/build.sh`, `.gitignore`, `docs/appendix/publishing.md`, and `milestones/milestone-05-professional-engineering.md` | Added reproducible printable HTML output under `build/printable/`, kept `build/` ignored, and deferred PDF generation by project decision while preserving the `pdf` script target as a stable no-op message. |
+| Deferred PDF target after issue #16 updates | `. .venv/bin/activate && ./scripts/build.sh pdf` from `/Users/simondawson/Herd/PC-Build` | Passed as a documented no-op. The command reports that PDF generation is deferred. |
+| Printable build after issue #16 updates | `. .venv/bin/activate && time ./scripts/build.sh printable` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.91 seconds; shell wall-clock total was 1.416 seconds. |
+| Full build after issue #16 updates | `. .venv/bin/activate && time ./scripts/build.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Built HTML and printable outputs. Shell wall-clock total was 2.414 seconds. |
 
 ## Warnings
 
