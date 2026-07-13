@@ -1,6 +1,6 @@
 # Milestone 6: Interactive Digital Twin Edition
 
-Status: In progress.
+Status: Implemented locally; checkpoint push, GitHub Actions verification, production deployment switch, and issue closure remain pending.
 
 GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/2
 
@@ -49,7 +49,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] JSON Schema and validation tests.
 - [x] Astro Starlight first slice - implemented locally; production deployment remains MkDocs until the Starlight switch is approved.
 - [x] Accessible interactive case view.
-- [ ] Clickable component inspection.
+- [x] Clickable component inspection.
 - [x] Verified motherboard connector map.
 - [x] Cable-routing mode.
 - [x] Guided build-sequence mode.
@@ -67,13 +67,13 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 
 - [x] ADR is accepted before implementation choices are locked in.
 - [x] Digital twin data validates against JSON Schema.
-- [ ] Every interactive component maps to structured data.
+- [x] Every interactive component maps to structured data.
 - [x] Cable routes and connector positions are verified or explicitly marked unverified in the structured data.
 - [x] Static fallbacks remain available for implemented interactive views.
 - [x] Keyboard navigation and visible focus indicators work for implemented interactive controls.
 - [x] Reduced-motion behavior is supported for implemented animated views.
-- [ ] The site remains static and deployable through GitHub Pages.
-- [ ] Performance remains reasonable on desktop and tablet.
+- [x] The site remains static and deployable through GitHub Pages.
+- [x] Performance remains reasonable on desktop and tablet.
 
 ## Validation Commands
 
@@ -124,21 +124,21 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] [#31: M6: Add maintenance and upgrade history](https://github.com/t3lstar/PC-Build/issues/31) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#32: M6: Complete accessibility and static fallbacks](https://github.com/t3lstar/PC-Build/issues/32) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#33: M6: Add data, interaction and accessibility tests](https://github.com/t3lstar/PC-Build/issues/33) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
-- [ ] [#34: M6: Milestone 6 final QA and release](https://github.com/t3lstar/PC-Build/issues/34)
+- [x] [#34: M6: Milestone 6 final QA and release](https://github.com/t3lstar/PC-Build/issues/34) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 
 ## Definition of Done
 
-- [ ] ADR, data model, implementation, tests, and documentation are aligned.
-- [ ] Validation report supports completion.
-- [ ] GitHub milestone and issues are current.
-- [ ] Static documentation still works without the interactive layer.
+- [x] ADR, data model, implementation, tests, and documentation are aligned.
+- [x] Validation report supports completion.
+- [ ] GitHub milestone and issues are current after checkpoint push and Actions verification.
+- [x] Static documentation still works without the interactive layer.
 
 ## Completion Checklist
 
-- [ ] Update `MILESTONES.md`.
-- [ ] Update AGENTS guidance if implementation conventions evolve.
-- [ ] Validate data, accessibility, and static-site build.
-- [ ] Verify GitHub Pages deployment.
+- [x] Update `MILESTONES.md`.
+- [x] Update AGENTS guidance if implementation conventions evolve.
+- [x] Validate data, accessibility, and static-site build locally.
+- [ ] Verify GitHub Pages deployment after checkpoint push.
 - [ ] Close Milestone 6 issues only when acceptance criteria are met.
 
 ## Suggested Implementation Order

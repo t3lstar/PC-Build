@@ -1,6 +1,6 @@
 # Digital Twin Accessibility and Fallback Audit
 
-Status: Active Milestone 6 audit. Last verified: 2026-07-13 16:35 BST.
+Status: Active Milestone 6 audit. Last verified: 2026-07-13 16:44 BST.
 
 ## Purpose
 
@@ -22,6 +22,7 @@ Track the accessibility and non-interactive fallback requirements for the Astro 
 
 | Feature | Fallback |
 | --- | --- |
+| Component inspector | Static component list. |
 | Case view | Static zone list. |
 | Connector map | Static connector list. |
 | Cable-routing mode | Static cable route list. |
@@ -36,5 +37,5 @@ Track the accessibility and non-interactive fallback requirements for the Astro 
 ## Remaining Manual Checks
 
 - Browser screenshot checks are still manual because Playwright is not installed in the project yet.
-- Automated accessibility testing is deferred to issue `#33`.
+- Browser-level accessibility scanning is not configured yet; issue `#33` added dependency-light source and built-HTML accessibility checks.
 - Exact interactive coordinates remain schematic until board-photo or manual-diagram coordinate verification is added.

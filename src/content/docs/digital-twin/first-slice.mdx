@@ -4,6 +4,7 @@ description: Data-backed Starlight first slice for the interactive digital twin.
 ---
 
 import DigitalTwinSummary from '../../../components/DigitalTwinSummary.astro';
+import DigitalTwinComponentInspector from '../../../components/DigitalTwinComponentInspector.astro';
 import DigitalTwinCaseView from '../../../components/DigitalTwinCaseView.astro';
 import DigitalTwinConnectorMap from '../../../components/DigitalTwinConnectorMap.astro';
 import DigitalTwinCableRouting from '../../../components/DigitalTwinCableRouting.astro';
@@ -25,6 +26,8 @@ This page proves that Starlight can render interactive components from the frame
 </noscript>
 
 <DigitalTwinSummary />
+
+<DigitalTwinComponentInspector />
 
 <DigitalTwinCaseView />
 
@@ -51,6 +54,7 @@ This page proves that Starlight can render interactive components from the frame
 If JavaScript is unavailable, this page must still explain the state of the digital twin data:
 
 - Component and connector data is validated by JSON Schema.
+- Component inspector includes a static component list.
 - Exact connector coordinates remain pending or partially verified.
 - Cable routes are represented as source data before detailed path interaction is added.
 - Airflow has text fallback content before animation is added.

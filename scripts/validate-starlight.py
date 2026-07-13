@@ -16,6 +16,7 @@ DIST_ACCESSIBILITY = ROOT / "dist" / "project" / "digital-twin-accessibility" / 
 
 COMPONENTS = {
     "DigitalTwinSummary": "Digital Twin Data Slice",
+    "DigitalTwinComponentInspector": "Static Component Inspector List",
     "DigitalTwinCaseView": "Static Zone List",
     "DigitalTwinConnectorMap": "Static Connector List",
     "DigitalTwinCableRouting": "Static Cable Route List",
@@ -71,6 +72,7 @@ def validate_dist(errors: list[str]) -> None:
 
     for expected in [
         "Interactive Case View",
+        "Component Inspector",
         "Motherboard Connector Map",
         "Cable-Routing Mode",
         "Guided Build Sequence",

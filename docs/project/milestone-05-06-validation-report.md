@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:39 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:44 BST.
 
 ## Passed Checks
 
@@ -136,6 +136,11 @@ Status: Active validation report. Last verified: 2026-07-13 16:39 BST.
 | Milestone 6 issue #33 data, interaction, and accessibility tests review | Manual review of `scripts/validate-starlight.py`, `scripts/validate.sh`, `README.md`, `CONTRIBUTING.md`, and existing validation scripts | Added dependency-light Starlight validation that checks required digital twin components, page imports, source fallbacks, accessible labelling markers, focus and reduced-motion CSS, built first-slice HTML sections, built accessibility audit HTML, and QR asset references. Wired it into `./scripts/validate.sh starlight`. |
 | Local full validation after issue #33 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; QR code validation passed; documentation validation passed; MkDocs reported 1.43 seconds; shell wall-clock total was 2.438 seconds. |
 | Starlight validation after issue #33 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 8 pages built in 2.47 seconds; `scripts/validate-starlight.py` passed; shell wall-clock total was 7.862 seconds. |
+| Milestone 6 issue #34 final QA review | Manual review of `MILESTONES.md`, `milestones/milestone-06-digital-twin.md`, `docs/project/milestone-06-final-qa.md`, `docs/project/digital-twin-accessibility.md`, `src/content/docs/digital-twin/first-slice.mdx`, and `scripts/validate-starlight.py` | Added the missing data-backed clickable component inspector, documented its static fallback, marked local Milestone 6 acceptance state, and recorded that checkpoint push, Actions verification, production deployment switch, and issue closure remain pending. |
+| Local full validation after issue #34 final QA | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; QR code validation passed; documentation validation passed; MkDocs reported 1.33 seconds; shell wall-clock total was 2.547 seconds. |
+| Starlight validation after issue #34 final QA | `. .venv/bin/activate && time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 8 static pages built in 1.80 seconds; `scripts/validate-starlight.py` passed; shell wall-clock total was 5.038 seconds. |
+| Component inspector generated HTML check | `rg -n "Component Inspector|Static Component Inspector List|aria-pressed|aria-live" dist/digital-twin/first-slice/index.html` | Passed. Built Starlight HTML contains the component inspector, static component fallback, selected-state controls, and live detail region. |
+| Starlight output size check | `du -sh dist public/assets/qrcodes src/components data/digital-twin/build.json` | Passed. Built Starlight output is 3.3M; committed QR SVG assets are 176K; component sources are 64K; structured data file is 52K. |
 
 ## Warnings
 
@@ -145,6 +150,7 @@ Status: Active validation report. Last verified: 2026-07-13 16:39 BST.
 | Shell Python alias | `python --version` | The shell does not expose a `python` command; use the project `.venv` Python or `python3` for one-off local scripts. |
 | Local Node version | `node --version` | Local Node reported v25.2.1; repository expects Node.js 24. |
 | MkDocs Material warning | `./scripts/build.sh html` | MkDocs Material prints an upstream warning about future MkDocs 2.0 compatibility. |
+| Starlight 404 route warning | `./scripts/validate.sh starlight` | Astro prints `Entry docs → 404 was not found.` while still completing the static build and validator successfully. |
 
 ## Known Limitations
 
@@ -166,8 +172,8 @@ Status: Active validation report. Last verified: 2026-07-13 16:39 BST.
 | Spelling | No spelling tool or dictionary is currently configured. |
 | Mermaid validation | No Mermaid CLI or validation script is currently configured. |
 | PlantUML generation | No PlantUML toolchain or script is currently configured. |
-| Accessibility tests | No browser accessibility test tool is currently configured. |
-| Automated screenshot regression for Starlight pages | Playwright is not installed in the project. Issue #22 was checked by Starlight build and generated HTML inspection only. |
+| Browser accessibility scanning | No browser accessibility test tool is currently configured. Current coverage is source and built-HTML validation. |
+| Automated screenshot regression for Starlight pages | Playwright is not installed in the project. Current coverage is Starlight build, generated HTML inspection, static fallback validation, and output size checks. |
 
 ## Failed Checks
 

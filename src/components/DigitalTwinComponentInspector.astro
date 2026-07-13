@@ -1,0 +1,114 @@
+---
+import digitalTwin from '../../data/digital-twin/build.json';
+
+const components = digitalTwin.components;
+const firstComponent = components[0];
+---
+
+<section class="pc-component-inspector" aria-labelledby="pc-component-inspector-heading">
+  <div class="pc-case-view__header">
+    <div>
+      <h2 id="pc-component-inspector-heading">Component Inspector</h2>
+      <p>
+        Select a component to inspect its exact model, role, verification state, source chapter, and
+        manufacturer reference.
+      </p>
+    </div>
+    <span class="pc-status">component data</span>
+  </div>
+
+  <div class="pc-component-inspector__layout">
+    <div class="pc-component-inspector__buttons" aria-label="Component selector">
+      {
+        components.map((component, index) => (
+          <button
+            type="button"
+            data-id={component.id}
+            data-name={component.name}
+            data-category={component.category}
+            data-model={component.model}
+            data-role={component.role}
+            data-chapter={component.chapter ?? 'n/a'}
+            data-url={component.manufacturerUrl ?? ''}
+            data-verification={component.evidence.state}
+            aria-describedby="pc-component-inspector-selected"
+            aria-pressed={index === 0 ? 'true' : 'false'}
+          >
+            <span>{component.category}</span>
+            {component.name}
+          </button>
+        ))
+      }
+    </div>
+
+    <aside class="pc-case-view__details" id="pc-component-inspector-selected" aria-live="polite">
+      <h3>{firstComponent.name}</h3>
+      <dl>
+        <div>
+          <dt>Category</dt>
+          <dd>{firstComponent.category}</dd>
+        </div>
+        <div>
+          <dt>Model</dt>
+          <dd>{firstComponent.model}</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>{firstComponent.role}</dd>
+        </div>
+        <div>
+          <dt>Source chapter</dt>
+          <dd>{firstComponent.chapter}</dd>
+        </div>
+        <div>
+          <dt>Verification</dt>
+          <dd>{firstComponent.evidence.state}</dd>
+        </div>
+      </dl>
+      <a class="pc-component-inspector__link" href={firstComponent.manufacturerUrl}>Open Manufacturer Reference</a>
+    </aside>
+  </div>
+
+  <details class="pc-case-view__fallback">
+    <summary>Static Component Inspector List</summary>
+    <ul>
+      {
+        components.map((component) => (
+          <li>
+            <strong>{component.name}</strong>: {component.model}. {component.role} Verification:
+            {' '}{component.evidence.state}.
+          </li>
+        ))
+      }
+    </ul>
+  </details>
+</section>
+
+<script>
+  const root = document.querySelector('.pc-component-inspector');
+  const details = root?.querySelector('.pc-case-view__details');
+  const title = details?.querySelector('h3');
+  const values = details?.querySelectorAll('dd');
+  const link = details?.querySelector('.pc-component-inspector__link');
+
+  function setActive(button) {
+    if (!details || !title || !values || values.length < 5 || !link) return;
+
+    root?.querySelectorAll('.pc-component-inspector__buttons button').forEach((item) => {
+      item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+    });
+
+    title.textContent = button.dataset.name ?? '';
+    values[0].textContent = button.dataset.category ?? '';
+    values[1].textContent = button.dataset.model ?? '';
+    values[2].textContent = button.dataset.role ?? '';
+    values[3].textContent = button.dataset.chapter ?? '';
+    values[4].textContent = button.dataset.verification ?? '';
+    link.setAttribute('href', button.dataset.url ?? '#');
+  }
+
+  root?.querySelectorAll('.pc-component-inspector__buttons button').forEach((button) => {
+    button.addEventListener('click', () => setActive(button));
+    button.addEventListener('focus', () => setActive(button));
+  });
+</script>
