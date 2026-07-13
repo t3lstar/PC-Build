@@ -57,7 +57,7 @@ Raise the existing GitHub Pages manual into publication-quality engineering docu
 - [x] Validation scripts and local CI wrapper.
 - [x] GitHub Actions validation expansion.
 - [x] Reproducible HTML and printable outputs; PDF generation deferred by project decision.
-- [ ] Expanded appendices and connector references.
+- [x] Expanded appendices and connector references.
 - [ ] Final Milestone 5 QA report.
 
 ## Acceptance Criteria
@@ -115,7 +115,7 @@ Run the local validation wrapper when checking milestone changes:
 - [x] [#14: M5: Implement GitHub Actions validation](https://github.com/t3lstar/PC-Build/issues/14)
 - [x] [#15: M5: Improve MkDocs Material site and print styling](https://github.com/t3lstar/PC-Build/issues/15) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#16: M5: Make HTML and PDF builds reproducible](https://github.com/t3lstar/PC-Build/issues/16) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
-- [ ] [#17: M5: Expand appendices and connector references](https://github.com/t3lstar/PC-Build/issues/17)
+- [x] [#17: M5: Expand appendices and connector references](https://github.com/t3lstar/PC-Build/issues/17) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [ ] [#18: M5: Milestone 5 final QA and release](https://github.com/t3lstar/PC-Build/issues/18)
 
 ## Definition of Done

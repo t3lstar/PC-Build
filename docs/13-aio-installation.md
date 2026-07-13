@@ -10,6 +10,8 @@ This chapter installs the ARCTIC Liquid Freezer III Pro 360 on the Ryzen 7 7800X
 
 Install CPU cooling with correct AM5 mounting pressure, radiator orientation, cable routing, and clearance around the motherboard.
 
+Use the [connector and cable reference](appendix/connectors-cables.md) for the simple all-in-one `CPU_FAN` path and the optional individual-control header paths.
+
 ## Estimated Time
 
 45-75 minutes.

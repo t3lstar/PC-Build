@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:16 BST.
+Status: Active validation report. Last verified: 2026-07-13 15:21 BST.
 
 ## Passed Checks
 
@@ -54,6 +54,8 @@ Status: Active validation report. Last verified: 2026-07-13 15:16 BST.
 | Deferred PDF target after issue #16 updates | `. .venv/bin/activate && ./scripts/build.sh pdf` from `/Users/simondawson/Herd/PC-Build` | Passed as a documented no-op. The command reports that PDF generation is deferred. |
 | Printable build after issue #16 updates | `. .venv/bin/activate && time ./scripts/build.sh printable` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.91 seconds; shell wall-clock total was 1.416 seconds. |
 | Full build after issue #16 updates | `. .venv/bin/activate && time ./scripts/build.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Built HTML and printable outputs. Shell wall-clock total was 2.414 seconds. |
+| Milestone 5 issue #17 connector appendix review | Manual review of `docs/appendix/connectors-cables.md`, `mkdocs.yml`, affected installation chapters, glossary, FAQ, verification register, and milestone tracker | Added connector/cable appendix, navigation entry, chapter cross-links, glossary/FAQ support, and verification register entry while deferring exact connector coordinates to future digital twin work. |
+| Local full validation after issue #17 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 0.97 seconds; shell wall-clock total was 1.486 seconds. |
 
 ## Warnings
 

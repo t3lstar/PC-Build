@@ -10,6 +10,8 @@ This chapter routes and secures power, front-panel, USB, audio, fan, pump, and P
 
 Keep airflow clear, reduce side-panel pressure, prevent fan contact, and make later troubleshooting easier.
 
+Use the [connector and cable reference](appendix/connectors-cables.md) for cable identity, routing dependencies, and do-not-use rules.
+
 ## Estimated Time
 
 30-60 minutes.

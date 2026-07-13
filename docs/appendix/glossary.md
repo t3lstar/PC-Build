@@ -20,7 +20,9 @@ Define PC building, BIOS, Windows, thermal, storage, memory, and power terminolo
 | EXPO | AMD memory profile that applies validated memory speed, timing, and voltage settings. |
 | EPS | CPU power connector from the PSU to the motherboard. |
 | fTPM | Firmware TPM support used by Windows 11 security requirements. |
+| F_PANEL | Motherboard header for case power switch, reset switch, power LED, drive LED, speaker, and related case leads. |
 | GPU | Graphics processing unit; the dedicated graphics card. |
+| Header | Motherboard connector used for case wiring, fans, USB, audio, lighting, or control signals. |
 | M.2 | Compact expansion slot used here for the NVMe SSD. |
 | NVMe | High-speed SSD protocol used over PCIe. |
 | PCIe | Expansion bus used by the GPU and NVMe SSD. |

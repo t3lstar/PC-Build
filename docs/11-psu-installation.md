@@ -10,6 +10,8 @@ This chapter installs the ASUS TUF Gaming 1000W Gold power supply and prepares t
 
 Mount the PSU securely and route the main power cables before the motherboard, radiator, and graphics card restrict access.
 
+Use the [connector and cable reference](appendix/connectors-cables.md) to distinguish 24-pin ATX, CPU EPS, PCIe GPU power, and optional SATA power cables.
+
 ## Estimated Time
 
 20-35 minutes.

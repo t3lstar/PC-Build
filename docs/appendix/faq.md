@@ -47,3 +47,7 @@ DDR5 memory training can delay first display output. Wait several minutes before
 ### Should I install motherboard utilities?
 
 Install drivers first. Add utilities only when they provide a function you need and cannot get from BIOS, Windows, or AMD Radeon Software.
+
+### Where should I check cable and connector names?
+
+Use the [connector and cable reference](connectors-cables.md). It consolidates the motherboard headers, PSU cable rules, front-panel polarity guidance, cooling cable paths, and routing dependencies used by this build.

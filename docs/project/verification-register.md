@@ -1,6 +1,6 @@
 # Verification Register
 
-Status: Active Milestone 5 verification register. Last verified: 2026-07-13 13:42 BST.
+Status: Active Milestone 5 verification register. Last verified: 2026-07-13 15:21 BST.
 
 Use this register for technical claims that need explicit official-source confirmation before they are treated as final.
 
@@ -17,3 +17,4 @@ Use this register for technical claims that need explicit official-source confir
 | Expected benchmark scores | Intentionally not provided | User-recorded baseline after build completion | `docs/23-benchmarks.md`, future benchmark log | Do not invent scores; use baseline procedure and variance guidance. |
 | Exact fan count and airflow roles | Verified for included case fans; build airflow remains final-assembly verified | Lian Li O11 Dynamic Mini V2 product page lists five included reverse-blade PWM fans for the Flow variant; ARCTIC documentation supports top radiator exhaust/intake orientation options. | `docs/04-case-overview.md`, future airflow visualisation | Keep planned layout as 3 bottom intake, 2 side intake, and top AIO exhaust. Confirm final fan direction physically before first boot. |
 | Product image hotlink reliability | External-risk accepted | Manufacturer or stable official product pages | `docs/02-components.md` | Treat product images as visual aids only; model numbers and official documentation remain source of truth. |
+| Connector and cable reference | Verified for connector names and build-level cable rules | Existing verified Gigabyte motherboard manual evidence, ARCTIC cooler cable-path evidence, PSU/case build guidance, and previously verified front-panel labels. | `docs/appendix/connectors-cables.md`, installation chapters | The appendix may identify headers and routing dependencies. Exact x/y connector coordinates remain deferred to future digital twin verification. |

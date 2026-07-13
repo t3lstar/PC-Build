@@ -12,6 +12,8 @@ The motherboard is the central connection point for the CPU, memory, SSD, GPU, c
 
 Identify the motherboard sockets, slots, headers, buttons, and diagnostic indicators that will be used during this build.
 
+Use the [connector and cable reference](appendix/connectors-cables.md) for a consolidated list of the headers and cable rules used by this build.
+
 ## Estimated Time
 
 20-30 minutes.

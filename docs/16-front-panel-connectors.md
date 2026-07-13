@@ -10,6 +10,8 @@ This chapter connects the case power switch, front USB, USB-C, and front audio c
 
 Make the case controls and front I/O work correctly before first boot.
 
+Use the [connector and cable reference](appendix/connectors-cables.md) for front-panel polarity rules and related internal USB/audio header guidance.
+
 ## Estimated Time
 
 20-35 minutes.
