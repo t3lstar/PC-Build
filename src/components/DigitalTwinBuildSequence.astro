@@ -1,0 +1,122 @@
+---
+import digitalTwin from '../../data/digital-twin/build.json';
+
+const componentsById = new Map(digitalTwin.components.map((component) => [component.id, component]));
+
+function chapterUrl(chapter: string) {
+  const fileName = chapter.split('/').pop() ?? '';
+  const slug = fileName.replace(/\.md$/, '');
+  return `${digitalTwin.metadata.siteUrl}${slug}/`;
+}
+
+const steps = [...digitalTwin.buildSequence]
+  .sort((left, right) => left.order - right.order)
+  .map((step) => ({
+    ...step,
+    url: chapterUrl(step.chapter),
+    components: (step.componentIds ?? [])
+      .map((componentId) => componentsById.get(componentId)?.name ?? componentId)
+      .join(', '),
+  }));
+
+const firstStep = steps[0];
+---
+
+<section class="pc-build-sequence" aria-labelledby="pc-build-sequence-heading">
+  <div class="pc-case-view__header">
+    <div>
+      <h2 id="pc-build-sequence-heading">Guided Build Sequence</h2>
+      <p>
+        Step through the verified build order and jump to the matching published chapter when you
+        need the full instructions.
+      </p>
+    </div>
+    <span class="pc-status">chapter linked</span>
+  </div>
+
+  <div class="pc-build-sequence__layout">
+    <div class="pc-build-sequence__rail" role="list" aria-label="Build sequence steps">
+      {
+        steps.map((step, index) => (
+          <button
+            class="pc-build-sequence__step"
+            type="button"
+            role="listitem"
+            data-step-id={step.id}
+            data-order={step.order}
+            data-label={step.label}
+            data-components={step.components}
+            data-chapter={step.chapter}
+            data-url={step.url}
+            data-verification={step.evidence.state}
+            aria-describedby="pc-build-sequence-selected"
+            aria-pressed={index === 0 ? 'true' : 'false'}
+          >
+            <span>{step.order}</span>
+            {step.label}
+          </button>
+        ))
+      }
+    </div>
+
+    <aside class="pc-case-view__details" id="pc-build-sequence-selected" aria-live="polite">
+      <h3>{firstStep.order}. {firstStep.label}</h3>
+      <dl>
+        <div>
+          <dt>Components</dt>
+          <dd>{firstStep.components}</dd>
+        </div>
+        <div>
+          <dt>Source chapter</dt>
+          <dd>{firstStep.chapter}</dd>
+        </div>
+        <div>
+          <dt>Verification</dt>
+          <dd>{firstStep.evidence.state}</dd>
+        </div>
+      </dl>
+      <a class="pc-build-sequence__chapter-link" href={firstStep.url}>Open Chapter</a>
+    </aside>
+  </div>
+
+  <details class="pc-case-view__fallback">
+    <summary>Static Build Sequence</summary>
+    <ol>
+      {
+        steps.map((step) => (
+          <li>
+            <a href={step.url}>{step.label}</a>: {step.components}. Verification:
+            {' '}{step.evidence.state}.
+          </li>
+        ))
+      }
+    </ol>
+  </details>
+</section>
+
+<script>
+  const root = document.querySelector('.pc-build-sequence');
+  const details = root?.querySelector('.pc-case-view__details');
+  const title = details?.querySelector('h3');
+  const values = details?.querySelectorAll('dd');
+  const link = details?.querySelector('.pc-build-sequence__chapter-link');
+
+  function setActive(button) {
+    if (!details || !title || !values || values.length < 3 || !link) return;
+
+    root?.querySelectorAll('.pc-build-sequence__step').forEach((item) => {
+      item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+    });
+
+    title.textContent = `${button.dataset.order}. ${button.dataset.label}`;
+    values[0].textContent = button.dataset.components ?? '';
+    values[1].textContent = button.dataset.chapter ?? '';
+    values[2].textContent = button.dataset.verification ?? '';
+    link.setAttribute('href', button.dataset.url ?? '#');
+  }
+
+  root?.querySelectorAll('.pc-build-sequence__step').forEach((button) => {
+    button.addEventListener('click', () => setActive(button));
+    button.addEventListener('focus', () => setActive(button));
+  });
+</script>

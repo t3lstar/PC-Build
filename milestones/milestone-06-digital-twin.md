@@ -52,7 +52,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [ ] Clickable component inspection.
 - [x] Verified motherboard connector map.
 - [x] Cable-routing mode.
-- [ ] Guided build-sequence mode.
+- [x] Guided build-sequence mode.
 - [ ] Airflow visualisation with static fallback.
 - [ ] Lightweight exploded assembly view.
 - [ ] Clearly labelled BIOS training simulator.
@@ -113,7 +113,7 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] [#22: M6: Implement interactive case view](https://github.com/t3lstar/PC-Build/issues/22) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#23: M6: Implement motherboard connector map](https://github.com/t3lstar/PC-Build/issues/23) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#24: M6: Implement cable-routing mode](https://github.com/t3lstar/PC-Build/issues/24) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
-- [ ] [#25: M6: Implement guided build-sequence mode](https://github.com/t3lstar/PC-Build/issues/25)
+- [x] [#25: M6: Implement guided build-sequence mode](https://github.com/t3lstar/PC-Build/issues/25) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#26: M6: Implement airflow visualisation](https://github.com/t3lstar/PC-Build/issues/26)
 - [ ] [#27: M6: Implement exploded assembly view](https://github.com/t3lstar/PC-Build/issues/27)
 - [ ] [#28: M6: Implement educational BIOS simulator](https://github.com/t3lstar/PC-Build/issues/28)
