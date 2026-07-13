@@ -33,6 +33,10 @@ This project will be delivered in four milestones so the repository can be built
 
 ## Milestone 1: Repository Scaffolding
 
+Tracking issue: https://github.com/t3lstar/PC-Build/issues/4
+
+Status: Complete.
+
 Create the documentation repository structure and make it ready for content.
 
 ### Scope
