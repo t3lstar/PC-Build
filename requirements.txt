@@ -2,3 +2,4 @@ mkdocs-material>=9.5
 mkdocs-with-pdf>=0.9
 weasyprint>=62
 jsonschema>=4.26
+qrcode>=8.0

@@ -57,7 +57,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] Lightweight exploded assembly view.
 - [x] Clearly labelled BIOS training simulator.
 - [x] Driver and firmware source dashboard.
-- [ ] QR codes for stable official URLs.
+- [x] QR codes for stable official URLs.
 - [ ] Local-only maintenance and upgrade history.
 - [ ] Accessibility, responsive, and data-integrity tests.
 
@@ -118,7 +118,7 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] [#27: M6: Implement exploded assembly view](https://github.com/t3lstar/PC-Build/issues/27) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#28: M6: Implement educational BIOS simulator](https://github.com/t3lstar/PC-Build/issues/28) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#29: M6: Add driver and firmware source dashboard](https://github.com/t3lstar/PC-Build/issues/29) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
-- [ ] [#30: M6: Generate and validate official-link QR codes](https://github.com/t3lstar/PC-Build/issues/30)
+- [x] [#30: M6: Generate and validate official-link QR codes](https://github.com/t3lstar/PC-Build/issues/30) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#31: M6: Add maintenance and upgrade history](https://github.com/t3lstar/PC-Build/issues/31)
 - [ ] [#32: M6: Complete accessibility and static fallbacks](https://github.com/t3lstar/PC-Build/issues/32)
 - [ ] [#33: M6: Add data, interaction and accessibility tests](https://github.com/t3lstar/PC-Build/issues/33)

@@ -45,6 +45,7 @@ This project is delivered in controlled milestones so the repository can be buil
 - Use `docs/project/repository-audit.md`, `docs/project/verification-register.md`, and `docs/project/milestone-05-06-validation-report.md` for Milestones 5 and 6 planning and validation.
 - Keep detailed Milestone 5 and Milestone 6 plans under `milestones/`.
 - Astro Starlight is the accepted Milestone 6 target platform for the interactive digital twin. Keep digital twin data framework-neutral, but implement the interactive site with Starlight after a controlled first slice proves GitHub Pages deployment, navigation, diagrams, validation, accessibility, and static fallbacks.
+- Milestone 6 QR code SVG assets are generated from official links in `data/digital-twin/build.json` by `scripts/generate-qrcodes.py`. Committed QR assets and their manifest live under `public/assets/qrcodes/` for the Starlight site and are validated by `./scripts/validate.sh qrcodes`.
 
 ## Milestone 1: Repository Scaffolding
 

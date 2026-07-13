@@ -1,0 +1,97 @@
+{
+  "source": "data/digital-twin/build.json",
+  "outputDir": "public/assets/qrcodes",
+  "links": [
+    {
+      "id": "amd-7800x3d",
+      "label": "AMD Ryzen 7 7800X3D",
+      "url": "https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-7-7800x3d.html",
+      "kind": "manufacturer",
+      "file": "amd-7800x3d.svg"
+    },
+    {
+      "id": "amd-drivers-support",
+      "label": "AMD drivers and support",
+      "url": "https://www.amd.com/en/support/download/drivers.html",
+      "kind": "support",
+      "file": "amd-drivers-support.svg"
+    },
+    {
+      "id": "arctic-liquid-freezer",
+      "label": "ARCTIC Liquid Freezer III Pro 360",
+      "url": "https://www.arctic.de/en/Liquid-Freezer-III-Pro-360/ACFRE00180A",
+      "kind": "manufacturer",
+      "file": "arctic-liquid-freezer.svg"
+    },
+    {
+      "id": "asus-psu",
+      "label": "ASUS TUF Gaming 1000W Gold tech specs",
+      "url": "https://www.asus.com/us/motherboards-components/power-supply-units/tuf-gaming/tuf-gaming-1000g/techspec/",
+      "kind": "manufacturer",
+      "file": "asus-psu.svg"
+    },
+    {
+      "id": "gigabyte-gpu",
+      "label": "Gigabyte Radeon RX 9060 XT Gaming OC 16G",
+      "url": "https://www.gigabyte.com/Graphics-Card/GV-R9060XTGAMING-OC-16GD/sp",
+      "kind": "manufacturer",
+      "file": "gigabyte-gpu.svg"
+    },
+    {
+      "id": "gigabyte-motherboard",
+      "label": "Gigabyte B850 AORUS Elite WiFi7",
+      "url": "https://www.gigabyte.com/Motherboard/B850-AORUS-ELITE-WIFI7-rev-1x/sp",
+      "kind": "manufacturer",
+      "file": "gigabyte-motherboard.svg"
+    },
+    {
+      "id": "gigabyte-support",
+      "label": "Gigabyte B850 AORUS Elite WiFi7 support",
+      "url": "https://www.gigabyte.com/Motherboard/B850-AORUS-ELITE-WIFI7-rev-1x/support",
+      "kind": "support",
+      "file": "gigabyte-support.svg"
+    },
+    {
+      "id": "gskill-flare-x5",
+      "label": "G.SKILL Flare X5 F5-6000J3038F16GX2-FX5",
+      "url": "https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5",
+      "kind": "manufacturer",
+      "file": "gskill-flare-x5.svg"
+    },
+    {
+      "id": "lian-li-case",
+      "label": "Lian Li O11 Dynamic Mini V2",
+      "url": "https://lian-li.com/product/o11-dynamic-mini-v2/",
+      "kind": "manufacturer",
+      "file": "lian-li-case.svg"
+    },
+    {
+      "id": "samsung-990-evo-plus",
+      "label": "Samsung 990 EVO Plus data sheet",
+      "url": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf",
+      "kind": "manufacturer",
+      "file": "samsung-990-evo-plus.svg"
+    },
+    {
+      "id": "samsung-magician",
+      "label": "Samsung Magician tools",
+      "url": "https://semiconductor.samsung.com/consumer-storage/support/tools/",
+      "kind": "support",
+      "file": "samsung-magician.svg"
+    },
+    {
+      "id": "windows-11-download",
+      "label": "Microsoft Windows 11 download",
+      "url": "https://www.microsoft.com/en-us/software-download/windows11",
+      "kind": "operating-system",
+      "file": "windows-11-download.svg"
+    },
+    {
+      "id": "windows-update",
+      "label": "Windows Update",
+      "url": "https://support.microsoft.com/windows/windows-update",
+      "kind": "support",
+      "file": "windows-update.svg"
+    }
+  ]
+}

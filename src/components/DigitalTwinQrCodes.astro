@@ -1,0 +1,52 @@
+---
+import digitalTwin from '../../data/digital-twin/build.json';
+
+const officialKinds = new Set(['manufacturer', 'support', 'operating-system', 'manual']);
+const qrLinks = digitalTwin.links
+  .filter((link) => officialKinds.has(link.kind))
+  .sort((left, right) => left.label.localeCompare(right.label));
+---
+
+<section class="pc-qr-codes" aria-labelledby="pc-qr-codes-heading">
+  <div class="pc-case-view__header">
+    <div>
+      <h2 id="pc-qr-codes-heading">Official-Link QR Codes</h2>
+      <p>
+        QR codes are generated from the structured official-link data. Use them for quick access
+        during assembly, driver installation, and maintenance.
+      </p>
+    </div>
+    <span class="pc-status">generated assets</span>
+  </div>
+
+  <div class="pc-qr-codes__grid">
+    {
+      qrLinks.map((link) => (
+        <article>
+          <img
+            src={`/PC-Build/assets/qrcodes/${link.id}.svg`}
+            alt={`QR code for ${link.label}`}
+            loading="lazy"
+          />
+          <h3>{link.label}</h3>
+          <p>{link.kind}</p>
+          <a href={link.url}>Open Link</a>
+        </article>
+      ))
+    }
+  </div>
+
+  <details class="pc-case-view__fallback">
+    <summary>Static QR Link List</summary>
+    <ul>
+      {
+        qrLinks.map((link) => (
+          <li>
+            <a href={link.url}>{link.label}</a>: QR asset
+            {' '}<code>public/assets/qrcodes/{link.id}.svg</code>.
+          </li>
+        ))
+      }
+    </ul>
+  </details>
+</section>

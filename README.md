@@ -86,6 +86,13 @@ Run local validation:
 
 This checks digital twin JSON data and cross-references, required repository files, MkDocs navigation targets, local Markdown links, and the strict HTML build.
 
+Regenerate official-link QR code assets after changing official links:
+
+```bash
+python scripts/generate-qrcodes.py
+./scripts/validate.sh qrcodes
+```
+
 Build the Astro Starlight first slice:
 
 ```bash
