@@ -1,47 +1,70 @@
 # Memory Installation
 
-Status: Placeholder for Milestone 2 core content.
+Status: Initial Milestone 2 content. Last verified: 2026-07-13.
 
 ## Introduction
 
-_To be completed in Milestone 2._
+This chapter installs the 32GB DDR5 memory kit in the correct dual-channel slots on the Gigabyte B850 AORUS Elite WiFi7 motherboard.
 
 ## Purpose
 
-_To be completed in Milestone 2._
+Install the matched DDR5 kit in the correct slots so the system can boot reliably and later run the EXPO profile.
 
 ## Estimated Time
 
-_To be completed in Milestone 2._
+10-15 minutes.
 
 ## Difficulty
 
-_To be completed in Milestone 2._
+Beginner.
 
 ## Required Tools
 
-_To be completed in Milestone 2._
+- Anti-static wrist strap.
+- Motherboard manual.
+- DDR5 memory kit.
+- Good lighting.
 
 ## Warnings
 
-_To be completed in Milestone 2._
+- Do not install DDR4 memory. The motherboard supports DDR5 only.
+- Do not mix separate memory kits.
+- Do not touch the gold contacts on the memory modules.
+- Do not enable EXPO before the first stable boot is confirmed.
+- Do not force a module if the notch is not aligned.
 
 ## Step-by-Step Instructions
 
-_To be completed in Milestone 2._
+1. Confirm the kit is the approved 2 x 16GB DDR5-6000 CL30 kit from the bill of materials.
+2. Locate the four DIMM slots beside the CPU socket.
+3. For two modules, use the motherboard-recommended paired slots: `A2` and `B2`.
+4. Open the retaining latches for those slots.
+5. Hold the first memory module by its edges.
+6. Align the DDR5 notch with the slot key.
+7. Press straight down with even pressure until the latch clicks into place.
+8. Repeat the process for the second module.
+9. Visually confirm both modules are fully seated and level.
 
 ## Verification Checklist
 
-_To be completed in Milestone 2._
+- [ ] Modules are installed in `A2` and `B2`.
+- [ ] Both latches are fully locked.
+- [ ] Both modules are level and fully seated.
+- [ ] The memory kit is matched and approved.
+- [ ] No EXPO settings have been changed yet.
 
 ## Common Mistakes
 
-_To be completed in Milestone 2._
+- Installing the modules in `A1` and `B1` instead of `A2` and `B2`.
+- Leaving one side slightly unseated.
+- Pressing at an angle.
+- Mixing two separately purchased kits.
+- Assuming EXPO is active before it is enabled in BIOS.
 
 ## Expected Result
 
-_To be completed in Milestone 2._
+The DDR5 memory kit is installed in the correct dual-channel slots and ready for first boot at default safe settings.
 
 ## Next Chapter
 
-_To be completed in Milestone 2._
+Continue to [M.2 SSD Installation](09-m2-installation.md).

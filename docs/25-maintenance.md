@@ -1,47 +1,83 @@
 # Maintenance
 
-Status: Placeholder for Milestone 2 core content.
+Status: Initial Milestone 2 content. Last verified: 2026-07-13.
 
 ## Introduction
 
-_To be completed in Milestone 2._
+This chapter defines routine care for the completed PC.
 
 ## Purpose
 
-_To be completed in Milestone 2._
+Keep temperatures, airflow, storage health, driver state, and documentation records under control over time.
 
 ## Estimated Time
 
-_To be completed in Milestone 2._
+10-30 minutes monthly; 45-90 minutes for deeper cleaning.
 
 ## Difficulty
 
-_To be completed in Milestone 2._
+Beginner.
 
 ## Required Tools
 
-_To be completed in Milestone 2._
+- Microfibre cloth.
+- Low-pressure electric air duster or compressed air used carefully.
+- Cable ties or hook-and-loop straps.
+- Hardware monitoring software.
+- Notes file for maintenance records.
 
 ## Warnings
 
-_To be completed in Milestone 2._
+- Power down and unplug the PC before physical cleaning.
+- Hold fans still when cleaning them with air.
+- Do not use household vacuum nozzles directly on components.
+- Do not spray liquid cleaner into the case.
+- Do not update BIOS casually; update for a reason.
 
 ## Step-by-Step Instructions
 
-_To be completed in Milestone 2._
+1. Monthly, inspect front, side, bottom, and top ventilation paths for dust.
+2. Check idle CPU and GPU temperatures against the temperature reference.
+3. Check that all fans spin normally and do not make new noise.
+4. Review Windows Update and driver update state.
+5. Every 3-6 months, power down, unplug, open the case, and clean dust filters.
+6. Hold fans still and clear dust from fan blades and radiator fins.
+7. Check cable ties and straps for pressure or rubbing.
+8. Check SSD free space and health using vendor or monitoring software.
+9. Record any BIOS, driver, hardware, or cooling changes.
+
+## Maintenance Schedule
+
+| Interval | Task |
+| --- | --- |
+| Monthly | Check temperatures, dust filters, fan noise, and Windows updates. |
+| Every 3-6 months | Clean filters, radiator, fans, and visible dust paths. |
+| Before major game installs | Confirm SSD free space. |
+| Before BIOS updates | Read release notes and confirm the update is relevant. |
+| After hardware changes | Re-run baseline checks and update documentation. |
 
 ## Verification Checklist
 
-_To be completed in Milestone 2._
+- [ ] Filters are clean.
+- [ ] Radiator airflow path is clear.
+- [ ] Fans spin normally.
+- [ ] Temperatures are consistent with baseline.
+- [ ] SSD has sufficient free space.
+- [ ] Driver and BIOS changes are recorded.
+- [ ] No cable is rubbing against a fan.
 
 ## Common Mistakes
 
-_To be completed in Milestone 2._
+- Using too much air pressure on fans.
+- Letting fans free-spin while cleaning.
+- Updating BIOS without a relevant reason.
+- Ignoring gradual temperature increases.
+- Filling the SSD until performance and update space suffer.
 
 ## Expected Result
 
-_To be completed in Milestone 2._
+The PC remains clean, cool, stable, and documented throughout normal use.
 
 ## Next Chapter
 
-_To be completed in Milestone 2._
+Continue to [Upgrades](26-upgrades.md).

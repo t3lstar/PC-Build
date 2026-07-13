@@ -1,47 +1,73 @@
 # GPU Installation
 
-Status: Placeholder for Milestone 2 core content.
+Status: Initial Milestone 2 content. Last verified: 2026-07-13.
 
 ## Introduction
 
-_To be completed in Milestone 2._
+This chapter installs the Gigabyte Radeon RX 9060 XT Gaming OC 16GB graphics card.
 
 ## Purpose
 
-_To be completed in Milestone 2._
+Seat the GPU correctly in the primary PCIe x16 slot, secure it to the case, and connect PCIe power.
 
 ## Estimated Time
 
-_To be completed in Milestone 2._
+15-25 minutes.
 
 ## Difficulty
 
-_To be completed in Milestone 2._
+Beginner to moderate.
 
 ## Required Tools
 
-_To be completed in Milestone 2._
+- Phillips #2 screwdriver.
+- GPU support bracket if supplied or required.
+- PCIe 8-pin power cable from the ASUS PSU.
+- Flashlight.
 
 ## Warnings
 
-_To be completed in Milestone 2._
+- Do not install the GPU in a lower slot unless deliberately troubleshooting.
+- Do not force the PCIe connector.
+- Do not run the GPU without its PCIe power cable connected.
+- Do not use a CPU EPS cable in the GPU power connector.
+- Do not lift the system by the graphics card.
 
 ## Step-by-Step Instructions
 
-_To be completed in Milestone 2._
+1. Remove the case expansion slot covers aligned with the motherboard primary PCIe x16 slot.
+2. Press the PCIe slot latch open if it is accessible.
+3. Hold the GPU by the edges and cooler body.
+4. Align the GPU with the primary PCIe x16 slot and rear expansion slots.
+5. Press the GPU straight into the slot until fully seated.
+6. Secure the GPU bracket to the case with screws.
+7. Install or adjust the anti-sag support if needed.
+8. Connect the PCIe 8-pin power cable.
+9. Route the cable with a gentle curve and no tight bend at the connector.
+10. Confirm the GPU fans can spin freely.
 
 ## Verification Checklist
 
-_To be completed in Milestone 2._
+- [ ] GPU is in the primary PCIe x16 slot.
+- [ ] PCIe slot latch is engaged.
+- [ ] Rear bracket is screwed into the case.
+- [ ] PCIe 8-pin power cable is fully seated.
+- [ ] Cable is not pressing sideways on the connector.
+- [ ] GPU is level or supported.
+- [ ] GPU fans are unobstructed.
 
 ## Common Mistakes
 
-_To be completed in Milestone 2._
+- Installing the GPU before removing the correct slot covers.
+- Partially seating the PCIe edge connector.
+- Using the wrong PSU cable.
+- Leaving the GPU unsupported if it sags.
+- Plugging the monitor into the motherboard display output instead of the GPU.
 
 ## Expected Result
 
-_To be completed in Milestone 2._
+The graphics card is installed, powered, supported, and ready for display output during first boot.
 
 ## Next Chapter
 
-_To be completed in Milestone 2._
+Continue to [Cable Routing](15-cable-routing.md).

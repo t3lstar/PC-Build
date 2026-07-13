@@ -1,8 +1,8 @@
 # Custom Gaming PC Build Manual
 
-Status: Repository scaffold complete. Core content is planned for Milestone 2.
+Status: Initial Milestone 2 content. Last updated: 2026-07-13.
 
-This site will become a professional build manual for the custom gaming PC specified in `AGENTS.md`.
+This site is the build manual for a custom Windows 11 Pro gaming PC based on AMD AM5, DDR5, NVMe storage, and a Radeon graphics card.
 
 ## Build Specification
 
@@ -16,8 +16,18 @@ This site will become a professional build manual for the custom gaming PC speci
 - Power supply: ASUS TUF Gaming 1000W Gold
 - Operating system: Windows 11 Pro on USB installation media
 
+## Start Here
+
+Use the guide in order:
+
+1. Confirm the [components](02-components.md) and [bill of materials](appendix/bill-of-materials.md).
+2. Prepare the [tools](05-tools.md) and [workspace](06-build-preparation.md).
+3. Install the CPU, memory, SSD, motherboard, cooler, PSU, and GPU.
+4. Complete [first boot](17-first-boot.md), [BIOS configuration](18-bios.md), [Windows installation](21-windows-installation.md), and [driver installation](20-driver-installation.md).
+5. Enable [EXPO](19-expo.md), apply [gaming optimisation](22-gaming-optimisation.md), and record [benchmarks](23-benchmarks.md).
+
 ## Documentation Status
 
-The repository has completed Milestone 1: repository scaffolding.
+Milestone 1 repository scaffolding is complete. Milestone 2 core content is being built into the chapter pages and appendices.
 
 See `MILESTONES.md` for the roadmap and acceptance criteria.

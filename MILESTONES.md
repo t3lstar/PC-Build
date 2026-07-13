@@ -17,6 +17,7 @@ This project will be delivered in four milestones so the repository can be built
 - Keep rendered appendix pages under `docs/appendix/`.
 - Keep rendered assets under `docs/assets/`.
 - Keep exact component identification and purchase links in `docs/appendix/bill-of-materials.md`.
+- Keep additional build tools and consumables, including Amazon UK convenience links, in `docs/05-tools.md` and `docs/appendix/bill-of-materials.md`.
 - Prefer manufacturer product pages for stable reference links and amazon.co.uk for retailer purchase links.
 - Treat retailer links as convenience links because price, stock, and listing details can change.
 - Compatibility guidance must state the verification result and evidence. Do not leave reader-facing instructions such as "check the QVL" when compatibility can be verified and documented in the repository.
@@ -72,6 +73,8 @@ Create the documentation repository structure and make it ready for content.
 ## Milestone 2: Core Content
 
 Tracking issue: https://github.com/t3lstar/PC-Build/issues/1
+
+Status: Complete.
 
 Write the complete technical documentation for each chapter.
 

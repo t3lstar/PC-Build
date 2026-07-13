@@ -88,6 +88,23 @@ Avoid:
 - Unknown-brand SSDs without clear endurance, warranty, and controller information.
 - Tall third-party heatsinks that conflict with motherboard M.2 heatsinks.
 
+## Additional Tools and Consumables
+
+These items are not PC components, but they are required or strongly recommended for a clean build. Amazon UK links are convenience examples rather than fixed requirements.
+
+| Item | Requirement level | Amazon UK example | Build use |
+| --- | --- | --- | --- |
+| Full-size Phillips #2 screwdriver | Required | [Amazon Basics 32-piece electronics screwdriver set](https://www.amazon.co.uk/AmazonBasics-32-Piece-Electronics-Repair-Screwdriver/dp/B07V3TDP49) | Case screws, motherboard screws, PSU screws, GPU bracket, radiator screws. |
+| Precision screwdriver or bit kit | Required | [iFixit Mako Precision Bit Set](https://www.amazon.co.uk/iFixit-Precision-Bit-Set-Electronic-Smartphone/dp/B0189YWOIO) | M.2 screws and small accessory screws. |
+| Anti-static wrist strap | Strongly recommended | [iFixit anti-static wrist strap](https://www.amazon.co.uk/Anti-Static-protection-equipment-electronics-electronic/dp/B00B2T9C8Y) | Reduces electrostatic discharge risk while handling exposed components. |
+| Anti-static screw tray or project tray | Recommended | [iFixit anti-static project tray](https://www.amazon.co.uk/iFixit-Anti-Static-electronic-disassembly-smartphone/dp/B00KRPFX00) | Keeps M.2, case, radiator, PSU, and motherboard screws separated. |
+| Side cutters | Recommended | [Amazon UK search](https://www.amazon.co.uk/s?k=small+side+cutters+electronics) | Trimming cable ties cleanly. |
+| Hook-and-loop cable straps or cable ties | Recommended | [Amazon UK search](https://www.amazon.co.uk/s?k=pc+cable+ties+hook+and+loop) | Cable routing behind the motherboard tray. |
+| Flashlight or head torch | Recommended | [Amazon UK search](https://www.amazon.co.uk/s?k=led+head+torch) | Header inspection and cable checks inside the case. |
+| Isopropyl alcohol and lint-free cloth | Optional | [Amazon UK search](https://www.amazon.co.uk/s?k=isopropyl+alcohol+lint+free+cloth) | Cleaning thermal paste only if rework is needed. |
+
+An all-in-one toolkit such as the [iFixit Pro Tech Toolkit](https://www.amazon.co.uk/iFixit-IF145-307-4-Pro-Tech-Toolkit/dp/B01GF0KV6G) is acceptable if it includes suitable bits and ESD protection, but still use a comfortable full-size Phillips #2 screwdriver for case and radiator screws.
+
 ## Compatibility Summary
 
 | Check | Result | Reason |
