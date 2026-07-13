@@ -47,6 +47,8 @@ Beginner.
 
 ![PCIe slot map](assets/diagrams/svg/pcie-slots.svg)
 
+![Hardware layout diagram](assets/diagrams/svg/hardware-layout.svg)
+
 PlantUML source: [hardware-layout.puml](assets/diagrams/plantuml/hardware-layout.puml)
 
 1. Place the motherboard box on a stable table.

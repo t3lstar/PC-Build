@@ -37,6 +37,8 @@ Beginner.
 
 ![PSU cable routing](assets/diagrams/svg/psu-cable-routing.svg)
 
+![Power flow diagram](assets/diagrams/svg/power-flow.svg)
+
 PlantUML source: [power-flow.puml](assets/diagrams/plantuml/power-flow.puml)
 
 1. Confirm the PSU is the ASUS TUF Gaming 1000W Gold.

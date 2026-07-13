@@ -35,6 +35,8 @@ Moderate.
 
 ## Step-by-Step Instructions
 
+![BIOS sequence diagram](assets/diagrams/svg/bios-sequence.svg)
+
 PlantUML source: [bios-sequence.puml](assets/diagrams/plantuml/bios-sequence.puml)
 
 1. Enter BIOS after first boot.

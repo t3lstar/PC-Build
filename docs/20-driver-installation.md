@@ -35,6 +35,8 @@ Beginner to moderate.
 
 ## Step-by-Step Instructions
 
+![Driver installation order diagram](assets/diagrams/svg/driver-order.svg)
+
 ```mermaid
 flowchart LR
     A["Windows Update"] --> B["AMD chipset driver"]

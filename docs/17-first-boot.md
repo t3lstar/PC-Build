@@ -36,6 +36,10 @@ Moderate.
 
 ## Step-by-Step Instructions
 
+![Boot process diagram](assets/diagrams/svg/boot-process.svg)
+
+![Boot flow diagram](assets/diagrams/svg/boot-flow.svg)
+
 ```mermaid
 flowchart TD
     A["Power button pressed"] --> B["PSU supplies standby and system power"]

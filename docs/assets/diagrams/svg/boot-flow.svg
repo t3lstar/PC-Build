@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Boot flow</title>
+  <desc id="desc">PlantUML-derived boot flow rendered as SVG.</desc>
+  <style>
+    .box{fill:#e0f2fe;stroke:#0369a1;stroke-width:2}.ok{fill:#dcfce7;stroke:#15803d;stroke-width:2}.fix{fill:#fee2e2;stroke:#dc2626;stroke-width:2}.line{stroke:#334155;stroke-width:3;marker-end:url(#arrow)}text{font-family:Arial,sans-serif;fill:#0f172a;font-size:15px}.title{font-size:22px;font-weight:bold}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
+  <text class="title" x="30" y="35">Boot Flow</text>
+  <rect class="box" x="330" y="70" width="220" height="45" rx="6"/><text x="372" y="98">Press power button</text>
+  <line class="line" x1="440" y1="115" x2="440" y2="150"/><rect class="box" x="330" y="150" width="220" height="45" rx="6"/><text x="370" y="178">System rails start</text>
+  <line class="line" x1="440" y1="195" x2="440" y2="230"/><rect class="box" x="330" y="230" width="220" height="45" rx="6"/><text x="372" y="258">POST hardware</text>
+  <line class="line" x1="440" y1="275" x2="440" y2="310"/><rect class="ok" x="330" y="310" width="220" height="45" rx="6"/><text x="365" y="338">Boot menu or BIOS</text>
+  <line class="line" x1="330" y1="332" x2="145" y2="332"/><rect class="box" x="40" y="302" width="105" height="60" rx="6"/><text x="60" y="327">Windows</text><text x="60" y="347">USB</text>
+  <line class="line" x1="550" y1="332" x2="745" y2="332"/><rect class="ok" x="745" y="302" width="115" height="60" rx="6"/><text x="765" y="327">NVMe</text><text x="765" y="347">Windows</text>
+  <line class="line" x1="440" y1="355" x2="440" y2="395"/><rect class="fix" x="330" y="395" width="220" height="45" rx="6"/><text x="360" y="423">Troubleshoot if POST fails</text>
+</svg>

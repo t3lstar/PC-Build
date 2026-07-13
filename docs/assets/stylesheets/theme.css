@@ -1,0 +1,81 @@
+:root {
+  --pc-accent: #0891b2;
+  --pc-accent-strong: #0e7490;
+  --pc-warning: #b45309;
+  --pc-panel: #f8fafc;
+  --pc-border: #cbd5e1;
+}
+
+[data-md-color-scheme="slate"] {
+  --pc-accent: #22d3ee;
+  --pc-accent-strong: #67e8f9;
+  --pc-warning: #f59e0b;
+  --pc-panel: #111827;
+  --pc-border: #334155;
+}
+
+.md-header,
+.md-tabs {
+  background: #0f172a;
+}
+
+.md-header__title {
+  font-weight: 700;
+}
+
+.md-typeset h1 {
+  font-weight: 760;
+  letter-spacing: 0;
+}
+
+.md-typeset h2 {
+  border-bottom: 1px solid var(--pc-border);
+  padding-bottom: .25rem;
+}
+
+.md-typeset a {
+  color: var(--pc-accent-strong);
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--pc-border);
+  border-radius: .35rem;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) th {
+  background: rgba(8, 145, 178, .12);
+}
+
+.md-typeset img[src*="assets/diagrams"] {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem 0 1.25rem;
+  padding: .75rem;
+  background: var(--pc-panel);
+  border: 1px solid var(--pc-border);
+  border-radius: .4rem;
+}
+
+.md-typeset .task-list-control .task-list-indicator::before {
+  background-color: var(--pc-accent);
+}
+
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: var(--pc-accent-strong);
+}
+
+.md-typeset code {
+  border-radius: .25rem;
+}
+
+.md-typeset .mermaid {
+  margin: 1rem 0;
+  padding: .75rem;
+  border: 1px solid var(--pc-border);
+  border-radius: .4rem;
+  background: var(--pc-panel);
+}

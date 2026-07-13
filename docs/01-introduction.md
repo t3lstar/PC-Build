@@ -53,6 +53,8 @@ See [Tools](05-tools.md) and the [Bill of Materials](appendix/bill-of-materials.
 
 ## Step-by-Step Instructions
 
+![Build sequence diagram](assets/diagrams/svg/build-sequence.svg)
+
 ```mermaid
 flowchart TD
     A["Confirm components and tools"] --> B["Prepare workspace and case"]

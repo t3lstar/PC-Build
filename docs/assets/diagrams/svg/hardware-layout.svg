@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Hardware layout</title>
+  <desc id="desc">Simplified layout of the case, motherboard, CPU, memory, NVMe SSD, GPU, PSU, radiator and intake fans.</desc>
+  <style>
+    .case{fill:#f8fafc;stroke:#0f172a;stroke-width:4}.mb{fill:#e2e8f0;stroke:#334155;stroke-width:3}.part{fill:#dbeafe;stroke:#2563eb;stroke-width:2}.hot{fill:#fee2e2;stroke:#dc2626;stroke-width:2}.power{fill:#fef3c7;stroke:#b45309;stroke-width:2}
+    text{font-family:Arial,sans-serif;fill:#0f172a;font-size:16px}.title{font-size:22px;font-weight:bold}
+  </style>
+  <text class="title" x="30" y="35">Hardware Layout</text>
+  <rect class="case" x="110" y="70" width="780" height="470" rx="12"/>
+  <rect class="hot" x="260" y="95" width="430" height="55" rx="6"/><text x="350" y="128">Top 360mm AIO radiator exhaust</text>
+  <rect class="mb" x="250" y="180" width="420" height="270" rx="8"/><text x="390" y="315">B850 motherboard</text>
+  <rect class="part" x="325" y="215" width="120" height="70" rx="6"/><text x="344" y="255">Ryzen CPU</text>
+  <rect class="part" x="485" y="205" width="45" height="125" rx="4"/><text x="490" y="350">A2</text>
+  <rect class="part" x="550" y="205" width="45" height="125" rx="4"/><text x="555" y="350">B2</text>
+  <rect class="part" x="325" y="345" width="250" height="30" rx="4"/><text x="370" y="366">Samsung NVMe SSD</text>
+  <rect class="part" x="280" y="400" width="350" height="42" rx="6"/><text x="380" y="427">RX 9060 XT GPU</text>
+  <rect class="power" x="700" y="370" width="140" height="85" rx="8"/><text x="724" y="418">ASUS PSU</text>
+  <circle class="part" cx="300" cy="505" r="30"/><circle class="part" cx="400" cy="505" r="30"/><circle class="part" cx="500" cy="505" r="30"/><text x="315" y="565">Bottom intake fans</text>
+  <circle class="part" cx="760" cy="230" r="30"/><circle class="part" cx="760" cy="315" r="30"/><text x="715" y="190">Side intake fans</text>
+</svg>
