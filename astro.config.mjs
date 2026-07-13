@@ -36,7 +36,10 @@ export default defineConfig({
         },
         {
           label: 'Architecture',
-          items: [{ label: 'ADR 0001', slug: 'project/adr-0001-digital-twin-architecture' }],
+          items: [
+            { label: 'ADR 0001', slug: 'project/adr-0001-digital-twin-architecture' },
+            { label: 'Accessibility Audit', slug: 'project/digital-twin-accessibility' },
+          ],
         },
       ],
     }),

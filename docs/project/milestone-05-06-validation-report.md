@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:33 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:36 BST.
 
 ## Passed Checks
 
@@ -129,6 +129,10 @@ Status: Active validation report. Last verified: 2026-07-13 16:33 BST.
 | Local full validation after issue #31 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; QR code validation passed; documentation validation passed; MkDocs reported 1.38 seconds; shell wall-clock total was 2.398 seconds. |
 | Starlight validation after issue #31 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 1.79 seconds; shell wall-clock total was 4.835 seconds. |
 | Maintenance history generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Maintenance and Upgrade History`, `Printable History Template`, `Monthly maintenance`, `Clear Local Entries`, and `No local history`. |
+| Milestone 6 issue #32 accessibility and static fallback review | Manual review of `docs/project/digital-twin-accessibility.md`, `src/content/docs/project/digital-twin-accessibility.md`, `src/content/docs/digital-twin/first-slice.mdx`, `astro.config.mjs`, `mkdocs.yml`, and `src/styles/starlight.css` | Added a digital twin accessibility and fallback audit, exposed it in MkDocs and Starlight navigation, added a no-JavaScript notice to the digital twin page, and documented keyboard, screen reader, reduced-motion, static fallback, verification labelling, and local privacy coverage. |
+| Local full validation after issue #32 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; QR code validation passed; documentation validation passed; MkDocs reported 2.25 seconds; shell wall-clock total was 3.922 seconds. |
+| Starlight validation after issue #32 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 8 pages built in 3.02 seconds after navigation update; shell wall-clock total was 7.918 seconds. |
+| Accessibility audit generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/project/digital-twin-accessibility/` and digital twin page content search | Passed. Generated pages contain `Digital Twin Accessibility`, `Static Fallback Inventory`, `Keyboard operation`, `No-JavaScript behavior`, and the digital twin no-JavaScript notice. |
 
 ## Warnings
 

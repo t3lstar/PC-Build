@@ -59,7 +59,8 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] Driver and firmware source dashboard.
 - [x] QR codes for stable official URLs.
 - [x] Local-only maintenance and upgrade history.
-- [ ] Accessibility, responsive, and data-integrity tests.
+- [x] Accessibility and static fallback coverage.
+- [ ] Responsive and data-integrity tests.
 
 ## Acceptance Criteria
 
@@ -67,9 +68,9 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] Digital twin data validates against JSON Schema.
 - [ ] Every interactive component maps to structured data.
 - [x] Cable routes and connector positions are verified or explicitly marked unverified in the structured data.
-- [x] Static fallbacks remain available for the implemented case view.
-- [x] Keyboard navigation and visible focus indicators work for the implemented case view.
-- [ ] Reduced-motion behavior is supported.
+- [x] Static fallbacks remain available for implemented interactive views.
+- [x] Keyboard navigation and visible focus indicators work for implemented interactive controls.
+- [x] Reduced-motion behavior is supported for implemented animated views.
 - [ ] The site remains static and deployable through GitHub Pages.
 - [ ] Performance remains reasonable on desktop and tablet.
 
@@ -120,7 +121,7 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] [#29: M6: Add driver and firmware source dashboard](https://github.com/t3lstar/PC-Build/issues/29) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#30: M6: Generate and validate official-link QR codes](https://github.com/t3lstar/PC-Build/issues/30) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#31: M6: Add maintenance and upgrade history](https://github.com/t3lstar/PC-Build/issues/31) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
-- [ ] [#32: M6: Complete accessibility and static fallbacks](https://github.com/t3lstar/PC-Build/issues/32)
+- [x] [#32: M6: Complete accessibility and static fallbacks](https://github.com/t3lstar/PC-Build/issues/32) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#33: M6: Add data, interaction and accessibility tests](https://github.com/t3lstar/PC-Build/issues/33)
 - [ ] [#34: M6: Milestone 6 final QA and release](https://github.com/t3lstar/PC-Build/issues/34)
 

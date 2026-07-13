@@ -51,6 +51,15 @@
   font-weight: 700;
 }
 
+.pc-noscript {
+  border: 1px solid var(--sl-color-accent);
+  border-radius: .4rem;
+  padding: .75rem;
+  background: var(--sl-color-accent-low);
+  color: var(--sl-color-accent-high);
+  font-weight: 700;
+}
+
 .pc-case-view {
   margin: 2rem 0;
 }
