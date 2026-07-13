@@ -1,6 +1,6 @@
 # PC Build Documentation Milestones
 
-This project will be delivered in four milestones so the repository can be built, reviewed, and improved in controlled stages.
+This project is delivered in controlled milestones so the repository can be built, reviewed, improved, and extended without losing completed work.
 
 ## Project Notes
 
@@ -42,6 +42,8 @@ This project will be delivered in four milestones so the repository can be built
 - Mermaid and PlantUML files should be retained as source assets, but the reader-facing chapter should embed a rendered SVG so all diagrams can use the same click-to-enlarge overlay.
 - Rendered SVG diagrams should preserve the technical detail and labels from their Mermaid or PlantUML source diagrams; do not simplify the reader-facing version in a way that loses build instructions or decision points.
 - Use the tracked MkDocs theme configuration and `docs/assets/stylesheets/theme.css` for site-level visual styling.
+- Use `docs/project/repository-audit.md`, `docs/project/verification-register.md`, and `docs/project/milestone-05-06-validation-report.md` for Milestones 5 and 6 planning and validation.
+- Keep detailed Milestone 5 and Milestone 6 plans under `milestones/`.
 
 ## Milestone 1: Repository Scaffolding
 
@@ -179,3 +181,47 @@ Refine the documentation into a publication-ready manual.
 - Links and navigation work.
 - Screenshots and diagrams render correctly.
 - The repository is suitable for publication on GitHub.
+
+## Milestone 5: Professional Engineering Edition
+
+GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/1
+
+Tracking issues: https://github.com/t3lstar/PC-Build/issues/5 through https://github.com/t3lstar/PC-Build/issues/18
+
+Status: Planned.
+
+Detailed plan: [milestones/milestone-05-professional-engineering.md](milestones/milestone-05-professional-engineering.md)
+
+Raise the existing documentation to publication-quality engineering documentation with stronger verification, checklists, troubleshooting, maintenance, benchmarking, validation automation, CI, and reproducible PDF/printable output.
+
+### Acceptance Criteria
+
+- HTML builds cleanly locally and in GitHub Actions.
+- PDF and standalone printable outputs build reproducibly or have a documented blocker.
+- Critical technical claims are verified or explicitly marked pending.
+- Troubleshooting decision trees render correctly.
+- Maintenance and benchmarking guidance is complete.
+- Validation commands are documented and repeatable.
+- GitHub issues reflect delivered work.
+
+## Milestone 6: Interactive Digital Twin Edition
+
+GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/2
+
+Tracking issues: https://github.com/t3lstar/PC-Build/issues/19 through https://github.com/t3lstar/PC-Build/issues/34
+
+Status: Planned.
+
+Detailed plan: [milestones/milestone-06-digital-twin.md](milestones/milestone-06-digital-twin.md)
+
+Add an accurate, maintainable interactive representation of the PC that supplements the static build guide while preserving accessibility, static fallbacks, and GitHub Pages compatibility.
+
+### Acceptance Criteria
+
+- Architecture ADR is accepted before implementation choices are locked in.
+- Digital twin data validates against JSON Schema.
+- Every interactive component maps to structured data.
+- Cable routes and connector positions are verified or explicitly marked unverified.
+- Static fallbacks remain available.
+- Keyboard navigation, visible focus indicators, and reduced-motion behavior work.
+- The site remains static and deployable through GitHub Pages.

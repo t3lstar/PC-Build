@@ -25,6 +25,21 @@ Examples include Python versions, Node.js versions, GitHub Pages behavior, build
 
 Do not leave durable project knowledge only in chat history.
 
+Milestones 1-4 are complete for the GitHub Pages HTML release. Preserve that work and extend it through:
+
+1. Milestone 5 - Professional Engineering Edition
+2. Milestone 6 - Interactive Digital Twin Edition
+
+Use `MILESTONES.md`, `milestones/`, and `docs/project/` as the planning source of truth for those later milestones.
+
+Do not recreate the repository, duplicate active pages, or overwrite good existing content when extending the project.
+
+Keep source files and generated output separate:
+
+- Source documentation lives in `docs/`, `milestones/`, root project files, scripts, and workflow files.
+- Generated MkDocs output lives in `site/` and should not be committed.
+- Future generated PDF, printable, diagram, QR, or digital twin outputs must have documented output locations before they are committed.
+
 --------------------------------------------------
 BUILD SPECIFICATION
 --------------------------------------------------
@@ -209,6 +224,28 @@ Ensure the published site output includes .nojekyll.
 Document the publication workflow in docs/appendix/publishing.md.
 
 --------------------------------------------------
+PROJECT PLANNING
+--------------------------------------------------
+
+Maintain milestone planning in:
+
+MILESTONES.md
+
+milestones/
+
+docs/project/
+
+Use docs/project/repository-audit.md for repository audit findings.
+
+Use docs/project/verification-register.md for claims that still need official-source verification.
+
+Use docs/project/milestone-05-06-validation-report.md for validation commands and outcomes during Milestones 5 and 6.
+
+GitHub issues for milestone work should include summary, user value, scope, out of scope, dependencies, implementation notes, acceptance criteria, validation steps, documentation impact, risks or open questions, and definition of done.
+
+Use checkboxes for acceptance criteria.
+
+--------------------------------------------------
 DOCUMENTATION REQUIREMENTS
 --------------------------------------------------
 
@@ -260,6 +297,14 @@ Do not scatter retailer links throughout installation chapters unless there is a
 
 RAM and SSD alternatives are acceptable when they preserve the intended platform requirements and performance class.
 
+Do not fabricate technical details, connector positions, benchmark scores, URLs, screenshots, compatibility claims, BIOS menu names, or hardware measurements.
+
+Use official manufacturer documentation as the authoritative source where available.
+
+Clearly mark unresolved or unverified claims in docs/project/verification-register.md.
+
+Product images are visual aids only. Model numbers and official documentation remain the source of truth.
+
 --------------------------------------------------
 DIAGRAMS
 --------------------------------------------------
@@ -309,6 +354,16 @@ Airflow
 Do NOT use AI-generated artwork.
 
 Diagrams must be technically accurate.
+
+For reader-facing diagrams, keep source and rendered assets traceable. Mermaid and PlantUML source files should remain in docs/assets/diagrams/ and rendered SVGs should remain visible in the site.
+
+For future interactive or digital twin diagrams:
+
+- Verify connector positions before displaying them as exact.
+- Provide static accessible fallbacks.
+- Support keyboard navigation and visible focus states.
+- Respect reduced-motion preferences.
+- Do not use heavy 3D tooling unless an accepted ADR demonstrates a clear user benefit.
 
 --------------------------------------------------
 BUILD ORDER
@@ -420,11 +475,11 @@ MemTest86
 
 HWInfo
 
-Expected temperatures
+Expected temperature ranges
 
-Expected benchmark scores
+Benchmark baseline procedure and user-recorded results
 
-Expected power consumption
+Power consumption observation procedure
 
 --------------------------------------------------
 QUALITY
@@ -439,6 +494,27 @@ Assume the reader is building their first PC.
 Every step should be verifiable.
 
 Everything should be technically accurate.
+
+Keep the guide suitable for a first-time PC builder.
+
+Prefer official-source citations for technical claims.
+
+Avoid invented screenshots or simulated UI that could be mistaken for the exact firmware or Windows interface.
+
+If a BIOS simulator is added later, clearly label it as training material because firmware appearance and menu names may vary by BIOS version.
+
+Accessibility requirements for new interactive work:
+
+- Keyboard navigation
+- Meaningful focus order
+- Visible focus indicators
+- Screen-reader labels
+- Text alternatives
+- Reduced-motion behavior
+- High contrast
+- Zoom tolerance
+- Static non-interactive fallback
+- Touch-friendly controls where appropriate
 
 --------------------------------------------------
 OUTPUT
