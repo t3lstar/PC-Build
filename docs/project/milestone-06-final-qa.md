@@ -14,7 +14,7 @@ Record the final QA state for Milestone 6 after the checkpoint push, GitHub Acti
 - Static fallbacks and no-JavaScript behavior.
 - Official-link QR code generation and validation.
 - Local-only maintenance history behavior.
-- MkDocs project documentation remains buildable while Starlight stays local.
+- MkDocs project documentation remains buildable while the Starlight first slice is published under `/digital-twin/first-slice/`.
 
 ## Local Implementation State
 
@@ -36,7 +36,7 @@ Record the final QA state for Milestone 6 after the checkpoint push, GitHub Acti
 | `#31` Maintenance and upgrade history | Implemented locally. |
 | `#32` Accessibility and static fallbacks | Implemented locally. |
 | `#33` Data, interaction, and accessibility tests | Implemented locally. |
-| `#34` Final QA and release | Local QA in progress; checkpoint push and release verification remain pending. |
+| `#34` Final QA and release | Published and verified. |
 
 ## Validation Evidence
 
@@ -61,6 +61,8 @@ Latest local result:
 | `./scripts/validate.sh starlight` | Passed. Astro built 8 static pages in 1.80 seconds; shell wall-clock total was 5.038 seconds. |
 | Built Starlight output size | `dist/` is 3.3M. |
 | QR asset size | `public/assets/qrcodes/` is 176K. |
+| GitHub Actions release run | Passed. Run `29264219489` deployed commit `21e4fc0`. |
+| Live digital twin route | Passed. `https://t3lstar.github.io/PC-Build/digital-twin/first-slice/` returned HTTP 200 and contains the Starlight digital twin. |
 
 ## Release State
 

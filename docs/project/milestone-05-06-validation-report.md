@@ -142,6 +142,8 @@ Status: Active validation report. Last verified: 2026-07-13 16:54 BST.
 | Component inspector generated HTML check | `rg -n "Component Inspector|Static Component Inspector List|aria-pressed|aria-live" dist/digital-twin/first-slice/index.html` | Passed. Built Starlight HTML contains the component inspector, static component fallback, selected-state controls, and live detail region. |
 | Starlight output size check | `du -sh dist public/assets/qrcodes src/components data/digital-twin/build.json` | Passed. Built Starlight output is 3.3M; committed QR SVG assets are 176K; component sources are 64K; structured data file is 52K. |
 | Combined Pages artifact build | `. .venv/bin/activate && ./scripts/build.sh html && ./scripts/build-digital-twin-site.sh` | Builds MkDocs into `site/`, builds Starlight into `dist/`, and merges the digital twin route and assets into `site/` for GitHub Pages publication. |
+| Corrected Milestone 6 Pages deployment | GitHub Actions run `29264219489` for commit `21e4fc0` | Passed. The workflow built the combined MkDocs and Starlight artifact and deployed it to GitHub Pages. |
+| Live digital twin route | `curl -L https://t3lstar.github.io/PC-Build/digital-twin/first-slice/` with content search | Passed. The route returned HTTP 200 and contains `Digital Twin First Slice`, `Component Inspector`, `Interactive Case View`, and `Official-Link QR Codes`. |
 
 ## Warnings
 
