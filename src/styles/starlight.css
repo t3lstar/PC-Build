@@ -10,6 +10,15 @@
   --sl-color-accent-high: #cffafe;
 }
 
+.sl-markdown-content li:has(> input[type='checkbox']) {
+  list-style: none;
+}
+
+.sl-markdown-content li > input[type='checkbox']:first-child {
+  margin-left: -1.25rem;
+  margin-right: .35rem;
+}
+
 .pc-hero-image,
 .pc-diagram {
   display: block;

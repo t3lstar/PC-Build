@@ -238,6 +238,11 @@ def validate_source(errors: list[str]) -> None:
             FORBIDDEN_TERM not in raw_text.lower(),
             f"{markdown_file.relative_to(ROOT)} contains an old site-generator reference.",
         )
+        require(
+            errors,
+            not any(line.startswith("Status:") for line in raw_text.splitlines()),
+            f"{markdown_file.relative_to(ROOT)} contains reader-facing project status metadata.",
+        )
         text = strip_code_fences(raw_text)
         for regex in (LINK_RE, IMAGE_RE):
             for match in regex.finditer(text):
