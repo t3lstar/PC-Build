@@ -1,6 +1,6 @@
 # Custom Gaming PC Build Manual
 
-Status: Initial Milestone 2 content. Last updated: 2026-07-13 11:34 BST.
+Status: Publication-ready HTML site. Last updated: 2026-07-13 12:19 BST.
 
 This site is the build manual for a custom Windows 11 Pro gaming PC based on AMD AM5, DDR5, NVMe storage, and a Radeon graphics card.
 
@@ -34,6 +34,8 @@ Use the guide in order:
 
 ## Documentation Status
 
-Milestone 1 repository scaffolding, Milestone 2 core content, and Milestone 3 technical diagrams are complete. Milestone 4 will focus on polish, styling, screenshots where appropriate, and PDF generation.
+Milestone 1 repository scaffolding, Milestone 2 core content, Milestone 3 technical diagrams, and Milestone 4 HTML site polish are complete.
+
+PDF and standalone printable manual generation are deferred to a later enhancement. The current publication target is the GitHub Pages HTML site.
 
 See `MILESTONES.md` for the roadmap and acceptance criteria.

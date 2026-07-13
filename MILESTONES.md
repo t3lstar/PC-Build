@@ -158,6 +158,8 @@ Add technically accurate diagrams that support the written build guide.
 
 Tracking issue: https://github.com/t3lstar/PC-Build/issues/3
 
+Status: Complete for the GitHub Pages HTML release.
+
 Refine the documentation into a publication-ready manual.
 
 ### Scope
