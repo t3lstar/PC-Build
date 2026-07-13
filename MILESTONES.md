@@ -19,6 +19,7 @@ This project will be delivered in four milestones so the repository can be built
 - Keep exact component identification and purchase links in `docs/appendix/bill-of-materials.md`.
 - Prefer manufacturer product pages for stable reference links and amazon.co.uk for retailer purchase links.
 - Treat retailer links as convenience links because price, stock, and listing details can change.
+- Compatibility guidance must state the verification result and evidence. Do not leave reader-facing instructions such as "check the QVL" when compatibility can be verified and documented in the repository.
 - Use one parameterized build script at `scripts/build.sh` with `html`, `pdf`, `printable`, and `all` targets.
 - Include `requirements.txt` for MkDocs and documentation build dependencies.
 - Use Python 3.12, Node.js 24, and a local `.venv` for local dependencies; ignore `.venv` in Git.

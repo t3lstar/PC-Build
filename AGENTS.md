@@ -254,6 +254,8 @@ Prefer amazon.co.uk for retailer purchase links.
 
 Retailer links should be treated as convenience links because prices, stock and listings may change.
 
+Compatibility notes should state the verification result and evidence. Do not leave compatibility work to the reader with vague instructions such as "check the QVL" when it can be verified and documented in the repository.
+
 Do not scatter retailer links throughout installation chapters unless there is a strong reason.
 
 RAM and SSD alternatives are acceptable when they preserve the intended platform requirements and performance class.

@@ -15,7 +15,7 @@ Retailer links are convenience links. Confirm seller, price, warranty terms, del
 | CPU | AMD Ryzen 7 7800X3D | Boxed product ID `100-100000910WOF`; AM5; Windows 11 supported | [AMD Ryzen 7 7800X3D](https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-7-7800x3d.html) | [Amazon UK](https://www.amazon.co.uk/AMD-7800X3D-Desk-top-Processor-16-thread/dp/B0BTZB7F88) | Compatible with the AM5 motherboard. |
 | CPU cooler | ARCTIC Liquid Freezer III Pro 360 | `ACFRE00180A`; 360mm AIO; AM5 mounting; 398 x 120 x 38mm radiator | [ARCTIC Liquid Freezer III Pro 360](https://www.arctic.de/en/Liquid-Freezer-III-Pro-360/ACFRE00180A) | [Amazon UK](https://www.amazon.co.uk/ARCTIC-Liquid-Freezer-III-Pro/dp/B0F2NBKT86) | Compatible with AM5. Dry-fit because the radiator is thicker than many 360mm AIO radiators. |
 | Motherboard | Gigabyte B850 AORUS Elite WiFi7 | Rev. 1.x; AMD B850; AM5; ATX; DDR5; Wi-Fi 7 | [Gigabyte B850 AORUS Elite WiFi7](https://www.gigabyte.com/Motherboard/B850-AORUS-ELITE-WIFI7-rev-1x/sp) | [Amazon UK](https://www.amazon.co.uk/GIGABYTE-B850-AORUS-ELITE-Motherboard/dp/B0DQM8GPR7) | Compatible with Ryzen 7000-series CPUs, DDR5 memory, ATX cases, and Windows 11. |
-| Memory | 32GB DDR5-6000 CL30 AMD EXPO | Preferred kit: G.SKILL Flare X5 `F5-6000J3038F16GX2-FX5`; 2 x 16GB; DDR5-6000 CL30; AMD EXPO | [G.SKILL Flare X5](https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5) | [Amazon UK](https://www.amazon.co.uk/G-SKILL-2x16GB-CL30-38-38-96-Desktop-Computer-matte-black/dp/B0C1TKSDKR) | Compatible target specification for AM5. Check Gigabyte QVL before final purchase. |
+| Memory | 32GB DDR5-6000 CL30 AMD EXPO | Preferred kit: G.SKILL Flare X5 `F5-6000J3038F16GX2-FX5`; 2 x 16GB; DDR5-6000 CL30; AMD EXPO | [G.SKILL Flare X5](https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5) | [Amazon UK](https://www.amazon.co.uk/G-SKILL-2x16GB-CL30-38-38-96-Desktop-Computer-matte-black/dp/B0C1TKSDKR) | Selected. G.SKILL QVL lists this kit for the Gigabyte B850 AORUS Elite WiFi7 motherboard. |
 | SSD | Samsung 990 EVO Plus 2TB NVMe | `MZ-V9S2T0`; M.2 2280; PCIe 4.0 x4 / PCIe 5.0 x2; NVMe 2.0 | [Samsung 990 EVO Plus data sheet](https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf) | [Amazon UK](https://www.amazon.co.uk/Technology-Intelligent-Turbowrite-MZ-V9S2T0B-AM/dp/B0DHLCRF91) | Compatible with the motherboard M.2 slots. Use a motherboard heatsink. |
 | GPU | Gigabyte Radeon RX 9060 XT Gaming OC 16GB | `GV-R9060XTGAMING-OC-16GD`; 16GB GDDR6; PCIe 5.0; 281 x 118 x 40mm; 1 x 8-pin PCIe power | [Gigabyte RX 9060 XT Gaming OC 16G](https://www.gigabyte.com/Graphics-Card/GV-R9060XTGAMING-OC-16GD/sp) | [Amazon UK](https://www.amazon.co.uk/Gigabyte-Radeon-9060-GAMING-Graphics/dp/B0F7HTR8DQ) | Compatible with the PCIe x16 slot, case GPU clearance, and PSU capacity. |
 | Case | Lian Li O11 Dynamic Mini V2 Flow | `O11DMIV2FX`; ATX support; top 360mm radiator support; ATX PSU support under 200mm; 400mm GPU clearance | [Lian Li O11 Dynamic Mini V2](https://lian-li.com/product/o11-dynamic-mini-v2/) | [Amazon UK](https://www.amazon.co.uk/Mid-Tower-Panoramic-High-Performance-Management-O11DMIV2FX-Black/dp/B0F8HK5C8J) | Compatible with the ATX motherboard, 281mm GPU, 150mm PSU, and 360mm radiator target. |
@@ -40,13 +40,24 @@ Acceptable examples:
 
 | Alternative | Manufacturer reference | Amazon UK link | Notes |
 | --- | --- | --- | --- |
-| Corsair Vengeance 32GB `CMK32GX5M2B6000Z30` | [Corsair Vengeance DDR5-6000 CL30 AMD EXPO](https://www.corsair.com/us/en/p/memory/cmk32gx5m2b6000z30/vengeance-32gb-2x16gb-ddr5-dram-6000mt-s-cl30-amd-expo-memory-black-cmk32gx5m2b6000z30) | [Amazon UK](https://www.amazon.co.uk/CORSAIR-VENGEANCE-6000MHz-Compatible-Computer/dp/B0CBRJ63RT) | Meets the DDR5-6000 CL30 EXPO target. Check motherboard QVL before purchase. |
-| G.SKILL Flare X5 `F5-6000J3038F16GX2-FX5` | [G.SKILL Flare X5](https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5) | [Amazon UK](https://www.amazon.co.uk/G-SKILL-2x16GB-CL30-38-38-96-Desktop-Computer-matte-black/dp/B0C1TKSDKR) | Preferred kit. Low-profile 33mm module height. |
+| G.SKILL Flare X5 `F5-6000J3038F16GX2-FX5` | [G.SKILL Flare X5](https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5) and [G.SKILL QVL](https://www.gskill.com/qvl/165/396/1673491242/F5-6000J3038F16GX2-FX5-QVL) | [Amazon UK](https://www.amazon.co.uk/G-SKILL-2x16GB-CL30-38-38-96-Desktop-Computer-matte-black/dp/B0C1TKSDKR) | Preferred kit. G.SKILL lists the Gigabyte B850 AORUS Elite WiFi7 on the kit QVL. Low-profile 33mm module height. |
+| G.SKILL Trident Z5 Neo `F5-6000J3038F16GX2-TZ5N` | [G.SKILL Trident Z5 Neo QVL](https://www.gskill.com/qvl/165/393/1661410171/F5-6000J3038F16GX2-TZ5N-QVL) | [Amazon UK](https://www.amazon.co.uk/G-Skill-Trident-288-Pin-CL30-38-38-96-F5-6000J3038F16GX2-TZ5N-Matte-Black/dp/B0BFCV7JZ8) | Acceptable alternative. G.SKILL lists the Gigabyte B850 AORUS Elite WiFi7 on the kit QVL. Taller RGB-free heatsink than Flare X5. |
+
+## RAM Compatibility Evidence
+
+| Evidence item | Result |
+| --- | --- |
+| CPU platform | AMD Ryzen 7 7800X3D uses the AM5 platform and supports DDR5 memory. |
+| Motherboard memory type | Gigabyte B850 AORUS Elite WiFi7 supports DDR5 memory and AMD EXPO memory modules. |
+| Selected RAM platform support | G.SKILL describes Flare X5 as designed for DDR5-enabled AMD AM5 platforms with AMD EXPO profiles. |
+| Selected RAM motherboard listing | G.SKILL QVL for `F5-6000J3038F16GX2-FX5` lists `B850 AORUS ELITE WIFI7`. |
+| Accepted alternative listing | G.SKILL QVL for `F5-6000J3038F16GX2-TZ5N` lists `B850 AORUS ELITE WIFI7`. |
+| Build decision | Use G.SKILL Flare X5 `F5-6000J3038F16GX2-FX5` as the preferred kit. Use G.SKILL Trident Z5 Neo `F5-6000J3038F16GX2-TZ5N` only as an approved alternative. Do not list Corsair Vengeance `CMK32GX5M2B6000Z30` as approved unless its compatibility is verified and documented later. |
 
 Avoid:
 
 - DDR4 memory. It is physically incompatible with this motherboard.
-- Four-DIMM kits unless there is a specific reason and the memory support list confirms the target speed.
+- Four-DIMM kits unless a specific four-module kit is verified and documented.
 - Non-EXPO kits when an EXPO kit is available at a similar price.
 - Mixing separate 16GB modules or separate 2 x 16GB kits.
 
@@ -83,7 +94,7 @@ Avoid:
 | --- | --- | --- |
 | CPU and motherboard | Pass | The motherboard is AM5 and supports AMD Ryzen 7000-series processors. |
 | CPU cooler and CPU socket | Pass | The ARCTIC cooler includes AM5 support. |
-| Memory and motherboard | Pass | The motherboard supports DDR5 and AMD EXPO memory profiles. DDR5-6000 is within the supported overclocked memory range. |
+| Memory and motherboard | Pass | The selected G.SKILL Flare X5 kit is listed by G.SKILL as compatible with the Gigabyte B850 AORUS Elite WiFi7 motherboard. The board supports DDR5 and AMD EXPO memory profiles. |
 | SSD and motherboard | Pass | The Samsung 990 EVO Plus is M.2 2280 NVMe and fits the motherboard M.2 slots. |
 | GPU and case | Pass | The GPU is 281mm long; the case supports GPUs up to the 400mm class. |
 | GPU and PSU | Pass | The GPU requires one 8-pin PCIe connector and recommends a 450W PSU; the selected PSU is 1000W and provides PCIe power headroom. |
@@ -96,10 +107,9 @@ Avoid:
 
 - Confirm each retailer listing matches the exact model number in this page.
 - Confirm the motherboard revision and BIOS support before assembly.
-- Check the Gigabyte memory support list for the chosen RAM kit.
+- Use one of the RAM kits explicitly listed in this page. Do not add another kit unless its motherboard compatibility has been verified and documented here.
 - Confirm the case colour and variant: `O11DMIV2FX` for black Flow.
 - Confirm the GPU listing is the 16GB model, not the 8GB model.
 - Confirm the SSD listing is the 2TB model.
 - Confirm the PSU listing is the ASUS TUF Gaming 1000W Gold, not a lower-wattage variant.
 - Keep invoices and serial numbers outside the public repository.
-
