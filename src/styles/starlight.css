@@ -329,3 +329,121 @@
     min-height: 30rem;
   }
 }
+
+.pc-cable-routing {
+  margin: 2rem 0;
+}
+
+.pc-cable-routing__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 24rem);
+  gap: 1rem;
+}
+
+.pc-cable-routing__stage {
+  min-height: 32rem;
+  overflow: hidden;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .5rem;
+  background: #f8fafc;
+}
+
+.pc-cable-routing__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 32rem;
+}
+
+.pc-cable-routing__psu {
+  fill: #fde68a;
+  stroke: #92400e;
+  stroke-width: .5;
+}
+
+.pc-cable-routing__motherboard {
+  fill: #dbeafe;
+  stroke: #1e3a8a;
+  stroke-width: .5;
+}
+
+.pc-cable-routing__gpu {
+  fill: #ddd6fe;
+  stroke: #6d28d9;
+  stroke-width: .5;
+}
+
+.pc-cable-routing__label {
+  fill: #0f172a;
+  font-size: .23rem;
+  font-weight: 700;
+}
+
+.pc-cable-routing__path {
+  fill: none;
+  stroke: var(--route-color);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  opacity: .18;
+  transition: opacity .16s ease, stroke-width .16s ease;
+}
+
+.pc-cable-routing__path[data-active='true'] {
+  stroke-width: 2.7;
+  opacity: 1;
+}
+
+.pc-cable-routing__controls {
+  display: grid;
+  gap: 1rem;
+}
+
+.pc-cable-routing__button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: .5rem;
+}
+
+.pc-cable-routing__button {
+  min-height: 3rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .35rem;
+  padding: .55rem .65rem;
+  background: var(--sl-color-gray-6);
+  color: inherit;
+  font: inherit;
+  font-size: .85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pc-cable-routing__button:hover,
+.pc-cable-routing__button:focus-visible,
+.pc-cable-routing__button[aria-pressed='true'] {
+  border-color: var(--sl-color-accent);
+  outline: 3px solid var(--sl-color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pc-cable-routing__path {
+    transition: none;
+  }
+}
+
+@media (max-width: 56rem) {
+  .pc-cable-routing__layout {
+    display: block;
+  }
+
+  .pc-cable-routing__stage,
+  .pc-cable-routing__svg {
+    min-height: 26rem;
+  }
+
+  .pc-cable-routing__controls {
+    margin-top: 1rem;
+  }
+}

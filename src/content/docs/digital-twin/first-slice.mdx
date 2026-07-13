@@ -6,6 +6,7 @@ description: Data-backed Starlight first slice for the interactive digital twin.
 import DigitalTwinSummary from '../../../components/DigitalTwinSummary.astro';
 import DigitalTwinCaseView from '../../../components/DigitalTwinCaseView.astro';
 import DigitalTwinConnectorMap from '../../../components/DigitalTwinConnectorMap.astro';
+import DigitalTwinCableRouting from '../../../components/DigitalTwinCableRouting.astro';
 
 This page proves that Starlight can render interactive components from the framework-neutral digital twin data model.
 
@@ -14,6 +15,8 @@ This page proves that Starlight can render interactive components from the frame
 <DigitalTwinCaseView />
 
 <DigitalTwinConnectorMap />
+
+<DigitalTwinCableRouting />
 
 ## Static Fallback
 
@@ -25,3 +28,4 @@ If JavaScript is unavailable, this page must still explain the state of the digi
 - Airflow has text fallback content before animation is added.
 - The case view includes a static zone list.
 - The connector map includes a static connector list.
+- Cable-routing mode includes a static cable route list.

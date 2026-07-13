@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:05 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:08 BST.
 
 ## Passed Checks
 
@@ -95,6 +95,10 @@ Status: Active validation report. Last verified: 2026-07-13 16:05 BST.
 | Local full validation after issue #23 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.81 seconds; shell wall-clock total was 4.409 seconds. |
 | Starlight validation after issue #23 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.23 seconds; shell wall-clock total was 7.791 seconds. |
 | Motherboard connector map generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Motherboard Connector Map`, `Static Connector List`, and key connector labels including `ATX_24PIN`, `CPU_FAN`, `F_PANEL`, and `M2A_CPU`. |
+| Milestone 6 issue #24 cable-routing mode review | Manual review of `src/components/DigitalTwinCableRouting.astro`, `src/content/docs/digital-twin/first-slice.mdx`, `src/styles/starlight.css`, and `data/digital-twin/build.json` | Added a data-backed cable-routing mode with selectable route buttons, isolated SVG route highlighting, endpoint labels, route-zone text, dependency notes, verification state display, reduced-motion styling, and static cable route fallback. |
+| Local full validation after issue #24 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.20 seconds; shell wall-clock total was 2.127 seconds. |
+| Starlight validation after issue #24 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.30 seconds; shell wall-clock total was 6.115 seconds. |
+| Cable-routing mode generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Cable-Routing Mode`, `Static Cable Route List`, `24-pin ATX`, `CPU EPS`, `PCIe 8-pin`, and `ARCTIC AIO` route content. |
 
 ## Warnings
 

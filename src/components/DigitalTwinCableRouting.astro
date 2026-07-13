@@ -1,0 +1,192 @@
+---
+import digitalTwin from '../../data/digital-twin/build.json';
+
+const connectorsById = new Map(digitalTwin.connectors.map((connector) => [connector.id, connector]));
+const locationsById = new Map(digitalTwin.locations.map((location) => [location.id, location]));
+
+const pathData = new Map([
+  ['atx-24-pin-cable', { d: 'M78 77 C83 68 83 55 78 45', color: '#dc2626' }],
+  ['cpu-eps-cable', { d: 'M78 77 C70 48 55 18 24 15', color: '#b91c1c' }],
+  ['gpu-pcie-power-cable', { d: 'M78 77 C68 70 62 66 50 64', color: '#7c3aed' }],
+  ['front-panel-cable', { d: 'M18 78 C30 86 56 90 75 89', color: '#9333ea' }],
+  ['front-usb-a-cable', { d: 'M18 78 C42 78 69 69 83 67', color: '#2563eb' }],
+  ['front-usb-c-cable', { d: 'M18 78 C43 82 70 77 84 76', color: '#1d4ed8' }],
+  ['front-audio-cable', { d: 'M18 78 C24 88 33 91 45 90', color: '#6d28d9' }],
+  ['aio-all-in-one-cable', { d: 'M50 12 C58 16 68 19 76 20', color: '#0f766e' }],
+  ['optional-sata-power-cable', { d: 'M78 77 C65 84 42 84 18 78', color: '#64748b' }],
+]);
+
+function endpointLabel(endpointId: string) {
+  return (
+    connectorsById.get(endpointId)?.label ??
+    locationsById.get(endpointId)?.label ??
+    endpointId
+  );
+}
+
+function routeLabel(routeId: string) {
+  return locationsById.get(routeId)?.label ?? routeId;
+}
+
+const routes = digitalTwin.cables.map((cable) => {
+  const path = pathData.get(cable.id);
+  return {
+    ...cable,
+    path: path?.d ?? 'M10 90 L90 10',
+    color: path?.color ?? '#64748b',
+    fromLabel: endpointLabel(cable.from),
+    toLabel: endpointLabel(cable.to),
+    routeLabels: cable.route.map(routeLabel).join(' > '),
+    dependencyText: cable.dependencyNotes?.join(' ') ?? 'No special dependency notes.',
+  };
+});
+
+const firstRoute = routes[0];
+---
+
+<section class="pc-cable-routing" aria-labelledby="pc-cable-routing-heading">
+  <div class="pc-case-view__header">
+    <div>
+      <h2 id="pc-cable-routing-heading">Cable-Routing Mode</h2>
+      <p>
+        Select a cable to isolate its schematic route, endpoint labels, routing zones, and build
+        dependency notes. Routes are planning guides, not measured cable coordinates.
+      </p>
+    </div>
+    <span class="pc-status">route isolation</span>
+  </div>
+
+  <div class="pc-cable-routing__layout">
+    <div class="pc-cable-routing__stage" aria-label="Schematic cable routing view">
+      <svg class="pc-cable-routing__svg" viewBox="0 0 100 100" role="img" aria-labelledby="cable-svg-title cable-svg-desc">
+        <title id="cable-svg-title">Schematic cable routing mode</title>
+        <desc id="cable-svg-desc">
+          Simplified case and motherboard layout with selectable cable routes between PSU, rear
+          cable chamber, motherboard, GPU, front-panel, and AIO zones.
+        </desc>
+        <rect class="pc-case-view__shell" x="8" y="5" width="84" height="88" rx="3" />
+        <rect class="pc-case-view__glass" x="20" y="19" width="58" height="56" rx="2" />
+        <rect class="pc-cable-routing__psu" x="70" y="70" width="16" height="14" rx="2" />
+        <rect class="pc-cable-routing__motherboard" x="30" y="24" width="40" height="46" rx="2" />
+        <rect class="pc-cable-routing__gpu" x="35" y="60" width="34" height="8" rx="1" />
+        <text class="pc-cable-routing__label" x="78" y="79" text-anchor="middle">PSU</text>
+        <text class="pc-cable-routing__label" x="50" y="48" text-anchor="middle">Board</text>
+        <text class="pc-cable-routing__label" x="52" y="66" text-anchor="middle">GPU</text>
+        {
+          routes.map((route, index) => (
+            <path
+              class="pc-cable-routing__path"
+              d={route.path}
+              data-route-id={route.id}
+              style={`--route-color:${route.color};`}
+              aria-hidden="true"
+              data-active={index === 0 ? 'true' : 'false'}
+            />
+          ))
+        }
+      </svg>
+    </div>
+
+    <div class="pc-cable-routing__controls" aria-label="Cable route selector">
+      <div class="pc-cable-routing__button-grid">
+        {
+          routes.map((route, index) => (
+            <button
+              class="pc-cable-routing__button"
+              type="button"
+              data-route-id={route.id}
+              data-label={route.label}
+              data-kind={route.kind}
+              data-from={route.fromLabel}
+              data-to={route.toLabel}
+              data-route={route.routeLabels}
+              data-dependencies={route.dependencyText}
+              data-verification={route.evidence.state}
+              aria-describedby="pc-cable-routing-selected"
+              aria-pressed={index === 0 ? 'true' : 'false'}
+            >
+              {route.label}
+            </button>
+          ))
+        }
+      </div>
+
+      <aside class="pc-case-view__details" id="pc-cable-routing-selected" aria-live="polite">
+        <h3>{firstRoute.label}</h3>
+        <dl>
+          <div>
+            <dt>Kind</dt>
+            <dd>{firstRoute.kind}</dd>
+          </div>
+          <div>
+            <dt>From</dt>
+            <dd>{firstRoute.fromLabel}</dd>
+          </div>
+          <div>
+            <dt>To</dt>
+            <dd>{firstRoute.toLabel}</dd>
+          </div>
+          <div>
+            <dt>Route</dt>
+            <dd>{firstRoute.routeLabels}</dd>
+          </div>
+          <div>
+            <dt>Dependencies</dt>
+            <dd>{firstRoute.dependencyText}</dd>
+          </div>
+          <div>
+            <dt>Verification</dt>
+            <dd>{firstRoute.evidence.state}</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+
+  <details class="pc-case-view__fallback">
+    <summary>Static Cable Route List</summary>
+    <ul>
+      {
+        routes.map((route) => (
+          <li>
+            <strong>{route.label}</strong>: {route.fromLabel} to {route.toLabel}. Route:
+            {' '}{route.routeLabels}. Verification: {route.evidence.state}.
+          </li>
+        ))
+      }
+    </ul>
+  </details>
+</section>
+
+<script>
+  const root = document.querySelector('.pc-cable-routing');
+  const details = root?.querySelector('.pc-case-view__details');
+  const title = details?.querySelector('h3');
+  const values = details?.querySelectorAll('dd');
+  const paths = root?.querySelectorAll('.pc-cable-routing__path');
+
+  function setActive(button) {
+    if (!details || !title || !values || values.length < 6) return;
+
+    root?.querySelectorAll('.pc-cable-routing__button').forEach((item) => {
+      item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+    });
+
+    paths?.forEach((path) => {
+      path.setAttribute('data-active', path.getAttribute('data-route-id') === button.dataset.routeId ? 'true' : 'false');
+    });
+
+    title.textContent = button.dataset.label ?? '';
+    values[0].textContent = button.dataset.kind ?? '';
+    values[1].textContent = button.dataset.from ?? '';
+    values[2].textContent = button.dataset.to ?? '';
+    values[3].textContent = button.dataset.route ?? '';
+    values[4].textContent = button.dataset.dependencies ?? '';
+    values[5].textContent = button.dataset.verification ?? '';
+  }
+
+  root?.querySelectorAll('.pc-cable-routing__button').forEach((button) => {
+    button.addEventListener('click', () => setActive(button));
+    button.addEventListener('focus', () => setActive(button));
+  });
+</script>
