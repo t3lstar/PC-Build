@@ -33,8 +33,10 @@ Status: Active validation report. Last verified: 2026-07-13 14:49 BST.
 | Local Python 3.12 environment recreated | `uv venv --python 3.12 .venv` and `uv pip install -r requirements.txt` | Created CPython 3.12.12 `.venv` and installed documentation dependencies. |
 | Local HTML build after moving checkout | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.96 seconds; shell wall-clock total was 3.515 seconds. |
 | Local HTML build after documenting checkout move | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.91 seconds; shell wall-clock total was 1.346 seconds. |
-| Milestone 5 issue #14 CI speed-up | `.github/workflows/deploy-pages.yml` review and Astral uv GitHub Actions documentation | Switched CI dependency installation from pip cache to `astral-sh/setup-uv@v6` with uv cache enabled and `uv pip install --system -r requirements.txt`. |
+| Milestone 5 issue #14 CI speed-up | `.github/workflows/deploy-pages.yml` review and GitHub Actions run timings | Switched CI dependency installation to `uv pip install --system -r requirements.txt` while keeping `actions/setup-python@v6` pip caching. |
+| GitHub Actions uv action correction | GitHub Actions run `29255643234` annotation review | Removed `astral-sh/setup-uv@v6` because it emitted a Node.js 20 deprecation annotation while GitHub forced it to Node.js 24. |
 | Local HTML build after CI speed-up | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.93 seconds; shell wall-clock total was 1.362 seconds. |
+| Local HTML build after removing Node 20 uv action | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.87 seconds; shell wall-clock total was 1.319 seconds. |
 
 ## Warnings
 
