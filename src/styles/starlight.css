@@ -530,3 +530,141 @@
     margin-top: 1rem;
   }
 }
+
+.pc-airflow {
+  margin: 2rem 0;
+}
+
+.pc-airflow__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.pc-airflow__controls button {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .35rem;
+  padding: .45rem .75rem;
+  background: var(--sl-color-gray-6);
+  color: inherit;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.pc-airflow__controls button:hover,
+.pc-airflow__controls button:focus-visible,
+.pc-airflow__controls button[aria-pressed='true'] {
+  border-color: var(--sl-color-accent);
+  outline: 3px solid var(--sl-color-accent);
+  outline-offset: 2px;
+}
+
+.pc-airflow__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 22rem);
+  gap: 1rem;
+}
+
+.pc-airflow__stage {
+  min-height: 30rem;
+  overflow: hidden;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .5rem;
+  background: #f8fafc;
+}
+
+.pc-airflow__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 30rem;
+}
+
+.pc-airflow__radiator {
+  fill: #fee2e2;
+  stroke: #dc2626;
+  stroke-width: .5;
+}
+
+.pc-airflow__label {
+  fill: #0f172a;
+  font-size: .22rem;
+  font-weight: 800;
+}
+
+.pc-airflow__arrow {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: opacity .16s ease, stroke-width .16s ease;
+}
+
+.pc-airflow__arrow--intake {
+  stroke: #2563eb;
+  marker-end: url('#airflow-intake-arrow');
+}
+
+.pc-airflow__arrow--exhaust {
+  stroke: #dc2626;
+  marker-end: url('#airflow-exhaust-arrow');
+}
+
+.pc-airflow__arrow[data-muted='true'] {
+  opacity: .16;
+  stroke-width: 1.2;
+}
+
+.pc-airflow__zones {
+  display: grid;
+  gap: .75rem;
+  align-content: start;
+}
+
+.pc-airflow__zones article {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .45rem;
+  padding: .85rem;
+  background: var(--sl-color-gray-6);
+}
+
+.pc-airflow__zones h3 {
+  margin-top: 0;
+}
+
+.pc-airflow__zones dl {
+  display: grid;
+  gap: .4rem;
+  margin-bottom: 0;
+}
+
+.pc-airflow__zones dt {
+  color: var(--sl-color-accent-high);
+  font-weight: 800;
+}
+
+.pc-airflow__zones dd {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pc-airflow__arrow {
+    transition: none;
+  }
+}
+
+@media (max-width: 56rem) {
+  .pc-airflow__layout {
+    display: block;
+  }
+
+  .pc-airflow__stage,
+  .pc-airflow__svg {
+    min-height: 24rem;
+  }
+
+  .pc-airflow__zones {
+    margin-top: 1rem;
+  }
+}

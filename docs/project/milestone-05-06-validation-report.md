@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:11 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:20 BST.
 
 ## Passed Checks
 
@@ -103,6 +103,10 @@ Status: Active validation report. Last verified: 2026-07-13 16:11 BST.
 | Local full validation after issue #25 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.39 seconds; shell wall-clock total was 2.535 seconds. |
 | Starlight validation after issue #25 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.13 seconds; shell wall-clock total was 5.567 seconds. |
 | Guided build-sequence generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Guided Build Sequence`, `Static Build Sequence`, `Confirm parts and tools`, `Install CPU`, `Benchmark baseline`, and published chapter links such as `https://t3lstar.github.io/PC-Build/06-build-preparation/`. |
+| Milestone 6 issue #26 airflow visualisation review | Manual review of `src/components/DigitalTwinAirflow.astro`, `src/content/docs/digital-twin/first-slice.mdx`, `src/styles/starlight.css`, and `data/digital-twin/build.json` | Added a data-backed airflow visualisation with all/intake/exhaust filters, schematic airflow arrows, verified zone descriptions, reduced-motion styling, and static airflow-list fallback. |
+| Local full validation after issue #26 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.57 seconds; shell wall-clock total was 2.484 seconds. |
+| Starlight validation after issue #26 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 1.78 seconds; shell wall-clock total was 5.378 seconds. |
+| Airflow visualisation generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Airflow Visualisation`, `Static Airflow List`, `Bottom intake airflow`, `Side intake airflow`, and `Top 360mm radiator exhaust`. |
 
 ## Warnings
 

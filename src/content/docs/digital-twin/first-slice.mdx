@@ -8,6 +8,7 @@ import DigitalTwinCaseView from '../../../components/DigitalTwinCaseView.astro';
 import DigitalTwinConnectorMap from '../../../components/DigitalTwinConnectorMap.astro';
 import DigitalTwinCableRouting from '../../../components/DigitalTwinCableRouting.astro';
 import DigitalTwinBuildSequence from '../../../components/DigitalTwinBuildSequence.astro';
+import DigitalTwinAirflow from '../../../components/DigitalTwinAirflow.astro';
 
 This page proves that Starlight can render interactive components from the framework-neutral digital twin data model.
 
@@ -21,6 +22,8 @@ This page proves that Starlight can render interactive components from the frame
 
 <DigitalTwinBuildSequence />
 
+<DigitalTwinAirflow />
+
 ## Static Fallback
 
 If JavaScript is unavailable, this page must still explain the state of the digital twin data:
@@ -33,3 +36,4 @@ If JavaScript is unavailable, this page must still explain the state of the digi
 - The connector map includes a static connector list.
 - Cable-routing mode includes a static cable route list.
 - Guided build-sequence mode includes a static ordered list.
+- Airflow visualisation includes a static airflow list.
