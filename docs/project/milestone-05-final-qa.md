@@ -1,6 +1,6 @@
 # Milestone 5 Final QA
 
-Status: Published QA complete. Last verified: 2026-07-13 15:27 BST.
+Status: Published QA complete. Last verified: 2026-07-13 15:30 BST.
 
 ## Purpose
 
@@ -8,7 +8,7 @@ Summarise the local Milestone 5 release state before pushing the local checkpoin
 
 ## Release State
 
-Milestone 5 implementation is pushed, GitHub Actions has passed, and the live GitHub Pages site has been verified.
+Milestone 5 implementation is pushed, GitHub Actions has passed, the live GitHub Pages site has been verified, issues `#5` through `#18` are closed, and GitHub Milestone 5 is closed.
 
 ## Local Commit Range
 
@@ -49,20 +49,19 @@ The milestone checkpoint was pushed to `main` and published through GitHub Pages
 | `#7` | Complete and pushed | Closed |
 | `#8` | Complete and pushed | Closed |
 | `#9` | Complete and pushed | Closed |
-| `#10` | Published | Ready to close |
-| `#11` | Published | Ready to close |
-| `#12` | Published | Ready to close |
-| `#13` | Published | Ready to close |
+| `#10` | Published | Closed |
+| `#11` | Published | Closed |
+| `#12` | Published | Closed |
+| `#13` | Published | Closed |
 | `#14` | Complete and pushed | Closed |
-| `#15` | Published | Ready to close |
-| `#16` | Published with PDF deferred | Ready to close |
-| `#17` | Published | Ready to close |
-| `#18` | Published | Ready to close |
+| `#15` | Published | Closed |
+| `#16` | Published with PDF deferred | Closed |
+| `#17` | Published | Closed |
+| `#18` | Published | Closed |
 
 ## Remaining Release Actions
 
-1. Close issues `#10`, `#11`, `#12`, `#13`, `#15`, `#16`, `#17`, and `#18`.
-2. Mark the GitHub Milestone 5 milestone complete after issue closure.
+No release actions remain for Milestone 5.
 
 ## Known Warnings
 

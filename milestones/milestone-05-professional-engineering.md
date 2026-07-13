@@ -1,6 +1,6 @@
 # Milestone 5: Professional Engineering Edition
 
-Status: Published; pending GitHub issue closure.
+Status: Complete and published.
 
 GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/1
 
@@ -69,7 +69,7 @@ Raise the existing GitHub Pages manual into publication-quality engineering docu
 - [x] Troubleshooting decision trees render correctly.
 - [x] Maintenance and benchmarking guidance is complete.
 - [x] Validation commands are documented and repeatable.
-- [ ] GitHub issues reflect delivered work after post-deployment evidence is pushed and issues are closed.
+- [x] GitHub issues reflect delivered work; issues `#5` through `#18` are closed.
 
 ## Validation Commands
 
@@ -122,7 +122,7 @@ Run the local validation wrapper when checking milestone changes:
 
 - [x] Deliverables are implemented or explicitly deferred with reasons.
 - [x] Validation report lists passed checks, warnings, limitations, and manual verification still required.
-- [ ] GitHub milestone and issues are current after post-deployment evidence is pushed and issues are closed.
+- [x] GitHub milestone and issues are current; GitHub Milestone 5 is closed.
 - [x] Documentation remains suitable for a first-time PC builder.
 
 ## Completion Checklist

@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:27 BST.
+Status: Active validation report. Last verified: 2026-07-13 15:30 BST.
 
 ## Passed Checks
 
@@ -66,6 +66,8 @@ Status: Active validation report. Last verified: 2026-07-13 15:27 BST.
 | Live GitHub Pages home page | `curl -L https://t3lstar.github.io/PC-Build/` | HTTP 200; page contains `Custom Gaming PC Build Manual`, `Connector and Cable Reference`, and `Milestone 5 Final QA`. |
 | Live GitHub Pages final QA page | `curl -L https://t3lstar.github.io/PC-Build/project/milestone-05-final-qa/` | HTTP 200; page contains `Milestone 5 Final QA`. |
 | Live GitHub Pages connector appendix | `curl -L https://t3lstar.github.io/PC-Build/appendix/connectors-cables/` | HTTP 200; page contains `Connector and Cable Reference`, `Motherboard Headers Used`, and `PSU Cable Reference`. |
+| Milestone 5 issue closure | `gh issue close` for issues `#10`, `#11`, `#12`, `#13`, `#15`, `#16`, `#17`, and `#18` | Closed all remaining Milestone 5 issues with deployment evidence comments. |
+| GitHub Milestone 5 closure | `gh api --method PATCH repos/t3lstar/PC-Build/milestones/1 -f state=closed` | Closed `Milestone 5 — Professional Engineering Edition`; it had 0 open issues and 14 closed issues. |
 
 ## Warnings
 
