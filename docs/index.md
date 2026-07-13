@@ -1,6 +1,6 @@
 # Custom Gaming PC Build Manual
 
-Status: Initial Milestone 2 content. Last updated: 2026-07-13.
+Status: Initial Milestone 2 content. Last updated: 2026-07-13 10:53 BST.
 
 This site is the build manual for a custom Windows 11 Pro gaming PC based on AMD AM5, DDR5, NVMe storage, and a Radeon graphics card.
 

@@ -1,6 +1,6 @@
 # Publishing
 
-Status: Initial publication guidance. Last verified: 2026-07-13.
+Status: Initial publication guidance. Last verified: 2026-07-13 10:53 BST.
 
 ## Purpose
 

@@ -1,6 +1,6 @@
 # EXPO Memory Setup
 
-Status: Initial Milestone 2 content. Last verified: 2026-07-13.
+Status: Initial Milestone 2 content. Last verified: 2026-07-13 10:53 BST.
 
 ## Introduction
 

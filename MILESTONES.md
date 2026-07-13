@@ -13,6 +13,7 @@ This project will be delivered in four milestones so the repository can be built
 - Windows 11 Pro installation media should be assumed to already exist on a USB flash drive.
 - Use `Custom Gaming PC Build Manual` as the MkDocs site title.
 - Use direct instructional language throughout the documentation.
+- Use date and time for page verification metadata, formatted as `YYYY-MM-DD HH:MM TZ`.
 - Use `docs/index.md` as the MkDocs home page and `README.md` as the GitHub repository overview.
 - Keep rendered appendix pages under `docs/appendix/`.
 - Keep rendered assets under `docs/assets/`.
