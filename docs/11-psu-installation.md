@@ -35,6 +35,10 @@ Beginner.
 
 ## Step-by-Step Instructions
 
+![PSU cable routing](assets/diagrams/svg/psu-cable-routing.svg)
+
+PlantUML source: [power-flow.puml](assets/diagrams/plantuml/power-flow.puml)
+
 1. Confirm the PSU is the ASUS TUF Gaming 1000W Gold.
 2. Confirm the PSU is unplugged and switched off.
 3. Connect the required modular cables before mounting if access is easier:

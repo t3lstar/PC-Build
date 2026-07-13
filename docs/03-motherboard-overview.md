@@ -39,6 +39,16 @@ Beginner.
 
 ## Step-by-Step Instructions
 
+![Motherboard header map](assets/diagrams/svg/motherboard-headers.svg)
+
+![Memory slot map](assets/diagrams/svg/memory-slots.svg)
+
+![M.2 slot map](assets/diagrams/svg/m2-slots.svg)
+
+![PCIe slot map](assets/diagrams/svg/pcie-slots.svg)
+
+PlantUML source: [hardware-layout.puml](assets/diagrams/plantuml/hardware-layout.puml)
+
 1. Place the motherboard box on a stable table.
 2. Place the motherboard on top of the box with the rear I/O ports facing left.
 3. Locate the AM5 CPU socket in the upper centre of the board.
@@ -199,4 +209,3 @@ You can identify every motherboard connector needed for the CPU, memory, SSD, GP
 ## Next Chapter
 
 Continue to [Case Overview](04-case-overview.md).
-

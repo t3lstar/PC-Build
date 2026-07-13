@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Front panel connectors</title>
+  <desc id="desc">Simplified front panel connector map for power switch, USB-C, USB-A and HD audio.</desc>
+  <style>
+    .mb{fill:#e2e8f0;stroke:#334155;stroke-width:3}.case{fill:#f8fafc;stroke:#0f172a;stroke-width:3}
+    .conn{fill:#bae6fd;stroke:#0369a1;stroke-width:3}.pin{fill:#111827}.audio{fill:#bbf7d0;stroke:#15803d;stroke-width:3}
+    text{font-family:Arial,sans-serif;fill:#0f172a;font-size:18px}.small{font-size:14px}
+    .line{stroke:#475569;stroke-width:4;marker-end:url(#arrow)}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+  <rect class="case" x="70" y="80" width="220" height="340" rx="10"/><text x="125" y="120">Case front I/O</text>
+  <rect class="mb" x="510" y="80" width="300" height="340" rx="10"/><text x="570" y="120">Motherboard edge</text>
+  <rect class="conn" x="115" y="155" width="130" height="42" rx="6"/><text class="small" x="132" y="182">Power switch</text>
+  <rect class="conn" x="115" y="225" width="130" height="42" rx="6"/><text class="small" x="150" y="252">USB-C</text>
+  <rect class="conn" x="115" y="295" width="130" height="42" rx="6"/><text class="small" x="150" y="322">USB-A</text>
+  <rect class="audio" x="115" y="365" width="130" height="42" rx="6"/><text class="small" x="143" y="392">HD audio</text>
+  <rect class="conn" x="575" y="155" width="155" height="42" rx="6"/><text class="small" x="596" y="182">F_PANEL header</text>
+  <rect class="conn" x="575" y="225" width="155" height="42" rx="6"/><text class="small" x="605" y="252">USB-C header</text>
+  <rect class="conn" x="575" y="295" width="155" height="42" rx="6"/><text class="small" x="600" y="322">USB 3.x header</text>
+  <rect class="audio" x="575" y="365" width="155" height="42" rx="6"/><text class="small" x="610" y="392">HD_AUDIO</text>
+  <line class="line" x1="245" y1="176" x2="575" y2="176"/><line class="line" x1="245" y1="246" x2="575" y2="246"/>
+  <line class="line" x1="245" y1="316" x2="575" y2="316"/><line class="line" x1="245" y1="386" x2="575" y2="386"/>
+  <text x="95" y="470">Use the motherboard manual for exact front-panel pin positions and LED polarity.</text>
+</svg>

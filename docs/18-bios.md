@@ -35,6 +35,8 @@ Moderate.
 
 ## Step-by-Step Instructions
 
+PlantUML source: [bios-sequence.puml](assets/diagrams/plantuml/bios-sequence.puml)
+
 1. Enter BIOS after first boot.
 2. Load optimized defaults if the board has been used before.
 3. Confirm system date and time.

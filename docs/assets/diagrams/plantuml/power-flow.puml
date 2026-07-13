@@ -1,0 +1,25 @@
+@startuml
+title Power flow
+skinparam componentStyle rectangle
+
+rectangle "Wall outlet" as Wall
+rectangle "ASUS TUF Gaming 1000W Gold PSU" as PSU
+rectangle "24-pin ATX\nMotherboard power" as ATX
+rectangle "CPU EPS\nTop-left motherboard" as EPS
+rectangle "PCIe 8-pin\nGraphics card" as PCIE
+rectangle "SATA power\nOptional accessories" as SATA
+rectangle "Gigabyte B850 AORUS Elite WiFi7" as MB
+rectangle "Ryzen 7 7800X3D" as CPU
+rectangle "Gigabyte RX 9060 XT Gaming OC 16GB" as GPU
+rectangle "Optional hubs or accessories" as Hub
+
+Wall --> PSU
+PSU --> ATX
+PSU --> EPS
+PSU --> PCIE
+PSU --> SATA
+ATX --> MB
+EPS --> CPU
+PCIE --> GPU
+SATA --> Hub
+@enduml

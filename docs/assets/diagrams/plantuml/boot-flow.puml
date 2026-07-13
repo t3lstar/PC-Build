@@ -1,0 +1,22 @@
+@startuml
+title Boot flow
+start
+:Press case power button;
+:PSU starts system rails;
+:Motherboard begins POST;
+if (CPU, RAM, GPU, SSD detected?) then (yes)
+  :Show BIOS splash or boot menu;
+  if (Windows installed on NVMe?) then (yes)
+    :Boot Windows 11 Pro;
+  else (no)
+    :Boot Windows 11 USB installer;
+    :Install Windows to Samsung NVMe SSD;
+    :Reboot from NVMe SSD;
+  endif
+  :Install drivers and validate baseline;
+else (no)
+  :Read debug LEDs;
+  :Power down and correct seating or cabling;
+endif
+stop
+@enduml

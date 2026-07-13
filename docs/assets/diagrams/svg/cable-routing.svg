@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="660" viewBox="0 0 960 660" role="img" aria-labelledby="title desc">
+  <title id="title">Cable routing</title>
+  <desc id="desc">Cable routing map for ATX, CPU EPS, GPU PCIe, front panel, USB, audio, fan and pump cables.</desc>
+  <style>
+    .case{fill:#f8fafc;stroke:#111827;stroke-width:4}
+    .mb{fill:#e2e8f0;stroke:#334155;stroke-width:3}
+    .psu{fill:#fde68a;stroke:#92400e;stroke-width:3}
+    .gpu{fill:#ddd6fe;stroke:#6d28d9;stroke-width:3}
+    .path{fill:none;stroke-width:6;stroke-linecap:round;marker-end:url(#arrow)}
+    .p24{stroke:#ea580c}.eps{stroke:#dc2626}.pcie{stroke:#7c3aed}.fp{stroke:#0891b2}.audio{stroke:#16a34a}.fan{stroke:#2563eb}
+    text{font-family:Arial,sans-serif;fill:#0f172a;font-size:18px}
+    .small{font-size:14px}
+  </style>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0f172a"/></marker></defs>
+  <rect class="case" x="90" y="55" width="780" height="545" rx="12"/>
+  <rect class="mb" x="235" y="115" width="420" height="410" rx="8"/><text x="350" y="330">Motherboard</text>
+  <rect class="psu" x="690" y="430" width="120" height="95" rx="8"/><text x="728" y="485">PSU</text>
+  <rect class="gpu" x="285" y="400" width="310" height="55" rx="8"/><text x="390" y="435">GPU</text>
+  <path class="path p24" d="M700 460 C735 350,735 245,655 245"/><text class="small" x="685" y="250">24-pin ATX</text>
+  <path class="path eps" d="M725 450 C720 130,550 85,360 115"/><text class="small" x="430" y="95">CPU EPS before radiator</text>
+  <path class="path pcie" d="M700 495 C620 500,600 440,595 430"/><text class="small" x="610" y="525">PCIe 8-pin</text>
+  <path class="path fp" d="M780 370 C700 570,590 550,610 515"/><text class="small" x="690" y="585">Front panel / USB</text>
+  <path class="path audio" d="M780 390 C660 610,290 575,280 520"/><text class="small" x="300" y="610">HD audio</text>
+  <path class="path fan" d="M515 100 C535 55,620 55,690 105"/><text class="small" x="560" y="45">Pump and fan leads</text>
+  <text x="115" y="635">Keep final cable ties loose until first boot and BIOS checks pass.</text>
+</svg>

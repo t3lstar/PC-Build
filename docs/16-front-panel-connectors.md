@@ -34,6 +34,8 @@ Moderate because front-panel header pins are small.
 
 ## Step-by-Step Instructions
 
+![Front panel connector map](assets/diagrams/svg/front-panel-connectors.svg)
+
 1. Locate the motherboard front-panel header in the manual.
 2. Connect the case power switch plug to the correct `PWR_SW` pins.
 3. Connect reset switch, power LED, or HDD LED plugs only if the case provides them and the manual confirms polarity.

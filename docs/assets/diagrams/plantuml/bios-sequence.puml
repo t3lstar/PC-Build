@@ -1,0 +1,21 @@
+@startuml
+title BIOS setup sequence
+start
+:Enter BIOS after first default boot;
+:Confirm CPU, 32GB RAM, SSD, pump, and fans;
+:Load optimized defaults if board history is unknown;
+:Confirm UEFI, TPM/fTPM, and Secure Boot availability;
+:Set Windows USB as temporary boot device;
+:Install Windows 11 Pro;
+:Install drivers;
+:Return to BIOS;
+if (Default boot and drivers stable?) then (yes)
+  :Enable EXPO profile;
+  :Save and reboot;
+  :Allow DDR5 memory training;
+  :Verify DDR5-6000 profile;
+else (no)
+  :Keep defaults and troubleshoot first;
+endif
+stop
+@enduml

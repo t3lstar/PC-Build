@@ -53,6 +53,27 @@ See [Tools](05-tools.md) and the [Bill of Materials](appendix/bill-of-materials.
 
 ## Step-by-Step Instructions
 
+```mermaid
+flowchart TD
+    A["Confirm components and tools"] --> B["Prepare workspace and case"]
+    B --> C["Install CPU in AM5 socket"]
+    C --> D["Install DDR5 in A2 and B2"]
+    D --> E["Install Samsung NVMe SSD"]
+    E --> F["Prepare PSU cables"]
+    F --> G["Install motherboard in case"]
+    G --> H["Install top 360mm AIO"]
+    H --> I["Install Radeon GPU"]
+    I --> J["Connect front panel and route cables"]
+    J --> K["First boot at default settings"]
+    K --> L["BIOS baseline checks"]
+    L --> M["Install Windows 11 Pro"]
+    M --> N["Install drivers"]
+    N --> O["Enable EXPO"]
+    O --> P["Benchmark and record baseline"]
+```
+
+Diagram source: [build-sequence.mmd](assets/diagrams/mermaid/build-sequence.mmd)
+
 1. Review the build specification in [Components](02-components.md).
 2. Confirm exact models and compatible alternatives in the [Bill of Materials](appendix/bill-of-materials.md).
 3. Gather tools and prepare the workspace.

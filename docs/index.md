@@ -28,6 +28,6 @@ Use the guide in order:
 
 ## Documentation Status
 
-Milestone 1 repository scaffolding is complete. Milestone 2 core content is being built into the chapter pages and appendices.
+Milestone 1 repository scaffolding, Milestone 2 core content, and Milestone 3 technical diagrams are complete. Milestone 4 will focus on polish, styling, screenshots where appropriate, and PDF generation.
 
 See `MILESTONES.md` for the roadmap and acceptance criteria.

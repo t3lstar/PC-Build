@@ -35,6 +35,8 @@ Moderate.
 
 ## Step-by-Step Instructions
 
+![Cable routing map](assets/diagrams/svg/cable-routing.svg)
+
 1. Route the 24-pin ATX cable through the nearest grommet to the motherboard right edge.
 2. Route CPU EPS cables along the rear/top channel and into the motherboard top-left corner.
 3. Route the PCIe 8-pin cable to the GPU with a gentle curve.

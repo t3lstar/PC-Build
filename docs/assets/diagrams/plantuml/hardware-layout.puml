@@ -1,0 +1,23 @@
+@startuml
+title Hardware layout - O11 Dynamic Mini V2 Flow build
+skinparam componentStyle rectangle
+
+rectangle "Lian Li O11 Dynamic Mini V2 Flow" {
+  rectangle "Top: ARCTIC Liquid Freezer III Pro 360 radiator exhaust" as Radiator
+  rectangle "Gigabyte B850 AORUS Elite WiFi7" as Motherboard {
+    rectangle "AM5 socket\nRyzen 7 7800X3D" as CPU
+    rectangle "DDR5 A2/B2\n32GB kit" as RAM
+    rectangle "M.2 NVMe\nSamsung 990 EVO Plus 2TB" as SSD
+    rectangle "Primary PCIe x16\nRX 9060 XT" as GPU
+  }
+  rectangle "Bottom reverse-blade intake fans" as BottomFans
+  rectangle "Side reverse-blade intake fans" as SideFans
+  rectangle "ASUS TUF Gaming 1000W Gold PSU" as PSU
+}
+
+SideFans --> Motherboard : cool intake
+BottomFans --> GPU : cool intake
+Radiator --> CPU : CPU heat removed
+PSU --> Motherboard : ATX and EPS power
+PSU --> GPU : PCIe 8-pin power
+@enduml

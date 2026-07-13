@@ -40,6 +40,23 @@ Beginner.
 
 ## Step-by-Step Instructions
 
+![Fan layout](assets/diagrams/svg/fan-layout.svg)
+
+![Airflow direction](assets/diagrams/svg/airflow.svg)
+
+```mermaid
+flowchart BT
+    B1["Bottom intake fans"] --> GPU["GPU and lower motherboard area"]
+    S1["Side intake fans"] --> MB["CPU socket, VRM, and memory area"]
+    GPU --> TOP["Top 360mm radiator exhaust"]
+    MB --> TOP
+    TOP --> OUT["Warm air exits upward"]
+    MB -. "Optional" .-> REAR["Rear exhaust fan position"]
+    REAR -.-> OUT
+```
+
+Diagram source: [airflow.mmd](assets/diagrams/mermaid/airflow.mmd)
+
 1. Place the case on a stable work surface.
 2. Remove the glass side panel and front glass panel.
 3. Remove the rear steel panel.
@@ -173,4 +190,3 @@ The case is open, inspected, and understood. The fan direction, radiator positio
 ## Next Chapter
 
 Continue to [Tools](05-tools.md).
-

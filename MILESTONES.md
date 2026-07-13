@@ -32,6 +32,7 @@ This project will be delivered in four milestones so the repository can be built
 - Assume the GitHub owner is `t3lstar`; if the repository name remains `PC-Build`, the default site URL is `https://t3lstar.github.io/PC-Build/`.
 - Pull requests should build the site only. Pushes to `main` should build and deploy the site.
 - Ensure the published site output includes `.nojekyll`.
+- Technical diagrams are hand-authored documentation assets. Do not use AI-generated artwork for Milestone 3 diagrams.
 
 ## Milestone 1: Repository Scaffolding
 
@@ -108,6 +109,8 @@ Write the complete technical documentation for each chapter.
 ## Milestone 3: Technical Diagrams
 
 Tracking issue: https://github.com/t3lstar/PC-Build/issues/2
+
+Status: Complete.
 
 Add technically accurate diagrams that support the written build guide.
 
