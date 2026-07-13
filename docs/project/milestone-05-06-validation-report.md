@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:36 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:39 BST.
 
 ## Passed Checks
 
@@ -133,6 +133,9 @@ Status: Active validation report. Last verified: 2026-07-13 16:36 BST.
 | Local full validation after issue #32 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; QR code validation passed; documentation validation passed; MkDocs reported 2.25 seconds; shell wall-clock total was 3.922 seconds. |
 | Starlight validation after issue #32 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 8 pages built in 3.02 seconds after navigation update; shell wall-clock total was 7.918 seconds. |
 | Accessibility audit generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/project/digital-twin-accessibility/` and digital twin page content search | Passed. Generated pages contain `Digital Twin Accessibility`, `Static Fallback Inventory`, `Keyboard operation`, `No-JavaScript behavior`, and the digital twin no-JavaScript notice. |
+| Milestone 6 issue #33 data, interaction, and accessibility tests review | Manual review of `scripts/validate-starlight.py`, `scripts/validate.sh`, `README.md`, `CONTRIBUTING.md`, and existing validation scripts | Added dependency-light Starlight validation that checks required digital twin components, page imports, source fallbacks, accessible labelling markers, focus and reduced-motion CSS, built first-slice HTML sections, built accessibility audit HTML, and QR asset references. Wired it into `./scripts/validate.sh starlight`. |
+| Local full validation after issue #33 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; QR code validation passed; documentation validation passed; MkDocs reported 1.43 seconds; shell wall-clock total was 2.438 seconds. |
+| Starlight validation after issue #33 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 8 pages built in 2.47 seconds; `scripts/validate-starlight.py` passed; shell wall-clock total was 7.862 seconds. |
 
 ## Warnings
 

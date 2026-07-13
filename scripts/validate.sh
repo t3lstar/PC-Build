@@ -13,7 +13,7 @@ Targets:
   qrcodes  Validate generated official-link QR code assets.
   docs  Validate required files, MkDocs nav targets, and local Markdown links.
   html  Build the MkDocs HTML site with strict mode.
-  starlight  Build the Astro Starlight first slice.
+  starlight  Build and validate the Astro Starlight digital twin.
   all   Run data validation, QR validation, docs validation, and the HTML build.
 USAGE
 }
@@ -41,6 +41,7 @@ validate_html() {
 validate_starlight() {
   cd "$ROOT_DIR"
   npm run starlight:build
+  "${PYTHON:-python3}" scripts/validate-starlight.py
 }
 
 case "$TARGET" in

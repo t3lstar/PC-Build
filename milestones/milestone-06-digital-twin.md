@@ -60,7 +60,8 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] QR codes for stable official URLs.
 - [x] Local-only maintenance and upgrade history.
 - [x] Accessibility and static fallback coverage.
-- [ ] Responsive and data-integrity tests.
+- [x] Data, interaction, accessibility, and generated-asset tests.
+- [ ] Browser-level responsive screenshot tests.
 
 ## Acceptance Criteria
 
@@ -122,7 +123,7 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] [#30: M6: Generate and validate official-link QR codes](https://github.com/t3lstar/PC-Build/issues/30) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#31: M6: Add maintenance and upgrade history](https://github.com/t3lstar/PC-Build/issues/31) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#32: M6: Complete accessibility and static fallbacks](https://github.com/t3lstar/PC-Build/issues/32) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
-- [ ] [#33: M6: Add data, interaction and accessibility tests](https://github.com/t3lstar/PC-Build/issues/33)
+- [x] [#33: M6: Add data, interaction and accessibility tests](https://github.com/t3lstar/PC-Build/issues/33) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#34: M6: Milestone 6 final QA and release](https://github.com/t3lstar/PC-Build/issues/34)
 
 ## Definition of Done

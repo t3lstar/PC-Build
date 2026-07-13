@@ -112,6 +112,8 @@ Use this command when validating the Astro Starlight first slice:
 ./scripts/validate.sh starlight
 ```
 
+The Starlight validation target builds the static site and then checks the digital twin source and generated HTML for required interactive sections, accessibility markers, static fallbacks, reduced-motion styling, and QR asset references.
+
 If a change introduces new tooling, document the command and expected result in `docs/project/milestone-05-06-validation-report.md`.
 
 Do not commit generated `site/` output.

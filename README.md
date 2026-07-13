@@ -97,10 +97,10 @@ Build the Astro Starlight first slice:
 
 ```bash
 npm install
-npm run starlight:build
+./scripts/validate.sh starlight
 ```
 
-The Starlight first slice builds to `dist/`. MkDocs remains the production GitHub Pages path until the Starlight migration slice is approved and the deployment workflow is switched.
+The Starlight first slice builds to `dist/` and then runs source/built-output checks for the digital twin's interaction structure, accessibility markers, static fallbacks, and QR asset references. MkDocs remains the production GitHub Pages path until the Starlight migration slice is approved and the deployment workflow is switched.
 
 The first slice currently uses Astro `7.0.7`, Starlight `0.41.3`, and MDX `7.0.2`. Local Node tooling should remain compatible with the repository Node.js 24 target.
 
