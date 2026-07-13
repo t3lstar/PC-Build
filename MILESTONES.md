@@ -28,7 +28,7 @@ This project is delivered in controlled milestones so the repository can be buil
 - Technical diagrams are hand-authored documentation assets. Do not use AI-generated artwork for technical diagrams.
 - Diagrams that readers need to follow the manual should be directly visible on the live site as rendered assets, not only linked as source files.
 - Diagrams must remain readable in the live dark theme: use explicit light SVG backgrounds, avoid labels outside the drawing safe area, and prefer numbered legends where cable paths would overlap text.
-- Avoid wide reader-facing Markdown tables for dense reference data; use per-item sections or narrow tables so content remains readable in the Starlight content column.
+- Use Markdown tables for compact comparisons, schedules, matrices, and log templates. Avoid wide reader-facing tables for dense reference records with long links or long notes; use grouped per-item sections instead. Starlight table styling must allow unavoidable wide tables to scroll horizontally rather than clip.
 - Mermaid and PlantUML files should be retained as source assets under `public/assets/diagrams/`, but reader-facing chapters should embed rendered SVG.
 - Use `milestones/verification-register.md` and `milestones/starlight-migration-inventory.md` for current planning and validation records.
 - Keep internal planning, ADR, audit, and validation records out of the public Starlight navigation unless they directly help readers build the PC.

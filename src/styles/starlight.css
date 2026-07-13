@@ -19,6 +19,26 @@
   margin-right: .35rem;
 }
 
+.sl-markdown-content table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  white-space: normal;
+}
+
+.sl-markdown-content th,
+.sl-markdown-content td {
+  min-width: 7rem;
+  vertical-align: top;
+}
+
+.sl-markdown-content th:first-child,
+.sl-markdown-content td:first-child {
+  min-width: 9rem;
+}
+
 .pc-hero-image,
 .pc-diagram {
   display: block;

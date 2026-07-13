@@ -37,7 +37,11 @@ Beginner to moderate.
 
 The entries below use the same fields for each application so the guidance stays complete without forcing a wide table into the reading column.
 
-### HWiNFO64
+### Essential
+
+Install these as part of the normal completed build unless a specific workflow replaces them.
+
+#### HWiNFO64
 
 - Tier: Essential.
 - Purpose: Sensor monitoring, logging, and hardware inventory.
@@ -52,7 +56,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update from HWiNFO when sensor support or bug fixes are useful.
 - Removal guidance: Uninstall from Windows Apps or delete the portable folder.
 
-### AMD Software: Adrenalin Edition
+#### AMD Software: Adrenalin Edition
 
 - Tier: Essential.
 - Purpose: Radeon GPU driver, GPU settings, monitoring, and update awareness.
@@ -67,7 +71,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update for game support, stability, security, or bug fixes; avoid day-one updates before important use.
 - Removal guidance: Use AMD installer cleanup options first; use DDU only for persistent driver faults.
 
-### Samsung Magician
+#### Samsung Magician
 
 - Tier: Essential.
 - Purpose: Samsung SSD health, firmware, SMART, and drive information.
@@ -82,7 +86,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update from Samsung when prompted or when SSD support changes.
 - Removal guidance: Uninstall from Windows Apps.
 
-### FanControl by Rem0o
+#### FanControl by Rem0o
 
 - Tier: Essential.
 - Purpose: Custom fan curves and sensor-based fan control.
@@ -97,7 +101,11 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update after reading release notes; export config first.
 - Removal guidance: Exit FanControl, restore BIOS curves if needed, then delete or uninstall according to installed package.
 
-### OCCT
+### Recommended
+
+Install these when they support your baseline, maintenance, or daily workflow.
+
+#### OCCT
 
 - Tier: Recommended.
 - Purpose: Stability, stress testing, and fault isolation.
@@ -112,7 +120,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update before major validation sessions.
 - Removal guidance: Delete the portable folder or uninstall from Windows Apps.
 
-### Cinebench 2024
+#### Cinebench 2024
 
 - Tier: Recommended.
 - Purpose: Repeatable CPU rendering benchmark.
@@ -127,7 +135,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update only when you deliberately start a new baseline series.
 - Removal guidance: Delete the portable package or uninstall if installed through Maxon tooling.
 
-### CrystalDiskMark
+#### CrystalDiskMark
 
 - Tier: Recommended.
 - Purpose: SSD performance benchmark.
@@ -142,7 +150,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update before storage retests if needed.
 - Removal guidance: Uninstall from Windows Apps.
 
-### MemTest86
+#### MemTest86
 
 - Tier: Recommended.
 - Purpose: Bootable memory testing outside Windows.
@@ -157,7 +165,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Recreate USB when using a newer major release.
 - Removal guidance: Reformat the USB or keep it as recovery media.
 
-### 3DMark
+#### 3DMark
 
 - Tier: Recommended.
 - Purpose: GPU/game-oriented benchmark and stress tests.
@@ -172,7 +180,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update when benchmark modules require it or when starting a new baseline series.
 - Removal guidance: Uninstall from the install platform.
 
-### Everything Search
+#### Everything Search
 
 - Tier: Recommended.
 - Purpose: Fast local filename search.
@@ -187,7 +195,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update from voidtools when needed.
 - Removal guidance: Uninstall from Windows Apps.
 
-### Microsoft PowerToys
+#### Microsoft PowerToys
 
 - Tier: Recommended.
 - Purpose: Windows utilities such as FancyZones, PowerRename, and Text Extractor.
@@ -202,7 +210,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update through Microsoft Store, GitHub, or winget.
 - Removal guidance: Uninstall from Windows Apps.
 
-### Playnite
+#### Playnite
 
 - Tier: Recommended.
 - Purpose: Unified game library manager.
@@ -217,7 +225,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Use Playnite built-in update path.
 - Removal guidance: Uninstall from Windows Apps and remove personal library data only if intended.
 
-### 7-Zip
+#### 7-Zip
 
 - Tier: Recommended.
 - Purpose: Archive extraction and creation.
@@ -232,7 +240,11 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update occasionally for security and format support.
 - Removal guidance: Uninstall from Windows Apps.
 
-### MSI Afterburner
+### Optional / Troubleshooting Only
+
+Keep these out of the default build unless you need the specific function.
+
+#### MSI Afterburner
 
 - Tier: Optional.
 - Purpose: GPU monitoring overlay or manual GPU tuning if required later.
@@ -247,7 +259,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update from MSI when needed.
 - Removal guidance: Uninstall from Windows Apps and remove profiles if no longer needed.
 
-### LibreHardwareMonitor
+#### LibreHardwareMonitor
 
 - Tier: Optional.
 - Purpose: Alternative open-source monitoring.
@@ -262,7 +274,7 @@ The entries below use the same fields for each application so the guidance stays
 - Update guidance: Update from GitHub releases.
 - Removal guidance: Delete the portable folder.
 
-### Display Driver Uninstaller
+#### Display Driver Uninstaller
 
 - Tier: Optional.
 - Purpose: Deep display-driver cleanup for persistent GPU driver faults.
