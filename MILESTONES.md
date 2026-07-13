@@ -1,0 +1,150 @@
+# PC Build Documentation Milestones
+
+This project will be delivered in four milestones so the repository can be built, reviewed, and improved in controlled stages.
+
+## Project Notes
+
+- A final-build reference image exists from ChatGPT and may be used as a visual target where appropriate.
+- All listed components should be treated as mutually compatible unless later verification proves otherwise.
+- RAM and SSD alternatives are acceptable if they preserve the intended platform requirements and performance class:
+  - RAM: DDR5, AMD EXPO support preferred, 32GB target capacity, DDR5-6000 CL30 target specification.
+  - SSD: NVMe M.2 drive, 2TB target capacity, suitable PCIe generation and thermal profile for the motherboard.
+- Windows 11 Pro installation media should be assumed to already exist on a USB flash drive.
+- Use `Custom Gaming PC Build Manual` as the MkDocs site title.
+- Use direct instructional language throughout the documentation.
+- Use `docs/index.md` as the MkDocs home page and `README.md` as the GitHub repository overview.
+- Keep rendered appendix pages under `docs/appendix/`.
+- Keep rendered assets under `docs/assets/`.
+- Keep exact component identification and purchase links in `docs/appendix/bill-of-materials.md`.
+- Prefer manufacturer product pages for stable reference links and amazon.co.uk for retailer purchase links.
+- Treat retailer links as convenience links because price, stock, and listing details can change.
+- Use one parameterized build script at `scripts/build.sh` with `html`, `pdf`, `printable`, and `all` targets.
+- Include `requirements.txt` for MkDocs and documentation build dependencies.
+- Use a local `.venv` for local Python dependencies and ignore it in Git.
+- Include `CONTRIBUTING.md` with documentation rules.
+- In Milestone 1, create diagram folders only. Do not create empty diagram placeholder files.
+- Publish the documentation as a public GitHub Pages site using GitHub Actions.
+- Use the default GitHub Pages URL first; defer any custom domain.
+- Assume the GitHub owner is `t3lstar`; if the repository name remains `PC-Build`, the default site URL is `https://t3lstar.github.io/PC-Build/`.
+- Pull requests should build the site only. Pushes to `main` should build and deploy the site.
+- Ensure the published site output includes `.nojekyll`.
+
+## Milestone 1: Repository Scaffolding
+
+Create the documentation repository structure and make it ready for content.
+
+### Scope
+
+- Create the required folder structure.
+- Add all planned Markdown chapter files as placeholders.
+- Add required chapter headings to placeholder pages.
+- Add appendix placeholder files under `docs/appendix/`.
+- Add `docs/appendix/bill-of-materials.md` as the buying guide placeholder.
+- Add asset folders for images, diagrams, icons, and scripts.
+- Configure MkDocs Material.
+- Define the MkDocs navigation in build order.
+- Add `scripts/build.sh` for generating HTML, PDF, and printable documentation.
+- Add `README.md`, `CONTRIBUTING.md`, and `requirements.txt`.
+- Add `.gitignore` for `.venv/`, generated site output, and local system files.
+- Add a GitHub Actions workflow for pull request builds and `main` branch GitHub Pages deployment.
+- Add `docs/appendix/publishing.md` explaining the public site build and deployment process.
+
+### Acceptance Criteria
+
+- The repository structure matches `AGENTS.md`.
+- `mkdocs.yml` exists and includes all chapters in navigation order.
+- Every planned Markdown file exists.
+- Placeholder pages clearly state their intended content.
+- Placeholder chapter pages include the required heading structure from `AGENTS.md`.
+- `scripts/build.sh` exists, supports `html`, `pdf`, `printable`, and `all`, and is executable.
+- Diagram folders exist without misleading empty diagram files.
+- MkDocs can serve or build the placeholder documentation without broken internal links.
+- GitHub Actions workflow exists for pull request build checks and `main` branch deployment.
+- The deployment workflow prepares `.nojekyll` in the published site output.
+
+## Milestone 2: Core Content
+
+Write the complete technical documentation for each chapter.
+
+### Scope
+
+- Complete every Markdown chapter from introduction through upgrades.
+- Complete appendix pages for glossary, FAQ, checklists, drivers, BIOS settings, and temperature reference.
+- Complete `docs/appendix/bill-of-materials.md` with exact components, manufacturer links, preferred amazon.co.uk purchase links, acceptable alternatives, and compatibility notes.
+- Ensure each chapter includes:
+  - Introduction
+  - Purpose
+  - Estimated time
+  - Difficulty
+  - Required tools
+  - Warnings
+  - Step-by-step instructions
+  - Verification checklist
+  - Common mistakes
+  - Expected result
+  - Next chapter
+
+### Acceptance Criteria
+
+- Each chapter is complete enough for a first-time PC builder to follow.
+- Instructions are specific to the listed hardware.
+- The bill of materials identifies exact components and clearly separates required specifications from acceptable alternatives.
+- Every step is verifiable.
+- BIOS, Windows, driver, benchmark, and maintenance content is technically accurate.
+- Cross-links between chapters are present and useful.
+
+## Milestone 3: Technical Diagrams
+
+Add technically accurate diagrams that support the written build guide.
+
+### Scope
+
+- Add Mermaid diagrams for:
+  - Build sequence
+  - Airflow
+  - Boot process
+  - Driver installation order
+- Add PlantUML diagrams for:
+  - Hardware layout
+  - Power flow
+  - Boot flow
+  - BIOS sequence
+- Add SVG diagrams for:
+  - Motherboard headers
+  - Fan layout
+  - Cable routing
+  - Front panel connectors
+  - PCIe slots
+  - Memory slots
+  - M.2 slots
+  - PSU cable routing
+  - Airflow
+
+### Acceptance Criteria
+
+- Diagrams are stored in the correct asset folders.
+- Diagram source files are retained where applicable.
+- Diagrams are referenced from the relevant chapters.
+- Diagrams are technically accurate and based on the actual components.
+- No AI-generated artwork is used.
+
+## Milestone 4: Polish
+
+Refine the documentation into a publication-ready manual.
+
+### Scope
+
+- Improve wording, consistency, and chapter flow.
+- Add screenshots where appropriate.
+- Improve MkDocs Material styling.
+- Validate navigation and cross-links.
+- Verify PDF, HTML, and printable manual generation.
+- Review the final repository for publication readiness.
+
+### Acceptance Criteria
+
+- Documentation builds cleanly as HTML.
+- PDF and printable manual outputs are generated successfully.
+- Links and navigation work.
+- Screenshots and diagrams render correctly.
+- The repository is suitable for publication on GitHub.
