@@ -1,0 +1,12 @@
+flowchart TD
+    A["CPU or GPU temperature is higher than expected"] --> B["Stop load test and record temperature, workload, and fan speeds"]
+    B --> C{"CPU temperature issue?"}
+    C -->|Yes| D["Check AIO pump and radiator fan readings in BIOS or HWInfo"]
+    D --> E["Confirm cold-plate film was removed and block is evenly mounted"]
+    E --> F["Confirm top radiator fans exhaust and cables clear blades"]
+    C -->|No| G["Check GPU fan speed, bottom intake fans, and GPU power cable clearance"]
+    G --> H["Confirm case panels and filters are not blocking airflow"]
+    F --> I{"Temperature returns to expected range?"}
+    H --> I
+    I -->|Yes| J["Record fix and new baseline"]
+    I -->|No| K["Recheck fan curves, dust, ambient temperature, and mount quality"]

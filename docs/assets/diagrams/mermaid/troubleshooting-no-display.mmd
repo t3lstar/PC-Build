@@ -1,0 +1,14 @@
+flowchart TD
+    A["System powers on but no display"] --> B["Wait for DDR5 memory training"]
+    B --> C{"Display appears after training?"}
+    C -->|Yes| D["Enter BIOS and record first boot status"]
+    C -->|No| E["Confirm monitor input and cable"]
+    E --> F["Move display cable to GPU output"]
+    F --> G["Check GPU seating and PCIe 8-pin power"]
+    G --> H{"VGA debug LED active?"}
+    H -->|Yes| I["Reseat GPU after powering down and unplugging PSU"]
+    H -->|No| J["Check DRAM debug LED and memory seating"]
+    J --> K["Boot with one DIMM in DDR5_A2 if needed"]
+    K --> L{"Display appears?"}
+    L -->|Yes| M["Reinstall second DIMM in DDR5_B2 and retest"]
+    L -->|No| N["Return BIOS to defaults or clear CMOS once, then retest"]

@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 14:09 BST.
+Status: Active validation report. Last verified: 2026-07-13 14:49 BST.
 
 ## Passed Checks
 
@@ -27,6 +27,12 @@ Status: Active validation report. Last verified: 2026-07-13 14:09 BST.
 | Local HTML build after issue #7 updates | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 188.75 seconds. |
 | Milestone 5 issue #8 checklist review | Manual review of `docs/appendix/checklists.md`, `docs/06-build-preparation.md`, and `docs/25-maintenance.md` | Expanded staged build checklists, maintenance log templates, and cross-links from preparation and maintenance chapters. |
 | Local HTML build after issue #8 updates | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 116.22 seconds. |
+| Milestone 5 issue #9 troubleshooting diagram review | Manual review of `docs/24-troubleshooting.md` and `docs/assets/diagrams/mermaid/troubleshooting-*.mmd` | Added four Mermaid decision trees for no power, no display, high temperature, and Windows/driver faults, with matching source assets. |
+| Troubleshooting source link check | `curl` for Gigabyte and Microsoft, browser verification for AMD support page | Gigabyte manual and Microsoft recovery page returned HTTP 200. AMD support page was browser-accessible but did not return a normal `curl` status from this environment. |
+| Local checkout moved off iCloud Drive | Fresh clone to `/Users/simondawson/Herd/PC-Build`; uncommitted issue #9 changes reapplied | New working copy is outside iCloud Drive. The old iCloud path should not be used for future builds. |
+| Local Python 3.12 environment recreated | `uv venv --python 3.12 .venv` and `uv pip install -r requirements.txt` | Created CPython 3.12.12 `.venv` and installed documentation dependencies. |
+| Local HTML build after moving checkout | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.96 seconds; shell wall-clock total was 3.515 seconds. |
+| Local HTML build after documenting checkout move | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.91 seconds; shell wall-clock total was 1.346 seconds. |
 
 ## Warnings
 
@@ -66,6 +72,7 @@ Status: Active validation report. Last verified: 2026-07-13 14:09 BST.
 | Local HTML build during audit | `. .venv/bin/activate; ./scripts/build.sh html` | Failed once with `OSError: [Errno 89] Operation canceled` while reading `docs/appendix/faq.md`. The file was present and readable immediately afterward. Treat as local iCloud/filesystem risk unless reproduced in CI. |
 | Local HTML build without `.venv` active | `./scripts/build.sh html` | Failed with `mkdocs: command not found`, as expected when the local virtual environment is not active. |
 | Local `pypdf` install into project `.venv` | `. .venv/bin/activate && python -m pip install pypdf` | Interrupted after slow/no output; used bundled runtime PDF tooling instead. No dependency file was changed. |
+| AMD support page `curl` check | `curl -L --head https://www.amd.com/en/support/download/drivers.html` | Returned `000` in this environment, while browser access succeeded. Keep as a link-check caveat rather than a documentation blocker. |
 
 ## Manual Verification Still Required
 

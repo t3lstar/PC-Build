@@ -1,0 +1,15 @@
+flowchart TD
+    A["No power when case button is pressed"] --> B{"Any PSU or motherboard signs of power?"}
+    B -->|No| C["Check wall socket, power strip, PSU switch, and IEC cable"]
+    C --> D{"Power available at PSU?"}
+    D -->|No| E["Change socket or cable before continuing"]
+    D -->|Yes| F["Switch off and unplug PSU"]
+    B -->|Yes| F
+    F --> G["Check 24-pin ATX and CPU EPS seating"]
+    G --> H["Check F_PANEL power switch on PW pins"]
+    H --> I{"Starts from case button?"}
+    I -->|Yes| J["Record fix and continue first boot"]
+    I -->|No| K["Test onboard power button if available"]
+    K --> L{"Starts from onboard button?"}
+    L -->|Yes| M["Recheck case switch cable and F_PANEL placement"]
+    L -->|No| N["Stop and inspect PSU, motherboard, or short risk"]

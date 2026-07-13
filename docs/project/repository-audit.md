@@ -54,7 +54,7 @@ The repository currently describes the confirmed build as:
 - `requirements.txt` includes PDF-related dependencies even though PDF output is deferred. Milestone 5 should decide whether to keep, pin, or split those dependencies.
 - The local `.venv` inspected during audit reported Python 3.14.5, while repository guidance expects Python 3.12.
 - Local Node reported v25.2.1, while repository guidance expects Node.js 24.
-- Build performance in the iCloud-backed working directory is slow.
+- Build performance in the previous iCloud-backed working directory was slow. A local checkout at `/Users/simondawson/Herd/PC-Build` reduced MkDocs build time from tens or hundreds of seconds to about one second of MkDocs build time.
 - A local HTML build attempt failed once with `OSError: [Errno 89] Operation canceled` while reading `docs/appendix/faq.md`. The file was readable immediately afterward, and GitHub Actions builds are passing, so this is treated as a local filesystem/iCloud risk.
 
 ## Documentation Gaps

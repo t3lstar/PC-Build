@@ -15,6 +15,8 @@ Follow these rules when adding or changing documentation.
 - Use Python 3.12 for the local documentation environment.
 - Use Node.js 24 if Node-based tooling is added or used locally.
 - Use a local Python virtual environment named `.venv`.
+- Keep the repository checkout on the local drive, not inside iCloud Drive or another synced folder.
+- Prefer `uv venv --python 3.12 .venv` and `uv pip install -r requirements.txt` when `uv` is available.
 - Do not install documentation dependencies into the system Python environment.
 - Install dependencies with `python -m pip install -r requirements.txt` after activating `.venv`.
 

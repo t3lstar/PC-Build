@@ -54,12 +54,14 @@ Rendered documentation content lives under `docs/` so MkDocs can build the site 
 
 Use Python 3.12 for local documentation builds. Node.js 24 is the expected local JavaScript runtime if Node-based tooling is added or used.
 
+Keep the working copy on the local drive, not inside iCloud Drive or another synced folder. MkDocs cleans and rewrites `site/` on each build, and synced storage can make local builds dramatically slower.
+
 Install dependencies:
 
 ```bash
-python3 -m venv .venv
+uv venv --python 3.12 .venv
 source .venv/bin/activate
-python -m pip install -r requirements.txt
+uv pip install -r requirements.txt
 ```
 
 Build the HTML site:

@@ -1,0 +1,16 @@
+flowchart TD
+    A["Windows, device, driver, or game stability fault"] --> B["Record symptom, error text, and last change"]
+    B --> C{"Device Manager shows unknown or failed device?"}
+    C -->|Yes| D["Install or reinstall chipset, network, audio, then GPU driver from official sources"]
+    C -->|No| E{"Fault started after driver update?"}
+    E -->|Yes| F["Roll back or clean reinstall the affected driver"]
+    E -->|No| G{"Fault started after EXPO or BIOS change?"}
+    G -->|Yes| H["Return BIOS to defaults and retest before re-enabling EXPO"]
+    G -->|No| I["Check Windows Update, game files, temperatures, and event logs"]
+    D --> J["Reboot and retest one change at a time"]
+    F --> J
+    H --> J
+    I --> J
+    J --> K{"Fault resolved?"}
+    K -->|Yes| L["Record driver or setting version"]
+    K -->|No| M["Escalate with recorded symptoms and versions"]
