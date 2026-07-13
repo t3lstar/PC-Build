@@ -1,6 +1,6 @@
 # Custom Gaming PC Build Manual
 
-Status: Placeholder for Milestone 1 repository scaffolding.
+Status: Repository scaffold complete. Core content is planned for Milestone 2.
 
 This site will become a professional build manual for the custom gaming PC specified in `AGENTS.md`.
 
@@ -18,6 +18,6 @@ This site will become a professional build manual for the custom gaming PC speci
 
 ## Documentation Status
 
-The repository is currently in Milestone 1: repository scaffolding.
+The repository has completed Milestone 1: repository scaffolding.
 
 See `MILESTONES.md` for the roadmap and acceptance criteria.

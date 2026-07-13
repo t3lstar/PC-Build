@@ -1,6 +1,6 @@
 # Publishing
 
-Status: Placeholder for Milestone 1 repository scaffolding.
+Status: Publication scaffold complete. Detailed publishing guidance is planned for Milestone 4.
 
 ## Purpose
 
