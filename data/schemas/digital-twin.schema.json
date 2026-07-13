@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://t3lstar.github.io/PC-Build/schemas/digital-twin.schema.json",
+  "title": "PC Build Digital Twin Data",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "metadata",
+    "components",
+    "locations",
+    "connectors",
+    "cables",
+    "airflow",
+    "buildSequence",
+    "biosTraining",
+    "links"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^0\\.1\\.0$"
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project", "siteUrl", "status", "lastVerified", "sourceAdr"],
+      "properties": {
+        "project": { "type": "string", "minLength": 1 },
+        "siteUrl": { "type": "string", "format": "uri" },
+        "status": { "enum": ["draft", "published"] },
+        "lastVerified": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2} [A-Z]{2,4}$" },
+        "sourceAdr": { "$ref": "#/$defs/repoPath" },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "components": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/component" },
+      "uniqueItems": true
+    },
+    "locations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/location" },
+      "uniqueItems": true
+    },
+    "connectors": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/connector" },
+      "uniqueItems": true
+    },
+    "cables": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/cable" },
+      "uniqueItems": true
+    },
+    "airflow": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/airflowZone" },
+      "uniqueItems": true
+    },
+    "buildSequence": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/buildStep" },
+      "uniqueItems": true
+    },
+    "biosTraining": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/biosState" },
+      "uniqueItems": true
+    },
+    "links": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/referenceLink" },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "repoPath": {
+      "type": "string",
+      "pattern": "^(docs|data|scripts|milestones|\\.github|assets)/.+|^[A-Z0-9_.-]+\\.md$"
+    },
+    "verificationState": {
+      "enum": ["verified", "partially_verified", "pending", "deferred"]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "sources"],
+      "properties": {
+        "state": { "$ref": "#/$defs/verificationState" },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["type", "ref"],
+            "properties": {
+              "type": { "enum": ["manual", "manufacturer", "repository", "build_observation", "deferred"] },
+              "ref": { "type": "string", "minLength": 1 },
+              "note": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "category", "name", "model", "role", "evidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "category": {
+          "enum": ["cpu", "cooler", "motherboard", "memory", "storage", "gpu", "case", "psu", "operating-system", "tool", "accessory"]
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "model": { "type": "string", "minLength": 1 },
+        "role": { "type": "string", "minLength": 1 },
+        "chapter": { "$ref": "#/$defs/repoPath" },
+        "manufacturerUrl": { "type": "string", "format": "uri" },
+        "evidence": { "$ref": "#/$defs/evidence" }
+      }
+    },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "kind", "evidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["case-region", "motherboard-zone", "slot", "header-area", "airflow-zone"] },
+        "parentId": { "$ref": "#/$defs/id" },
+        "staticFallback": { "type": "string" },
+        "evidence": { "$ref": "#/$defs/evidence" }
+      }
+    },
+    "connector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "kind", "componentId", "locationId", "evidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["power", "fan", "pump", "front-panel", "usb", "audio", "pcie", "m2", "memory", "display", "other"] },
+        "componentId": { "$ref": "#/$defs/id" },
+        "locationId": { "$ref": "#/$defs/id" },
+        "pinLabel": { "type": "string" },
+        "polaritySensitive": { "type": "boolean" },
+        "evidence": { "$ref": "#/$defs/evidence" }
+      }
+    },
+    "cable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "kind", "from", "to", "route", "evidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1 },
+        "kind": { "enum": ["atx-24-pin", "eps", "pcie-power", "front-panel", "usb", "audio", "fan", "pump", "sata-power", "other"] },
+        "from": { "$ref": "#/$defs/id" },
+        "to": { "$ref": "#/$defs/id" },
+        "route": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/id" }
+        },
+        "dependencyNotes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "evidence": { "$ref": "#/$defs/evidence" }
+      }
+    },
+    "airflowZone": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "direction", "locationId", "evidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1 },
+        "direction": { "enum": ["intake", "exhaust", "neutral", "mixed"] },
+        "locationId": { "$ref": "#/$defs/id" },
+        "staticFallback": { "type": "string", "minLength": 1 },
+        "evidence": { "$ref": "#/$defs/evidence" }
+      }
+    },
+    "buildStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "order", "label", "chapter", "evidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "order": { "type": "integer", "minimum": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "chapter": { "$ref": "#/$defs/repoPath" },
+        "componentIds": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/id" }
+        },
+        "evidence": { "$ref": "#/$defs/evidence" }
+      }
+    },
+    "biosState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "stateType", "staticFallback", "evidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1 },
+        "stateType": { "enum": ["default", "expo", "boot-order", "rollback", "training", "warning"] },
+        "staticFallback": { "type": "string", "minLength": 1 },
+        "nextStateIds": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/id" }
+        },
+        "evidence": { "$ref": "#/$defs/evidence" }
+      }
+    },
+    "referenceLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "url", "kind", "evidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "kind": { "enum": ["manufacturer", "manual", "support", "retailer", "repository", "operating-system"] },
+        "componentId": { "$ref": "#/$defs/id" },
+        "evidence": { "$ref": "#/$defs/evidence" }
+      }
+    }
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "$schema": "../schemas/digital-twin.schema.json",
+  "schemaVersion": "0.1.0",
+  "metadata": {
+    "project": "Custom Gaming PC Build Manual",
+    "siteUrl": "https://t3lstar.github.io/PC-Build/",
+    "status": "draft",
+    "lastVerified": "2026-07-13 15:38 BST",
+    "sourceAdr": "docs/adr/0001-digital-twin-architecture.md",
+    "notes": [
+      "Seed data for the Milestone 6 schema contract.",
+      "Detailed verified component and connector population is handled by issue #21."
+    ]
+  },
+  "components": [
+    {
+      "id": "motherboard",
+      "category": "motherboard",
+      "name": "Gigabyte B850 AORUS Elite WiFi7",
+      "model": "B850 AORUS ELITE WIFI7 rev. 1.x",
+      "role": "Central AM5 motherboard for CPU, memory, SSD, GPU, headers, and power connections.",
+      "chapter": "docs/03-motherboard-overview.md",
+      "manufacturerUrl": "https://www.gigabyte.com/Motherboard/B850-AORUS-ELITE-WIFI7-rev-1x/sp",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Motherboard connector/header inventory is verified for the static guide."
+          }
+        ]
+      }
+    },
+    {
+      "id": "case",
+      "category": "case",
+      "name": "Lian Li O11 Dynamic Mini V2 Flow",
+      "model": "O11DMIV2FX",
+      "role": "Case, airflow frame, radiator mount, and cable-routing enclosure.",
+      "chapter": "docs/04-case-overview.md",
+      "manufacturerUrl": "https://lian-li.com/product/o11-dynamic-mini-v2/",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Case fan count and top radiator support are verified for the static guide."
+          }
+        ]
+      }
+    }
+  ],
+  "locations": [
+    {
+      "id": "motherboard-top-left",
+      "label": "Motherboard top-left power area",
+      "kind": "motherboard-zone",
+      "staticFallback": "Area used for CPU EPS routing before top radiator final installation.",
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Connector identity is verified; exact digital twin coordinates remain pending."
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-top-radiator",
+      "label": "Top radiator mount",
+      "kind": "case-region",
+      "staticFallback": "Top 360mm radiator exhaust position.",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "AIO and case top-radiator fit is verified as compatible and clearance-sensitive."
+          }
+        ]
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "id": "cpu-eps-header",
+      "label": "CPU EPS power header",
+      "kind": "power",
+      "componentId": "motherboard",
+      "locationId": "motherboard-top-left",
+      "pinLabel": "CPU EPS",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Header use is documented; exact visual coordinate is pending future digital twin verification."
+          }
+        ]
+      }
+    }
+  ],
+  "cables": [
+    {
+      "id": "cpu-eps-cable",
+      "label": "CPU EPS power cable",
+      "kind": "eps",
+      "from": "psu-cpu-eps-output",
+      "to": "cpu-eps-header",
+      "route": ["motherboard-top-left"],
+      "dependencyNotes": [
+        "Route before top radiator final installation."
+      ],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Routing dependency is documented; exact route coordinates are pending."
+          }
+        ]
+      }
+    }
+  ],
+  "airflow": [
+    {
+      "id": "top-radiator-exhaust",
+      "label": "Top 360mm radiator exhaust",
+      "direction": "exhaust",
+      "locationId": "case-top-radiator",
+      "staticFallback": "The top radiator is planned as exhaust, with bottom and side fans acting as intake.",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Planned airflow role is verified for the static guide and final fan direction remains a physical check."
+          }
+        ]
+      }
+    }
+  ],
+  "buildSequence": [
+    {
+      "id": "install-motherboard",
+      "order": 1,
+      "label": "Install motherboard into case",
+      "chapter": "docs/12-motherboard-installation.md",
+      "componentIds": ["motherboard", "case"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/12-motherboard-installation.md"
+          }
+        ]
+      }
+    }
+  ],
+  "biosTraining": [
+    {
+      "id": "default-boot",
+      "label": "Default boot before EXPO",
+      "stateType": "default",
+      "staticFallback": "Boot at defaults before enabling EXPO or tuning.",
+      "nextStateIds": ["expo-training"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/19-expo.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "expo-training",
+      "label": "EXPO memory training",
+      "stateType": "training",
+      "staticFallback": "After EXPO is enabled, DDR5 memory training can take several minutes.",
+      "nextStateIds": [],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/19-expo.md"
+          }
+        ]
+      }
+    }
+  ],
+  "links": [
+    {
+      "id": "github-pages-site",
+      "label": "Published GitHub Pages site",
+      "url": "https://t3lstar.github.io/PC-Build/",
+      "kind": "repository",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/milestone-05-final-qa.md"
+          }
+        ]
+      }
+    }
+  ]
+}

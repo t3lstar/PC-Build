@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:35 BST.
+Status: Active validation report. Last verified: 2026-07-13 15:38 BST.
 
 ## Passed Checks
 
@@ -72,6 +72,9 @@ Status: Active validation report. Last verified: 2026-07-13 15:35 BST.
 | Local full validation after issue #19 ADR draft | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 1.16 seconds; shell wall-clock total was 1.825 seconds. |
 | Milestone 6 issue #19 ADR acceptance | User decision and manual review of `docs/adr/0001-digital-twin-architecture.md`, `MILESTONES.md`, and `milestones/milestone-06-digital-twin.md` | Updated ADR 0001 to Accepted. Astro Starlight is now the direct Milestone 6 target platform, with framework-neutral data and static fallbacks preserved. |
 | Local full validation after issue #19 ADR acceptance | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 1.03 seconds; shell wall-clock total was 1.570 seconds. |
+| Milestone 6 issue #20 schema and data model review | Manual review of `data/schemas/digital-twin.schema.json`, `data/digital-twin/build.json`, `scripts/validate-data.py`, `scripts/validate.sh`, `requirements.txt`, `README.md`, `CONTRIBUTING.md`, and `milestones/milestone-06-digital-twin.md` | Added Draft 2020-12 JSON Schema, seed digital twin dataset, Python validation command, and validation documentation. |
+| Digital twin data validation after issue #20 updates | `. .venv/bin/activate && ./scripts/validate.sh data` from `/Users/simondawson/Herd/PC-Build` | Passed. `data/digital-twin/build.json` validates against `data/schemas/digital-twin.schema.json`. |
+| Local full validation after issue #20 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.03 seconds; shell wall-clock total was 1.617 seconds. |
 
 ## Warnings
 

@@ -84,7 +84,7 @@ Run local validation:
 ./scripts/validate.sh all
 ```
 
-This checks required repository files, MkDocs navigation targets, local Markdown links, and the strict HTML build.
+This checks digital twin JSON data, required repository files, MkDocs navigation targets, local Markdown links, and the strict HTML build.
 
 ## Project Planning
 

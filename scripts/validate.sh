@@ -9,10 +9,16 @@ usage() {
 Usage: ./scripts/validate.sh <target>
 
 Targets:
+  data  Validate digital twin JSON data against JSON Schema.
   docs  Validate required files, MkDocs nav targets, and local Markdown links.
   html  Build the MkDocs HTML site with strict mode.
-  all   Run docs validation and the HTML build.
+  all   Run data validation, docs validation, and the HTML build.
 USAGE
+}
+
+validate_data() {
+  cd "$ROOT_DIR"
+  "${PYTHON:-python3}" scripts/validate-data.py
 }
 
 validate_docs() {
@@ -26,6 +32,9 @@ validate_html() {
 }
 
 case "$TARGET" in
+  data)
+    validate_data
+    ;;
   docs)
     validate_docs
     ;;
@@ -33,6 +42,7 @@ case "$TARGET" in
     validate_html
     ;;
   all)
+    validate_data
     validate_docs
     validate_html
     ;;

@@ -97,7 +97,7 @@ source .venv/bin/activate
 ./scripts/validate.sh all
 ```
 
-Use `./scripts/build.sh html` when you only need to rebuild the MkDocs site. Use `./scripts/validate.sh docs` when you only need the repository structure and local Markdown link checks.
+Use `./scripts/build.sh html` when you only need to rebuild the MkDocs site. Use `./scripts/validate.sh docs` when you only need the repository structure and local Markdown link checks. Use `./scripts/validate.sh data` when you only need digital twin JSON Schema validation.
 
 If a change introduces new tooling, document the command and expected result in `docs/project/milestone-05-06-validation-report.md`.
 
