@@ -1,6 +1,6 @@
 # Publishing
 
-Status: Initial publication guidance. Last verified: 2026-07-13 10:53 BST.
+Status: Initial publication guidance. Last verified: 2026-07-13 11:47 BST.
 
 ## Purpose
 
@@ -43,6 +43,8 @@ Supported targets:
 | MkDocs output | `site/` |
 
 Do not install MkDocs dependencies into system Python.
+
+PDF and standalone printable manual generation are deferred until after the GitHub Pages site is publication-ready. The `pdf` and `printable` script targets remain reserved for that later work.
 
 ## GitHub Actions Flow
 

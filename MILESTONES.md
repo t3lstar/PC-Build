@@ -7,6 +7,7 @@ This project will be delivered in four milestones so the repository can be built
 - When new durable project knowledge is discovered, update the relevant documentation in the same change so future sessions can rehydrate from the repository.
 - A final-build reference image exists from ChatGPT and may be used as a visual target where appropriate.
 - Include real component product imagery in the documentation where it helps visual identification. Prefer externally hosted manufacturer images with source links rather than copying third-party product photography into the repository.
+- PDF and standalone printable manual generation are deferred until after the GitHub Pages site is publication-ready.
 - All listed components should be treated as mutually compatible unless later verification proves otherwise.
 - RAM and SSD alternatives are acceptable if they preserve the intended platform requirements and performance class:
   - RAM: DDR5, AMD EXPO support preferred, 32GB target capacity, DDR5-6000 CL30 target specification.
@@ -165,13 +166,14 @@ Refine the documentation into a publication-ready manual.
 - Add screenshots where appropriate.
 - Improve MkDocs Material styling.
 - Validate navigation and cross-links.
-- Verify PDF, HTML, and printable manual generation.
+- Verify HTML generation and the published GitHub Pages site.
+- Defer PDF and standalone printable manual generation to a later enhancement.
 - Review the final repository for publication readiness.
 
 ### Acceptance Criteria
 
 - Documentation builds cleanly as HTML.
-- PDF and printable manual outputs are generated successfully.
+- PDF and standalone printable manual generation are documented as deferred.
 - Links and navigation work.
 - Screenshots and diagrams render correctly.
 - The repository is suitable for publication on GitHub.

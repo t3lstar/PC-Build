@@ -68,6 +68,8 @@ Build every configured output:
 ./scripts/build.sh all
 ```
 
+The `pdf` and `printable` script targets are reserved for later work. The current published output is the GitHub Pages HTML site.
+
 ## Local Preview
 
 ```bash
