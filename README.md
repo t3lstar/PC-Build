@@ -42,6 +42,8 @@ Rendered documentation content lives under `docs/` so MkDocs can build the site 
 
 ## Build
 
+Use Python 3.12 for local documentation builds. Node.js 24 is the expected local JavaScript runtime if Node-based tooling is added or used.
+
 Install dependencies:
 
 ```bash
@@ -65,5 +67,6 @@ Build every configured output:
 ## Local Preview
 
 ```bash
+source .venv/bin/activate
 mkdocs serve
 ```

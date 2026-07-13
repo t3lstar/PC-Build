@@ -176,6 +176,10 @@ Include requirements.txt for MkDocs and documentation build dependencies.
 
 Use a local Python virtual environment named .venv for local documentation builds.
 
+Use Python 3.12 for local documentation builds to match GitHub Actions.
+
+Use Node.js 24 for any local Node-based tooling to match GitHub Actions runtime expectations.
+
 Do not install Python packages into the system Python environment.
 
 --------------------------------------------------
