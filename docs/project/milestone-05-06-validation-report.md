@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Initial validation report. Last verified: 2026-07-13 13:04 BST.
+Status: Active validation report. Last verified: 2026-07-13 13:42 BST.
 
 ## Passed Checks
 
@@ -15,6 +15,10 @@ Status: Initial validation report. Last verified: 2026-07-13 13:04 BST.
 | Milestone 5 issue set | `gh issue list --repo t3lstar/PC-Build --state all --limit 120` | Created and verified issues `#5` through `#18`. |
 | Milestone 6 issue set | `gh issue list --repo t3lstar/PC-Build --state all --limit 120` | Created and verified issues `#19` through `#34`. |
 | Local HTML build with `.venv` active | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 139.69 seconds. |
+| Local HTML build after issue #5 updates | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 71.44 seconds. |
+| Gigabyte manual availability | `curl -I -L https://download.gigabyte.com/FileList/Manual/mb_manual_b850-aorus-elite-wf7_1101_e.pdf` | Official user manual 1101 URL returned HTTP 200. |
+| Gigabyte manual text extraction | Bundled runtime Python with `pypdf`, using temporary files under `/tmp/pc-build-sources/` | Extracted 40 pages from the official manual for local verification; no PDF or extracted text was committed. |
+| Milestone 5 issue #5 verification pass | Official Gigabyte, G.SKILL, ARCTIC, Lian Li, and Samsung sources | Updated `docs/project/verification-register.md` plus affected RAM, M.2, AIO, and front-panel chapters. |
 
 ## Warnings
 
@@ -53,12 +57,11 @@ Status: Initial validation report. Last verified: 2026-07-13 13:04 BST.
 | --- | --- | --- |
 | Local HTML build during audit | `. .venv/bin/activate; ./scripts/build.sh html` | Failed once with `OSError: [Errno 89] Operation canceled` while reading `docs/appendix/faq.md`. The file was present and readable immediately afterward. Treat as local iCloud/filesystem risk unless reproduced in CI. |
 | Local HTML build without `.venv` active | `./scripts/build.sh html` | Failed with `mkdocs: command not found`, as expected when the local virtual environment is not active. |
+| Local `pypdf` install into project `.venv` | `. .venv/bin/activate && python -m pip install pypdf` | Interrupted after slow/no output; used bundled runtime PDF tooling instead. No dependency file was changed. |
 
 ## Manual Verification Still Required
 
 - Exact motherboard connector positions for interactive display.
-- Exact fan and pump header recommendations.
-- Exact front-panel pinout reproduction if copied into documentation.
-- M.2 slot preference and heatsink details.
+- Exact front-panel connector coordinates for a future interactive map.
 - BIOS menu names for the BIOS version used during the build.
 - Real benchmark baseline values after the physical machine is assembled and tested.

@@ -1,6 +1,6 @@
 # Front Panel Connectors
 
-Status: Initial Milestone 2 content. Last verified: 2026-07-13 10:53 BST.
+Status: Verified Milestone 5 content. Last verified: 2026-07-13 13:42 BST.
 
 ## Introduction
 
@@ -20,7 +20,7 @@ Moderate because front-panel header pins are small.
 
 ## Required Tools
 
-- Motherboard manual.
+- Gigabyte B850 AORUS Elite WiFi7 user manual.
 - Case manual.
 - Flashlight.
 - Precision screwdriver or tweezers if needed for positioning small plugs.
@@ -28,7 +28,7 @@ Moderate because front-panel header pins are small.
 ## Warnings
 
 - Do not force USB 3.x or USB-C headers; bent pins are difficult to repair.
-- Do not guess the power switch pins. Use the motherboard manual.
+- Do not guess front-panel pins. Use the `F_PANEL` labels below and confirm against the motherboard manual diagram before applying pressure.
 - Do not connect front audio to the wrong header.
 - Do not pull front-panel cables tight.
 
@@ -36,14 +36,29 @@ Moderate because front-panel header pins are small.
 
 ![Front panel connector map](assets/diagrams/svg/front-panel-connectors.svg)
 
-1. Locate the motherboard front-panel header in the manual.
-2. Connect the case power switch plug to the correct `PWR_SW` pins.
-3. Connect reset switch, power LED, or HDD LED plugs only if the case provides them and the manual confirms polarity.
-4. Connect the front USB-A cable to the motherboard USB 3.x header.
-5. Connect the front USB-C cable to the motherboard USB-C front-panel header.
-6. Connect the HD audio cable to the front audio header at the lower-left area of the motherboard.
-7. Check that each keyed connector is aligned before applying pressure.
-8. Leave a small service loop so connectors are not under tension.
+1. Locate the motherboard `F_PANEL` header at the bottom edge of the board.
+2. Connect the case power switch plug to the `PW` pins. Switch polarity does not matter.
+3. Connect reset switch, power LED, or HDD LED plugs only if the case provides them.
+4. For LED plugs, align positive and negative polarity with the motherboard labels before pressing the connector down.
+5. Use these verified motherboard header labels:
+
+| Label | Function | Polarity note |
+| --- | --- | --- |
+| `PW+` / `PW-` | Power switch | Polarity does not matter for a simple switch. |
+| `RES+` / `RES-` | Reset switch | Polarity does not matter for a simple switch. |
+| `PLED+` / `PLED-` | Power LED | Polarity matters. |
+| `PWR_LED+` / `PWR_LED-` | Alternate power LED pins | Polarity matters. |
+| `HD+` / `HD-` | Drive activity LED | Polarity matters. |
+| `SPEAK+` / `SPEAK-` | Case speaker | Only used if a speaker is supplied. |
+| `CI+` / `CI-` | Chassis intrusion | Not used unless the case provides this cable. |
+| `NC` | No connection | Leave unused. |
+
+6. Leave speaker and chassis-intrusion pins unused unless the case accessory bundle includes those cables.
+7. Connect the front USB-A cable to the motherboard USB 3.x header.
+8. Connect the front USB-C cable to the motherboard USB-C front-panel header.
+9. Connect the HD audio cable to the front audio header at the lower-left area of the motherboard.
+10. Check that each keyed connector is aligned before applying pressure.
+11. Leave a small service loop so connectors are not under tension.
 
 ## Verification Checklist
 
@@ -66,6 +81,11 @@ Moderate because front-panel header pins are small.
 ## Expected Result
 
 The case power button and front I/O are connected and ready for first boot testing.
+
+## Sources Reviewed
+
+- [Gigabyte B850 AORUS Elite WiFi7 user manual 1101](https://download.gigabyte.com/FileList/Manual/mb_manual_b850-aorus-elite-wf7_1101_e.pdf)
+- [Lian Li O11 Dynamic Mini V2 product page](https://lian-li.com/product/o11-dynamic-mini-v2/)
 
 ## Next Chapter
 

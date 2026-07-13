@@ -1,6 +1,6 @@
 # M.2 SSD Installation
 
-Status: Initial Milestone 2 content. Last verified: 2026-07-13 10:53 BST.
+Status: Verified Milestone 5 content. Last verified: 2026-07-13 13:42 BST.
 
 ## Introduction
 
@@ -23,7 +23,7 @@ Beginner to moderate.
 - Precision Phillips screwdriver if the M.2 heatsink uses screws.
 - Anti-static wrist strap.
 - Samsung 990 EVO Plus 2TB SSD.
-- Motherboard manual.
+- Gigabyte B850 AORUS Elite WiFi7 user manual.
 
 ## Warnings
 
@@ -35,8 +35,8 @@ Beginner to moderate.
 
 ## Step-by-Step Instructions
 
-1. Identify the preferred primary M.2 slot from the motherboard manual.
-2. Remove the M.2 heatsink covering that slot.
+1. Identify the `M2A_CPU` slot. This is the preferred boot SSD slot for this build because it is CPU-connected and supports PCIe 5.0 x4/x2 SSD capability with Ryzen 7000-series CPUs.
+2. Remove the M.2 heatsink covering `M2A_CPU`.
 3. Confirm the slot is set for an 80mm `2280` drive position.
 4. Remove any protective film from the heatsink thermal pad.
 5. Hold the Samsung 990 EVO Plus by its edges.
@@ -49,6 +49,7 @@ Beginner to moderate.
 ## Verification Checklist
 
 - [ ] SSD is M.2 2280 NVMe.
+- [ ] SSD is installed in `M2A_CPU`.
 - [ ] SSD is fully inserted into the connector.
 - [ ] SSD is secured at the 2280 position.
 - [ ] Thermal pad protective film is removed.
@@ -62,10 +63,16 @@ Beginner to moderate.
 - Overtightening the heatsink.
 - Using a heatsink-version SSD under the motherboard heatsink.
 - Forgetting which slot contains the Windows drive.
+- Installing a SATA M.2 drive; the motherboard M.2 connectors support PCIe/NVMe SSDs only.
 
 ## Expected Result
 
 The Samsung 990 EVO Plus 2TB drive is installed under a motherboard heatsink and ready to be detected during BIOS and Windows setup.
+
+## Sources Reviewed
+
+- [Gigabyte B850 AORUS Elite WiFi7 user manual 1101](https://download.gigabyte.com/FileList/Manual/mb_manual_b850-aorus-elite-wf7_1101_e.pdf)
+- [Samsung 990 EVO Plus data sheet](https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf)
 
 ## Next Chapter
 

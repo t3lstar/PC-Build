@@ -1,6 +1,6 @@
 # AIO Installation
 
-Status: Initial Milestone 2 content. Last verified: 2026-07-13 10:53 BST.
+Status: Verified Milestone 5 content. Last verified: 2026-07-13 13:42 BST.
 
 ## Introduction
 
@@ -22,6 +22,8 @@ Moderate.
 
 - Phillips #2 screwdriver.
 - ARCTIC AM5 mounting hardware.
+- ARCTIC Liquid Freezer III Pro 360 online manual.
+- Gigabyte B850 AORUS Elite WiFi7 user manual.
 - Thermal paste supplied with the cooler unless pre-applied.
 - Isopropyl alcohol and lint-free cloth if paste must be cleaned.
 - Flashlight.
@@ -50,8 +52,10 @@ Moderate.
 11. Lower the pump block straight onto the CPU.
 12. Tighten the mounting screws gradually and evenly.
 13. Connect the pump/fan cable according to the chosen ARCTIC cable mode.
-14. For a simple build, use the all-in-one cable path and connect it to the CPU fan or pump header specified by the cooler and motherboard manuals.
-15. Secure loose fan and pump cables away from fan blades.
+14. For the simple build path, use the ARCTIC all-in-one cable and connect it to `CPU_FAN`. This gives one PWM control signal and monitoring path for the cooler assembly.
+15. For later individual tuning, use the ARCTIC individual-control cable only if you deliberately want separate pump, VRM fan, and radiator fan control. Connect those leads to 4-pin PWM-capable motherboard headers such as `CPU_FAN`, `CPU_OPT`, and `FAN4_PUMP`, then label the leads before closing the rear chamber.
+16. In BIOS, set the connected cooler headers to PWM mode before tuning curves.
+17. Secure loose fan and pump cables away from fan blades.
 
 ## Verification Checklist
 
@@ -61,6 +65,7 @@ Moderate.
 - [ ] Cold plate protective film is removed.
 - [ ] Pump block is evenly mounted.
 - [ ] Fan and pump cables are connected.
+- [ ] Connected cooler headers are planned for PWM mode in BIOS.
 - [ ] Tubes are not sharply kinked.
 - [ ] Fans spin freely by hand.
 
@@ -71,11 +76,18 @@ Moderate.
 - Using the wrong radiator screws.
 - Applying too much thermal paste.
 - Connecting pump/fan cables to an unmonitored or disabled header.
+- Using the individual-control cable without noting which lead is pump, VRM fan, and radiator fans.
 - Letting a cable touch the fan blades.
 
 ## Expected Result
 
 The CPU cooler is mounted, the top radiator is secured, and pump/fan cables are ready for BIOS monitoring.
+
+## Sources Reviewed
+
+- [ARCTIC Liquid Freezer III Pro 360 manual](https://support.arctic.de/en/liquid-freezer-iii-pro-360)
+- [ARCTIC Liquid Freezer III Pro 360 product page](https://www.arctic.de/en/Liquid-Freezer-III-Pro-360/ACFRE00180A)
+- [Gigabyte B850 AORUS Elite WiFi7 user manual 1101](https://download.gigabyte.com/FileList/Manual/mb_manual_b850-aorus-elite-wf7_1101_e.pdf)
 
 ## Next Chapter
 
