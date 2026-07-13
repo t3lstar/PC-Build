@@ -1,6 +1,6 @@
 # Documentation Structure
 
-Status: Active Milestone 5 structure guide. Last verified: 2026-07-13 14:59 BST.
+Status: Active Milestone 5 structure guide. Last verified: 2026-07-13 15:14 BST.
 
 ## Purpose
 
@@ -45,6 +45,7 @@ For milestone implementation:
 
 - Make local commits per issue or coherent issue group.
 - Run the local HTML build before each local commit.
+- Run `./scripts/validate.sh all` for Milestone 5 validation checkpoints.
 - Keep GitHub issues open while their commits are local-only.
 - Push at agreed milestone checkpoints instead of after every issue.
 - Close GitHub issues only after the relevant commits are pushed and GitHub Actions passes.

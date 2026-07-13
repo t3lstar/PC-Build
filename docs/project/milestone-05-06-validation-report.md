@@ -46,6 +46,8 @@ Status: Active validation report. Last verified: 2026-07-13 15:14 BST.
 | Milestone 5 issue #12 benchmark methodology review | Manual review of `docs/23-benchmarks.md`, `docs/appendix/checklists.md`, and `milestones/milestone-05-professional-engineering.md` | Expanded benchmark preconditions, test order, logging template, pass criteria, retest rules, and privacy guidance without inventing benchmark scores. |
 | Old iCloud checkout removal | `rm -rf '/Users/simondawson/Library/Mobile Documents/com~apple~CloudDocs/PC-Build'` after confirming active checkout is `/Users/simondawson/Herd/PC-Build` | Removed the stale iCloud Drive checkout. Future local work should use `/Users/simondawson/Herd/PC-Build`. |
 | Local HTML build after issue #12 updates | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 1.04 seconds; shell wall-clock total was 1.494 seconds. |
+| Milestone 5 issue #13 validation tooling review | Manual review of `scripts/validate-docs.py`, `scripts/validate.sh`, `README.md`, `CONTRIBUTING.md`, `docs/project/documentation-structure.md`, and `milestones/milestone-05-professional-engineering.md` | Added dependency-light docs validation for required files, MkDocs nav targets, local Markdown links, plus a local `./scripts/validate.sh all` wrapper. |
+| Local full validation after issue #13 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 0.87 seconds; shell wall-clock total was 1.214 seconds. |
 
 ## Warnings
 

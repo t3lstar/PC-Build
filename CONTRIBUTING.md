@@ -90,12 +90,14 @@ Every main chapter must include:
 
 ## Validation
 
-Run the HTML build before committing documentation changes:
+Run local validation before committing documentation changes:
 
 ```bash
 source .venv/bin/activate
-./scripts/build.sh html
+./scripts/validate.sh all
 ```
+
+Use `./scripts/build.sh html` when you only need to rebuild the MkDocs site. Use `./scripts/validate.sh docs` when you only need the repository structure and local Markdown link checks.
 
 If a change introduces new tooling, document the command and expected result in `docs/project/milestone-05-06-validation-report.md`.
 

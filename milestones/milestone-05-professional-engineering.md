@@ -54,7 +54,7 @@ Raise the existing GitHub Pages manual into publication-quality engineering docu
 - [x] Monitoring and optimisation guide.
 - [x] Maintenance schedules and logs.
 - [x] Benchmark baseline methodology.
-- [ ] Validation scripts and local CI wrapper.
+- [x] Validation scripts and local CI wrapper.
 - [ ] GitHub Actions validation expansion.
 - [ ] Reproducible HTML and PDF/printable outputs.
 - [ ] Expanded appendices and connector references.
@@ -81,7 +81,12 @@ Initial expected commands:
 ./scripts/build.sh all
 ```
 
-Additional validation commands should be added as tooling is implemented.
+Run the local validation wrapper when checking milestone changes:
+
+```bash
+. .venv/bin/activate
+./scripts/validate.sh all
+```
 
 ## Risks
 
@@ -106,7 +111,7 @@ Additional validation commands should be added as tooling is implemented.
 - [x] [#10: M5: Complete monitoring and optimisation guide](https://github.com/t3lstar/PC-Build/issues/10) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#11: M5: Complete maintenance schedules and logs](https://github.com/t3lstar/PC-Build/issues/11) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#12: M5: Establish benchmark baseline methodology](https://github.com/t3lstar/PC-Build/issues/12) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
-- [ ] [#13: M5: Add documentation validation scripts](https://github.com/t3lstar/PC-Build/issues/13)
+- [x] [#13: M5: Add documentation validation scripts](https://github.com/t3lstar/PC-Build/issues/13) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#14: M5: Implement GitHub Actions validation](https://github.com/t3lstar/PC-Build/issues/14)
 - [ ] [#15: M5: Improve MkDocs Material site and print styling](https://github.com/t3lstar/PC-Build/issues/15)
 - [ ] [#16: M5: Make HTML and PDF builds reproducible](https://github.com/t3lstar/PC-Build/issues/16)

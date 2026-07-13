@@ -78,6 +78,14 @@ Build every configured output:
 
 The `pdf` and `printable` script targets are reserved for later work. The current published output is the GitHub Pages HTML site.
 
+Run local validation:
+
+```bash
+./scripts/validate.sh all
+```
+
+This checks required repository files, MkDocs navigation targets, local Markdown links, and the strict HTML build.
+
 ## Project Planning
 
 - Milestone tracker: `MILESTONES.md`
@@ -97,7 +105,7 @@ Milestone 6 will focus on an accessible, static-site-compatible digital twin aft
 2. Work from the relevant GitHub issue or milestone plan.
 3. Update project documentation in the same change when new durable information is discovered.
 4. Keep technical claims source-backed or record unresolved items in `docs/project/verification-register.md`.
-5. Run `./scripts/build.sh html` before publishing documentation changes.
+5. Run `./scripts/validate.sh all` before publishing documentation changes.
 
 Milestone implementation uses a local-first flow: commit locally per issue or issue group, validate locally, and push at agreed milestone checkpoints. GitHub issues are closed only after the relevant commits are pushed and GitHub Actions passes.
 
