@@ -51,7 +51,7 @@ Raise the existing GitHub Pages manual into publication-quality engineering docu
 - [ ] Improved README and contribution guidance.
 - [ ] Expanded build, maintenance, and troubleshooting checklists.
 - [ ] Mermaid troubleshooting decision trees.
-- [ ] Monitoring and optimisation guide.
+- [x] Monitoring and optimisation guide.
 - [ ] Maintenance schedules and logs.
 - [ ] Benchmark baseline methodology.
 - [ ] Validation scripts and local CI wrapper.
@@ -103,7 +103,7 @@ Additional validation commands should be added as tooling is implemented.
 - [x] [#7: M5: Improve README, roadmap and contribution guidance](https://github.com/t3lstar/PC-Build/issues/7)
 - [x] [#8: M5: Create build and maintenance checklists](https://github.com/t3lstar/PC-Build/issues/8)
 - [x] [#9: M5: Add troubleshooting decision trees](https://github.com/t3lstar/PC-Build/issues/9)
-- [ ] [#10: M5: Complete monitoring and optimisation guide](https://github.com/t3lstar/PC-Build/issues/10)
+- [x] [#10: M5: Complete monitoring and optimisation guide](https://github.com/t3lstar/PC-Build/issues/10) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [ ] [#11: M5: Complete maintenance schedules and logs](https://github.com/t3lstar/PC-Build/issues/11)
 - [ ] [#12: M5: Establish benchmark baseline methodology](https://github.com/t3lstar/PC-Build/issues/12)
 - [ ] [#13: M5: Add documentation validation scripts](https://github.com/t3lstar/PC-Build/issues/13)

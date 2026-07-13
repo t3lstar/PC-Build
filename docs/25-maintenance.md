@@ -1,6 +1,6 @@
 # Maintenance
 
-Status: Published HTML content. Last reviewed: 2026-07-13 13:53 BST.
+Status: Published HTML content. Last reviewed: 2026-07-13 15:04 BST.
 
 ## Introduction
 
@@ -38,13 +38,14 @@ Beginner.
 
 1. Monthly, inspect front, side, bottom, and top ventilation paths for dust.
 2. Check idle CPU and GPU temperatures against the temperature reference.
-3. Check that all fans spin normally and do not make new noise.
-4. Review Windows Update and driver update state.
-5. Every 3-6 months, power down, unplug, open the case, and clean dust filters.
-6. Hold fans still and clear dust from fan blades and radiator fins.
-7. Check cable ties and straps for pressure or rubbing.
-8. Check SSD free space and health using vendor or monitoring software.
-9. Record any BIOS, driver, hardware, or cooling changes.
+3. Compare current readings with the [gaming optimisation](22-gaming-optimisation.md) monitoring baseline.
+4. Check that all fans spin normally and do not make new noise.
+5. Review Windows Update and driver update state.
+6. Every 3-6 months, power down, unplug, open the case, and clean dust filters.
+7. Hold fans still and clear dust from fan blades and radiator fins.
+8. Check cable ties and straps for pressure or rubbing.
+9. Check SSD free space and health using vendor or monitoring software.
+10. Record any BIOS, driver, hardware, or cooling changes.
 
 Use the maintenance log templates in the [checklists appendix](appendix/checklists.md) to record monthly checks, driver/firmware changes, and hardware changes.
 

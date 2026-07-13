@@ -1,14 +1,14 @@
 # Benchmarks
 
-Status: Published HTML content. Last reviewed: 2026-07-13 13:53 BST.
+Status: Published HTML content. Last reviewed: 2026-07-13 15:04 BST.
 
 ## Introduction
 
-This chapter establishes a baseline test process for temperatures, stability, storage performance, and gaming performance.
+This chapter establishes a baseline test process for temperatures, stability, storage performance, and gaming performance after the monitored optimisation pass is complete.
 
 ## Purpose
 
-Confirm the build is stable and performing as expected before daily use.
+Confirm the build is stable and performing as expected before daily use, with results that can be compared against the [gaming optimisation](22-gaming-optimisation.md), [temperature reference](appendix/temperature-reference.md), and [maintenance](25-maintenance.md) records.
 
 ## Estimated Time
 
@@ -38,17 +38,19 @@ Moderate.
 
 1. Record ambient room temperature.
 2. Record BIOS version, driver versions, EXPO status, and Windows version.
-3. Record idle CPU and GPU temperatures after 10 minutes at the desktop.
-4. Run a short CPU load test while monitoring CPU temperature and pump/fan behavior.
-5. Run a memory stability test with EXPO enabled.
-6. Run an SSD benchmark and confirm the NVMe drive behaves like a PCIe NVMe drive, not a SATA drive.
-7. Run a GPU benchmark or a repeatable in-game benchmark.
-8. Record average FPS, 1% lows if available, GPU temperature, CPU temperature, and driver version.
-9. Repeat any failed test after fixing the cause.
+3. Confirm the optimisation monitoring log has current idle readings.
+4. Record idle CPU and GPU temperatures after 10 minutes at the desktop.
+5. Run a short CPU load test while monitoring CPU temperature and pump/fan behavior.
+6. Run a memory stability test with EXPO enabled.
+7. Run an SSD benchmark and confirm the NVMe drive behaves like a PCIe NVMe drive, not a SATA drive.
+8. Run a GPU benchmark or a repeatable in-game benchmark.
+9. Record average FPS, 1% lows if available, GPU temperature, GPU utilisation, VRAM usage, CPU temperature, and driver version.
+10. Repeat any failed test after fixing the cause.
 
 ## Verification Checklist
 
 - [ ] Baseline settings are recorded.
+- [ ] Optimisation monitoring log is current.
 - [ ] Idle temperatures are recorded.
 - [ ] CPU load temperature is acceptable for the cooler.
 - [ ] Memory test passes.
