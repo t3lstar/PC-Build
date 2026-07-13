@@ -668,3 +668,107 @@
     margin-top: 1rem;
   }
 }
+
+.pc-exploded {
+  margin: 2rem 0;
+}
+
+.pc-exploded__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 22rem);
+  gap: 1rem;
+}
+
+.pc-exploded__stage {
+  min-height: 32rem;
+  overflow: hidden;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .5rem;
+  background: #f8fafc;
+}
+
+.pc-exploded__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 32rem;
+}
+
+.pc-exploded__layer {
+  transform: translate(calc(var(--dx) * 1px), calc(var(--dy) * 1px));
+  transition: transform .18s ease;
+}
+
+.pc-exploded[data-mode='assembled'] .pc-exploded__layer {
+  transform: translate(0, 0);
+}
+
+.pc-exploded__layer rect {
+  fill: #dbeafe;
+  stroke: #1e3a8a;
+  stroke-width: .55;
+}
+
+.pc-exploded__layer text {
+  fill: #0f172a;
+  font-size: .22rem;
+  font-weight: 800;
+}
+
+.pc-exploded__layer--case rect {
+  fill: #e2e8f0;
+  stroke: #334155;
+}
+
+.pc-exploded__layer--psu rect {
+  fill: #fde68a;
+  stroke: #92400e;
+}
+
+.pc-exploded__layer--gpu rect {
+  fill: #ddd6fe;
+  stroke: #6d28d9;
+}
+
+.pc-exploded__layer--cooler rect {
+  fill: #fee2e2;
+  stroke: #dc2626;
+}
+
+.pc-exploded__parts {
+  display: grid;
+  gap: .75rem;
+  align-content: start;
+}
+
+.pc-exploded__parts article {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .45rem;
+  padding: .85rem;
+  background: var(--sl-color-gray-6);
+}
+
+.pc-exploded__parts h3 {
+  margin-top: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pc-exploded__layer {
+    transition: none;
+  }
+}
+
+@media (max-width: 56rem) {
+  .pc-exploded__layout {
+    display: block;
+  }
+
+  .pc-exploded__stage,
+  .pc-exploded__svg {
+    min-height: 25rem;
+  }
+
+  .pc-exploded__parts {
+    margin-top: 1rem;
+  }
+}

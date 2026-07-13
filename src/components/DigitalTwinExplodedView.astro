@@ -1,0 +1,108 @@
+---
+import digitalTwin from '../../data/digital-twin/build.json';
+
+const componentIds = ['case', 'psu', 'motherboard', 'cpu', 'memory', 'storage', 'gpu', 'cooler'];
+const components = componentIds
+  .map((id) => digitalTwin.components.find((component) => component.id === id))
+  .filter(Boolean);
+
+const layerMeta = new Map([
+  ['case', { label: 'Case frame', x: 8, y: 13, w: 84, h: 76, dx: 0, dy: 0 }],
+  ['psu', { label: 'PSU', x: 68, y: 69, w: 18, h: 15, dx: 8, dy: 5 }],
+  ['motherboard', { label: 'Motherboard', x: 30, y: 27, w: 40, h: 44, dx: -9, dy: -3 }],
+  ['cpu', { label: 'CPU', x: 42, y: 36, w: 12, h: 10, dx: -20, dy: -11 }],
+  ['memory', { label: 'DDR5', x: 58, y: 34, w: 7, h: 25, dx: 19, dy: -13 }],
+  ['storage', { label: 'M.2 SSD', x: 42, y: 51, w: 20, h: 5, dx: -18, dy: 13 }],
+  ['gpu', { label: 'GPU', x: 35, y: 62, w: 34, h: 8, dx: 9, dy: 18 }],
+  ['cooler', { label: 'Top AIO', x: 25, y: 16, w: 50, h: 8, dx: 0, dy: -14 }],
+]);
+---
+
+<section class="pc-exploded" aria-labelledby="pc-exploded-heading" data-mode="exploded">
+  <div class="pc-case-view__header">
+    <div>
+      <h2 id="pc-exploded-heading">Exploded Assembly View</h2>
+      <p>
+        Toggle between the assembled schematic and a lightweight exploded view of the major build
+        layers. This is an assembly teaching aid, not a measured mechanical drawing.
+      </p>
+    </div>
+    <span class="pc-status">assembly layers</span>
+  </div>
+
+  <div class="pc-airflow__controls" aria-label="Assembly view mode">
+    <button type="button" data-mode="exploded" aria-pressed="true">Exploded</button>
+    <button type="button" data-mode="assembled" aria-pressed="false">Assembled</button>
+  </div>
+
+  <div class="pc-exploded__layout">
+    <div class="pc-exploded__stage" aria-label="Schematic exploded assembly view">
+      <svg class="pc-exploded__svg" viewBox="0 0 100 100" role="img" aria-labelledby="exploded-svg-title exploded-svg-desc">
+        <title id="exploded-svg-title">Lightweight exploded assembly view</title>
+        <desc id="exploded-svg-desc">
+          Major PC build components are shown as schematic layers that can move between assembled
+          and exploded positions.
+        </desc>
+        {
+          components.map((component) => {
+            const meta = layerMeta.get(component.id);
+            return meta ? (
+              <g
+                class={`pc-exploded__layer pc-exploded__layer--${component.category}`}
+                style={`--dx:${meta.dx};--dy:${meta.dy};`}
+                data-component-id={component.id}
+              >
+                <rect x={meta.x} y={meta.y} width={meta.w} height={meta.h} rx="2" />
+                <text x={meta.x + meta.w / 2} y={meta.y + meta.h / 2 + 1.3} text-anchor="middle">
+                  {meta.label}
+                </text>
+              </g>
+            ) : null;
+          })
+        }
+      </svg>
+    </div>
+
+    <div class="pc-exploded__parts">
+      {
+        components.map((component) => (
+          <article>
+            <h3>{component.name}</h3>
+            <p>{component.role}</p>
+            <span class="pc-status">{component.evidence.state}</span>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+
+  <details class="pc-case-view__fallback">
+    <summary>Static Assembly Layers</summary>
+    <ol>
+      {
+        components.map((component) => (
+          <li>
+            <strong>{component.name}</strong>: {component.role} Verification:
+            {' '}{component.evidence.state}.
+          </li>
+        ))
+      }
+    </ol>
+  </details>
+</section>
+
+<script>
+  const root = document.querySelector('.pc-exploded');
+  const buttons = root?.querySelectorAll('.pc-airflow__controls button');
+
+  function setMode(mode) {
+    root?.setAttribute('data-mode', mode);
+    buttons?.forEach((button) => {
+      button.setAttribute('aria-pressed', button.getAttribute('data-mode') === mode ? 'true' : 'false');
+    });
+  }
+
+  buttons?.forEach((button) => {
+    button.addEventListener('click', () => setMode(button.getAttribute('data-mode') ?? 'exploded'));
+  });
+</script>

@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:20 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:22 BST.
 
 ## Passed Checks
 
@@ -107,6 +107,10 @@ Status: Active validation report. Last verified: 2026-07-13 16:20 BST.
 | Local full validation after issue #26 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.57 seconds; shell wall-clock total was 2.484 seconds. |
 | Starlight validation after issue #26 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 1.78 seconds; shell wall-clock total was 5.378 seconds. |
 | Airflow visualisation generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Airflow Visualisation`, `Static Airflow List`, `Bottom intake airflow`, `Side intake airflow`, and `Top 360mm radiator exhaust`. |
+| Milestone 6 issue #27 exploded assembly view review | Manual review of `src/components/DigitalTwinExplodedView.astro`, `src/content/docs/digital-twin/first-slice.mdx`, `src/styles/starlight.css`, and `data/digital-twin/build.json` | Added a lightweight data-backed exploded assembly view with assembled/exploded toggle, major component layers, verified component roles, reduced-motion styling, and static assembly-layer fallback. |
+| Local full validation after issue #27 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.22 seconds; shell wall-clock total was 2.231 seconds. |
+| Starlight validation after issue #27 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.02 seconds; shell wall-clock total was 4.771 seconds. |
+| Exploded assembly generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Exploded Assembly View`, `Static Assembly Layers`, `Case frame`, `Top AIO`, `AMD Ryzen 7 7800X3D`, and `ASUS TUF`. |
 
 ## Warnings
 

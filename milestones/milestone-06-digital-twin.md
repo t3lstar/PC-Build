@@ -54,7 +54,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] Cable-routing mode.
 - [x] Guided build-sequence mode.
 - [x] Airflow visualisation with static fallback.
-- [ ] Lightweight exploded assembly view.
+- [x] Lightweight exploded assembly view.
 - [ ] Clearly labelled BIOS training simulator.
 - [ ] Driver and firmware source dashboard.
 - [ ] QR codes for stable official URLs.
@@ -115,7 +115,7 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] [#24: M6: Implement cable-routing mode](https://github.com/t3lstar/PC-Build/issues/24) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#25: M6: Implement guided build-sequence mode](https://github.com/t3lstar/PC-Build/issues/25) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#26: M6: Implement airflow visualisation](https://github.com/t3lstar/PC-Build/issues/26) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
-- [ ] [#27: M6: Implement exploded assembly view](https://github.com/t3lstar/PC-Build/issues/27)
+- [x] [#27: M6: Implement exploded assembly view](https://github.com/t3lstar/PC-Build/issues/27) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#28: M6: Implement educational BIOS simulator](https://github.com/t3lstar/PC-Build/issues/28)
 - [ ] [#29: M6: Add driver and firmware source dashboard](https://github.com/t3lstar/PC-Build/issues/29)
 - [ ] [#30: M6: Generate and validate official-link QR codes](https://github.com/t3lstar/PC-Build/issues/30)
