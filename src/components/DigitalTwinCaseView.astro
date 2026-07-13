@@ -1,0 +1,212 @@
+---
+import digitalTwin from '../../data/digital-twin/build.json';
+
+const locationsById = new Map(digitalTwin.locations.map((location) => [location.id, location]));
+const airflowByLocationId = new Map(digitalTwin.airflow.map((zone) => [zone.locationId, zone]));
+
+const zones = [
+  {
+    id: 'case-top-radiator',
+    label: 'Top radiator',
+    x: 18,
+    y: 7,
+    width: 64,
+    height: 12,
+    componentIds: ['cooler'],
+  },
+  {
+    id: 'motherboard-right-edge',
+    label: 'Motherboard',
+    x: 25,
+    y: 25,
+    width: 42,
+    height: 44,
+    componentIds: ['motherboard', 'cpu', 'memory', 'storage'],
+  },
+  {
+    id: 'gpu-area',
+    label: 'Graphics card',
+    x: 30,
+    y: 58,
+    width: 44,
+    height: 12,
+    componentIds: ['gpu'],
+  },
+  {
+    id: 'case-side-intake',
+    label: 'Side intake',
+    x: 76,
+    y: 31,
+    width: 10,
+    height: 30,
+    componentIds: ['case'],
+  },
+  {
+    id: 'case-bottom-intake',
+    label: 'Bottom intake',
+    x: 23,
+    y: 76,
+    width: 54,
+    height: 10,
+    componentIds: ['case'],
+  },
+  {
+    id: 'psu-modular-panel',
+    label: 'PSU',
+    x: 70,
+    y: 68,
+    width: 17,
+    height: 16,
+    componentIds: ['psu'],
+  },
+  {
+    id: 'rear-cable-chamber',
+    label: 'Cable chamber',
+    x: 9,
+    y: 22,
+    width: 10,
+    height: 60,
+    componentIds: ['psu', 'case'],
+  },
+];
+
+const componentName = (componentId: string) =>
+  digitalTwin.components.find((component) => component.id === componentId)?.name ?? componentId;
+
+const viewZones = zones.map((zone) => {
+  const location = locationsById.get(zone.id);
+  const airflow = airflowByLocationId.get(zone.id);
+  return {
+    ...zone,
+    description: location?.staticFallback ?? 'Schematic case zone.',
+    verification: location?.evidence.state ?? 'pending',
+    airflow: airflow ? `${airflow.label}: ${airflow.direction}` : 'No airflow role',
+    components: zone.componentIds.map(componentName).join(', '),
+  };
+});
+---
+
+<section class="pc-case-view" aria-labelledby="pc-case-view-heading">
+  <div class="pc-case-view__header">
+    <div>
+      <h2 id="pc-case-view-heading">Interactive Case View</h2>
+      <p>
+        Schematic view of the Lian Li O11 Dynamic Mini V2 Flow layout. Select a zone to inspect
+        the verified build data behind it.
+      </p>
+    </div>
+    <span class="pc-status">data-backed</span>
+  </div>
+
+  <div class="pc-case-view__layout">
+    <div class="pc-case-view__stage" aria-label="Schematic case layout with selectable zones">
+      <svg class="pc-case-view__svg" viewBox="0 0 100 100" role="img" aria-labelledby="case-svg-title case-svg-desc">
+        <title id="case-svg-title">Schematic PC case layout</title>
+        <desc id="case-svg-desc">
+          A simplified front-facing case layout showing radiator, motherboard, GPU, intake fans,
+          power supply, and rear cable chamber zones.
+        </desc>
+        <defs>
+          <marker id="case-arrow-intake" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+            <path d="M0 0 L5 2.5 L0 5 Z" fill="#2563eb" />
+          </marker>
+          <marker id="case-arrow-exhaust" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+            <path d="M0 0 L5 2.5 L0 5 Z" fill="#dc2626" />
+          </marker>
+        </defs>
+        <rect class="pc-case-view__shell" x="8" y="5" width="84" height="88" rx="3" />
+        <rect class="pc-case-view__glass" x="19" y="20" width="58" height="56" rx="2" />
+        <line class="pc-case-view__route" x1="14" y1="70" x2="35" y2="63" />
+        <line class="pc-case-view__route" x1="75" y1="76" x2="60" y2="64" />
+        <path class="pc-case-view__airflow pc-case-view__airflow--intake" d="M31 91 L31 82" />
+        <path class="pc-case-view__airflow pc-case-view__airflow--intake" d="M50 91 L50 82" />
+        <path class="pc-case-view__airflow pc-case-view__airflow--intake" d="M69 91 L69 82" />
+        <path class="pc-case-view__airflow pc-case-view__airflow--intake" d="M96 37 L86 37" />
+        <path class="pc-case-view__airflow pc-case-view__airflow--intake" d="M96 53 L86 53" />
+        <path class="pc-case-view__airflow pc-case-view__airflow--exhaust" d="M50 2 L50 10" />
+      </svg>
+
+      {
+        viewZones.map((zone) => (
+          <button
+            class="pc-case-view__hotspot"
+            type="button"
+            style={`--x:${zone.x};--y:${zone.y};--w:${zone.width};--h:${zone.height};`}
+            data-zone-id={zone.id}
+            data-label={zone.label}
+            data-description={zone.description}
+            data-components={zone.components}
+            data-airflow={zone.airflow}
+            data-verification={zone.verification}
+            aria-describedby="pc-case-view-selected"
+          >
+            <span>{zone.label}</span>
+          </button>
+        ))
+      }
+    </div>
+
+    <aside class="pc-case-view__details" id="pc-case-view-selected" aria-live="polite">
+      <h3>{viewZones[0].label}</h3>
+      <dl>
+        <div>
+          <dt>Components</dt>
+          <dd>{viewZones[0].components}</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd>{viewZones[0].description}</dd>
+        </div>
+        <div>
+          <dt>Airflow</dt>
+          <dd>{viewZones[0].airflow}</dd>
+        </div>
+        <div>
+          <dt>Verification</dt>
+          <dd>{viewZones[0].verification}</dd>
+        </div>
+      </dl>
+    </aside>
+  </div>
+
+  <details class="pc-case-view__fallback">
+    <summary>Static Zone List</summary>
+    <ul>
+      {
+        viewZones.map((zone) => (
+          <li>
+            <strong>{zone.label}</strong>: {zone.description} Components: {zone.components}.
+            Verification: {zone.verification}.
+          </li>
+        ))
+      }
+    </ul>
+  </details>
+</section>
+
+<script>
+  const root = document.querySelector('.pc-case-view');
+  const details = root?.querySelector('.pc-case-view__details');
+  const title = details?.querySelector('h3');
+  const values = details?.querySelectorAll('dd');
+
+  function setActive(button) {
+    if (!details || !title || !values || values.length < 4) return;
+
+    root?.querySelectorAll('.pc-case-view__hotspot').forEach((item) => {
+      item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+    });
+
+    title.textContent = button.dataset.label ?? '';
+    values[0].textContent = button.dataset.components ?? '';
+    values[1].textContent = button.dataset.description ?? '';
+    values[2].textContent = button.dataset.airflow ?? '';
+    values[3].textContent = button.dataset.verification ?? '';
+  }
+
+  root?.querySelectorAll('.pc-case-view__hotspot').forEach((button, index) => {
+    button.setAttribute('aria-pressed', index === 0 ? 'true' : 'false');
+    button.addEventListener('click', () => setActive(button));
+    button.addEventListener('focus', () => setActive(button));
+  });
+</script>

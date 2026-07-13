@@ -4,16 +4,20 @@ description: Data-backed Starlight first slice for the interactive digital twin.
 ---
 
 import DigitalTwinSummary from '../../../components/DigitalTwinSummary.astro';
+import DigitalTwinCaseView from '../../../components/DigitalTwinCaseView.astro';
 
-This page proves that Starlight can render a component from the framework-neutral digital twin data model.
+This page proves that Starlight can render interactive components from the framework-neutral digital twin data model.
 
 <DigitalTwinSummary />
+
+<DigitalTwinCaseView />
 
 ## Static Fallback
 
 If JavaScript is unavailable, this page must still explain the state of the digital twin data:
 
 - Component and connector data is validated by JSON Schema.
-- Exact connector coordinates remain pending.
-- Cable routes are represented as source data before they are rendered as interactive paths.
+- Exact connector coordinates remain pending or partially verified.
+- Cable routes are represented as source data before detailed path interaction is added.
 - Airflow has text fallback content before animation is added.
+- The case view includes a static zone list.

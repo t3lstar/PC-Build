@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:59 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:03 BST.
 
 ## Passed Checks
 
@@ -87,6 +87,10 @@ Status: Active validation report. Last verified: 2026-07-13 15:59 BST.
 | Digital twin data validation after issue #21 updates | `. .venv/bin/activate && ./scripts/validate.sh data` from `/Users/simondawson/Herd/PC-Build` | Passed. JSON Schema validation and custom cross-reference checks passed for component, location, connector, cable route, airflow, build-step, BIOS-state, and reference-link IDs. |
 | Local full validation after issue #21 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.13 seconds; shell wall-clock total was 1.920 seconds. |
 | Starlight validation after issue #21 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 1.47 seconds; shell wall-clock total was 4.770 seconds. |
+| Milestone 6 issue #22 interactive case view review | Manual review of `src/components/DigitalTwinCaseView.astro`, `src/content/docs/digital-twin/first-slice.mdx`, `src/styles/starlight.css`, and `data/digital-twin/build.json` | Added a data-backed schematic case view with keyboard-focusable zones, visible focus styling, live details panel, verified/partially verified state display, and a static zone-list fallback. |
+| Local full validation after issue #22 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.44 seconds; shell wall-clock total was 2.431 seconds. |
+| Starlight validation after issue #22 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.17 seconds after Vite dependency re-optimisation; shell wall-clock total was 5.700 seconds. |
+| Interactive case view generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Interactive Case View`, selectable case-view hotspots, and `Static Zone List`. |
 
 ## Warnings
 
@@ -118,6 +122,7 @@ Status: Active validation report. Last verified: 2026-07-13 15:59 BST.
 | Mermaid validation | No Mermaid CLI or validation script is currently configured. |
 | PlantUML generation | No PlantUML toolchain or script is currently configured. |
 | Accessibility tests | No browser accessibility test tool is currently configured. |
+| Automated screenshot regression for Starlight pages | Playwright is not installed in the project. Issue #22 was checked by Starlight build and generated HTML inspection only. |
 
 ## Failed Checks
 

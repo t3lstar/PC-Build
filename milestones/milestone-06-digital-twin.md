@@ -48,7 +48,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] Structured build data under `data/` - verified component, connector, cable, airflow, build-sequence, BIOS-state, and reference-link dataset implemented locally for issue #21.
 - [x] JSON Schema and validation tests.
 - [x] Astro Starlight first slice - implemented locally; production deployment remains MkDocs until the Starlight switch is approved.
-- [ ] Accessible interactive case view.
+- [x] Accessible interactive case view.
 - [ ] Clickable component inspection.
 - [ ] Verified motherboard connector map.
 - [ ] Cable-routing mode.
@@ -67,8 +67,8 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] Digital twin data validates against JSON Schema.
 - [ ] Every interactive component maps to structured data.
 - [x] Cable routes and connector positions are verified or explicitly marked unverified in the structured data.
-- [ ] Static fallbacks remain available.
-- [ ] Keyboard navigation and visible focus indicators work.
+- [x] Static fallbacks remain available for the implemented case view.
+- [x] Keyboard navigation and visible focus indicators work for the implemented case view.
 - [ ] Reduced-motion behavior is supported.
 - [ ] The site remains static and deployable through GitHub Pages.
 - [ ] Performance remains reasonable on desktop and tablet.
@@ -110,7 +110,7 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] [#20: M6: Define build data model and JSON Schema](https://github.com/t3lstar/PC-Build/issues/20) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#35: M6: Migrate site to Astro Starlight first slice](https://github.com/t3lstar/PC-Build/issues/35) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#21: M6: Create verified component and connector dataset](https://github.com/t3lstar/PC-Build/issues/21) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
-- [ ] [#22: M6: Implement interactive case view](https://github.com/t3lstar/PC-Build/issues/22)
+- [x] [#22: M6: Implement interactive case view](https://github.com/t3lstar/PC-Build/issues/22) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#23: M6: Implement motherboard connector map](https://github.com/t3lstar/PC-Build/issues/23)
 - [ ] [#24: M6: Implement cable-routing mode](https://github.com/t3lstar/PC-Build/issues/24)
 - [ ] [#25: M6: Implement guided build-sequence mode](https://github.com/t3lstar/PC-Build/issues/25)
