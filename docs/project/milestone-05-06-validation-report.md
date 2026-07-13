@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:21 BST.
+Status: Active validation report. Last verified: 2026-07-13 15:24 BST.
 
 ## Passed Checks
 
@@ -56,6 +56,11 @@ Status: Active validation report. Last verified: 2026-07-13 15:21 BST.
 | Full build after issue #16 updates | `. .venv/bin/activate && time ./scripts/build.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Built HTML and printable outputs. Shell wall-clock total was 2.414 seconds. |
 | Milestone 5 issue #17 connector appendix review | Manual review of `docs/appendix/connectors-cables.md`, `mkdocs.yml`, affected installation chapters, glossary, FAQ, verification register, and milestone tracker | Added connector/cable appendix, navigation entry, chapter cross-links, glossary/FAQ support, and verification register entry while deferring exact connector coordinates to future digital twin work. |
 | Local full validation after issue #17 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 0.97 seconds; shell wall-clock total was 1.486 seconds. |
+| Local full validation before issue #18 final QA | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 1.00 seconds; shell wall-clock total was 1.542 seconds. |
+| Local full build before issue #18 final QA | `. .venv/bin/activate && time ./scripts/build.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Built HTML and printable outputs. Shell wall-clock total was 2.490 seconds. |
+| GitHub issue state before checkpoint push | `gh issue list --repo t3lstar/PC-Build --label milestone-5 --state all --limit 40` | Issues `#5`-`#9` and `#14` are closed. Issues `#10`-`#13` and `#15`-`#18` remain open because their commits are local-only. |
+| Milestone 5 issue #18 final QA review | Manual review of `docs/project/milestone-05-final-qa.md`, `MILESTONES.md`, `milestones/milestone-05-professional-engineering.md`, and `mkdocs.yml` | Added final local QA summary, release state, commit list, validation evidence, issue state, remaining release actions, and known warnings. |
+| Local full validation after issue #18 final QA | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 0.95 seconds; shell wall-clock total was 1.550 seconds. |
 
 ## Warnings
 

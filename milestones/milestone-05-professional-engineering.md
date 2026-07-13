@@ -1,6 +1,6 @@
 # Milestone 5: Professional Engineering Edition
 
-Status: In progress.
+Status: Complete locally; pending checkpoint push, GitHub Actions verification, live-site review, and issue closure.
 
 GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/1
 
@@ -58,18 +58,18 @@ Raise the existing GitHub Pages manual into publication-quality engineering docu
 - [x] GitHub Actions validation expansion.
 - [x] Reproducible HTML and printable outputs; PDF generation deferred by project decision.
 - [x] Expanded appendices and connector references.
-- [ ] Final Milestone 5 QA report.
+- [x] Final Milestone 5 QA report.
 
 ## Acceptance Criteria
 
-- [ ] HTML builds cleanly locally and in GitHub Actions.
-- [ ] PDF and standalone printable outputs build reproducibly or have a documented blocker.
-- [ ] No known broken internal links remain.
-- [ ] Critical technical claims are verified or explicitly marked pending.
-- [ ] Troubleshooting decision trees render correctly.
-- [ ] Maintenance and benchmarking guidance is complete.
-- [ ] Validation commands are documented and repeatable.
-- [ ] GitHub issues reflect delivered work.
+- [x] HTML builds cleanly locally; GitHub Actions verification is pending the checkpoint push.
+- [x] PDF generation is deferred by project decision; printable HTML builds reproducibly.
+- [x] No known broken internal links remain.
+- [x] Critical technical claims are verified or explicitly marked pending.
+- [x] Troubleshooting decision trees render correctly.
+- [x] Maintenance and benchmarking guidance is complete.
+- [x] Validation commands are documented and repeatable.
+- [ ] GitHub issues reflect delivered work after local commits are pushed and Actions passes.
 
 ## Validation Commands
 
@@ -116,14 +116,14 @@ Run the local validation wrapper when checking milestone changes:
 - [x] [#15: M5: Improve MkDocs Material site and print styling](https://github.com/t3lstar/PC-Build/issues/15) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#16: M5: Make HTML and PDF builds reproducible](https://github.com/t3lstar/PC-Build/issues/16) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#17: M5: Expand appendices and connector references](https://github.com/t3lstar/PC-Build/issues/17) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
-- [ ] [#18: M5: Milestone 5 final QA and release](https://github.com/t3lstar/PC-Build/issues/18)
+- [x] [#18: M5: Milestone 5 final QA and release](https://github.com/t3lstar/PC-Build/issues/18) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 
 ## Definition of Done
 
-- [ ] Deliverables are implemented or explicitly deferred with reasons.
-- [ ] Validation report lists passed checks, warnings, limitations, and manual verification still required.
-- [ ] GitHub milestone and issues are current.
-- [ ] Documentation remains suitable for a first-time PC builder.
+- [x] Deliverables are implemented or explicitly deferred with reasons.
+- [x] Validation report lists passed checks, warnings, limitations, and manual verification still required.
+- [ ] GitHub milestone and issues are current after checkpoint push and Actions verification.
+- [x] Documentation remains suitable for a first-time PC builder.
 
 ## Completion Checklist
 
