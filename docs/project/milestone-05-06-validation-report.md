@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:22 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:24 BST.
 
 ## Passed Checks
 
@@ -111,6 +111,10 @@ Status: Active validation report. Last verified: 2026-07-13 16:22 BST.
 | Local full validation after issue #27 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.22 seconds; shell wall-clock total was 2.231 seconds. |
 | Starlight validation after issue #27 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.02 seconds; shell wall-clock total was 4.771 seconds. |
 | Exploded assembly generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Exploded Assembly View`, `Static Assembly Layers`, `Case frame`, `Top AIO`, `AMD Ryzen 7 7800X3D`, and `ASUS TUF`. |
+| Milestone 6 issue #28 educational BIOS simulator review | Manual review of `src/components/DigitalTwinBiosSimulator.astro`, `src/content/docs/digital-twin/first-slice.mdx`, `src/styles/starlight.css`, and `data/digital-twin/build.json` | Added a clearly labelled training-only BIOS simulator using the BIOS state data, with selectable state cards, next-state guidance, verification state display, and static BIOS training-flow fallback. |
+| Local full validation after issue #28 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.83 seconds; shell wall-clock total was 3.007 seconds. |
+| Starlight validation after issue #28 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 3.92 seconds; shell wall-clock total was 7.763 seconds. |
+| Educational BIOS simulator generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Educational BIOS Simulator`, `training only`, `Static BIOS Training Flow`, `Default boot before EXPO`, `EXPO memory training`, and `Clear CMOS rollback`. |
 
 ## Warnings
 

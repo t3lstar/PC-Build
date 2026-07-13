@@ -1,0 +1,104 @@
+---
+import digitalTwin from '../../data/digital-twin/build.json';
+
+const statesById = new Map(digitalTwin.biosTraining.map((state) => [state.id, state]));
+const states = digitalTwin.biosTraining.map((state) => ({
+  ...state,
+  nextLabels: state.nextStateIds?.map((id) => statesById.get(id)?.label ?? id).join(', ') || 'End state',
+}));
+
+const firstState = states[0];
+---
+
+<section class="pc-bios-sim" aria-labelledby="pc-bios-sim-heading">
+  <div class="pc-case-view__header">
+    <div>
+      <h2 id="pc-bios-sim-heading">Educational BIOS Simulator</h2>
+      <p>
+        Training-only flow for first boot, boot order, EXPO, memory training, and rollback. It is
+        not a screenshot or exact menu map for a specific BIOS version.
+      </p>
+    </div>
+    <span class="pc-status">training only</span>
+  </div>
+
+  <div class="pc-bios-sim__layout">
+    <div class="pc-bios-sim__screen" aria-live="polite">
+      <span class="pc-bios-sim__eyebrow">{firstState.stateType}</span>
+      <h3>{firstState.label}</h3>
+      <p>{firstState.staticFallback}</p>
+      <dl>
+        <div>
+          <dt>Verification</dt>
+          <dd>{firstState.evidence.state}</dd>
+        </div>
+        <div>
+          <dt>Next states</dt>
+          <dd>{firstState.nextLabels}</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="pc-bios-sim__states" aria-label="BIOS training states">
+      {
+        states.map((state, index) => (
+          <button
+            type="button"
+            data-state-id={state.id}
+            data-label={state.label}
+            data-type={state.stateType}
+            data-fallback={state.staticFallback}
+            data-verification={state.evidence.state}
+            data-next={state.nextLabels}
+            aria-pressed={index === 0 ? 'true' : 'false'}
+          >
+            <span>{state.stateType}</span>
+            {state.label}
+          </button>
+        ))
+      }
+    </div>
+  </div>
+
+  <details class="pc-case-view__fallback">
+    <summary>Static BIOS Training Flow</summary>
+    <ul>
+      {
+        states.map((state) => (
+          <li>
+            <strong>{state.label}</strong>: {state.staticFallback} Next: {state.nextLabels}.
+            Verification: {state.evidence.state}.
+          </li>
+        ))
+      }
+    </ul>
+  </details>
+</section>
+
+<script>
+  const root = document.querySelector('.pc-bios-sim');
+  const screen = root?.querySelector('.pc-bios-sim__screen');
+  const eyebrow = screen?.querySelector('.pc-bios-sim__eyebrow');
+  const title = screen?.querySelector('h3');
+  const copy = screen?.querySelector('p');
+  const values = screen?.querySelectorAll('dd');
+
+  function setState(button) {
+    if (!screen || !eyebrow || !title || !copy || !values || values.length < 2) return;
+
+    root?.querySelectorAll('.pc-bios-sim__states button').forEach((item) => {
+      item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+    });
+
+    eyebrow.textContent = button.dataset.type ?? '';
+    title.textContent = button.dataset.label ?? '';
+    copy.textContent = button.dataset.fallback ?? '';
+    values[0].textContent = button.dataset.verification ?? '';
+    values[1].textContent = button.dataset.next ?? '';
+  }
+
+  root?.querySelectorAll('.pc-bios-sim__states button').forEach((button) => {
+    button.addEventListener('click', () => setState(button));
+    button.addEventListener('focus', () => setState(button));
+  });
+</script>
