@@ -20,7 +20,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 ## Scope
 
 - Create a digital twin architecture ADR.
-- Migrate the site to Astro Starlight as the direct Milestone 6 target platform through a controlled first slice before switching production deployment.
+- Migrate the site to Astro Starlight as the direct Milestone 6 target platform through issue `#35`, a controlled first slice before switching production deployment.
 - Define a validated build data model and JSON Schema.
 - Create verified component, connector, cable, airflow, and sequence data.
 - Build a minimal accessible interactive vertical slice first.
@@ -47,6 +47,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] `docs/adr/0001-digital-twin-architecture.md` - accepted; Astro Starlight is the direct target platform.
 - [x] Structured build data under `data/` - seed dataset added; detailed verified population continues in issue #21.
 - [x] JSON Schema and validation tests.
+- [x] Astro Starlight first slice - implemented locally; production deployment remains MkDocs until the Starlight switch is approved.
 - [ ] Accessible interactive case view.
 - [ ] Clickable component inspection.
 - [ ] Verified motherboard connector map.
@@ -107,6 +108,7 @@ Future commands should include interaction tests, accessibility checks, and gene
 
 - [x] [#19: M6: Digital twin architecture ADR](https://github.com/t3lstar/PC-Build/issues/19) - accepted locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#20: M6: Define build data model and JSON Schema](https://github.com/t3lstar/PC-Build/issues/20) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
+- [x] [#35: M6: Migrate site to Astro Starlight first slice](https://github.com/t3lstar/PC-Build/issues/35) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#21: M6: Create verified component and connector dataset](https://github.com/t3lstar/PC-Build/issues/21)
 - [ ] [#22: M6: Implement interactive case view](https://github.com/t3lstar/PC-Build/issues/22)
 - [ ] [#23: M6: Implement motherboard connector map](https://github.com/t3lstar/PC-Build/issues/23)

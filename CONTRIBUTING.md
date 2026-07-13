@@ -19,6 +19,7 @@ Follow these rules when adding or changing documentation.
 - Prefer `uv venv --python 3.12 .venv` and `uv pip install -r requirements.txt` when `uv` is available.
 - Do not install documentation dependencies into the system Python environment.
 - Install dependencies with `python -m pip install -r requirements.txt` after activating `.venv`.
+- Install Node dependencies with `npm install` before working on the Astro Starlight first slice.
 
 ## Documentation Drift
 
@@ -98,6 +99,12 @@ source .venv/bin/activate
 ```
 
 Use `./scripts/build.sh html` when you only need to rebuild the MkDocs site. Use `./scripts/validate.sh docs` when you only need the repository structure and local Markdown link checks. Use `./scripts/validate.sh data` when you only need digital twin JSON Schema validation.
+
+Use this command when validating the Astro Starlight first slice:
+
+```bash
+./scripts/validate.sh starlight
+```
 
 If a change introduces new tooling, document the command and expected result in `docs/project/milestone-05-06-validation-report.md`.
 

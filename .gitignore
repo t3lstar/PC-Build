@@ -1,5 +1,8 @@
 .venv/
+.astro/
 site/
 build/
+dist/
+node_modules/
 __pycache__/
 .DS_Store

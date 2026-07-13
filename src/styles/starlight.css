@@ -1,0 +1,52 @@
+:root {
+  --sl-color-accent-low: #d9f7fb;
+  --sl-color-accent: #0891b2;
+  --sl-color-accent-high: #164e63;
+}
+
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #083344;
+  --sl-color-accent: #22d3ee;
+  --sl-color-accent-high: #cffafe;
+}
+
+.pc-hero-image,
+.pc-diagram {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 1rem 0 1.25rem;
+  padding: .75rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .4rem;
+  background: #f8fafc;
+}
+
+.pc-data-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.pc-data-panel article {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .4rem;
+  padding: 1rem;
+  background: var(--sl-color-gray-6);
+}
+
+.pc-data-panel h3 {
+  margin-top: 0;
+}
+
+.pc-status {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .1rem .45rem;
+  border-radius: .25rem;
+  background: var(--sl-color-accent-low);
+  color: var(--sl-color-accent-high);
+  font-size: .75rem;
+  font-weight: 700;
+}

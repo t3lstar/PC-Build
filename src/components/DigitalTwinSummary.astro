@@ -1,0 +1,48 @@
+---
+import digitalTwin from '../../data/digital-twin/build.json';
+
+const componentCount = digitalTwin.components.length;
+const connectorCount = digitalTwin.connectors.length;
+const cableCount = digitalTwin.cables.length;
+const airflowCount = digitalTwin.airflow.length;
+const verificationStates = new Set([
+  ...digitalTwin.components.map((item) => item.evidence.state),
+  ...digitalTwin.connectors.map((item) => item.evidence.state),
+  ...digitalTwin.cables.map((item) => item.evidence.state),
+]);
+---
+
+<section aria-labelledby="digital-twin-summary-heading">
+  <h2 id="digital-twin-summary-heading">Digital Twin Data Slice</h2>
+  <p>
+    This Starlight component reads the framework-neutral JSON data in
+    <code>data/digital-twin/build.json</code>. It proves that the first slice can render
+    documentation from structured source data without embedding build facts only in the UI.
+  </p>
+  <div class="pc-data-panel">
+    <article>
+      <h3>Components</h3>
+      <p>{componentCount} seed records</p>
+      <span class="pc-status">schema validated</span>
+    </article>
+    <article>
+      <h3>Connectors</h3>
+      <p>{connectorCount} seed record</p>
+      <span class="pc-status">coordinates pending</span>
+    </article>
+    <article>
+      <h3>Cables</h3>
+      <p>{cableCount} seed route</p>
+      <span class="pc-status">route detail pending</span>
+    </article>
+    <article>
+      <h3>Airflow</h3>
+      <p>{airflowCount} seed zone</p>
+      <span class="pc-status">static fallback ready</span>
+    </article>
+  </div>
+  <p>
+    Verification states present in this slice:
+    <strong>{Array.from(verificationStates).join(', ')}</strong>.
+  </p>
+</section>

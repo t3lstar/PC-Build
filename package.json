@@ -1,0 +1,32 @@
+{
+  "name": "pc-build",
+  "version": "1.0.0",
+  "description": "Documentation and digital twin source for a custom gaming PC build.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <26",
+    "npm": ">=11"
+  },
+  "scripts": {
+    "starlight:dev": "astro dev",
+    "starlight:build": "astro build",
+    "starlight:preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t3lstar/PC-Build.git"
+  },
+  "keywords": [],
+  "author": "NOSWAD Consulting Ltd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/t3lstar/PC-Build/issues"
+  },
+  "homepage": "https://github.com/t3lstar/PC-Build#readme",
+  "dependencies": {
+    "@astrojs/mdx": "^7.0.2",
+    "@astrojs/starlight": "^0.41.3",
+    "astro": "^7.0.7"
+  }
+}

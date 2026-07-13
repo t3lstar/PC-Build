@@ -12,6 +12,7 @@ Targets:
   data  Validate digital twin JSON data against JSON Schema.
   docs  Validate required files, MkDocs nav targets, and local Markdown links.
   html  Build the MkDocs HTML site with strict mode.
+  starlight  Build the Astro Starlight first slice.
   all   Run data validation, docs validation, and the HTML build.
 USAGE
 }
@@ -31,6 +32,11 @@ validate_html() {
   ./scripts/build.sh html
 }
 
+validate_starlight() {
+  cd "$ROOT_DIR"
+  npm run starlight:build
+}
+
 case "$TARGET" in
   data)
     validate_data
@@ -40,6 +46,9 @@ case "$TARGET" in
     ;;
   html)
     validate_html
+    ;;
+  starlight)
+    validate_starlight
     ;;
   all)
     validate_data
