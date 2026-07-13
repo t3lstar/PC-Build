@@ -59,14 +59,51 @@
   cursor: zoom-in;
 }
 
-.md-typeset a.glightbox[href*="assets/diagrams"]::after {
-  content: "Click to enlarge";
-  display: block;
+.pc-diagram-hint {
   margin: -.75rem 0 1.25rem;
   color: var(--pc-accent-strong);
   font-size: .7rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.pc-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(2, 6, 23, .9);
+}
+
+.pc-lightbox.is-open {
+  display: flex;
+}
+
+.pc-lightbox__image {
+  max-width: min(96vw, 1400px);
+  max-height: 90vh;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: .45rem;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, .55);
+}
+
+.pc-lightbox__close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  border: 1px solid rgba(226, 232, 240, .35);
+  border-radius: .35rem;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .md-typeset .task-list-control .task-list-indicator::before {
@@ -77,6 +114,39 @@
 .md-nav__link:focus,
 .md-nav__link:hover {
   color: var(--pc-accent-strong);
+}
+
+.md-sidebar .md-nav__title {
+  color: #f8fafc;
+  font-weight: 800;
+}
+
+.md-nav__item--section > .md-nav__link,
+.md-nav--secondary > .md-nav__title {
+  position: relative;
+  margin: .9rem 0 .35rem;
+  padding-left: .65rem;
+  color: #e2e8f0;
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.md-nav__item--section > .md-nav__link::before,
+.md-nav--secondary > .md-nav__title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .25rem;
+  bottom: .25rem;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--pc-accent);
+}
+
+.md-nav--secondary .md-nav__link {
+  font-size: .82rem;
 }
 
 .md-typeset code {
