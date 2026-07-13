@@ -1,6 +1,6 @@
 # Milestone 8: Operations, Monitoring and Maintenance Handbook
 
-Status: Implemented locally; deployment pending.
+Status: Complete and published.
 
 GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/4>
 
@@ -54,7 +54,7 @@ Add a first-class Operations section for maintaining, monitoring, securing, trou
 - [x] Troubleshooting guide.
 - [x] Upgrade planning guide.
 - [x] Expanded validation.
-- [ ] Final QA and release evidence.
+- [x] Final QA and release evidence.
 
 ## Acceptance Criteria
 
@@ -67,7 +67,7 @@ Add a first-class Operations section for maintaining, monitoring, securing, trou
 - [x] FanControl guidance covers bottom intake, side intake, top radiator fans, pump handling, sensors, curves, quiet, gaming, and stress-test profiles.
 - [x] Backup and security guidance covers restore points, recovery media, BitLocker recovery keys, Windows Security, Secure Boot, TPM, password manager, two-factor authentication, browser safety, driver download safety, and firmware verification.
 - [x] Validation covers Operations routes and recommended software completeness.
-- [ ] GitHub Pages deploys the Operations section successfully.
+- [x] GitHub Pages deploys the Operations section successfully.
 
 ## Issue Breakdown
 
@@ -83,7 +83,21 @@ Add a first-class Operations section for maintaining, monitoring, securing, trou
 - [x] [#54: M8: Add backup and security guides](https://github.com/t3lstar/PC-Build/issues/54)
 - [x] [#55: M8: Expand troubleshooting and upgrade planning](https://github.com/t3lstar/PC-Build/issues/55)
 - [x] [#56: M8: Expand Operations validation](https://github.com/t3lstar/PC-Build/issues/56)
-- [ ] [#57: M8: Final QA and release](https://github.com/t3lstar/PC-Build/issues/57)
+- [x] [#57: M8: Final QA and release](https://github.com/t3lstar/PC-Build/issues/57)
+
+## Release Evidence
+
+- Local validation passed with `. .venv/bin/activate && ./scripts/validate.sh all`.
+- GitHub Actions deployment passed for run `29274085984` after the Operations handbook implementation.
+- GitHub Actions deployment passed for run `29274238276` after removing public documentation status metadata.
+- GitHub Actions deployment passed for run `29274378304` after fixing checklist rendering.
+- Live GitHub Pages returns 200 for `/operations/overview/`, `/operations/recommended-software/`, and `/operations/maintenance-schedule/`.
+- Live GitHub Pages returns 404 for retired lifecycle Build Guide route `/build-guide/benchmarks/`.
+- Live Home no longer contains the reader-facing Documentation Status block.
+- Live Operations pages no longer contain reader-facing `Status:` metadata.
+- Deployed CSS contains the task-list rule that removes duplicate list bullets from checkbox lists.
+- GitHub issues `#45` through `#57` are closed.
+- GitHub Milestone 8 is closed.
 
 ## Completion Checklist
 
@@ -91,5 +105,5 @@ Add a first-class Operations section for maintaining, monitoring, securing, trou
 - [x] Update `milestones/README.md`.
 - [x] Update Starlight navigation.
 - [x] Validate local Starlight build.
-- [ ] Verify GitHub Pages deployment.
-- [ ] Close Milestone 8 issues only after deployment evidence is recorded.
+- [x] Verify GitHub Pages deployment.
+- [x] Close Milestone 8 issues only after deployment evidence is recorded.

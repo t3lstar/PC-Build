@@ -121,8 +121,8 @@ GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/4>
 
 Tracking issues: <https://github.com/t3lstar/PC-Build/issues/45> through <https://github.com/t3lstar/PC-Build/issues/57>
 
-Status: In progress locally.
+Status: Complete and published.
 
 Detailed plan: [milestones/milestone-08-operations-handbook.md](milestones/milestone-08-operations-handbook.md)
 
-Add a first-class Operations section for maintaining, monitoring, securing, troubleshooting, benchmarking, and upgrading the completed PC throughout its lifetime.
+Added a first-class Operations section for maintaining, monitoring, securing, troubleshooting, benchmarking, and upgrading the completed PC throughout its lifetime.
