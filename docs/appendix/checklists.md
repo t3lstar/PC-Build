@@ -1,6 +1,6 @@
 # Checklists
 
-Status: Verified Milestone 5 checklist content. Last verified: 2026-07-13 15:08 BST.
+Status: Verified Milestone 5 checklist content. Last verified: 2026-07-13 15:10 BST.
 
 ## Purpose
 
@@ -143,12 +143,14 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 
 ## Benchmark and Handover
 
+- [ ] Benchmark preconditions checked.
 - [ ] EXPO enabled and confirmed.
 - [ ] Idle temperatures recorded.
 - [ ] CPU load temperatures recorded.
 - [ ] Memory stability check passed.
 - [ ] SSD benchmark recorded.
 - [ ] GPU benchmark recorded.
+- [ ] Repeatable real game test recorded.
 - [ ] Driver and BIOS versions recorded.
 - [ ] Any abnormal result is investigated before treating the build as complete.
 - [ ] Final photos are taken for private maintenance reference.
@@ -189,3 +191,9 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 | Date/time | Symptom | Recent change | Troubleshooting tree used | Action taken | Result | Follow-up |
 | --- | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |  |
+
+## Benchmark Baseline Log Template
+
+| Date/time | Room temp | BIOS | Chipset driver | Radeon driver | EXPO | Test | Settings | Result | CPU temp | GPU temp | SSD temp | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |
