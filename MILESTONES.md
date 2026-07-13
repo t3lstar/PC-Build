@@ -6,6 +6,7 @@ This project will be delivered in four milestones so the repository can be built
 
 - When new durable project knowledge is discovered, update the relevant documentation in the same change so future sessions can rehydrate from the repository.
 - A final-build reference image exists from ChatGPT and may be used as a visual target where appropriate.
+- Include real component product imagery in the documentation where it helps visual identification. Prefer externally hosted manufacturer images with source links rather than copying third-party product photography into the repository.
 - All listed components should be treated as mutually compatible unless later verification proves otherwise.
 - RAM and SSD alternatives are acceptable if they preserve the intended platform requirements and performance class:
   - RAM: DDR5, AMD EXPO support preferred, 32GB target capacity, DDR5-6000 CL30 target specification.

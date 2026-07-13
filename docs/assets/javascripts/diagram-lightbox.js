@@ -6,11 +6,15 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    var diagrams = Array.prototype.slice.call(
-      document.querySelectorAll('.md-typeset img[src*="assets/diagrams"]')
+    var zoomableImages = Array.prototype.slice.call(
+      document.querySelectorAll(
+        '.md-typeset img[src*="assets/diagrams"], ' +
+          '.md-typeset img[src*="assets/images"], ' +
+          ".pc-component-gallery img"
+      )
     );
 
-    if (!diagrams.length) {
+    if (!zoomableImages.length) {
       return;
     }
 
@@ -37,15 +41,17 @@
       }
     });
 
-    diagrams.forEach(function (image) {
+    zoomableImages.forEach(function (image) {
       image.setAttribute("tabindex", "0");
       image.setAttribute("role", "button");
       image.setAttribute("title", "Click to enlarge");
 
-      var hint = document.createElement("div");
-      hint.className = "pc-diagram-hint";
-      hint.textContent = "Click to enlarge";
-      image.insertAdjacentElement("afterend", hint);
+      if (!image.closest("figure")) {
+        var hint = document.createElement("div");
+        hint.className = "pc-diagram-hint";
+        hint.textContent = "Click to enlarge";
+        image.insertAdjacentElement("afterend", hint);
+      }
 
       function open() {
         overlayImage.src = image.currentSrc || image.src;
