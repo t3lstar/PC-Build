@@ -107,7 +107,7 @@ Additional validation commands should be added as tooling is implemented.
 - [ ] [#11: M5: Complete maintenance schedules and logs](https://github.com/t3lstar/PC-Build/issues/11)
 - [ ] [#12: M5: Establish benchmark baseline methodology](https://github.com/t3lstar/PC-Build/issues/12)
 - [ ] [#13: M5: Add documentation validation scripts](https://github.com/t3lstar/PC-Build/issues/13)
-- [ ] [#14: M5: Implement GitHub Actions validation](https://github.com/t3lstar/PC-Build/issues/14)
+- [x] [#14: M5: Implement GitHub Actions validation](https://github.com/t3lstar/PC-Build/issues/14)
 - [ ] [#15: M5: Improve MkDocs Material site and print styling](https://github.com/t3lstar/PC-Build/issues/15)
 - [ ] [#16: M5: Make HTML and PDF builds reproducible](https://github.com/t3lstar/PC-Build/issues/16)
 - [ ] [#17: M5: Expand appendices and connector references](https://github.com/t3lstar/PC-Build/issues/17)

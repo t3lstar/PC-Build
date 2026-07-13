@@ -37,6 +37,7 @@ Status: Active validation report. Last verified: 2026-07-13 14:49 BST.
 | GitHub Actions uv action correction | GitHub Actions run `29255643234` annotation review | Removed `astral-sh/setup-uv@v6` because it emitted a Node.js 20 deprecation annotation while GitHub forced it to Node.js 24. |
 | Local HTML build after CI speed-up | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.93 seconds; shell wall-clock total was 1.362 seconds. |
 | Local HTML build after removing Node 20 uv action | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.87 seconds; shell wall-clock total was 1.319 seconds. |
+| GitHub Actions after CI speed-up correction | Run `29255786168` | Passed. Build job completed in 14 seconds; deploy job completed in 11 seconds. Dependency install step took 5 seconds and build step took 1 second. No Node 20 annotation was shown in the run watch output. |
 
 ## Warnings
 
