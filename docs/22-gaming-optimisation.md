@@ -1,6 +1,6 @@
 # Gaming Optimisation
 
-Status: Initial Milestone 2 content. Last verified: 2026-07-13 10:53 BST.
+Status: Published HTML content. Last reviewed: 2026-07-13 13:53 BST.
 
 ## Introduction
 

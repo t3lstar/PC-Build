@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 13:42 BST.
+Status: Active validation report. Last verified: 2026-07-13 13:53 BST.
 
 ## Passed Checks
 
@@ -19,6 +19,10 @@ Status: Active validation report. Last verified: 2026-07-13 13:42 BST.
 | Gigabyte manual availability | `curl -I -L https://download.gigabyte.com/FileList/Manual/mb_manual_b850-aorus-elite-wf7_1101_e.pdf` | Official user manual 1101 URL returned HTTP 200. |
 | Gigabyte manual text extraction | Bundled runtime Python with `pypdf`, using temporary files under `/tmp/pc-build-sources/` | Extracted 40 pages from the official manual for local verification; no PDF or extracted text was committed. |
 | Milestone 5 issue #5 verification pass | Official Gigabyte, G.SKILL, ARCTIC, Lian Li, and Samsung sources | Updated `docs/project/verification-register.md` plus affected RAM, M.2, AIO, and front-panel chapters. |
+| Milestone 5 issue #6 status metadata scan | `rg -n` for stale Milestone 2 status wording | No published Markdown pages retain stale Milestone 2 status wording after the metadata update. |
+| Milestone 5 issue #6 chapter next-link scan | Python scan over `docs/[0-9][0-9]-*.md` | Every numbered build chapter has a `Next Chapter` section. |
+| Milestone 5 issue #6 project navigation | `mkdocs.yml` review | Added `Documentation Structure` under the Project navigation group. |
+| Local HTML build after issue #6 updates | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 72.17 seconds. |
 
 ## Warnings
 

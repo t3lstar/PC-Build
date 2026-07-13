@@ -92,5 +92,6 @@ nav:
       - Publishing: appendix/publishing.md
   - Project:
       - Repository Audit: project/repository-audit.md
+      - Documentation Structure: project/documentation-structure.md
       - Verification Register: project/verification-register.md
       - Milestone 5 and 6 Validation: project/milestone-05-06-validation-report.md

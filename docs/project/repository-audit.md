@@ -49,7 +49,7 @@ The repository currently describes the confirmed build as:
 
 ## Technical Debt
 
-- Many pages still show `Status: Initial Milestone 2 content`, even though the HTML site is publication-ready. Milestone 5 should standardise revision/status metadata.
+- Page status metadata was standardised during Milestone 5 issue `#6`. Pages that were not source-reverified use `Published HTML content`; source-reverified pages use `Verified Milestone 5 content`.
 - PDF and standalone printable manual generation are intentionally deferred. The current `pdf` and `printable` script targets are reserved placeholders.
 - `requirements.txt` includes PDF-related dependencies even though PDF output is deferred. Milestone 5 should decide whether to keep, pin, or split those dependencies.
 - The local `.venv` inspected during audit reported Python 3.14.5, while repository guidance expects Python 3.12.
