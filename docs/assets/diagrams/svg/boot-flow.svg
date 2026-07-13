@@ -4,6 +4,7 @@
   <style>
     .box{fill:#e0f2fe;stroke:#0369a1;stroke-width:2}.ok{fill:#dcfce7;stroke:#15803d;stroke-width:2}.fix{fill:#fee2e2;stroke:#dc2626;stroke-width:2}.line{stroke:#334155;stroke-width:3;marker-end:url(#arrow)}text{font-family:Arial,sans-serif;fill:#0f172a;font-size:15px}.title{font-size:22px;font-weight:bold}
   </style>
+  <rect width="100%" height="100%" fill="#f8fafc"/>
   <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
   <text class="title" x="30" y="35">Boot Flow</text>
   <rect class="box" x="330" y="70" width="220" height="45" rx="6"/><text x="372" y="98">Press power button</text>

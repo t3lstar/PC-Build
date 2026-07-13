@@ -10,14 +10,15 @@
     <marker id="red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/></marker>
     <marker id="gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker>
   </defs>
-  <rect class="case" x="180" y="90" width="590" height="350" rx="12"/>
-  <line class="cool" x1="300" y1="515" x2="300" y2="435"/><line class="cool" x1="430" y1="515" x2="430" y2="435"/><line class="cool" x1="560" y1="515" x2="560" y2="435"/>
+  <rect width="960" height="560" fill="#f8fafc"/>
+  <text x="40" y="45" class="title">Airflow Direction</text>
+  <rect class="case" x="180" y="115" width="590" height="330" rx="12"/>
+  <line class="cool" x1="300" y1="520" x2="300" y2="445"/><line class="cool" x1="430" y1="520" x2="430" y2="445"/><line class="cool" x1="560" y1="520" x2="560" y2="445"/>
   <line class="cool" x1="900" y1="210" x2="770" y2="210"/><line class="cool" x1="900" y1="320" x2="770" y2="320"/>
-  <line class="mix" x1="320" y1="380" x2="460" y2="250"/><line class="mix" x1="700" y1="260" x2="520" y2="215"/>
-  <line class="warm" x1="480" y1="90" x2="480" y2="25"/>
-  <text x="70" y="70">Bottom and side intake feed GPU, motherboard, and radiator.</text>
-  <text x="575" y="70">Top radiator exhaust removes warm air.</text>
-  <text class="small" x="245" y="475">Bottom intake</text>
+  <line class="mix" x1="320" y1="385" x2="460" y2="260"/><line class="mix" x1="700" y1="275" x2="520" y2="230"/>
+  <line class="warm" x1="480" y1="115" x2="480" y2="70"/>
+  <text x="215" y="425">Cool intake feeds GPU and motherboard.</text>
+  <text x="540" y="96">Top radiator exhaust</text>
+  <text class="small" x="110" y="505">Bottom intake</text>
   <text class="small" x="790" y="185">Side intake</text>
-  <text class="small" x="505" y="38">Top exhaust</text>
 </svg>

@@ -7,6 +7,7 @@
     text{font-family:Arial,sans-serif;fill:#0f172a;font-size:18px}.small{font-size:14px}
     .line{stroke:#475569;stroke-width:4;marker-end:url(#arrow)}
   </style>
+  <rect width="100%" height="100%" fill="#f8fafc"/>
   <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
   <rect class="case" x="70" y="80" width="220" height="340" rx="10"/><text x="125" y="120">Case front I/O</text>
   <rect class="mb" x="510" y="80" width="300" height="340" rx="10"/><text x="570" y="120">Motherboard edge</text>

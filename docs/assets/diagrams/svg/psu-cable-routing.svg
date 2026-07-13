@@ -1,19 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
   <title id="title">PSU cable routing</title>
-  <desc id="desc">PSU cable routing for 24-pin ATX, CPU EPS, PCIe GPU power and optional SATA power.</desc>
+  <desc id="desc">Simplified PSU cable routing with numbered callouts for CPU EPS, 24-pin ATX, PCIe GPU power, and optional SATA power.</desc>
   <style>
-    .case{fill:#f8fafc;stroke:#0f172a;stroke-width:4}.psu{fill:#fde68a;stroke:#92400e;stroke-width:3}.mb{fill:#e2e8f0;stroke:#334155;stroke-width:3}.gpu{fill:#ddd6fe;stroke:#6d28d9;stroke-width:3}
-    .path{fill:none;stroke-width:6;stroke-linecap:round;marker-end:url(#arrow)}.atx{stroke:#ea580c}.eps{stroke:#dc2626}.pcie{stroke:#7c3aed}.sata{stroke:#0891b2}
-    text{font-family:Arial,sans-serif;fill:#0f172a;font-size:18px}.small{font-size:14px}
+    .bg{fill:#f8fafc}.case{fill:#ffffff;stroke:#0f172a;stroke-width:4}.psu{fill:#fde68a;stroke:#92400e;stroke-width:3}.mb{fill:#e2e8f0;stroke:#334155;stroke-width:3}.gpu{fill:#ddd6fe;stroke:#6d28d9;stroke-width:3}
+    .path{fill:none;stroke-width:7;stroke-linecap:round;marker-end:url(#arrow)}.atx{stroke:#ea580c}.eps{stroke:#dc2626}.pcie{stroke:#7c3aed}.sata{stroke:#0891b2}
+    .badge{fill:#0f172a;stroke:#ffffff;stroke-width:2}.legend{fill:#ffffff;stroke:#cbd5e1;stroke-width:2}
+    text{font-family:Arial,sans-serif;fill:#0f172a;font-size:20px}.title{font-size:26px;font-weight:bold}.small{font-size:16px}.badgeText{fill:#ffffff;font-size:18px;font-weight:bold}
   </style>
-  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0f172a"/></marker></defs>
-  <rect class="case" x="90" y="55" width="780" height="420" rx="12"/>
-  <rect class="psu" x="665" y="330" width="150" height="90" rx="8"/><text x="700" y="382">ASUS PSU</text>
-  <rect class="mb" x="210" y="110" width="380" height="280" rx="8"/><text x="330" y="255">Motherboard</text>
-  <rect class="gpu" x="260" y="325" width="280" height="48" rx="8"/><text x="360" y="356">GPU</text>
-  <path class="path atx" d="M665 355 C625 330,625 230,590 230"/><text class="small" x="610" y="220">24-pin ATX</text>
-  <path class="path eps" d="M700 330 C690 85,485 70,330 110"/><text class="small" x="455" y="82">CPU EPS first</text>
-  <path class="path pcie" d="M665 390 C600 410,555 365,540 350"/><text class="small" x="560" y="430">PCIe 8-pin</text>
-  <path class="path sata" d="M815 390 C850 390,850 250,780 215"/><text class="small" x="760" y="205">Optional SATA power</text>
-  <text x="120" y="520">Use only modular cables supplied with the ASUS PSU.</text>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><path d="M0,0 L0,8 L11,4 z" fill="#0f172a"/></marker></defs>
+  <rect class="bg" width="1100" height="620"/>
+  <text class="title" x="40" y="45">PSU Cable Routing</text>
+  <rect class="case" x="80" y="80" width="720" height="390" rx="12"/>
+  <rect class="mb" x="210" y="125" width="420" height="255" rx="8"/><text x="350" y="260">Motherboard</text>
+  <rect class="gpu" x="260" y="325" width="300" height="48" rx="8"/><text x="385" y="356">GPU</text>
+  <rect class="psu" x="655" y="330" width="115" height="90" rx="8"/><text x="688" y="382">PSU</text>
+
+  <path class="path eps" d="M705 330 C690 140,485 100,310 125"/>
+  <circle class="badge" cx="405" cy="105" r="16"/><text class="badgeText" x="400" y="111">1</text>
+  <path class="path atx" d="M655 355 C620 330,630 240,630 240"/>
+  <circle class="badge" cx="632" cy="240" r="16"/><text class="badgeText" x="627" y="246">2</text>
+  <path class="path pcie" d="M655 395 C615 430,585 390,560 355"/>
+  <circle class="badge" cx="590" cy="420" r="16"/><text class="badgeText" x="585" y="426">3</text>
+  <path class="path sata" d="M770 395 C820 360,815 260,770 220"/>
+  <circle class="badge" cx="808" cy="285" r="16"/><text class="badgeText" x="803" y="291">4</text>
+
+  <rect class="legend" x="825" y="105" width="245" height="220" rx="8"/>
+  <text class="title" x="858" y="140">Legend</text>
+  <text class="small" x="850" y="180">1 CPU EPS first</text>
+  <text class="small" x="850" y="215">2 24-pin ATX</text>
+  <text class="small" x="850" y="250">3 PCIe GPU power</text>
+  <text class="small" x="850" y="285">4 Optional SATA</text>
+  <text class="small" x="105" y="530">Use only modular cables supplied with the ASUS PSU.</text>
 </svg>

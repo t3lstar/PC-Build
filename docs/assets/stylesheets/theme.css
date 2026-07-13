@@ -53,9 +53,20 @@
   max-width: 100%;
   margin: 1rem 0 1.25rem;
   padding: .75rem;
-  background: var(--pc-panel);
+  background: #f8fafc;
   border: 1px solid var(--pc-border);
   border-radius: .4rem;
+  cursor: zoom-in;
+}
+
+.md-typeset a.glightbox[href*="assets/diagrams"]::after {
+  content: "Click to enlarge";
+  display: block;
+  margin: -.75rem 0 1.25rem;
+  color: var(--pc-accent-strong);
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .md-typeset .task-list-control .task-list-indicator::before {

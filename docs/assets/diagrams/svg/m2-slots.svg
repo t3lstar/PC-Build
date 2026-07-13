@@ -5,8 +5,9 @@
     .board{fill:#202a2f;stroke:#111827;stroke-width:4}.slot{fill:#111827;stroke:#f8fafc;stroke-width:3}.primary{fill:#bbf7d0;stroke:#16a34a;stroke-width:4}
     .heatsink{fill:#94a3b8;stroke:#e2e8f0;stroke-width:2}text{font-family:Arial,sans-serif;fill:#f8fafc;font-size:19px}.dark{fill:#0f172a}.small{font-size:15px}
   </style>
+  <rect width="100%" height="100%" fill="#f8fafc"/>
   <rect class="board" x="100" y="55" width="700" height="360" rx="10"/>
-  <rect class="primary" x="260" y="125" width="360" height="38" rx="5"/><text class="dark" x="310" y="150">Primary M.2: Samsung 990 EVO Plus</text>
+  <rect class="primary" x="210" y="125" width="460" height="42" rx="5"/><text class="dark" x="245" y="153">Primary M.2: Samsung 990 EVO Plus</text>
   <rect class="heatsink" x="240" y="175" width="400" height="42" rx="5"/><text x="340" y="203">Motherboard heatsink</text>
   <rect class="slot" x="260" y="270" width="300" height="30" rx="4"/><text x="585" y="292" class="small">Additional M.2 slot</text>
   <rect class="slot" x="260" y="335" width="300" height="30" rx="4"/><text x="585" y="357" class="small">Additional M.2 slot</text>

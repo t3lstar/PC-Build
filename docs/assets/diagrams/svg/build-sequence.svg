@@ -5,6 +5,7 @@
     .box{fill:#e0f2fe;stroke:#0369a1;stroke-width:2}.check{fill:#dcfce7;stroke:#15803d;stroke-width:2}.warn{fill:#fef3c7;stroke:#b45309;stroke-width:2}
     .line{stroke:#334155;stroke-width:3;marker-end:url(#arrow)}text{font-family:Arial,sans-serif;fill:#0f172a;font-size:15px}.title{font-size:22px;font-weight:bold}
   </style>
+  <rect width="100%" height="100%" fill="#f8fafc"/>
   <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker></defs>
   <text class="title" x="30" y="35">Build Sequence</text>
   <rect class="check" x="35" y="70" width="180" height="48" rx="6"/><text x="55" y="100">Confirm parts and tools</text>

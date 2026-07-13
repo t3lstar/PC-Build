@@ -5,6 +5,7 @@
     .board{fill:#202a2f;stroke:#111827;stroke-width:4}.cpu{fill:#475569;stroke:#e2e8f0;stroke-width:3}.slot{fill:#111827;stroke:#94a3b8;stroke-width:3}
     .use{fill:#bbf7d0;stroke:#16a34a;stroke-width:4}text{font-family:Arial,sans-serif;fill:#f8fafc;font-size:20px}.dark{fill:#0f172a}.small{font-size:16px}
   </style>
+  <rect width="100%" height="100%" fill="#f8fafc"/>
   <rect class="board" x="100" y="55" width="700" height="360" rx="10"/>
   <rect class="cpu" x="205" y="170" width="145" height="145" rx="8"/><text x="252" y="250">CPU</text>
   <rect class="slot" x="450" y="105" width="45" height="260" rx="4"/><text x="455" y="395">A1</text>
