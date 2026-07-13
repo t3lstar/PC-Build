@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 ---
-Status: Verified Milestone 5 troubleshooting content. Last verified: 2026-07-13 14:09 BST.
+Status: Published Operations content. Last verified: 2026-07-13 18:39 BST.
 
 ## Introduction
 
@@ -159,6 +159,20 @@ Source: [troubleshooting-windows-driver.mmd](/PC-Build/assets/diagrams/mermaid/t
 | Front audio missing                   | Header or Windows audio device                  | Confirm `F_AUDIO` seating, Realtek driver state, and selected output device. |
 | Network missing after Windows install | Driver or adapter state                         | Install official motherboard network driver, then Windows Update.            |
 
+## Operational Faults
+
+| Symptom | Possible causes | Diagnostic tools | Investigation sequence | Likely resolutions |
+| --- | --- | --- | --- | --- |
+| Higher temperatures than expected | Dust, blocked filters, fan curve change, pump/fan issue, ambient temperature, driver workload. | HWiNFO64, FanControl, BIOS fan page, Samsung Magician. | Compare with baseline, check workload, inspect filters, confirm fans/pump, review recent changes. | Clean filters, restore fan profile, fix cable obstruction, remount cooler only after simpler checks. |
+| Unexpected fan noise | Cable contact, bearing noise, aggressive curve, fan resonance, loose panel/filter. | Physical inspection, FanControl manual test. | Identify fan group, test one group at a time, inspect cables and panels. | Re-route cable, adjust curve hysteresis, tighten panel, replace faulty fan. |
+| Slow boot | BIOS memory training, USB device delay, Windows startup apps, storage issue, pending updates. | BIOS boot page, Task Manager Startup, Event Viewer. | Record boot phase, unplug nonessential USB devices, check startup apps, review BIOS changes. | Reduce startup apps, update only relevant drivers, review EXPO stability. |
+| Windows instability | Driver issue, memory instability, Windows update, storage fault, overheating. | Event Viewer, Reliability Monitor, HWiNFO64, MemTest86, OCCT. | Record stop code or app fault, check last update, return tuning to default, test memory. | Roll back recent update, disable unstable EXPO, reinstall official driver, restore point. |
+| Driver problems | Wrong source, failed install, Windows replacement driver, corrupted GPU driver. | Device Manager, AMD Adrenalin, installer logs. | Check device state, reinstall official package, avoid third-party updater, use DDU only if normal cleanup fails. | Clean reinstall official driver, block repeated bad optional update if needed. |
+| Game crashes | GPU driver, unstable memory, overlay conflict, game files, temperature, power. | AMD Adrenalin, Event Viewer, game launcher verify, HWiNFO64. | Disable overlays, verify game files, check temperatures, test default GPU and EXPO state. | Update or roll back GPU driver, repair game files, reduce unstable settings. |
+| SSD health warning | Firmware issue, high temperature, media errors, low spare, cable/slot issue for future drives. | Samsung Magician, CrystalDiskInfo, Event Viewer. | Back up immediately, capture SMART/health, check temperature, review firmware notes. | Replace drive if health is degraded; update firmware only after backup. |
+| Memory instability | EXPO instability, mixed kit, wrong slots, BIOS version, faulty DIMM. | MemTest86, BIOS, Event Viewer WHEA logs. | Disable EXPO, test one DIMM in A2, test matched kit, review QVL and BIOS. | Use stable profile, update BIOS for memory fix, replace faulty kit. |
+| Unexpected shutdowns | PSU/power, thermal protection, driver crash, memory fault, wall power. | Event Viewer, HWiNFO64 logs, OCCT targeted tests. | Check event timing, inspect power cables, monitor temperatures, test without overclock/tuning. | Reseat power cables, restore defaults, isolate PSU/GPU/memory only after logs support it. |
+
 ## Verification Checklist
 
 - [ ] Symptom and last change are recorded.
@@ -168,6 +182,8 @@ Source: [troubleshooting-windows-driver.mmd](/PC-Build/assets/diagrams/mermaid/t
 - [ ] EXPO is disabled during memory fault isolation.
 - [ ] Only one change is tested at a time.
 - [ ] Final fix is recorded.
+- [ ] Recent software, driver, firmware, and hardware changes are recorded.
+- [ ] Baseline comparison is used for temperature, fan, and benchmark faults.
 
 ## Common Mistakes
 
@@ -189,4 +205,4 @@ Faults are isolated methodically, corrected, and documented without introducing 
 
 ## Next Chapter
 
-Continue to [Maintenance](/PC-Build/build-guide/maintenance/).
+Continue to [Upgrade Planning](/PC-Build/operations/upgrade-planning/).

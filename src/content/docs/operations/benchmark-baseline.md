@@ -1,7 +1,7 @@
 ---
-title: "Benchmarks"
+title: "Benchmark Baseline"
 ---
-Status: Published HTML content. Last reviewed: 2026-07-13 15:10 BST.
+Status: Published HTML content. Last reviewed: 2026-07-13 18:38 BST.
 
 ## Introduction
 
@@ -9,7 +9,7 @@ This chapter establishes a repeatable baseline test process for temperatures, st
 
 ## Purpose
 
-Confirm the build is stable and performing as expected before daily use, with results that can be compared against the [gaming optimisation](/PC-Build/build-guide/gaming-optimisation/), [temperature reference](/PC-Build/appendix/temperature-reference/), and [maintenance](/PC-Build/build-guide/maintenance/) records.
+Confirm the build is stable and performing as expected before daily use, with results that can be compared against the [gaming optimisation](/PC-Build/build-guide/gaming-optimisation/), [temperature reference](/PC-Build/appendix/temperature-reference/), and [maintenance schedule](/PC-Build/operations/maintenance-schedule/) records.
 
 The benchmark process is not intended to chase leaderboard scores. It is intended to prove that the build is stable, cooled correctly, configured consistently, and ready for future comparison after driver, firmware, cooling, or hardware changes.
 
@@ -24,10 +24,12 @@ Moderate.
 ## Required Tools
 
 - Hardware monitoring software.
-- Memory test tool.
-- CPU load test.
-- GPU benchmark or repeatable game benchmark.
-- SSD benchmark.
+- [HWiNFO64](/PC-Build/operations/recommended-software/) for logging.
+- MemTest86 for memory validation.
+- Cinebench 2024 for CPU benchmark.
+- 3DMark for GPU/game benchmark.
+- CrystalDiskMark for SSD benchmark.
+- OCCT for controlled stability testing.
 - Notes file or spreadsheet for results.
 - The monitoring log from [Gaming Optimisation](/PC-Build/build-guide/gaming-optimisation/).
 
@@ -65,6 +67,17 @@ Run tests in this order so failures are easier to isolate.
 | 4     | SSD benchmark                   | Confirm NVMe-class behaviour and thermal response                    | Tool, result summary, peak SSD temp                                   |
 | 5     | GPU synthetic or game benchmark | Confirm GPU stability, driver behaviour, airflow, and display output | Score/FPS if available, GPU temp, hotspot if shown, utilisation, VRAM |
 | 6     | Mixed real game test            | Confirm practical gaming behaviour                                   | Settings, duration, stutter/artifacts/crash notes                     |
+
+## Tool-Specific Procedure
+
+| Tool | Use | Baseline action | Retest trigger |
+| --- | --- | --- | --- |
+| HWiNFO64 | Sensor logging | Start logging before idle, CPU, SSD, GPU, and mixed tests. | Any thermal, driver, fan, or instability investigation. |
+| MemTest86 | Memory stability | Run after EXPO is enabled or after memory changes. | Boot loops, game crashes, WHEA errors, RAM upgrade, EXPO change. |
+| Cinebench 2024 | CPU load and score trend | Run CPU benchmark with HWiNFO logging active. | BIOS update, cooler change, CPU change, fan curve change. |
+| CrystalDiskMark | SSD throughput sanity check | Run default storage benchmark once the system is idle. | SSD firmware update, new NVMe drive, suspected throttling. |
+| 3DMark | GPU/game-class performance | Run one appropriate benchmark or stress test at default GPU tuning. | GPU driver update, GPU change, display issue, airflow change. |
+| OCCT | Stability and fault isolation | Use short targeted tests, not unattended torture runs. | Suspected CPU, memory, GPU, PSU, or thermal instability. |
 
 ## Step-by-Step Instructions
 
@@ -144,4 +157,4 @@ The system has a documented stable baseline for temperatures, memory, storage, C
 
 ## Next Chapter
 
-Continue to [Troubleshooting](/PC-Build/build-guide/troubleshooting/).
+Continue to [Troubleshooting](/PC-Build/operations/troubleshooting/).

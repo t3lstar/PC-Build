@@ -7,8 +7,9 @@ This folder contains detailed milestone plans that extend the summary roadmap in
 - [Milestone 5: Professional Engineering Edition](milestone-05-professional-engineering.md)
 - [Milestone 6: Interactive Digital Twin Edition](milestone-06-digital-twin.md)
 - [Milestone 7: Full Starlight Migration](milestone-07-full-starlight-migration.md)
+- [Milestone 8: Operations, Monitoring and Maintenance Handbook](milestone-08-operations-handbook.md)
 
-Milestones 1-7 are complete and remain documented in `MILESTONES.md`.
+Milestones 1-7 are complete and remain documented in `MILESTONES.md`. Milestone 8 is the current active implementation milestone.
 
 Repository-only records:
 

@@ -1,7 +1,7 @@
 ---
 title: "Custom Gaming PC Build Manual"
 ---
-Status: Publication-ready HTML site. Last updated: 2026-07-13 12:19 BST.
+Status: Publication-ready HTML site. Last updated: 2026-07-13 18:40 BST.
 
 This site is the build manual for a custom Windows 11 Pro gaming PC based on AMD AM5, DDR5, NVMe storage, and a Radeon graphics card.
 
@@ -31,11 +31,12 @@ Use the guide in order:
 2. Prepare the [tools](/PC-Build/build-guide/tools/) and [workspace](/PC-Build/build-guide/build-preparation/).
 3. Install the CPU, memory, SSD, motherboard, cooler, PSU, and GPU.
 4. Complete [first boot](/PC-Build/build-guide/first-boot/), [BIOS configuration](/PC-Build/build-guide/bios/), [Windows installation](/PC-Build/build-guide/windows-installation/), and [driver installation](/PC-Build/build-guide/driver-installation/).
-5. Enable [EXPO](/PC-Build/build-guide/expo/), apply [gaming optimisation](/PC-Build/build-guide/gaming-optimisation/), and record [benchmarks](/PC-Build/build-guide/benchmarks/).
+5. Enable [EXPO](/PC-Build/build-guide/expo/), apply [gaming optimisation](/PC-Build/build-guide/gaming-optimisation/), and record the [benchmark baseline](/PC-Build/operations/benchmark-baseline/).
+6. Use the [Operations overview](/PC-Build/operations/overview/) for monitoring, maintenance, backups, security, troubleshooting, and future upgrades.
 
 ## Documentation Status
 
-Milestone 1 repository scaffolding, Milestone 2 core content, Milestone 3 technical diagrams, and Milestone 4 HTML site polish are complete.
+Milestone 1 repository scaffolding, Milestone 2 core content, Milestone 3 technical diagrams, Milestone 4 HTML site polish, Milestone 5 professional engineering content, Milestone 6 digital twin, and Milestone 7 Starlight migration are complete.
 
 PDF and standalone printable manual generation are deferred to a later enhancement. The current publication target is the GitHub Pages HTML site.
 

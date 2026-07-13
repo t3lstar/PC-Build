@@ -1,7 +1,7 @@
 ---
 title: "Starlight Source Inventory"
 ---
-Status: Repository-only Milestone 7 inventory. Last verified: 2026-07-13 18:20 BST.
+Status: Repository-only source inventory. Last verified: 2026-07-13 18:42 BST.
 
 ## Purpose
 
@@ -11,13 +11,12 @@ This is a repository planning record, not a public site page.
 
 ## Current Counts
 
-| Source area                | Count | Notes                                                     |
-| -------------------------- | ----: | --------------------------------------------------------- |
-| Starlight content pages    | 37    | Complete manual, appendix, and digital twin               |
-| Build guide pages          | 26    | Clean routes under `/build-guide/`                        |
-| Appendix pages             | 9     | Clean routes under `/appendix/`                           |
-| Digital twin MDX pages     | 1     | `/digital-twin/first-slice/`                              |
-| Reader-facing asset folder | 1     | `public/assets/`                                          |
+- Starlight content pages: 45 complete manual, Operations, appendix, and digital twin pages.
+- Build guide pages: 22 clean routes under `/build-guide/`.
+- Operations pages: 12 clean routes under `/operations/`.
+- Appendix pages: 9 clean routes under `/appendix/`.
+- Digital twin MDX pages: 1 route at `/digital-twin/first-slice/`.
+- Reader-facing asset folder: 1 folder at `public/assets/`.
 
 ## Source Ownership
 
@@ -37,6 +36,7 @@ This is a repository planning record, not a public site page.
 | ------------ | ---------------------------- | ---------------------------------------- |
 | Home         | `/`                          | Starlight landing page                   |
 | Build guide  | `/build-guide/<chapter>/`    | Human-readable chapter routes            |
+| Operations   | `/operations/<chapter>/`     | Post-build operating handbook            |
 | Appendix     | `/appendix/<reference>/`     | Reference and support material           |
 | Digital twin | `/digital-twin/first-slice/` | Interactive documentation first slice    |
 
@@ -56,6 +56,7 @@ Numbered chapter URLs are intentionally not preserved. This is a development-sta
 ## Completion State
 
 - Build guide pages have been moved to clean Starlight routes.
+- Operations pages are first-class public Starlight routes for monitoring, software, drivers, fan control, backups, security, troubleshooting, benchmarking, maintenance, and upgrades.
 - Appendix pages have been moved to clean Starlight routes.
 - ADR, verification, migration inventory, audit, and historical QA records are repository records, not public Starlight pages.
 - Milestone 5 and 6 validation archive pages were removed because they no longer add value to the current public site.

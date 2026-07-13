@@ -112,6 +112,13 @@ python scripts/generate-qrcodes.py
 npm run starlight:dev -- --host 127.0.0.1 --port 4321
 ```
 
+## Public Sections
+
+- Build Guide: first build and Windows setup.
+- Operations: monitoring, maintenance, software, drivers, backups, security, troubleshooting, benchmarking, and upgrade planning.
+- Appendix: reference material, checklists, bill of materials, drivers, BIOS settings, and publishing notes.
+- Digital Twin: interactive data-backed build reference.
+
 ## Project Planning
 
 - Milestone tracker: `MILESTONES.md`

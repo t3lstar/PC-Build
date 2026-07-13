@@ -75,4 +75,4 @@ This appendix identifies connector names and safe routing rules. It does not pro
 - [AIO Installation](/PC-Build/build-guide/aio-installation/)
 - [Cable Routing](/PC-Build/build-guide/cable-routing/)
 - [Front Panel Connectors](/PC-Build/build-guide/front-panel-connectors/)
-- [Troubleshooting](/PC-Build/build-guide/troubleshooting/)
+- [Troubleshooting](/PC-Build/operations/troubleshooting/)

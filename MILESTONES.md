@@ -35,6 +35,7 @@ This project is delivered in controlled milestones so the repository can be buil
 - Digital twin data remains framework-neutral under `data/digital-twin/`.
 - QR code SVG assets are generated from official links in `data/digital-twin/build.json` by `scripts/generate-qrcodes.py`. Committed QR assets and their manifest live under `public/assets/qrcodes/`.
 - Milestone 7 uses a clean Starlight information architecture. Numbered chapter routes are not preserved.
+- Milestone 8 adds `src/content/docs/operations/` as the first-class post-build operating handbook.
 
 ## Milestone 1: Repository Scaffolding
 
@@ -113,3 +114,15 @@ Completed the clean Astro Starlight site with source parity, clean routes, valid
 - Diagram and image assets render correctly.
 - Validation covers migrated pages, internal links, Markdown linting, Astro checks, and critical assets.
 - GitHub Pages deploys the Starlight site successfully.
+
+## Milestone 8: Operations, Monitoring and Maintenance Handbook
+
+GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/4>
+
+Tracking issues: <https://github.com/t3lstar/PC-Build/issues/45> through <https://github.com/t3lstar/PC-Build/issues/57>
+
+Status: In progress locally.
+
+Detailed plan: [milestones/milestone-08-operations-handbook.md](milestones/milestone-08-operations-handbook.md)
+
+Add a first-class Operations section for maintaining, monitoring, securing, troubleshooting, benchmarking, and upgrading the completed PC throughout its lifetime.

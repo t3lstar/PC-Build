@@ -49,10 +49,18 @@ EXPECTED_ROUTES = [
     "build-guide/driver-installation/index.html",
     "build-guide/windows-installation/index.html",
     "build-guide/gaming-optimisation/index.html",
-    "build-guide/benchmarks/index.html",
-    "build-guide/troubleshooting/index.html",
-    "build-guide/maintenance/index.html",
-    "build-guide/upgrades/index.html",
+    "operations/overview/index.html",
+    "operations/recommended-software/index.html",
+    "operations/software-to-avoid/index.html",
+    "operations/driver-strategy/index.html",
+    "operations/monitoring/index.html",
+    "operations/fancontrol/index.html",
+    "operations/benchmark-baseline/index.html",
+    "operations/maintenance-schedule/index.html",
+    "operations/backup-recovery/index.html",
+    "operations/security/index.html",
+    "operations/troubleshooting/index.html",
+    "operations/upgrade-planning/index.html",
     "appendix/glossary/index.html",
     "appendix/faq/index.html",
     "appendix/checklists/index.html",
@@ -76,6 +84,29 @@ REMOVED_OLD_ROUTES = [
     "adr/0001-digital-twin-architecture/index.html",
     "project/verification-register/index.html",
     "project/starlight-migration-inventory/index.html",
+    "build-guide/benchmarks/index.html",
+    "build-guide/troubleshooting/index.html",
+    "build-guide/maintenance/index.html",
+    "build-guide/upgrades/index.html",
+]
+
+RECOMMENDED_SOFTWARE = [
+    "HWiNFO64",
+    "AMD Software: Adrenalin Edition",
+    "Samsung Magician",
+    "FanControl by Rem0o",
+    "OCCT",
+    "Cinebench 2024",
+    "CrystalDiskMark",
+    "MemTest86",
+    "3DMark",
+    "Everything Search",
+    "Microsoft PowerToys",
+    "Playnite",
+    "7-Zip",
+    "MSI Afterburner",
+    "LibreHardwareMonitor",
+    "Display Driver Uninstaller",
 ]
 
 COMPONENTS = {
@@ -155,7 +186,7 @@ def local_source_exists(source: Path, target: str) -> bool:
 
 def validate_source(errors: list[str]) -> None:
     files = markdown_files()
-    require(errors, len(files) == 37, f"Expected 37 Starlight content pages, found {len(files)}.")
+    require(errors, len(files) == 45, f"Expected 45 Starlight content pages, found {len(files)}.")
     require(errors, not OLD_CONFIG.exists(), "Old site-generator config should be removed after Starlight migration.")
     require(errors, not (ROOT / "docs").exists(), "Old documentation source directory should be removed after Starlight migration.")
 
@@ -182,6 +213,23 @@ def validate_source(errors: list[str]) -> None:
     require(errors, ":focus-visible" in css, "Starlight CSS lacks visible focus styles.")
     require(errors, "prefers-reduced-motion" in css, "Starlight CSS lacks reduced-motion handling.")
     require(errors, ".pc-image-lightbox" in css, "Starlight CSS lacks image lightbox styling.")
+
+    recommended = read(CONTENT / "operations" / "recommended-software.md")
+    for package in RECOMMENDED_SOFTWARE:
+        require(errors, package in recommended, f"Recommended software page missing {package}.")
+    for required in [
+        "Official source",
+        "Installation guidance",
+        "Safe configuration",
+        "Recommended settings",
+        "Use cadence",
+        "Permanently installed",
+        "Resource usage",
+        "Potential alternatives",
+        "Update guidance",
+        "Removal guidance",
+    ]:
+        require(errors, required in recommended, f"Recommended software page missing column or section '{required}'.")
 
     for markdown_file in files:
         raw_text = read(markdown_file)

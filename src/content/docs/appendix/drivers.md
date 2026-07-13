@@ -9,6 +9,8 @@ Track required chipset, motherboard, network, audio, GPU, and utility drivers.
 
 Driver pages change over time. Use the official links below and record the actual installed version during the build.
 
+Use the [Driver Strategy](/PC-Build/operations/driver-strategy/) chapter for update timing, rollback, risks, and post-update verification.
+
 ## Official Sources
 
 | Area                         | Source                                                                                                                | Use                                                                     |

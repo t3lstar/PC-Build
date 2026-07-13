@@ -55,7 +55,7 @@ Record these values before optimisation so later problems have a comparison poin
 | Cooling       | AIO pump reading if exposed, radiator fan response, case fan response, noise    | BIOS, monitoring software, physical inspection      |
 | Software      | Chipset driver version, Radeon driver version, major launcher versions          | Driver installers, AMD Radeon Software, notes file  |
 
-Use the [temperature reference](/PC-Build/appendix/temperature-reference/) for expected temperature ranges and action points. Use the [benchmark chapter](/PC-Build/build-guide/benchmarks/) for repeatable load testing after this optimisation pass.
+Use the [temperature reference](/PC-Build/appendix/temperature-reference/) for expected temperature ranges and action points. Use the [benchmark baseline](/PC-Build/operations/benchmark-baseline/) for repeatable load testing after this optimisation pass.
 
 ## Optimisation Rules
 
@@ -83,7 +83,7 @@ Use the [temperature reference](/PC-Build/appendix/temperature-reference/) for e
 12. Leave Hardware-Accelerated GPU Scheduling unchanged unless you are deliberately testing it as a single recorded change.
 13. Use balanced or high-performance Windows power behaviour according to the intended noise and performance preference.
 14. Confirm EXPO status only after the system has already passed default boot and driver checks.
-15. If EXPO is enabled, record the reported memory speed and run the memory checks described in [EXPO Memory Setup](/PC-Build/build-guide/expo/) and [Benchmarks](/PC-Build/build-guide/benchmarks/).
+15. If EXPO is enabled, record the reported memory speed and run the memory checks described in [EXPO Memory Setup](/PC-Build/build-guide/expo/) and [Benchmark Baseline](/PC-Build/operations/benchmark-baseline/).
 16. Run one repeatable game or synthetic benchmark and record CPU temperature, GPU temperature, GPU utilisation, VRAM usage, fan behaviour, and any visible stutter or artifacting.
 17. Adjust fan curves only if temperatures, ramping, or noise justify it. Keep changes conservative and record the new curve source.
 18. Create a restore point before installing large game launchers, RGB software, capture tools, or optional motherboard utilities.
@@ -140,4 +140,4 @@ The system has a recorded, stable gaming baseline covering Windows state, driver
 
 ## Next Chapter
 
-Continue to [Benchmarks](/PC-Build/build-guide/benchmarks/).
+Continue to [Operations Overview](/PC-Build/operations/overview/).

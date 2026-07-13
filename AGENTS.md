@@ -41,6 +41,7 @@ Use `MILESTONES.md` and `milestones/` as the planning source of truth.
 ## Source Layout
 
 - Starlight content source lives in `src/content/docs/`.
+- Operations handbook content lives in `src/content/docs/operations/`.
 - Interactive Astro components live in `src/components/`.
 - Site styling lives in `src/styles/starlight.css`.
 - Public images, diagrams, icons, and QR assets live in `public/assets/`.
@@ -133,6 +134,8 @@ Every main chapter should include:
 - Next chapter
 
 Use direct instructional language throughout. For example, write "Install the CPU into the AM5 socket." rather than conversational phrasing.
+
+Operations chapters should keep post-build guidance separate from build steps. Use `src/content/docs/operations/` for monitoring, maintenance, software, drivers, backups, security, troubleshooting, benchmarking, and upgrade planning.
 
 ## Bill of Materials
 

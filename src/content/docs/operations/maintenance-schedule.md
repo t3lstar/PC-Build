@@ -1,7 +1,7 @@
 ---
-title: "Maintenance"
+title: "Maintenance Schedule"
 ---
-Status: Published HTML content. Last reviewed: 2026-07-13 15:08 BST.
+Status: Published HTML content. Last reviewed: 2026-07-13 18:38 BST.
 
 ## Introduction
 
@@ -52,16 +52,33 @@ Use the maintenance log templates in the [checklists appendix](/PC-Build/appendi
 
 ## Maintenance Schedule
 
-| Interval                       | Task                                                                                                                                                          |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Weekly during the first month  | Check idle temperatures, fan noise, Windows Update state, and SSD free space so the new-build baseline becomes familiar.                                      |
-| Monthly                        | Check temperatures, dust filters, fan noise, SSD free space, Windows Update, and driver state.                                                                |
-| Every 3-6 months               | Clean filters, radiator, fans, and visible dust paths. Inspect cable strain and fan clearance.                                                                |
-| Before major game installs     | Confirm SSD free space.                                                                                                                                       |
-| Before long benchmark sessions | Confirm radiator path is clear and monitoring software can see CPU, GPU, SSD, and fan readings.                                                               |
-| Before BIOS updates            | Read release notes and confirm the update is relevant.                                                                                                        |
-| After driver updates           | Record the previous version, new version, reason, and result. Re-run a short stability check if the update affects chipset, GPU, network, or storage drivers. |
-| After hardware changes         | Re-run baseline checks, update documentation, and compare with the previous benchmark baseline.                                                               |
+- After build: record baseline temperatures, benchmark results, BIOS version, driver versions, fan behaviour, SSD health, backup state, and BitLocker recovery-key state.
+- Weekly during the first month: check idle temperatures, fan noise, Windows Update state, SSD free space, and backup status so the new-build baseline becomes familiar.
+- Monthly: check temperatures, dust filters, fan noise, SSD free space, Windows Update, driver state, backup health, and Windows Security status.
+- Quarterly: clean accessible filters, inspect fan blades, inspect cable clearance, review software startup entries, and verify a sample file restore.
+- Six monthly: open the case for deeper dust inspection, clean radiator and fan paths, inspect cable ties, review BIOS and driver release notes, and refresh recovery media if needed.
+- Annual: review upgrade goals, backup strategy, BitLocker key storage, benchmark baseline, firmware state, fan curves, and installed utility list.
+- Before major game installs: confirm SSD free space.
+- Before long benchmark sessions: confirm radiator path is clear and monitoring software can see CPU, GPU, SSD, and fan readings.
+- Before BIOS updates: read release notes and confirm the update is relevant.
+- After driver updates: record the previous version, new version, reason, and result. Re-run a short stability check if the update affects chipset, GPU, network, or storage drivers.
+- After hardware changes: re-run baseline checks, update documentation, and compare with the previous benchmark baseline.
+
+## Checklist By Interval
+
+| Area | After build | Weekly first month | Monthly | Quarterly | Six monthly | Annual |
+| --- | --- | --- | --- | --- | --- | --- |
+| Cleaning | Confirm panels and filters are seated. | Visual dust check. | Filter check. | Clean filters. | Clean filters, fans, radiator path. | Review case placement and airflow. |
+| Dust filters | Record initial state. | Inspect. | Inspect. | Clean. | Clean. | Replace if damaged. |
+| Firmware | Record BIOS and SSD firmware. | No routine change. | Review only if symptoms exist. | Read release notes. | Update only for a reason. | Review support lifecycle. |
+| Drivers | Record chipset, GPU, network, audio. | Watch for obvious issues. | Review versions. | Update if release notes justify it. | Revalidate if updated. | Review driver strategy. |
+| Windows | Fully update after build. | Check restart state. | Patch normally. | Review feature update timing. | Check recovery options. | Review installed apps. |
+| SSD health | Record Samsung Magician state. | Check free space. | Check health and temperature. | Check firmware notes. | Run benchmark only if needed. | Review storage capacity. |
+| Benchmark verification | Capture baseline. | No routine retest. | Retest only if symptoms exist. | Retest after driver/firmware changes. | Retest after cooling changes. | Refresh baseline if system changed. |
+| Cable inspection | Inspect after cable management. | Listen for fan contact. | Visual check if panels are open. | Inspect ties and grommets. | Inspect strain and rubbing. | Review before upgrades. |
+| Fan inspection | Record baseline noise. | Listen for new noise. | Check speeds. | Clean blades. | Clean and inspect bearings/noise. | Review curves. |
+| Temperature review | Record idle/load baseline. | Compare idle. | Compare idle and light load. | Compare against baseline. | Compare after cleaning. | Refresh baseline if needed. |
+| Backup verification | Configure backup. | Confirm first backup completes. | Check backup status. | Restore one test file. | Review recovery USB. | Full backup review. |
 
 ## Maintenance Triggers
 
@@ -137,4 +154,4 @@ The PC remains clean, cool, stable, and documented throughout normal use.
 
 ## Next Chapter
 
-Continue to [Upgrades](/PC-Build/build-guide/upgrades/).
+Continue to [Backup and Recovery](/PC-Build/operations/backup-recovery/).

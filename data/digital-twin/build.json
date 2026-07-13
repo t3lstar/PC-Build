@@ -1249,14 +1249,14 @@
       "id": "benchmark-baseline",
       "order": 16,
       "label": "Benchmark baseline",
-      "chapter": "src/content/docs/build-guide/benchmarks.md",
+      "chapter": "src/content/docs/operations/benchmark-baseline.md",
       "componentIds": ["cpu", "cooler", "memory", "storage", "gpu"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/build-guide/benchmarks.md",
+            "ref": "src/content/docs/operations/benchmark-baseline.md",
             "note": "Benchmark procedure is verified; real scores are intentionally not invented."
           }
         ]

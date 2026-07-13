@@ -1,7 +1,7 @@
 ---
-title: "Upgrades"
+title: "Upgrade Planning"
 ---
-Status: Published HTML content. Last reviewed: 2026-07-13 13:53 BST.
+Status: Published HTML content. Last reviewed: 2026-07-13 18:38 BST.
 
 ## Introduction
 
@@ -58,6 +58,18 @@ Moderate.
 | CPU     | Confirm BIOS support before replacing the processor.                                                             |
 | Cooling | Confirm radiator thickness, fan position, and tube routing.                                                      |
 | PSU     | Replace the PSU and cables as a set if changing PSU model.                                                       |
+
+## Upgrade Types
+
+| Upgrade | Planning checks | BIOS implications | Driver implications | Validation after upgrade |
+| --- | --- | --- | --- | --- |
+| Additional NVMe drive | Check M.2 slot support, heatsink, lane sharing, screw/latch hardware, and thermal path. | Usually none unless storage detection issues occur. | Windows may install storage driver automatically; Samsung Magician only applies to Samsung drives. | Confirm drive detection, format intentionally, check temperature, run storage sanity test. |
+| GPU replacement | Check GPU length, thickness, weight support, PCIe power, PSU headroom, and display outputs. | Usually none unless Resize BAR or compatibility setting needs review. | Remove old driver only when changing vendor or fixing faults; install official GPU driver. | Run 3DMark/game test, check power cable seating, temperature, fan behaviour. |
+| RAM increase | Prefer a new matched kit; verify motherboard QVL or vendor compatibility. | BIOS update may be needed for memory compatibility; EXPO must be retested. | No Windows driver change, but memory instability can appear as app or game crashes. | Run MemTest86 and normal workload checks. |
+| CPU change | Check AM5 support, BIOS version, cooler compatibility, and power/thermal behaviour. | BIOS update may be required before installing a newer CPU. | Chipset driver update may be sensible after CPU/platform change. | Check BIOS detection, temperatures, Cinebench, OCCT short test. |
+| Fan replacement | Check size, connector type, PWM/DC mode, airflow direction, and cable path. | Header mode or fan curve may need review. | FanControl profile may need recalibration. | Confirm RPM readings, airflow direction, noise, and thermal response. |
+| AIO replacement | Check radiator support, thickness, tube routing, pump header, fan headers, and mounting hardware. | Fan/pump curve review required. | FanControl profile may need recalibration. | Check pump reading, CPU idle/load temperature, leak/noise inspection. |
+| PSU reuse or replacement | Check wattage, quality, connectors, cable compatibility, and warranty age. | Usually none. | No driver change. | Use only cables from the selected PSU, verify boot/load stability. |
 
 ## Verification Checklist
 
