@@ -67,6 +67,8 @@ Beginner.
 - [ ] Cable paths are understood before parts are installed.
 - [ ] Windows 11 Pro USB installer is ready.
 
+Use the consolidated [checklists appendix](appendix/checklists.md) for pre-purchase, workspace, parts intake, and staged build checks.
+
 ## Common Mistakes
 
 - Installing the motherboard before confirming standoff positions.

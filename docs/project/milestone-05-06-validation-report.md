@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 13:53 BST.
+Status: Active validation report. Last verified: 2026-07-13 14:09 BST.
 
 ## Passed Checks
 
@@ -25,6 +25,8 @@ Status: Active validation report. Last verified: 2026-07-13 13:53 BST.
 | Local HTML build after issue #6 updates | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 72.17 seconds. |
 | Milestone 5 issue #7 roadmap and contribution review | Manual review of `README.md`, `CONTRIBUTING.md`, `MILESTONES.md`, and `milestones/` | README now shows current roadmap status, contribution workflow, project-control docs, and GitHub milestone links; contribution guide now documents issue workflow, technical verification, validation, and generated-output rules. |
 | Local HTML build after issue #7 updates | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 188.75 seconds. |
+| Milestone 5 issue #8 checklist review | Manual review of `docs/appendix/checklists.md`, `docs/06-build-preparation.md`, and `docs/25-maintenance.md` | Expanded staged build checklists, maintenance log templates, and cross-links from preparation and maintenance chapters. |
+| Local HTML build after issue #8 updates | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 116.22 seconds. |
 
 ## Warnings
 

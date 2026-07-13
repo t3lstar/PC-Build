@@ -46,6 +46,8 @@ Beginner.
 8. Check SSD free space and health using vendor or monitoring software.
 9. Record any BIOS, driver, hardware, or cooling changes.
 
+Use the maintenance log templates in the [checklists appendix](appendix/checklists.md) to record monthly checks, driver/firmware changes, and hardware changes.
+
 ## Maintenance Schedule
 
 | Interval | Task |
