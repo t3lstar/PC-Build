@@ -44,7 +44,7 @@ This project is delivered in controlled milestones so the repository can be buil
 - Use the tracked MkDocs theme configuration and `docs/assets/stylesheets/theme.css` for site-level visual styling.
 - Use `docs/project/repository-audit.md`, `docs/project/verification-register.md`, and `docs/project/milestone-05-06-validation-report.md` for Milestones 5 and 6 planning and validation.
 - Keep detailed Milestone 5 and Milestone 6 plans under `milestones/`.
-- Astro Starlight is a possible future migration path because it may fit richer interactive documentation, but do not migrate during Milestone 5. Evaluate it with a proof-of-concept after Milestone 5 is complete.
+- Astro Starlight is the accepted Milestone 6 target platform for the interactive digital twin. Keep digital twin data framework-neutral, but implement the interactive site with Starlight after a controlled first slice proves GitHub Pages deployment, navigation, diagrams, validation, accessibility, and static fallbacks.
 
 ## Milestone 1: Repository Scaffolding
 
@@ -211,7 +211,7 @@ GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/2
 
 Tracking issues: https://github.com/t3lstar/PC-Build/issues/19 through https://github.com/t3lstar/PC-Build/issues/34
 
-Status: Planned.
+Status: In progress.
 
 Detailed plan: [milestones/milestone-06-digital-twin.md](milestones/milestone-06-digital-twin.md)
 
@@ -219,7 +219,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 
 ### Acceptance Criteria
 
-- Architecture ADR is accepted before implementation choices are locked in.
+- Architecture ADR is accepted; Astro Starlight is the direct target platform for Milestone 6.
 - Digital twin data validates against JSON Schema.
 - Every interactive component maps to structured data.
 - Cable routes and connector positions are verified or explicitly marked unverified.

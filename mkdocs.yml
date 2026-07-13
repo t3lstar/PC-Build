@@ -96,6 +96,7 @@ nav:
       - Temperature Reference: appendix/temperature-reference.md
       - Publishing: appendix/publishing.md
   - Project:
+      - ADR 0001 Digital Twin Architecture: adr/0001-digital-twin-architecture.md
       - Repository Audit: project/repository-audit.md
       - Documentation Structure: project/documentation-structure.md
       - Verification Register: project/verification-register.md

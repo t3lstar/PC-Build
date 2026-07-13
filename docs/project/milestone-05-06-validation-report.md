@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:30 BST.
+Status: Active validation report. Last verified: 2026-07-13 15:35 BST.
 
 ## Passed Checks
 
@@ -68,12 +68,16 @@ Status: Active validation report. Last verified: 2026-07-13 15:30 BST.
 | Live GitHub Pages connector appendix | `curl -L https://t3lstar.github.io/PC-Build/appendix/connectors-cables/` | HTTP 200; page contains `Connector and Cable Reference`, `Motherboard Headers Used`, and `PSU Cable Reference`. |
 | Milestone 5 issue closure | `gh issue close` for issues `#10`, `#11`, `#12`, `#13`, `#15`, `#16`, `#17`, and `#18` | Closed all remaining Milestone 5 issues with deployment evidence comments. |
 | GitHub Milestone 5 closure | `gh api --method PATCH repos/t3lstar/PC-Build/milestones/1 -f state=closed` | Closed `Milestone 5 — Professional Engineering Edition`; it had 0 open issues and 14 closed issues. |
+| Milestone 6 issue #19 ADR draft | Manual review of `docs/adr/0001-digital-twin-architecture.md`, `MILESTONES.md`, `milestones/milestone-06-digital-twin.md`, and `mkdocs.yml` | Added proposed digital twin architecture ADR. The proposed direction is data-first, framework-neutral, with MkDocs remaining production until an Astro Starlight proof of concept passes. |
+| Local full validation after issue #19 ADR draft | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 1.16 seconds; shell wall-clock total was 1.825 seconds. |
+| Milestone 6 issue #19 ADR acceptance | User decision and manual review of `docs/adr/0001-digital-twin-architecture.md`, `MILESTONES.md`, and `milestones/milestone-06-digital-twin.md` | Updated ADR 0001 to Accepted. Astro Starlight is now the direct Milestone 6 target platform, with framework-neutral data and static fallbacks preserved. |
+| Local full validation after issue #19 ADR acceptance | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 1.03 seconds; shell wall-clock total was 1.570 seconds. |
 
 ## Warnings
 
 | Check | Command or source | Outcome |
 | --- | --- | --- |
-| Local Python version | `. .venv/bin/activate; python --version` | Local `.venv` reported Python 3.14.5; repository expects Python 3.12. |
+| Local Python version | `. .venv/bin/activate; python --version` | Local `.venv` reports Python 3.12.12, matching the repository expectation. |
 | Shell Python alias | `python --version` | The shell does not expose a `python` command; use the project `.venv` Python or `python3` for one-off local scripts. |
 | Local Node version | `node --version` | Local Node reported v25.2.1; repository expects Node.js 24. |
 | MkDocs Material warning | `./scripts/build.sh html` | MkDocs Material prints an upstream warning about future MkDocs 2.0 compatibility. |

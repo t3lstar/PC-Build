@@ -1,6 +1,6 @@
 # Milestone 6: Interactive Digital Twin Edition
 
-Status: Planned.
+Status: In progress.
 
 GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/2
 
@@ -20,6 +20,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 ## Scope
 
 - Create a digital twin architecture ADR.
+- Migrate the site to Astro Starlight as the direct Milestone 6 target platform through a controlled first slice before switching production deployment.
 - Define a validated build data model and JSON Schema.
 - Create verified component, connector, cable, airflow, and sequence data.
 - Build a minimal accessible interactive vertical slice first.
@@ -43,7 +44,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 
 ## Deliverables
 
-- [ ] `docs/adr/0001-digital-twin-architecture.md`.
+- [x] `docs/adr/0001-digital-twin-architecture.md` - accepted; Astro Starlight is the direct target platform.
 - [ ] Structured build data under `data/`.
 - [ ] JSON Schema and validation tests.
 - [ ] Accessible interactive case view.
@@ -61,7 +62,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 
 ## Acceptance Criteria
 
-- [ ] ADR is accepted before implementation choices are locked in.
+- [x] ADR is accepted before implementation choices are locked in.
 - [ ] Digital twin data validates against JSON Schema.
 - [ ] Every interactive component maps to structured data.
 - [ ] Cable routes and connector positions are verified or explicitly marked unverified.
@@ -97,7 +98,7 @@ Future commands should include JSON Schema validation, interaction tests, access
 
 ## Issue Breakdown
 
-- [ ] [#19: M6: Digital twin architecture ADR](https://github.com/t3lstar/PC-Build/issues/19)
+- [x] [#19: M6: Digital twin architecture ADR](https://github.com/t3lstar/PC-Build/issues/19) - accepted locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#20: M6: Define build data model and JSON Schema](https://github.com/t3lstar/PC-Build/issues/20)
 - [ ] [#21: M6: Create verified component and connector dataset](https://github.com/t3lstar/PC-Build/issues/21)
 - [ ] [#22: M6: Implement interactive case view](https://github.com/t3lstar/PC-Build/issues/22)
