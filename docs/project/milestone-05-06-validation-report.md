@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:38 BST.
+Status: Active validation report. Last verified: 2026-07-13 15:59 BST.
 
 ## Passed Checks
 
@@ -83,6 +83,10 @@ Status: Active validation report. Last verified: 2026-07-13 15:38 BST.
 | MkDocs validation comparison after issue #35 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.18 seconds; shell wall-clock total was 1.986 seconds. |
 | Starlight base path check after issue #35 updates | `rg -n '/PC-Build/' dist/index.html dist/digital-twin/first-slice/index.html` | Built Starlight output uses `/PC-Build/` URLs for canonical links, static assets, navigation, scripts, and styles. |
 | Final local Starlight first-slice validation before commit | `./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 1.43 seconds with Pagefind search enabled. |
+| Milestone 6 issue #21 verified dataset review | Manual review of `data/digital-twin/build.json`, `scripts/validate-data.py`, `docs/project/verification-register.md`, `docs/appendix/connectors-cables.md`, and `docs/appendix/bill-of-materials.md` | Replaced seed digital twin data with 9 verified components, 13 locations, 18 connectors, 9 cables, 3 airflow zones, 16 build steps, 7 BIOS training states, and 10 reference links. Component identities, connector names, airflow roles, and build dependencies are source-backed; exact future visual coordinates remain marked partially verified or deferred. |
+| Digital twin data validation after issue #21 updates | `. .venv/bin/activate && ./scripts/validate.sh data` from `/Users/simondawson/Herd/PC-Build` | Passed. JSON Schema validation and custom cross-reference checks passed for component, location, connector, cable route, airflow, build-step, BIOS-state, and reference-link IDs. |
+| Local full validation after issue #21 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.13 seconds; shell wall-clock total was 1.920 seconds. |
+| Starlight validation after issue #21 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 1.47 seconds; shell wall-clock total was 4.770 seconds. |
 
 ## Warnings
 
@@ -101,7 +105,7 @@ Status: Active validation report. Last verified: 2026-07-13 15:38 BST.
 - Dedicated internal and external link validation is not configured.
 - Diagram source-to-SVG generation and drift detection are not automated.
 - SVG validation is not configured.
-- JSON Schema validation for a future digital twin does not exist yet.
+- Visual coordinate validation for future interactive digital twin views is not configured yet.
 - Milestone 5 and 6 issues are planning issues only; implementation should close them only after their acceptance criteria are met.
 
 ## Checks That Could Not Run

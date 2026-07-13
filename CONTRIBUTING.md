@@ -98,7 +98,7 @@ source .venv/bin/activate
 ./scripts/validate.sh all
 ```
 
-Use `./scripts/build.sh html` when you only need to rebuild the MkDocs site. Use `./scripts/validate.sh docs` when you only need the repository structure and local Markdown link checks. Use `./scripts/validate.sh data` when you only need digital twin JSON Schema validation.
+Use `./scripts/build.sh html` when you only need to rebuild the MkDocs site. Use `./scripts/validate.sh docs` when you only need the repository structure and local Markdown link checks. Use `./scripts/validate.sh data` when you only need digital twin JSON Schema and cross-reference validation.
 
 Use this command when validating the Astro Starlight first slice:
 

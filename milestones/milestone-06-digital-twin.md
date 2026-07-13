@@ -4,7 +4,7 @@ Status: In progress.
 
 GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/2
 
-Tracking issues: https://github.com/t3lstar/PC-Build/issues/19 through https://github.com/t3lstar/PC-Build/issues/34
+Tracking issues: https://github.com/t3lstar/PC-Build/issues/19 through https://github.com/t3lstar/PC-Build/issues/35
 
 ## Purpose
 
@@ -45,7 +45,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 ## Deliverables
 
 - [x] `docs/adr/0001-digital-twin-architecture.md` - accepted; Astro Starlight is the direct target platform.
-- [x] Structured build data under `data/` - seed dataset added; detailed verified population continues in issue #21.
+- [x] Structured build data under `data/` - verified component, connector, cable, airflow, build-sequence, BIOS-state, and reference-link dataset implemented locally for issue #21.
 - [x] JSON Schema and validation tests.
 - [x] Astro Starlight first slice - implemented locally; production deployment remains MkDocs until the Starlight switch is approved.
 - [ ] Accessible interactive case view.
@@ -66,7 +66,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] ADR is accepted before implementation choices are locked in.
 - [x] Digital twin data validates against JSON Schema.
 - [ ] Every interactive component maps to structured data.
-- [ ] Cable routes and connector positions are verified or explicitly marked unverified.
+- [x] Cable routes and connector positions are verified or explicitly marked unverified in the structured data.
 - [ ] Static fallbacks remain available.
 - [ ] Keyboard navigation and visible focus indicators work.
 - [ ] Reduced-motion behavior is supported.
@@ -109,7 +109,7 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] [#19: M6: Digital twin architecture ADR](https://github.com/t3lstar/PC-Build/issues/19) - accepted locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#20: M6: Define build data model and JSON Schema](https://github.com/t3lstar/PC-Build/issues/20) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#35: M6: Migrate site to Astro Starlight first slice](https://github.com/t3lstar/PC-Build/issues/35) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
-- [ ] [#21: M6: Create verified component and connector dataset](https://github.com/t3lstar/PC-Build/issues/21)
+- [x] [#21: M6: Create verified component and connector dataset](https://github.com/t3lstar/PC-Build/issues/21) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#22: M6: Implement interactive case view](https://github.com/t3lstar/PC-Build/issues/22)
 - [ ] [#23: M6: Implement motherboard connector map](https://github.com/t3lstar/PC-Build/issues/23)
 - [ ] [#24: M6: Implement cable-routing mode](https://github.com/t3lstar/PC-Build/issues/24)

@@ -209,7 +209,7 @@ Raise the existing documentation to publication-quality engineering documentatio
 
 GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/2
 
-Tracking issues: https://github.com/t3lstar/PC-Build/issues/19 through https://github.com/t3lstar/PC-Build/issues/34
+Tracking issues: https://github.com/t3lstar/PC-Build/issues/19 through https://github.com/t3lstar/PC-Build/issues/35
 
 Status: In progress.
 

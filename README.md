@@ -8,7 +8,7 @@ The intended public site URL is `https://t3lstar.github.io/PC-Build/`.
 
 ## Current Roadmap Status
 
-The project is split into staged milestones. Milestones 1-4 are complete for the published GitHub Pages HTML site. Milestone 5 is in progress.
+The project is split into staged milestones. Milestones 1-5 are complete for the published GitHub Pages HTML site. Milestone 6 is in progress locally.
 
 | Milestone | Status | Tracker |
 | --- | --- | --- |
@@ -16,8 +16,8 @@ The project is split into staged milestones. Milestones 1-4 are complete for the
 | 2. Core content | Complete | [Issue #1](https://github.com/t3lstar/PC-Build/issues/1) |
 | 3. Technical diagrams | Complete | [Issue #2](https://github.com/t3lstar/PC-Build/issues/2) |
 | 4. Polish | Complete for GitHub Pages HTML | [Issue #3](https://github.com/t3lstar/PC-Build/issues/3) |
-| 5. Professional Engineering Edition | In progress | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/1) |
-| 6. Interactive Digital Twin Edition | Planned | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/2) |
+| 5. Professional Engineering Edition | Complete and published | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/1) |
+| 6. Interactive Digital Twin Edition | In progress locally | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/2) |
 
 See `MILESTONES.md` for the current roadmap, assumptions, and acceptance criteria.
 
@@ -84,7 +84,7 @@ Run local validation:
 ./scripts/validate.sh all
 ```
 
-This checks digital twin JSON data, required repository files, MkDocs navigation targets, local Markdown links, and the strict HTML build.
+This checks digital twin JSON data and cross-references, required repository files, MkDocs navigation targets, local Markdown links, and the strict HTML build.
 
 Build the Astro Starlight first slice:
 
@@ -106,9 +106,9 @@ The first slice currently uses Astro `7.0.7`, Starlight `0.41.3`, and MDX `7.0.2
 - Technical verification register: `docs/project/verification-register.md`
 - Validation report: `docs/project/milestone-05-06-validation-report.md`
 
-Milestone 5 will focus on professional engineering documentation, validation automation, verification tracking, printable/PDF output, and long-term maintenance records.
+Milestone 5 added professional engineering documentation, validation automation, verification tracking, printable output, and long-term maintenance records. PDF generation remains deferred.
 
-Milestone 6 will focus on an accessible, static-site-compatible digital twin after an architecture decision record and verified data model are in place.
+Milestone 6 focuses on an accessible, static-site-compatible Astro Starlight digital twin backed by framework-neutral verified build data.
 
 ## Contribution Workflow
 

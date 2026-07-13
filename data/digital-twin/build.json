@@ -5,14 +5,52 @@
     "project": "Custom Gaming PC Build Manual",
     "siteUrl": "https://t3lstar.github.io/PC-Build/",
     "status": "draft",
-    "lastVerified": "2026-07-13 15:38 BST",
+    "lastVerified": "2026-07-13 15:53 BST",
     "sourceAdr": "docs/adr/0001-digital-twin-architecture.md",
     "notes": [
-      "Seed data for the Milestone 6 schema contract.",
-      "Detailed verified component and connector population is handled by issue #21."
+      "Milestone 6 issue #21 verified dataset for component identity, connector names, cable dependencies, airflow roles, build sequence, and BIOS training states.",
+      "Exact interactive x/y coordinates remain future digital twin work and are deliberately marked partially verified or deferred where appropriate."
     ]
   },
   "components": [
+    {
+      "id": "cpu",
+      "category": "cpu",
+      "name": "AMD Ryzen 7 7800X3D",
+      "model": "100-100000910WOF",
+      "role": "AM5 gaming CPU installed in the motherboard socket.",
+      "chapter": "docs/07-cpu-installation.md",
+      "manufacturerUrl": "https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-7-7800x3d.html",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md",
+            "note": "Primary component list identifies the exact CPU and AM5 compatibility."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cooler",
+      "category": "cooler",
+      "name": "ARCTIC Liquid Freezer III Pro 360",
+      "model": "ACFRE00180A",
+      "role": "360mm AIO liquid cooler mounted in the top radiator position.",
+      "chapter": "docs/13-aio-installation.md",
+      "manufacturerUrl": "https://www.arctic.de/en/Liquid-Freezer-III-Pro-360/ACFRE00180A",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "AIO AM5 support, radiator dimensions, top-radiator compatibility, and acceptable cable paths are verified."
+          }
+        ]
+      }
+    },
     {
       "id": "motherboard",
       "category": "motherboard",
@@ -33,6 +71,63 @@
       }
     },
     {
+      "id": "memory",
+      "category": "memory",
+      "name": "G.SKILL Flare X5 32GB DDR5-6000 CL30",
+      "model": "F5-6000J3038F16GX2-FX5",
+      "role": "Two-module AMD EXPO DDR5 kit installed in slots DDR5_A2 and DDR5_B2.",
+      "chapter": "docs/08-memory-installation.md",
+      "manufacturerUrl": "https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "G.SKILL QVL lists the motherboard for this kit and the manual verifies A2/B2 slot guidance."
+          }
+        ]
+      }
+    },
+    {
+      "id": "storage",
+      "category": "storage",
+      "name": "Samsung 990 EVO Plus 2TB NVMe SSD",
+      "model": "MZ-V9S2T0",
+      "role": "M.2 2280 NVMe boot SSD installed in the preferred CPU-connected M2A_CPU slot.",
+      "chapter": "docs/09-m2-installation.md",
+      "manufacturerUrl": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "M2A_CPU is verified as the preferred CPU-connected M.2 slot for the boot NVMe SSD."
+          }
+        ]
+      }
+    },
+    {
+      "id": "gpu",
+      "category": "gpu",
+      "name": "Gigabyte Radeon RX 9060 XT Gaming OC 16GB",
+      "model": "GV-R9060XTGAMING-OC-16GD",
+      "role": "Primary graphics card installed in the motherboard primary PCIe x16 slot.",
+      "chapter": "docs/14-gpu-installation.md",
+      "manufacturerUrl": "https://www.gigabyte.com/Graphics-Card/GV-R9060XTGAMING-OC-16GD/sp",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md",
+            "note": "Compatibility summary verifies GPU length, PCIe slot fit, and PSU capacity."
+          }
+        ]
+      }
+    },
+    {
       "id": "case",
       "category": "case",
       "name": "Lian Li O11 Dynamic Mini V2 Flow",
@@ -46,7 +141,45 @@
           {
             "type": "repository",
             "ref": "docs/project/verification-register.md",
-            "note": "Case fan count and top radiator support are verified for the static guide."
+            "note": "Case fan count, ATX support, GPU clearance, PSU clearance, and top radiator support are verified for the static guide."
+          }
+        ]
+      }
+    },
+    {
+      "id": "psu",
+      "category": "psu",
+      "name": "ASUS TUF Gaming 1000W Gold",
+      "model": "TUF-GAMING-1000G",
+      "role": "Fully modular ATX power supply for motherboard, CPU, GPU, and optional accessory power.",
+      "chapter": "docs/11-psu-installation.md",
+      "manufacturerUrl": "https://www.asus.com/us/motherboards-components/power-supply-units/tuf-gaming/tuf-gaming-1000g/techspec/",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md",
+            "note": "Compatibility summary verifies case clearance and power headroom."
+          }
+        ]
+      }
+    },
+    {
+      "id": "operating-system",
+      "category": "operating-system",
+      "name": "Windows 11 Pro",
+      "model": "USB installation media",
+      "role": "Operating system installed from an existing Windows 11 Pro USB installer.",
+      "chapter": "docs/21-windows-installation.md",
+      "manufacturerUrl": "https://www.microsoft.com/en-us/software-download/windows11",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "MILESTONES.md",
+            "note": "Project assumptions state Windows 11 Pro installation media is already available on USB."
           }
         ]
       }
@@ -55,7 +188,7 @@
   "locations": [
     {
       "id": "motherboard-top-left",
-      "label": "Motherboard top-left power area",
+      "label": "Motherboard top-left CPU EPS area",
       "kind": "motherboard-zone",
       "staticFallback": "Area used for CPU EPS routing before top radiator final installation.",
       "evidence": {
@@ -70,9 +203,127 @@
       }
     },
     {
+      "id": "motherboard-right-edge",
+      "label": "Motherboard right-edge 24-pin and USB area",
+      "kind": "motherboard-zone",
+      "staticFallback": "Right-edge cable entry zone for ATX 24-pin and front USB routing.",
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Connector names and routing guidance are verified; exact visual coordinates are future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "motherboard-bottom-edge",
+      "label": "Motherboard bottom-edge front-panel area",
+      "kind": "motherboard-zone",
+      "staticFallback": "Bottom-edge zone for front-panel, front-audio, and lower utility leads.",
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "F_PANEL labels and polarity caution are verified; exact rendered map remains future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "motherboard-cpu-fan-area",
+      "label": "CPU fan and pump header area",
+      "kind": "header-area",
+      "parentId": "motherboard",
+      "staticFallback": "Header area used for the simple AIO all-in-one cable or optional individual-control leads.",
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Acceptable headers are verified; exact x/y placement is future digital twin work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "memory-slots-a2-b2",
+      "label": "DDR5_A2 and DDR5_B2 memory slots",
+      "kind": "slot",
+      "parentId": "motherboard",
+      "staticFallback": "Install the two memory modules in DDR5_A2 and DDR5_B2.",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Motherboard manual verifies A2/B2 installation guidance for two DIMMs."
+          }
+        ]
+      }
+    },
+    {
+      "id": "motherboard-m2a-cpu",
+      "label": "M2A_CPU NVMe slot",
+      "kind": "slot",
+      "parentId": "motherboard",
+      "staticFallback": "Preferred CPU-connected M.2 slot for the Samsung boot SSD.",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "M2A_CPU is verified as the preferred boot SSD slot."
+          }
+        ]
+      }
+    },
+    {
+      "id": "motherboard-primary-pcie",
+      "label": "Primary PCIe x16 slot",
+      "kind": "slot",
+      "parentId": "motherboard",
+      "staticFallback": "Install the graphics card in the primary PCIe x16 slot.",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Primary PCIe x16 slot usage is verified for the static guide."
+          }
+        ]
+      }
+    },
+    {
+      "id": "gpu-area",
+      "label": "Graphics card area",
+      "kind": "case-region",
+      "parentId": "case",
+      "staticFallback": "Area occupied by the installed GPU and its PCIe power cable.",
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/14-gpu-installation.md",
+            "note": "GPU installation guidance is documented; exact visual position remains future work."
+          }
+        ]
+      }
+    },
+    {
       "id": "case-top-radiator",
       "label": "Top radiator mount",
       "kind": "case-region",
+      "parentId": "case",
       "staticFallback": "Top 360mm radiator exhaust position.",
       "evidence": {
         "state": "verified",
@@ -84,9 +335,96 @@
           }
         ]
       }
+    },
+    {
+      "id": "case-bottom-intake",
+      "label": "Bottom intake fan row",
+      "kind": "airflow-zone",
+      "parentId": "case",
+      "staticFallback": "Three bottom intake fans feed cool air toward the GPU and motherboard.",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Planned layout is documented as three bottom intake fans."
+          }
+        ]
+      }
+    },
+    {
+      "id": "case-side-intake",
+      "label": "Side intake fan column",
+      "kind": "airflow-zone",
+      "parentId": "case",
+      "staticFallback": "Two side intake fans supply fresh air into the main chamber.",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Planned layout is documented as two side intake fans."
+          }
+        ]
+      }
+    },
+    {
+      "id": "rear-cable-chamber",
+      "label": "Rear cable-management chamber",
+      "kind": "case-region",
+      "parentId": "case",
+      "staticFallback": "Rear chamber for PSU modular cables and slack management before panel closure.",
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/15-cable-routing.md",
+            "note": "Routing rules are documented; exact cable paths remain physical-build verified."
+          }
+        ]
+      }
+    },
+    {
+      "id": "psu-modular-panel",
+      "label": "PSU modular cable panel",
+      "kind": "case-region",
+      "parentId": "psu",
+      "staticFallback": "PSU output side for modular ATX, EPS, PCIe, and optional SATA power cables.",
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "PSU cable types are documented; exact modular panel positions remain future work."
+          }
+        ]
+      }
     }
   ],
   "connectors": [
+    {
+      "id": "atx-24-pin-header",
+      "label": "ATX_24PIN motherboard power header",
+      "kind": "power",
+      "componentId": "motherboard",
+      "locationId": "motherboard-right-edge",
+      "pinLabel": "ATX_24PIN",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Header identity and use are verified; exact visual coordinate is pending."
+          }
+        ]
+      }
+    },
     {
       "id": "cpu-eps-header",
       "label": "CPU EPS power header",
@@ -105,18 +443,344 @@
           }
         ]
       }
+    },
+    {
+      "id": "cpu-fan-header",
+      "label": "CPU_FAN header",
+      "kind": "fan",
+      "componentId": "motherboard",
+      "locationId": "motherboard-cpu-fan-area",
+      "pinLabel": "CPU_FAN",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Verified as the simple AIO all-in-one cable path."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cpu-opt-header",
+      "label": "CPU_OPT header",
+      "kind": "fan",
+      "componentId": "motherboard",
+      "locationId": "motherboard-cpu-fan-area",
+      "pinLabel": "CPU_OPT",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Verified as a 4-pin fan-capable optional individual-control header."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fan4-pump-header",
+      "label": "FAN4_PUMP header",
+      "kind": "pump",
+      "componentId": "motherboard",
+      "locationId": "motherboard-cpu-fan-area",
+      "pinLabel": "FAN4_PUMP",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Verified as fan/water-cooling pump capable for optional individual control."
+          }
+        ]
+      }
+    },
+    {
+      "id": "front-panel-header",
+      "label": "F_PANEL case front-panel header",
+      "kind": "front-panel",
+      "componentId": "motherboard",
+      "locationId": "motherboard-bottom-edge",
+      "pinLabel": "F_PANEL",
+      "polaritySensitive": true,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Manual labels and LED polarity caution are verified."
+          }
+        ]
+      }
+    },
+    {
+      "id": "front-usb-a-header",
+      "label": "Internal USB 3.x front USB-A header",
+      "kind": "usb",
+      "componentId": "motherboard",
+      "locationId": "motherboard-right-edge",
+      "pinLabel": "Internal USB 3.x",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Internal USB 3.x header is verified from motherboard connector inventory."
+          }
+        ]
+      }
+    },
+    {
+      "id": "front-usb-c-header",
+      "label": "Internal USB-C front-panel header",
+      "kind": "usb",
+      "componentId": "motherboard",
+      "locationId": "motherboard-right-edge",
+      "pinLabel": "Internal USB-C",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Internal USB-C header is verified from motherboard connector inventory."
+          }
+        ]
+      }
+    },
+    {
+      "id": "front-audio-header",
+      "label": "HD audio front-panel header",
+      "kind": "audio",
+      "componentId": "motherboard",
+      "locationId": "motherboard-bottom-edge",
+      "pinLabel": "HD_AUDIO",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "HD audio header is verified from motherboard connector inventory."
+          }
+        ]
+      }
+    },
+    {
+      "id": "m2a-cpu-slot",
+      "label": "M2A_CPU slot",
+      "kind": "m2",
+      "componentId": "motherboard",
+      "locationId": "motherboard-m2a-cpu",
+      "pinLabel": "M2A_CPU",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Verified as the preferred CPU-connected boot SSD slot."
+          }
+        ]
+      }
+    },
+    {
+      "id": "primary-pcie-x16-slot",
+      "label": "Primary PCIe x16 slot",
+      "kind": "pcie",
+      "componentId": "motherboard",
+      "locationId": "motherboard-primary-pcie",
+      "pinLabel": "PCIEX16",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Primary PCIe x16 slot usage is verified for the GPU."
+          }
+        ]
+      }
+    },
+    {
+      "id": "memory-slot-a2",
+      "label": "DDR5_A2 slot",
+      "kind": "memory",
+      "componentId": "motherboard",
+      "locationId": "memory-slots-a2-b2",
+      "pinLabel": "DDR5_A2",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Verified as a required slot for the two-DIMM memory kit."
+          }
+        ]
+      }
+    },
+    {
+      "id": "memory-slot-b2",
+      "label": "DDR5_B2 slot",
+      "kind": "memory",
+      "componentId": "motherboard",
+      "locationId": "memory-slots-a2-b2",
+      "pinLabel": "DDR5_B2",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Verified as a required slot for the two-DIMM memory kit."
+          }
+        ]
+      }
+    },
+    {
+      "id": "gpu-pcie-power-socket",
+      "label": "GPU PCIe 8-pin power socket",
+      "kind": "power",
+      "componentId": "gpu",
+      "locationId": "gpu-area",
+      "pinLabel": "PCIe 8-pin",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md",
+            "note": "GPU specification is documented as requiring one 8-pin PCIe power connector."
+          }
+        ]
+      }
+    },
+    {
+      "id": "psu-atx-output",
+      "label": "PSU 24-pin ATX modular output",
+      "kind": "power",
+      "componentId": "psu",
+      "locationId": "psu-modular-panel",
+      "pinLabel": "ATX",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "PSU cable requirement is documented; exact modular panel coordinate remains future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "psu-cpu-eps-output",
+      "label": "PSU CPU EPS modular output",
+      "kind": "power",
+      "componentId": "psu",
+      "locationId": "psu-modular-panel",
+      "pinLabel": "CPU",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "PSU cable requirement is documented; exact modular panel coordinate remains future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "psu-pcie-output",
+      "label": "PSU PCIe modular output",
+      "kind": "power",
+      "componentId": "psu",
+      "locationId": "psu-modular-panel",
+      "pinLabel": "PCIe",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "PSU cable requirement is documented; exact modular panel coordinate remains future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "psu-sata-output",
+      "label": "PSU optional SATA power modular output",
+      "kind": "power",
+      "componentId": "psu",
+      "locationId": "psu-modular-panel",
+      "pinLabel": "SATA",
+      "polaritySensitive": false,
+      "evidence": {
+        "state": "deferred",
+        "sources": [
+          {
+            "type": "deferred",
+            "ref": "Baseline build leaves SATA power unused unless a future accessory requires it."
+          }
+        ]
+      }
     }
   ],
   "cables": [
+    {
+      "id": "atx-24-pin-cable",
+      "label": "24-pin ATX motherboard power cable",
+      "kind": "atx-24-pin",
+      "from": "psu-atx-output",
+      "to": "atx-24-pin-header",
+      "route": ["psu-modular-panel", "rear-cable-chamber", "motherboard-right-edge"],
+      "dependencyNotes": [
+        "Use the PSU-supplied modular cable.",
+        "Confirm the latch is fully seated before closing the rear panel."
+      ],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Cable type and routing dependency are documented; exact route coordinates are future work."
+          }
+        ]
+      }
+    },
     {
       "id": "cpu-eps-cable",
       "label": "CPU EPS power cable",
       "kind": "eps",
       "from": "psu-cpu-eps-output",
       "to": "cpu-eps-header",
-      "route": ["motherboard-top-left"],
+      "route": ["psu-modular-panel", "rear-cable-chamber", "motherboard-top-left"],
       "dependencyNotes": [
-        "Route before top radiator final installation."
+        "Route before top radiator final installation.",
+        "Keep separate from PCIe GPU power cables."
       ],
       "evidence": {
         "state": "partially_verified",
@@ -128,9 +792,194 @@
           }
         ]
       }
+    },
+    {
+      "id": "gpu-pcie-power-cable",
+      "label": "PCIe 8-pin GPU power cable",
+      "kind": "pcie-power",
+      "from": "psu-pcie-output",
+      "to": "gpu-pcie-power-socket",
+      "route": ["psu-modular-panel", "rear-cable-chamber", "gpu-area"],
+      "dependencyNotes": [
+        "Connect only after the GPU is fully latched in the PCIe slot.",
+        "Avoid sharp bends at the GPU connector."
+      ],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Cable type and handling rule are documented; exact route coordinates are future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "front-panel-cable",
+      "label": "Case front-panel switch and LED leads",
+      "kind": "front-panel",
+      "from": "rear-cable-chamber",
+      "to": "front-panel-header",
+      "route": ["rear-cable-chamber", "motherboard-bottom-edge"],
+      "dependencyNotes": [
+        "Power switch is not polarity-sensitive.",
+        "LED leads are polarity-sensitive and must follow the motherboard pin labels."
+      ],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Front-panel labels and LED polarity caution are verified; exact cable coordinate is future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "front-usb-a-cable",
+      "label": "Front USB-A internal cable",
+      "kind": "usb",
+      "from": "rear-cable-chamber",
+      "to": "front-usb-a-header",
+      "route": ["rear-cable-chamber", "motherboard-right-edge"],
+      "dependencyNotes": [
+        "Align carefully before applying pressure.",
+        "Do not bend header pins."
+      ],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Header and handling rule are verified; exact cable coordinate is future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "front-usb-c-cable",
+      "label": "Front USB-C internal cable",
+      "kind": "usb",
+      "from": "rear-cable-chamber",
+      "to": "front-usb-c-header",
+      "route": ["rear-cable-chamber", "motherboard-right-edge"],
+      "dependencyNotes": [
+        "Connect before final cable tie-down.",
+        "Avoid side load on the connector."
+      ],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Header and routing dependency are verified; exact cable coordinate is future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "front-audio-cable",
+      "label": "Front HD audio cable",
+      "kind": "audio",
+      "from": "rear-cable-chamber",
+      "to": "front-audio-header",
+      "route": ["rear-cable-chamber", "motherboard-bottom-edge"],
+      "dependencyNotes": [
+        "Route away from fans and high-tension power bundles."
+      ],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md",
+            "note": "Header and routing guidance are verified; exact cable coordinate is future work."
+          }
+        ]
+      }
+    },
+    {
+      "id": "aio-all-in-one-cable",
+      "label": "ARCTIC AIO all-in-one control cable",
+      "kind": "fan",
+      "from": "case-top-radiator",
+      "to": "cpu-fan-header",
+      "route": ["case-top-radiator", "motherboard-cpu-fan-area"],
+      "dependencyNotes": [
+        "Use this simple build path unless deliberately choosing individual pump, VRM fan, and radiator fan control.",
+        "Set the connected header to PWM in BIOS."
+      ],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "ARCTIC and Gigabyte documentation verify this as an acceptable simple control path."
+          }
+        ]
+      }
+    },
+    {
+      "id": "optional-sata-power-cable",
+      "label": "Optional SATA power cable",
+      "kind": "sata-power",
+      "from": "psu-sata-output",
+      "to": "rear-cable-chamber",
+      "route": ["psu-modular-panel", "rear-cable-chamber"],
+      "dependencyNotes": [
+        "Leave unused during baseline setup unless a future documented accessory requires it."
+      ],
+      "evidence": {
+        "state": "deferred",
+        "sources": [
+          {
+            "type": "deferred",
+            "ref": "No baseline SATA-powered accessory is currently part of this build."
+          }
+        ]
+      }
     }
   ],
   "airflow": [
+    {
+      "id": "bottom-intake",
+      "label": "Bottom intake airflow",
+      "direction": "intake",
+      "locationId": "case-bottom-intake",
+      "staticFallback": "Three bottom intake fans feed cool air toward the GPU and motherboard.",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Planned layout is documented as three bottom intake fans."
+          }
+        ]
+      }
+    },
+    {
+      "id": "side-intake",
+      "label": "Side intake airflow",
+      "direction": "intake",
+      "locationId": "case-side-intake",
+      "staticFallback": "Two side intake fans supply fresh air into the main chamber.",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Planned layout is documented as two side intake fans."
+          }
+        ]
+      }
+    },
     {
       "id": "top-radiator-exhaust",
       "label": "Top 360mm radiator exhaust",
@@ -151,8 +1000,106 @@
   ],
   "buildSequence": [
     {
-      "id": "install-motherboard",
+      "id": "confirm-parts-tools",
       "order": 1,
+      "label": "Confirm parts and tools",
+      "chapter": "docs/06-build-preparation.md",
+      "componentIds": ["cpu", "cooler", "motherboard", "memory", "storage", "gpu", "case", "psu", "operating-system"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/06-build-preparation.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "prepare-workspace",
+      "order": 2,
+      "label": "Prepare workspace and case",
+      "chapter": "docs/06-build-preparation.md",
+      "componentIds": ["case"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/06-build-preparation.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "install-cpu",
+      "order": 3,
+      "label": "Install CPU in AM5 socket",
+      "chapter": "docs/07-cpu-installation.md",
+      "componentIds": ["cpu", "motherboard"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/07-cpu-installation.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "install-memory",
+      "order": 4,
+      "label": "Install DDR5 in A2 and B2",
+      "chapter": "docs/08-memory-installation.md",
+      "componentIds": ["memory", "motherboard"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "A2/B2 slot guidance is verified."
+          }
+        ]
+      }
+    },
+    {
+      "id": "install-ssd",
+      "order": 5,
+      "label": "Install Samsung NVMe SSD",
+      "chapter": "docs/09-m2-installation.md",
+      "componentIds": ["storage", "motherboard"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "M2A_CPU is verified as the preferred boot SSD slot."
+          }
+        ]
+      }
+    },
+    {
+      "id": "prepare-psu-cables",
+      "order": 6,
+      "label": "Prepare PSU cables",
+      "chapter": "docs/11-psu-installation.md",
+      "componentIds": ["psu"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "install-motherboard",
+      "order": 7,
       "label": "Install motherboard into case",
       "chapter": "docs/12-motherboard-installation.md",
       "componentIds": ["motherboard", "case"],
@@ -165,6 +1112,155 @@
           }
         ]
       }
+    },
+    {
+      "id": "install-top-aio",
+      "order": 8,
+      "label": "Install top AIO",
+      "chapter": "docs/13-aio-installation.md",
+      "componentIds": ["cooler", "case", "motherboard"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Top 360mm radiator fit and cable path are verified as compatible and clearance-sensitive."
+          }
+        ]
+      }
+    },
+    {
+      "id": "install-gpu",
+      "order": 9,
+      "label": "Install GPU",
+      "chapter": "docs/14-gpu-installation.md",
+      "componentIds": ["gpu", "motherboard", "psu"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/14-gpu-installation.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "connect-cables",
+      "order": 10,
+      "label": "Connect cables",
+      "chapter": "docs/15-cable-routing.md",
+      "componentIds": ["motherboard", "case", "psu", "gpu", "cooler"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/connectors-cables.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "first-boot",
+      "order": 11,
+      "label": "First boot",
+      "chapter": "docs/17-first-boot.md",
+      "componentIds": ["motherboard", "cpu", "memory", "storage", "gpu", "psu"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/17-first-boot.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "bios-checks",
+      "order": 12,
+      "label": "BIOS checks",
+      "chapter": "docs/18-bios.md",
+      "componentIds": ["motherboard", "cpu", "memory", "storage"],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "Q-Flash behavior is verified; exact menu names may vary by firmware version."
+          }
+        ]
+      }
+    },
+    {
+      "id": "install-windows",
+      "order": 13,
+      "label": "Install Windows",
+      "chapter": "docs/21-windows-installation.md",
+      "componentIds": ["operating-system", "storage"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "MILESTONES.md",
+            "note": "Windows 11 Pro USB installation media is a project assumption."
+          }
+        ]
+      }
+    },
+    {
+      "id": "install-drivers",
+      "order": 14,
+      "label": "Install drivers",
+      "chapter": "docs/20-driver-installation.md",
+      "componentIds": ["motherboard", "gpu", "operating-system"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/20-driver-installation.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "enable-expo",
+      "order": 15,
+      "label": "Enable EXPO",
+      "chapter": "docs/19-expo.md",
+      "componentIds": ["memory", "motherboard"],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "EXPO support is verified; exact BIOS menu path remains firmware-version dependent."
+          }
+        ]
+      }
+    },
+    {
+      "id": "benchmark-baseline",
+      "order": 16,
+      "label": "Benchmark baseline",
+      "chapter": "docs/23-benchmarks.md",
+      "componentIds": ["cpu", "cooler", "memory", "storage", "gpu"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/23-benchmarks.md",
+            "note": "Benchmark procedure is verified; real scores are intentionally not invented."
+          }
+        ]
+      }
     }
   ],
   "biosTraining": [
@@ -173,6 +1269,56 @@
       "label": "Default boot before EXPO",
       "stateType": "default",
       "staticFallback": "Boot at defaults before enabling EXPO or tuning.",
+      "nextStateIds": ["boot-order-usb", "expo-disabled"],
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/17-first-boot.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "boot-order-usb",
+      "label": "USB installer boot order",
+      "stateType": "boot-order",
+      "staticFallback": "Use the Windows 11 Pro USB installer for OS installation, then boot from the NVMe SSD after installation.",
+      "nextStateIds": ["boot-order-nvme"],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/21-windows-installation.md",
+            "note": "USB installation media is assumed; exact BIOS menu path depends on firmware version."
+          }
+        ]
+      }
+    },
+    {
+      "id": "boot-order-nvme",
+      "label": "NVMe boot after Windows installation",
+      "stateType": "boot-order",
+      "staticFallback": "After Windows is installed, remove or de-prioritise the USB installer so the Samsung NVMe SSD boots first.",
+      "nextStateIds": ["expo-disabled"],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/21-windows-installation.md",
+            "note": "Boot behavior is documented; exact BIOS menu path depends on firmware version."
+          }
+        ]
+      }
+    },
+    {
+      "id": "expo-disabled",
+      "label": "Stable defaults with EXPO disabled",
+      "stateType": "expo",
+      "staticFallback": "Confirm the system is stable at default memory settings before enabling EXPO.",
       "nextStateIds": ["expo-training"],
       "evidence": {
         "state": "verified",
@@ -189,7 +1335,7 @@
       "label": "EXPO memory training",
       "stateType": "training",
       "staticFallback": "After EXPO is enabled, DDR5 memory training can take several minutes.",
-      "nextStateIds": [],
+      "nextStateIds": ["expo-enabled", "clear-cmos-rollback"],
       "evidence": {
         "state": "verified",
         "sources": [
@@ -199,9 +1345,188 @@
           }
         ]
       }
+    },
+    {
+      "id": "expo-enabled",
+      "label": "EXPO enabled and verified",
+      "stateType": "expo",
+      "staticFallback": "After training completes, verify the memory profile in BIOS or Windows and record the stable baseline.",
+      "nextStateIds": [],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "EXPO support is verified; exact menu names remain firmware-version dependent."
+          }
+        ]
+      }
+    },
+    {
+      "id": "clear-cmos-rollback",
+      "label": "Clear CMOS rollback",
+      "stateType": "rollback",
+      "staticFallback": "If EXPO training repeatedly fails, return to safe defaults before continuing troubleshooting.",
+      "nextStateIds": ["default-boot"],
+      "evidence": {
+        "state": "partially_verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/18-bios.md",
+            "note": "Rollback guidance is documented; exact board procedure should be checked against the installed board/manual before interactive training is finalized."
+          }
+        ]
+      }
     }
   ],
   "links": [
+    {
+      "id": "amd-7800x3d",
+      "label": "AMD Ryzen 7 7800X3D",
+      "url": "https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-7-7800x3d.html",
+      "kind": "manufacturer",
+      "componentId": "cpu",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "arctic-liquid-freezer",
+      "label": "ARCTIC Liquid Freezer III Pro 360",
+      "url": "https://www.arctic.de/en/Liquid-Freezer-III-Pro-360/ACFRE00180A",
+      "kind": "manufacturer",
+      "componentId": "cooler",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gigabyte-motherboard",
+      "label": "Gigabyte B850 AORUS Elite WiFi7",
+      "url": "https://www.gigabyte.com/Motherboard/B850-AORUS-ELITE-WIFI7-rev-1x/sp",
+      "kind": "manufacturer",
+      "componentId": "motherboard",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gskill-flare-x5",
+      "label": "G.SKILL Flare X5 F5-6000J3038F16GX2-FX5",
+      "url": "https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5",
+      "kind": "manufacturer",
+      "componentId": "memory",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/project/verification-register.md",
+            "note": "QVL compatibility is verified."
+          }
+        ]
+      }
+    },
+    {
+      "id": "samsung-990-evo-plus",
+      "label": "Samsung 990 EVO Plus data sheet",
+      "url": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf",
+      "kind": "manufacturer",
+      "componentId": "storage",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gigabyte-gpu",
+      "label": "Gigabyte Radeon RX 9060 XT Gaming OC 16G",
+      "url": "https://www.gigabyte.com/Graphics-Card/GV-R9060XTGAMING-OC-16GD/sp",
+      "kind": "manufacturer",
+      "componentId": "gpu",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lian-li-case",
+      "label": "Lian Li O11 Dynamic Mini V2",
+      "url": "https://lian-li.com/product/o11-dynamic-mini-v2/",
+      "kind": "manufacturer",
+      "componentId": "case",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "asus-psu",
+      "label": "ASUS TUF Gaming 1000W Gold tech specs",
+      "url": "https://www.asus.com/us/motherboards-components/power-supply-units/tuf-gaming/tuf-gaming-1000g/techspec/",
+      "kind": "manufacturer",
+      "componentId": "psu",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md"
+          }
+        ]
+      }
+    },
+    {
+      "id": "windows-11-download",
+      "label": "Microsoft Windows 11 download",
+      "url": "https://www.microsoft.com/en-us/software-download/windows11",
+      "kind": "operating-system",
+      "componentId": "operating-system",
+      "evidence": {
+        "state": "verified",
+        "sources": [
+          {
+            "type": "repository",
+            "ref": "docs/appendix/bill-of-materials.md"
+          }
+        ]
+      }
+    },
     {
       "id": "github-pages-site",
       "label": "Published GitHub Pages site",
