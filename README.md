@@ -99,6 +99,8 @@ Milestone 6 will focus on an accessible, static-site-compatible digital twin aft
 4. Keep technical claims source-backed or record unresolved items in `docs/project/verification-register.md`.
 5. Run `./scripts/build.sh html` before publishing documentation changes.
 
+Milestone implementation uses a local-first flow: commit locally per issue or issue group, validate locally, and push at agreed milestone checkpoints. GitHub issues are closed only after the relevant commits are pushed and GitHub Actions passes.
+
 ## Local Preview
 
 ```bash

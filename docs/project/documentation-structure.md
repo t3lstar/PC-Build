@@ -1,6 +1,6 @@
 # Documentation Structure
 
-Status: Active Milestone 5 structure guide. Last verified: 2026-07-13 13:53 BST.
+Status: Active Milestone 5 structure guide. Last verified: 2026-07-13 14:59 BST.
 
 ## Purpose
 
@@ -36,6 +36,19 @@ Use date and time in the format `YYYY-MM-DD HH:MM TZ`.
 - Keep GitHub milestone and issue links in `MILESTONES.md`, `milestones/`, and project pages.
 - Do not create a duplicate chapter when an existing page can be extended.
 - Do not commit generated `site/` output.
+
+## Local-First Milestone Workflow
+
+Use `/Users/simondawson/Herd/PC-Build` as the active local checkout.
+
+For milestone implementation:
+
+- Make local commits per issue or coherent issue group.
+- Run the local HTML build before each local commit.
+- Keep GitHub issues open while their commits are local-only.
+- Push at agreed milestone checkpoints instead of after every issue.
+- Close GitHub issues only after the relevant commits are pushed and GitHub Actions passes.
+- Push earlier when a change needs live GitHub Pages review, CI-only validation, or remote backup.
 
 ## Current Live Site
 

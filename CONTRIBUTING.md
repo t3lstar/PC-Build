@@ -37,6 +37,18 @@ Follow these rules when adding or changing documentation.
 - Close an issue only after its acceptance criteria and validation notes are satisfied.
 - Keep `milestones/` and `MILESTONES.md` current when milestone scope or issue status changes.
 
+## Local-First Milestone Flow
+
+Use local commits for milestone implementation work and push only at deliberate milestone checkpoints.
+
+- Commit locally after each completed issue or coherent issue group.
+- Run `./scripts/build.sh html` locally before each local commit.
+- Keep GitHub issues open while their commits are local-only.
+- Do not close GitHub issues until the relevant commits have been pushed and GitHub Actions has passed.
+- Push once per milestone, or at an agreed checkpoint, instead of pushing after every issue.
+- Push earlier if a change needs GitHub Pages review, GitHub Actions validation, or remote backup before continuing.
+- Keep `docs/project/milestone-05-06-validation-report.md` current while working locally so the eventual push has a complete validation trail.
+
 ## Technical Verification
 
 - Prefer official manufacturer documentation for component specifications, connector labels, compatibility, BIOS behavior, and clearance claims.

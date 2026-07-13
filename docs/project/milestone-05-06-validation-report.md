@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 14:49 BST.
+Status: Active validation report. Last verified: 2026-07-13 14:59 BST.
 
 ## Passed Checks
 
@@ -38,6 +38,7 @@ Status: Active validation report. Last verified: 2026-07-13 14:49 BST.
 | Local HTML build after CI speed-up | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.93 seconds; shell wall-clock total was 1.362 seconds. |
 | Local HTML build after removing Node 20 uv action | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.87 seconds; shell wall-clock total was 1.319 seconds. |
 | GitHub Actions after CI speed-up correction | Run `29255786168` | Passed. Build job completed in 14 seconds; deploy job completed in 11 seconds. Dependency install step took 5 seconds and build step took 1 second. No Node 20 annotation was shown in the run watch output. |
+| Local-first milestone workflow decision | User workflow decision, documented in `README.md`, `CONTRIBUTING.md`, and `docs/project/documentation-structure.md` | Future milestone work should commit locally per issue or issue group, validate locally, and push at agreed milestone checkpoints. GitHub issues should close only after pushed commits pass GitHub Actions. |
 
 ## Warnings
 
