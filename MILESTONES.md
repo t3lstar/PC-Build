@@ -37,6 +37,7 @@ This project will be delivered in four milestones so the repository can be built
 - Diagrams that readers need to follow the manual should be directly visible on the live site as rendered assets, not only linked as source files.
 - Diagrams must remain readable in the live dark theme: use explicit light SVG backgrounds, avoid labels outside the drawing safe area, and prefer numbered legends where cable paths would overlap text.
 - Diagrams should support click-to-enlarge overlays on the published site for readability on smaller screens.
+- Mermaid and PlantUML files should be retained as source assets, but the reader-facing chapter should embed a rendered SVG so all diagrams can use the same click-to-enlarge overlay.
 - Use the tracked MkDocs theme configuration and `docs/assets/stylesheets/theme.css` for site-level visual styling.
 
 ## Milestone 1: Repository Scaffolding

@@ -40,22 +40,6 @@ Moderate.
 
 ![Boot flow diagram](assets/diagrams/svg/boot-flow.svg)
 
-```mermaid
-flowchart TD
-    A["Power button pressed"] --> B["PSU supplies standby and system power"]
-    B --> C["Motherboard firmware starts POST"]
-    C --> D{"CPU, RAM, GPU, SSD detected?"}
-    D -- "No" --> E["Check debug LEDs and reseat relevant component"]
-    E --> C
-    D -- "Yes" --> F["Enter BIOS or continue boot"]
-    F --> G{"Windows installed?"}
-    G -- "No" --> H["Boot Windows 11 USB installer"]
-    G -- "Yes" --> I["Boot Windows from NVMe SSD"]
-    H --> J["Install Windows 11 Pro"]
-    J --> I
-    I --> K["Install drivers and validate baseline"]
-```
-
 Diagram sources: [boot-process.mmd](assets/diagrams/mermaid/boot-process.mmd), [boot-flow.puml](assets/diagrams/plantuml/boot-flow.puml)
 
 1. Confirm the PSU switch is off.

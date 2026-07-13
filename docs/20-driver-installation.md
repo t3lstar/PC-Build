@@ -37,17 +37,6 @@ Beginner to moderate.
 
 ![Driver installation order diagram](assets/diagrams/svg/driver-order.svg)
 
-```mermaid
-flowchart LR
-    A["Windows Update"] --> B["AMD chipset driver"]
-    B --> C["LAN or Wi-Fi driver"]
-    C --> D["Bluetooth driver if required"]
-    D --> E["Audio driver if required"]
-    E --> F["AMD Radeon GPU driver"]
-    F --> G["Samsung Magician optional"]
-    G --> H["Device Manager verification"]
-```
-
 Diagram source: [driver-order.mmd](assets/diagrams/mermaid/driver-order.mmd)
 
 1. Run Windows Update until no critical updates remain.
