@@ -4,6 +4,7 @@ This project will be delivered in four milestones so the repository can be built
 
 ## Project Notes
 
+- When new durable project knowledge is discovered, update the relevant documentation in the same change so future sessions can rehydrate from the repository.
 - A final-build reference image exists from ChatGPT and may be used as a visual target where appropriate.
 - All listed components should be treated as mutually compatible unless later verification proves otherwise.
 - RAM and SSD alternatives are acceptable if they preserve the intended platform requirements and performance class:

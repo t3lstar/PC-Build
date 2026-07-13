@@ -19,6 +19,12 @@ Use MILESTONES.md as the current project roadmap, including project notes, assum
 
 Do not recreate project decisions that are already captured in MILESTONES.md. Preserve those decisions unless the user explicitly changes them.
 
+When a new project requirement, environment constraint, tooling version, compatibility note, workflow decision or implementation assumption is discovered, update the relevant project documentation in the same change.
+
+Examples include Python versions, Node.js versions, GitHub Pages behavior, build tooling constraints, component compatibility notes and accepted alternatives.
+
+Do not leave durable project knowledge only in chat history.
+
 --------------------------------------------------
 BUILD SPECIFICATION
 --------------------------------------------------

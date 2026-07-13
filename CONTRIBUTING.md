@@ -18,6 +18,12 @@ Follow these rules when adding or changing documentation.
 - Do not install documentation dependencies into the system Python environment.
 - Install dependencies with `python -m pip install -r requirements.txt` after activating `.venv`.
 
+## Documentation Drift
+
+- Update project documentation when new durable information is discovered.
+- Keep tooling versions, build assumptions, compatibility notes, workflow decisions, and accepted alternatives in tracked files.
+- Do not leave important project knowledge only in chat history.
+
 ## Chapter Structure
 
 Every main chapter must include:
