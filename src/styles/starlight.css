@@ -207,3 +207,125 @@
     margin-top: 1rem;
   }
 }
+
+.pc-connector-map {
+  margin: 2rem 0;
+}
+
+.pc-connector-map__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem);
+  gap: 1rem;
+}
+
+.pc-connector-map__board {
+  position: relative;
+  min-height: 34rem;
+  overflow: hidden;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .5rem;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.pc-connector-map__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 34rem;
+}
+
+.pc-connector-map__pcb {
+  fill: #dbeafe;
+  stroke: #1e3a8a;
+  stroke-width: .7;
+}
+
+.pc-connector-map__socket {
+  fill: #e2e8f0;
+  stroke: #334155;
+  stroke-width: .45;
+}
+
+.pc-connector-map__chipset {
+  fill: #cbd5e1;
+  stroke: #334155;
+  stroke-width: .45;
+}
+
+.pc-connector-map__label {
+  fill: #0f172a;
+  font-size: .23rem;
+  font-weight: 700;
+}
+
+.pc-connector-map__pin {
+  position: absolute;
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1%);
+  width: calc(var(--w) * 1%);
+  height: calc(var(--h) * 1%);
+  display: grid;
+  place-items: center;
+  min-width: 2rem;
+  min-height: 1.6rem;
+  border: 2px solid #0f766e;
+  border-radius: .25rem;
+  background: rgba(20, 184, 166, .16);
+  color: #0f172a;
+  font: inherit;
+  font-size: clamp(.58rem, 1vw, .78rem);
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  cursor: pointer;
+}
+
+.pc-connector-map__pin span {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: .1rem .18rem;
+}
+
+.pc-connector-map__pin--power {
+  border-color: #dc2626;
+  background: rgba(220, 38, 38, .14);
+}
+
+.pc-connector-map__pin--usb {
+  border-color: #2563eb;
+  background: rgba(37, 99, 235, .14);
+}
+
+.pc-connector-map__pin--front-panel,
+.pc-connector-map__pin--audio {
+  border-color: #9333ea;
+  background: rgba(147, 51, 234, .14);
+}
+
+.pc-connector-map__pin--pcie,
+.pc-connector-map__pin--m2,
+.pc-connector-map__pin--memory {
+  border-color: #ca8a04;
+  background: rgba(202, 138, 4, .16);
+}
+
+.pc-connector-map__pin:hover,
+.pc-connector-map__pin:focus-visible,
+.pc-connector-map__pin[aria-pressed='true'] {
+  border-color: #0f172a;
+  background: rgba(34, 211, 238, .32);
+  outline: 3px solid #22d3ee;
+  outline-offset: 2px;
+}
+
+@media (max-width: 52rem) {
+  .pc-connector-map__layout {
+    display: block;
+  }
+
+  .pc-connector-map__board,
+  .pc-connector-map__svg {
+    min-height: 30rem;
+  }
+}

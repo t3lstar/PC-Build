@@ -50,7 +50,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] Astro Starlight first slice - implemented locally; production deployment remains MkDocs until the Starlight switch is approved.
 - [x] Accessible interactive case view.
 - [ ] Clickable component inspection.
-- [ ] Verified motherboard connector map.
+- [x] Verified motherboard connector map.
 - [ ] Cable-routing mode.
 - [ ] Guided build-sequence mode.
 - [ ] Airflow visualisation with static fallback.
@@ -111,7 +111,7 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] [#35: M6: Migrate site to Astro Starlight first slice](https://github.com/t3lstar/PC-Build/issues/35) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#21: M6: Create verified component and connector dataset](https://github.com/t3lstar/PC-Build/issues/21) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [x] [#22: M6: Implement interactive case view](https://github.com/t3lstar/PC-Build/issues/22) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
-- [ ] [#23: M6: Implement motherboard connector map](https://github.com/t3lstar/PC-Build/issues/23)
+- [x] [#23: M6: Implement motherboard connector map](https://github.com/t3lstar/PC-Build/issues/23) - implemented locally; GitHub issue remains open until the next milestone checkpoint push passes Actions.
 - [ ] [#24: M6: Implement cable-routing mode](https://github.com/t3lstar/PC-Build/issues/24)
 - [ ] [#25: M6: Implement guided build-sequence mode](https://github.com/t3lstar/PC-Build/issues/25)
 - [ ] [#26: M6: Implement airflow visualisation](https://github.com/t3lstar/PC-Build/issues/26)

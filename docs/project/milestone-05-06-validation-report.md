@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:03 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:05 BST.
 
 ## Passed Checks
 
@@ -91,6 +91,10 @@ Status: Active validation report. Last verified: 2026-07-13 16:03 BST.
 | Local full validation after issue #22 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.44 seconds; shell wall-clock total was 2.431 seconds. |
 | Starlight validation after issue #22 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.17 seconds after Vite dependency re-optimisation; shell wall-clock total was 5.700 seconds. |
 | Interactive case view generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Interactive Case View`, selectable case-view hotspots, and `Static Zone List`. |
+| Milestone 6 issue #23 motherboard connector map review | Manual review of `src/components/DigitalTwinConnectorMap.astro`, `src/content/docs/digital-twin/first-slice.mdx`, `src/styles/starlight.css`, and `data/digital-twin/build.json` | Added a data-backed schematic motherboard connector map for build-critical motherboard connectors, with keyboard-focusable connector buttons, visible focus styling, live details panel, verification state display, and static connector-list fallback. |
+| Local full validation after issue #23 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.81 seconds; shell wall-clock total was 4.409 seconds. |
+| Starlight validation after issue #23 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.23 seconds; shell wall-clock total was 7.791 seconds. |
+| Motherboard connector map generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Motherboard Connector Map`, `Static Connector List`, and key connector labels including `ATX_24PIN`, `CPU_FAN`, `F_PANEL`, and `M2A_CPU`. |
 
 ## Warnings
 
