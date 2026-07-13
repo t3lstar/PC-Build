@@ -6,16 +6,18 @@ The documentation is built with MkDocs Material and is designed to evolve as com
 
 The intended public site URL is `https://t3lstar.github.io/PC-Build/`.
 
-## Current Milestone
+## Current Roadmap Status
 
-The project is split into staged milestones:
+The project is split into staged milestones. Milestones 1-4 are complete for the published GitHub Pages HTML site. Milestone 5 is in progress.
 
-1. Repository scaffolding
-2. Core content
-3. Technical diagrams
-4. Polish
-5. Professional Engineering Edition
-6. Interactive Digital Twin Edition
+| Milestone | Status | Tracker |
+| --- | --- | --- |
+| 1. Repository scaffolding | Complete | [Issue #4](https://github.com/t3lstar/PC-Build/issues/4) |
+| 2. Core content | Complete | [Issue #1](https://github.com/t3lstar/PC-Build/issues/1) |
+| 3. Technical diagrams | Complete | [Issue #2](https://github.com/t3lstar/PC-Build/issues/2) |
+| 4. Polish | Complete for GitHub Pages HTML | [Issue #3](https://github.com/t3lstar/PC-Build/issues/3) |
+| 5. Professional Engineering Edition | In progress | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/1) |
+| 6. Interactive Digital Twin Edition | Planned | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/2) |
 
 See `MILESTONES.md` for the current roadmap, assumptions, and acceptance criteria.
 
@@ -79,10 +81,21 @@ The `pdf` and `printable` script targets are reserved for later work. The curren
 - Milestone tracker: `MILESTONES.md`
 - Detailed milestone plans: `milestones/`
 - Repository audit and verification planning: `docs/project/`
+- Live site structure guide: `docs/project/documentation-structure.md`
+- Technical verification register: `docs/project/verification-register.md`
+- Validation report: `docs/project/milestone-05-06-validation-report.md`
 
 Milestone 5 will focus on professional engineering documentation, validation automation, verification tracking, printable/PDF output, and long-term maintenance records.
 
 Milestone 6 will focus on an accessible, static-site-compatible digital twin after an architecture decision record and verified data model are in place.
+
+## Contribution Workflow
+
+1. Read `AGENTS.md` and `MILESTONES.md` before making changes.
+2. Work from the relevant GitHub issue or milestone plan.
+3. Update project documentation in the same change when new durable information is discovered.
+4. Keep technical claims source-backed or record unresolved items in `docs/project/verification-register.md`.
+5. Run `./scripts/build.sh html` before publishing documentation changes.
 
 ## Local Preview
 

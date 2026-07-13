@@ -23,6 +23,24 @@ Follow these rules when adding or changing documentation.
 - Update project documentation when new durable information is discovered.
 - Keep tooling versions, build assumptions, compatibility notes, workflow decisions, and accepted alternatives in tracked files.
 - Do not leave important project knowledge only in chat history.
+- Update `docs/project/milestone-05-06-validation-report.md` when validation commands, outcomes, warnings, or blockers change.
+- Update `docs/project/verification-register.md` when a technical claim is verified, remains pending, or is deliberately deferred.
+
+## Issue Workflow
+
+- Read `AGENTS.md` and `MILESTONES.md` before starting an issue.
+- Use the matching GitHub issue as the work boundary.
+- Preserve completed Milestones 1-4 unless the user explicitly changes direction.
+- Extend existing chapters, appendices, project pages, scripts, or workflows before creating parallel duplicates.
+- Close an issue only after its acceptance criteria and validation notes are satisfied.
+- Keep `milestones/` and `MILESTONES.md` current when milestone scope or issue status changes.
+
+## Technical Verification
+
+- Prefer official manufacturer documentation for component specifications, connector labels, compatibility, BIOS behavior, and clearance claims.
+- Do not invent screenshots, benchmark scores, URLs, connector coordinates, BIOS menu names, or compatibility claims.
+- Treat retailer links as convenience links, not authoritative technical evidence.
+- Keep product images as visual aids only; model numbers and official documentation remain the source of truth.
 
 ## Chapter Structure
 
@@ -55,3 +73,16 @@ Every main chapter must include:
 - Keep Mermaid and PlantUML source files when diagrams are added.
 - Do not use AI-generated artwork for technical diagrams.
 - Use the final-build reference image only as a visual target where appropriate.
+
+## Validation
+
+Run the HTML build before committing documentation changes:
+
+```bash
+source .venv/bin/activate
+./scripts/build.sh html
+```
+
+If a change introduces new tooling, document the command and expected result in `docs/project/milestone-05-06-validation-report.md`.
+
+Do not commit generated `site/` output.

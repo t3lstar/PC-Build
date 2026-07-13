@@ -1,6 +1,6 @@
 # Milestone 5: Professional Engineering Edition
 
-Status: Planned.
+Status: In progress.
 
 GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/1
 
@@ -98,8 +98,8 @@ Additional validation commands should be added as tooling is implemented.
 
 ## Issue Breakdown
 
-- [ ] [#5: M5: Audit and technical verification register](https://github.com/t3lstar/PC-Build/issues/5)
-- [ ] [#6: M5: Standardise documentation structure and navigation](https://github.com/t3lstar/PC-Build/issues/6)
+- [x] [#5: M5: Audit and technical verification register](https://github.com/t3lstar/PC-Build/issues/5)
+- [x] [#6: M5: Standardise documentation structure and navigation](https://github.com/t3lstar/PC-Build/issues/6)
 - [ ] [#7: M5: Improve README, roadmap and contribution guidance](https://github.com/t3lstar/PC-Build/issues/7)
 - [ ] [#8: M5: Create build and maintenance checklists](https://github.com/t3lstar/PC-Build/issues/8)
 - [ ] [#9: M5: Add troubleshooting decision trees](https://github.com/t3lstar/PC-Build/issues/9)

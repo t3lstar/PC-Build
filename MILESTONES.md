@@ -188,7 +188,7 @@ GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/1
 
 Tracking issues: https://github.com/t3lstar/PC-Build/issues/5 through https://github.com/t3lstar/PC-Build/issues/18
 
-Status: Planned.
+Status: In progress.
 
 Detailed plan: [milestones/milestone-05-professional-engineering.md](milestones/milestone-05-professional-engineering.md)
 

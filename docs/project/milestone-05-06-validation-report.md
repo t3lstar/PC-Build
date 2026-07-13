@@ -23,6 +23,8 @@ Status: Active validation report. Last verified: 2026-07-13 13:53 BST.
 | Milestone 5 issue #6 chapter next-link scan | Python scan over `docs/[0-9][0-9]-*.md` | Every numbered build chapter has a `Next Chapter` section. |
 | Milestone 5 issue #6 project navigation | `mkdocs.yml` review | Added `Documentation Structure` under the Project navigation group. |
 | Local HTML build after issue #6 updates | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 72.17 seconds. |
+| Milestone 5 issue #7 roadmap and contribution review | Manual review of `README.md`, `CONTRIBUTING.md`, `MILESTONES.md`, and `milestones/` | README now shows current roadmap status, contribution workflow, project-control docs, and GitHub milestone links; contribution guide now documents issue workflow, technical verification, validation, and generated-output rules. |
+| Local HTML build after issue #7 updates | `. .venv/bin/activate && ./scripts/build.sh html` | Passed in 188.75 seconds. |
 
 ## Warnings
 
