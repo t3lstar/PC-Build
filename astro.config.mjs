@@ -10,6 +10,15 @@ export default defineConfig({
       title: 'Custom Gaming PC Build Manual',
       description: 'Professional documentation and digital twin source for a custom gaming PC build.',
       customCss: ['./src/styles/starlight.css'],
+      head: [
+        {
+          tag: 'script',
+          attrs: {
+            src: '/PC-Build/assets/scripts/image-lightbox.js',
+            defer: true,
+          },
+        },
+      ],
       social: [
         {
           icon: 'github',

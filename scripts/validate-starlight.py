@@ -12,6 +12,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 CONTENT = ROOT / "src" / "content" / "docs"
 CSS = ROOT / "src" / "styles" / "starlight.css"
+LIGHTBOX = ROOT / "public" / "assets" / "scripts" / "image-lightbox.js"
 COMPONENT_DIR = ROOT / "src" / "components"
 DIST = ROOT / "dist"
 DIST_FIRST_SLICE = DIST / "digital-twin" / "first-slice" / "index.html"
@@ -160,9 +161,12 @@ def validate_source(errors: list[str]) -> None:
 
     page = read(CONTENT / "digital-twin" / "first-slice.mdx")
     css = read(CSS)
+    lightbox = read(LIGHTBOX) if LIGHTBOX.exists() else ""
 
     require(errors, "<noscript>" in page, "Digital twin page is missing a no-JavaScript notice.")
     require(errors, "## Static Fallback" in page, "Digital twin page is missing the Static Fallback section.")
+    require(errors, LIGHTBOX.exists(), "Image lightbox script is missing.")
+    require(errors, "pc-image-lightbox" in lightbox, "Image lightbox script lacks expected lightbox markup.")
 
     for component, fallback in COMPONENTS.items():
         component_path = COMPONENT_DIR / f"{component}.astro"
@@ -177,6 +181,7 @@ def validate_source(errors: list[str]) -> None:
 
     require(errors, ":focus-visible" in css, "Starlight CSS lacks visible focus styles.")
     require(errors, "prefers-reduced-motion" in css, "Starlight CSS lacks reduced-motion handling.")
+    require(errors, ".pc-image-lightbox" in css, "Starlight CSS lacks image lightbox styling.")
 
     for markdown_file in files:
         raw_text = read(markdown_file)
@@ -215,6 +220,7 @@ def validate_dist(errors: list[str]) -> None:
         return
 
     first_slice = read(DIST_FIRST_SLICE)
+    home = read(DIST / "index.html") if (DIST / "index.html").exists() else ""
 
     for expected in [
         "Interactive Case View",
@@ -235,6 +241,11 @@ def validate_dist(errors: list[str]) -> None:
         require(errors, expected in first_slice, f"Built first-slice HTML missing '{expected}'.")
 
     require(errors, first_slice.count("/PC-Build/assets/qrcodes/") >= 13, "Built first-slice HTML does not reference all QR assets.")
+    require(
+        errors,
+        "/PC-Build/assets/scripts/image-lightbox.js" in home,
+        "Built Starlight output does not include the image lightbox script.",
+    )
 
     checked_assets = set()
     for html_file in DIST.rglob("*.html"):
