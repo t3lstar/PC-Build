@@ -25,8 +25,8 @@ Follow these rules when adding or changing documentation.
 - Update project documentation when new durable information is discovered.
 - Keep tooling versions, build assumptions, compatibility notes, workflow decisions, and accepted alternatives in tracked files.
 - Do not leave important project knowledge only in chat history.
-- Update `src/content/docs/project/starlight-migration-inventory.md` when Starlight source layout, route, asset, or validation coverage changes.
-- Update `src/content/docs/project/verification-register.md` when a technical claim is verified, remains pending, or is deliberately deferred.
+- Update `milestones/starlight-migration-inventory.md` when Starlight source layout, route, asset, or validation coverage changes.
+- Update `milestones/verification-register.md` when a technical claim is verified, remains pending, or is deliberately deferred.
 
 ## Issue Workflow
 

@@ -6,7 +6,7 @@
     "siteUrl": "https://t3lstar.github.io/PC-Build/",
     "status": "draft",
     "lastVerified": "2026-07-13 16:27 BST",
-    "sourceAdr": "src/content/docs/adr/0001-digital-twin-architecture.md",
+    "sourceAdr": "milestones/adr-0001-digital-twin-architecture.md",
     "notes": [
       "Milestone 6 issue #21 verified dataset for component identity, connector names, cable dependencies, airflow roles, build sequence, and BIOS training states.",
       "Exact interactive x/y coordinates remain future digital twin work and are deliberately marked partially verified or deferred where appropriate."
@@ -45,7 +45,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "AIO AM5 support, radiator dimensions, top-radiator compatibility, and acceptable cable paths are verified."
           }
         ]
@@ -64,7 +64,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Motherboard connector/header inventory is verified for the static guide."
           }
         ]
@@ -83,7 +83,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "G.SKILL QVL lists the motherboard for this kit and the manual verifies A2/B2 slot guidance."
           }
         ]
@@ -102,7 +102,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "M2A_CPU is verified as the preferred CPU-connected M.2 slot for the boot NVMe SSD."
           }
         ]
@@ -140,7 +140,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Case fan count, ATX support, GPU clearance, PSU clearance, and top radiator support are verified for the static guide."
           }
         ]
@@ -228,7 +228,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "F_PANEL labels and polarity caution are verified; exact rendered map remains future work."
           }
         ]
@@ -245,7 +245,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Acceptable headers are verified; exact x/y placement is future digital twin work."
           }
         ]
@@ -262,7 +262,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Motherboard manual verifies A2/B2 installation guidance for two DIMMs."
           }
         ]
@@ -279,7 +279,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "M2A_CPU is verified as the preferred boot SSD slot."
           }
         ]
@@ -330,7 +330,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "AIO and case top-radiator fit is verified as compatible and clearance-sensitive."
           }
         ]
@@ -347,7 +347,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Planned layout is documented as three bottom intake fans."
           }
         ]
@@ -364,7 +364,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Planned layout is documented as two side intake fans."
           }
         ]
@@ -457,7 +457,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Verified as the simple AIO all-in-one cable path."
           }
         ]
@@ -476,7 +476,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Verified as a 4-pin fan-capable optional individual-control header."
           }
         ]
@@ -495,7 +495,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Verified as fan/water-cooling pump capable for optional individual control."
           }
         ]
@@ -514,7 +514,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Manual labels and LED polarity caution are verified."
           }
         ]
@@ -590,7 +590,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Verified as the preferred CPU-connected boot SSD slot."
           }
         ]
@@ -628,7 +628,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Verified as a required slot for the two-DIMM memory kit."
           }
         ]
@@ -647,7 +647,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Verified as a required slot for the two-DIMM memory kit."
           }
         ]
@@ -831,7 +831,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Front-panel labels and LED polarity caution are verified; exact cable coordinate is future work."
           }
         ]
@@ -918,7 +918,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "ARCTIC and Gigabyte documentation verify this as an acceptable simple control path."
           }
         ]
@@ -957,7 +957,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Planned layout is documented as three bottom intake fans."
           }
         ]
@@ -974,7 +974,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Planned layout is documented as two side intake fans."
           }
         ]
@@ -991,7 +991,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Planned airflow role is verified for the static guide and final fan direction remains a physical check."
           }
         ]
@@ -1058,7 +1058,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "A2/B2 slot guidance is verified."
           }
         ]
@@ -1075,7 +1075,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "M2A_CPU is verified as the preferred boot SSD slot."
           }
         ]
@@ -1124,7 +1124,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Top 360mm radiator fit and cable path are verified as compatible and clearance-sensitive."
           }
         ]
@@ -1189,7 +1189,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "Q-Flash behavior is verified; exact menu names may vary by firmware version."
           }
         ]
@@ -1239,7 +1239,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "EXPO support is verified; exact BIOS menu path remains firmware-version dependent."
           }
         ]
@@ -1357,7 +1357,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "EXPO support is verified; exact menu names remain firmware-version dependent."
           }
         ]
@@ -1441,7 +1441,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/verification-register.md",
+            "ref": "milestones/verification-register.md",
             "note": "QVL compatibility is verified."
           }
         ]
@@ -1605,7 +1605,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "src/content/docs/project/starlight-migration-inventory.md"
+            "ref": "milestones/starlight-migration-inventory.md"
           }
         ]
       }

@@ -44,7 +44,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 
 ## Deliverables
 
-- [x] `src/content/docs/adr/0001-digital-twin-architecture.md` - accepted; Astro Starlight is the direct target platform.
+- [x] `milestones/adr-0001-digital-twin-architecture.md` - accepted; Astro Starlight is the direct target platform.
 - [x] Structured build data under `data/` - verified component, connector, cable, airflow, build-sequence, BIOS-state, and reference-link dataset implemented locally for issue #21.
 - [x] JSON Schema and validation tests.
 - [x] Astro Starlight first slice - published at `/digital-twin/first-slice/`.

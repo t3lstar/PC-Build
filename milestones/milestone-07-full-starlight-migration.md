@@ -1,6 +1,6 @@
 # Milestone 7: Full Starlight Migration
 
-Status: In progress locally.
+Status: Published; final issue closure pending.
 
 GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/3>
 
@@ -21,7 +21,8 @@ Complete the clean Astro Starlight site with full manual source, clean routes, v
 
 - Inventory all Starlight pages.
 - Move build guide chapters into clean Starlight routes.
-- Move appendix, ADR, project, milestone, and validation pages into clean Starlight routes.
+- Move appendix pages into clean Starlight routes.
+- Keep ADR, project, milestone, and validation records in repository-only milestone files.
 - Rebuild Starlight navigation.
 - Use clean human-readable routes instead of numbered chapter routes.
 - Move diagram, image, QR, and digital twin assets into the Starlight asset model.
@@ -49,14 +50,14 @@ Complete the clean Astro Starlight site with full manual source, clean routes, v
 
 - [x] Starlight source inventory.
 - [x] Full build guide chapter migration.
-- [x] Appendix and project page migration.
+- [x] Appendix page migration.
 - [x] Full Starlight navigation.
 - [x] Clean Starlight route strategy.
 - [x] Diagram and asset compatibility.
 - [x] Expanded Starlight validation.
 - [x] Starlight GitHub Pages workflow.
 - [x] Old source and build path removed.
-- [ ] Final QA report.
+- [x] Final QA evidence recorded in this milestone file.
 
 ## Acceptance Criteria
 
@@ -66,7 +67,7 @@ Complete the clean Astro Starlight site with full manual source, clean routes, v
 - [x] Digital twin remains published and accessible locally.
 - [x] Diagram and image assets render from `public/assets/`.
 - [x] Validation covers pages, internal links, Markdown linting, Astro checks, and critical assets.
-- [ ] GitHub Pages deploys the Starlight site successfully.
+- [x] GitHub Pages deploys the Starlight site successfully.
 - [ ] Milestone 7 issues are closed only after live deployment verification.
 
 ## Issue Breakdown
@@ -81,11 +82,19 @@ Complete the clean Astro Starlight site with full manual source, clean routes, v
 - [x] [#43: M7: Remove old build path](https://github.com/t3lstar/PC-Build/issues/43) - implemented locally.
 - [ ] [#44: M7: Full Starlight migration final QA and release](https://github.com/t3lstar/PC-Build/issues/44)
 
+## Release Evidence
+
+- Local validation passed with `. .venv/bin/activate && ./scripts/validate.sh all`.
+- GitHub Actions deployment passed for run `29269556163` after the clean migration.
+- GitHub Actions deployment passed for run `29269908759` after restoring image enlargement.
+- Live GitHub Pages serves the Starlight site and the restored image lightbox script.
+- Public project-management pages were removed from the reader site when they no longer added value.
+
 ## Completion Checklist
 
 - [x] Update `MILESTONES.md`.
 - [x] Update README and CONTRIBUTING.
 - [x] Validate local Starlight build.
 - [x] Validate route and asset parity.
-- [ ] Verify GitHub Pages deployment.
+- [x] Verify GitHub Pages deployment.
 - [ ] Close Milestone 7 issues only after deployment evidence is recorded.

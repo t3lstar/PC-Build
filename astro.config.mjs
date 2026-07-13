@@ -77,14 +77,6 @@ export default defineConfig({
           label: 'Digital Twin',
           items: [{ label: 'First Slice', slug: 'digital-twin/first-slice' }],
         },
-        {
-          label: 'Project',
-          items: [
-            { label: 'ADR 0001 Digital Twin Architecture', slug: 'adr/0001-digital-twin-architecture' },
-            { label: 'Verification Register', slug: 'project/verification-register' },
-            { label: 'Starlight Migration Inventory', slug: 'project/starlight-migration-inventory' },
-          ],
-        },
       ],
     }),
     mdx(),

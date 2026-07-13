@@ -29,7 +29,8 @@ This project is delivered in controlled milestones so the repository can be buil
 - Diagrams that readers need to follow the manual should be directly visible on the live site as rendered assets, not only linked as source files.
 - Diagrams must remain readable in the live dark theme: use explicit light SVG backgrounds, avoid labels outside the drawing safe area, and prefer numbered legends where cable paths would overlap text.
 - Mermaid and PlantUML files should be retained as source assets under `public/assets/diagrams/`, but reader-facing chapters should embed rendered SVG.
-- Use `src/content/docs/project/verification-register.md` and `src/content/docs/project/starlight-migration-inventory.md` for current planning and validation records.
+- Use `milestones/verification-register.md` and `milestones/starlight-migration-inventory.md` for current planning and validation records.
+- Keep internal planning, ADR, audit, and validation records out of the public Starlight navigation unless they directly help readers build the PC.
 - Astro Starlight is the accepted platform for the site and digital twin.
 - Digital twin data remains framework-neutral under `data/digital-twin/`.
 - QR code SVG assets are generated from official links in `data/digital-twin/build.json` by `scripts/generate-qrcodes.py`. Committed QR assets and their manifest live under `public/assets/qrcodes/`.
@@ -97,11 +98,11 @@ GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/3>
 
 Tracking issues: <https://github.com/t3lstar/PC-Build/issues/36> through <https://github.com/t3lstar/PC-Build/issues/44>
 
-Status: In progress locally.
+Status: Published; final issue closure pending.
 
 Detailed plan: [milestones/milestone-07-full-starlight-migration.md](milestones/milestone-07-full-starlight-migration.md)
 
-Complete the clean Astro Starlight site with source parity, clean routes, validation, assets, and GitHub Pages publication.
+Complete the clean Astro Starlight site with source parity, clean routes, validation, assets, and GitHub Pages publication. Public pages are limited to the reader guide, appendix, and digital twin; project-management records stay in `milestones/`.
 
 ### Acceptance Criteria
 

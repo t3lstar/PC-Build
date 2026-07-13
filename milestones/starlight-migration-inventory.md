@@ -1,20 +1,21 @@
 ---
 title: "Starlight Source Inventory"
 ---
-Status: Active Milestone 7 inventory. Last verified: 2026-07-13 18:05 BST.
+Status: Repository-only Milestone 7 inventory. Last verified: 2026-07-13 18:20 BST.
 
 ## Purpose
 
 Track the clean Astro Starlight source layout, routes, assets, and validation coverage for Milestone 7.
 
+This is a repository planning record, not a public site page.
+
 ## Current Counts
 
 | Source area                | Count | Notes                                                     |
 | -------------------------- | ----: | --------------------------------------------------------- |
-| Starlight content pages    | 40    | Complete manual, appendix, project, ADR, and digital twin |
+| Starlight content pages    | 37    | Complete manual, appendix, and digital twin               |
 | Build guide pages          | 26    | Clean routes under `/build-guide/`                        |
 | Appendix pages             | 9     | Clean routes under `/appendix/`                           |
-| Project and ADR pages      | 3     | Clean routes under `/project/` and `/adr/`                |
 | Digital twin MDX pages     | 1     | `/digital-twin/first-slice/`                              |
 | Reader-facing asset folder | 1     | `public/assets/`                                          |
 
@@ -28,6 +29,7 @@ Track the clean Astro Starlight source layout, routes, assets, and validation co
 | Public assets         | `public/assets/`           | Images, diagrams, icons, generated QR code assets   |
 | Digital twin data     | `data/digital-twin/`       | Framework-neutral build data and JSON Schema        |
 | Build scripts         | `scripts/`                 | Local build, validation, QR generation, data checks |
+| Project records       | `milestones/`              | Milestones, ADRs, verification, and release records |
 
 ## Route Strategy
 
@@ -36,8 +38,6 @@ Track the clean Astro Starlight source layout, routes, assets, and validation co
 | Home         | `/`                          | Starlight landing page                   |
 | Build guide  | `/build-guide/<chapter>/`    | Human-readable chapter routes            |
 | Appendix     | `/appendix/<reference>/`     | Reference and support material           |
-| ADR          | `/adr/<decision>/`           | Architecture decision records            |
-| Project      | `/project/<record>/`         | Current validation and migration records |
 | Digital twin | `/digital-twin/first-slice/` | Interactive documentation first slice    |
 
 Numbered chapter URLs are intentionally not preserved. This is a development-stage documentation site and the clean Starlight route structure is the source of truth.
@@ -56,9 +56,10 @@ Numbered chapter URLs are intentionally not preserved. This is a development-sta
 ## Completion State
 
 - Build guide pages have been moved to clean Starlight routes.
-- Appendix, ADR, and project pages have been moved to clean Starlight routes.
+- Appendix pages have been moved to clean Starlight routes.
+- ADR, verification, migration inventory, audit, and historical QA records are repository records, not public Starlight pages.
 - Milestone 5 and 6 validation archive pages were removed because they no longer add value to the current public site.
-- Repository audit, documentation structure, and standalone accessibility audit pages were removed because current README, Starlight navigation, digital twin content, and validation now cover their useful information.
+- Repository audit, documentation structure, standalone accessibility audit, ADR, verification register, and Starlight migration inventory pages were removed from the public site because repository records and validation now cover their useful information.
 - Reader-facing diagram and image assets live under `public/assets/`.
 - The GitHub Pages workflow builds and deploys `dist/`.
 - The old source directory, old site configuration, and old build scripts have been removed.

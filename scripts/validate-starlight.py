@@ -62,9 +62,6 @@ EXPECTED_ROUTES = [
     "appendix/bios-settings/index.html",
     "appendix/temperature-reference/index.html",
     "appendix/publishing/index.html",
-    "adr/0001-digital-twin-architecture/index.html",
-    "project/verification-register/index.html",
-    "project/starlight-migration-inventory/index.html",
     "digital-twin/first-slice/index.html",
 ]
 
@@ -76,6 +73,9 @@ REMOVED_OLD_ROUTES = [
     "components/index.html",
     "case-overview/index.html",
     "project/adr-0001-digital-twin-architecture/index.html",
+    "adr/0001-digital-twin-architecture/index.html",
+    "project/verification-register/index.html",
+    "project/starlight-migration-inventory/index.html",
 ]
 
 COMPONENTS = {
@@ -155,7 +155,7 @@ def local_source_exists(source: Path, target: str) -> bool:
 
 def validate_source(errors: list[str]) -> None:
     files = markdown_files()
-    require(errors, len(files) == 40, f"Expected 40 Starlight content pages, found {len(files)}.")
+    require(errors, len(files) == 37, f"Expected 37 Starlight content pages, found {len(files)}.")
     require(errors, not OLD_CONFIG.exists(), "Old site-generator config should be removed after Starlight migration.")
     require(errors, not (ROOT / "docs").exists(), "Old documentation source directory should be removed after Starlight migration.")
 

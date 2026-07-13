@@ -23,7 +23,7 @@ Examples include Python versions, Node.js versions, GitHub Pages behavior, build
 
 Do not leave durable project knowledge only in chat history.
 
-Use `MILESTONES.md`, `milestones/`, and `src/content/docs/project/` as the planning source of truth.
+Use `MILESTONES.md` and `milestones/` as the planning source of truth.
 
 ## Build Specification
 
@@ -105,11 +105,12 @@ Maintain milestone planning in:
 
 - `MILESTONES.md`
 - `milestones/`
-- `src/content/docs/project/`
 
-Use `src/content/docs/project/verification-register.md` for claims that still need official-source verification.
+Use `milestones/verification-register.md` for claims that still need official-source verification.
 
-Use `src/content/docs/project/starlight-migration-inventory.md` for current Starlight migration state and validation coverage.
+Use `milestones/starlight-migration-inventory.md` for current Starlight migration state and validation coverage.
+
+Keep internal planning, ADR, audit, and validation records in `milestones/` unless they directly help readers build the PC.
 
 GitHub issues for milestone work should include summary, user value, scope, out of scope, dependencies, implementation notes, acceptance criteria, validation steps, documentation impact, risks or open questions, and definition of done.
 
@@ -155,7 +156,7 @@ Do not fabricate technical details, connector positions, benchmark scores, URLs,
 
 Use official manufacturer documentation as the authoritative source where available.
 
-Clearly mark unresolved or unverified claims in `src/content/docs/project/verification-register.md`.
+Clearly mark unresolved or unverified claims in `milestones/verification-register.md`.
 
 Product images are visual aids only. Model numbers and official documentation remain the source of truth.
 

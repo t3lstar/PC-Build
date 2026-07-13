@@ -116,8 +116,11 @@ npm run starlight:dev -- --host 127.0.0.1 --port 4321
 
 - Milestone tracker: `MILESTONES.md`
 - Detailed milestone plans: `milestones/`
-- Technical verification register: `src/content/docs/project/verification-register.md`
-- Starlight source inventory: `src/content/docs/project/starlight-migration-inventory.md`
+- Technical verification register: `milestones/verification-register.md`
+- Starlight source inventory: `milestones/starlight-migration-inventory.md`
+- Digital twin architecture decision: `milestones/adr-0001-digital-twin-architecture.md`
+
+Project planning records are repository-only unless they directly help readers build the PC.
 
 Milestone implementation uses a local-first flow: commit locally per issue or issue group, validate locally, and push at agreed milestone checkpoints. GitHub issues are closed only after the relevant commits are pushed and GitHub Actions passes.
 
@@ -126,7 +129,7 @@ Milestone implementation uses a local-first flow: commit locally per issue or is
 1. Read `AGENTS.md` and `MILESTONES.md` before making changes.
 2. Work from the relevant GitHub issue or milestone plan.
 3. Update project documentation in the same change when new durable information is discovered.
-4. Keep technical claims source-backed or record unresolved items in `src/content/docs/project/verification-register.md`.
+4. Keep technical claims source-backed or record unresolved items in `milestones/verification-register.md`.
 5. Run `./scripts/validate.sh all` before publishing documentation changes.
 
 ## License
