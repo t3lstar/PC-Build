@@ -1,0 +1,74 @@
+---
+import digitalTwin from '../../data/digital-twin/build.json';
+
+const componentById = new Map(digitalTwin.components.map((component) => [component.id, component]));
+const sourceIds = ['windows-update', 'gigabyte-support', 'amd-drivers-support', 'samsung-magician'];
+
+const guidance = new Map([
+  ['windows-update', 'Run first after Windows installation, then reboot until no required restart remains.'],
+  ['gigabyte-support', 'Use for BIOS, LAN, WLAN, Bluetooth, audio, utilities, and board manuals.'],
+  ['amd-drivers-support', 'Use for AMD chipset and Radeon driver packages when choosing AMD direct source.'],
+  ['samsung-magician', 'Optional SSD health and firmware utility; not required for Windows installation.'],
+]);
+
+const sources = sourceIds
+  .map((id) => digitalTwin.links.find((link) => link.id === id))
+  .filter(Boolean)
+  .map((link) => ({
+    ...link,
+    component: link.componentId ? componentById.get(link.componentId)?.name ?? link.componentId : 'Platform',
+    guidance: guidance.get(link.id) ?? 'Use as an official source.',
+  }));
+---
+
+<section class="pc-driver-dashboard" aria-labelledby="pc-driver-dashboard-heading">
+  <div class="pc-case-view__header">
+    <div>
+      <h2 id="pc-driver-dashboard-heading">Driver and Firmware Source Dashboard</h2>
+      <p>
+        Use these official sources during Windows setup, driver installation, firmware checks, and
+        later maintenance. Record installed versions in the static driver appendix.
+      </p>
+    </div>
+    <span class="pc-status">official sources</span>
+  </div>
+
+  <div class="pc-driver-dashboard__grid">
+    {
+      sources.map((source) => (
+        <article>
+          <h3>{source.label}</h3>
+          <dl>
+            <div>
+              <dt>Applies to</dt>
+              <dd>{source.component}</dd>
+            </div>
+            <div>
+              <dt>Use</dt>
+              <dd>{source.guidance}</dd>
+            </div>
+            <div>
+              <dt>Verification</dt>
+              <dd>{source.evidence.state}</dd>
+            </div>
+          </dl>
+          <a href={source.url}>Open Source</a>
+        </article>
+      ))
+    }
+  </div>
+
+  <details class="pc-case-view__fallback">
+    <summary>Static Driver Source List</summary>
+    <ul>
+      {
+        sources.map((source) => (
+          <li>
+            <a href={source.url}>{source.label}</a>: {source.guidance} Applies to:
+            {' '}{source.component}. Verification: {source.evidence.state}.
+          </li>
+        ))
+      }
+    </ul>
+  </details>
+</section>

@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:24 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:27 BST.
 
 ## Passed Checks
 
@@ -115,6 +115,11 @@ Status: Active validation report. Last verified: 2026-07-13 16:24 BST.
 | Local full validation after issue #28 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.83 seconds; shell wall-clock total was 3.007 seconds. |
 | Starlight validation after issue #28 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 3.92 seconds; shell wall-clock total was 7.763 seconds. |
 | Educational BIOS simulator generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Educational BIOS Simulator`, `training only`, `Static BIOS Training Flow`, `Default boot before EXPO`, `EXPO memory training`, and `Clear CMOS rollback`. |
+| Milestone 6 issue #29 driver and firmware dashboard review | Manual review of `data/digital-twin/build.json`, `src/components/DigitalTwinDriverDashboard.astro`, `src/content/docs/digital-twin/first-slice.mdx`, `src/styles/starlight.css`, and `docs/appendix/drivers.md` | Added verified support links for Windows Update, Gigabyte motherboard support, AMD drivers and support, and Samsung Magician tools to the digital twin data, then rendered a dashboard with official-source guidance and static source-list fallback. |
+| Digital twin data validation after issue #29 updates | `. .venv/bin/activate && ./scripts/validate.sh data` from `/Users/simondawson/Herd/PC-Build` | Passed. JSON Schema validation and custom cross-reference checks passed after adding driver and firmware support links. |
+| Local full validation after issue #29 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; documentation validation passed; MkDocs reported 1.90 seconds; shell wall-clock total was 2.973 seconds. |
+| Starlight validation after issue #29 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.18 seconds; shell wall-clock total was 6.113 seconds. |
+| Driver and firmware dashboard generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Driver and Firmware Source Dashboard`, `Static Driver Source List`, `Gigabyte B850 AORUS Elite WiFi7 support`, `AMD drivers and support`, `Samsung Magician`, and `Windows Update`. |
 
 ## Warnings
 

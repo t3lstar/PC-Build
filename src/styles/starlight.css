@@ -868,3 +868,58 @@
     margin-top: 1rem;
   }
 }
+
+.pc-driver-dashboard {
+  margin: 2rem 0;
+}
+
+.pc-driver-dashboard__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.pc-driver-dashboard__grid article {
+  display: grid;
+  gap: .75rem;
+  align-content: start;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .45rem;
+  padding: 1rem;
+  background: var(--sl-color-gray-6);
+}
+
+.pc-driver-dashboard__grid h3 {
+  margin: 0;
+}
+
+.pc-driver-dashboard__grid dl {
+  display: grid;
+  gap: .6rem;
+  margin: 0;
+}
+
+.pc-driver-dashboard__grid dt {
+  color: var(--sl-color-accent-high);
+  font-weight: 800;
+}
+
+.pc-driver-dashboard__grid dd {
+  margin: .1rem 0 0;
+}
+
+.pc-driver-dashboard__grid a {
+  justify-self: start;
+  border-radius: .35rem;
+  padding: .45rem .65rem;
+  background: var(--sl-color-accent);
+  color: #001018;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.pc-driver-dashboard__grid a:hover,
+.pc-driver-dashboard__grid a:focus-visible {
+  outline: 3px solid var(--sl-color-accent-high);
+  outline-offset: 2px;
+}
