@@ -1,13 +1,13 @@
 :root {
-  --sl-color-accent-low: #ecfccb;
-  --sl-color-accent: #65a30d;
-  --sl-color-accent-high: #365314;
+  --sl-color-accent-low: #e6efd7;
+  --sl-color-accent: #526f33;
+  --sl-color-accent-high: #2d3f1b;
 }
 
 :root[data-theme='dark'] {
-  --sl-color-accent-low: #1a2e05;
-  --sl-color-accent: #a3e635;
-  --sl-color-accent-high: #ecfccb;
+  --sl-color-accent-low: #1f2b16;
+  --sl-color-accent: #8fab63;
+  --sl-color-accent-high: #dceac6;
 }
 
 .sl-markdown-content li:has(> input[type='checkbox']) {
