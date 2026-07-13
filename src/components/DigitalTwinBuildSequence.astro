@@ -95,16 +95,16 @@ const firstStep = steps[0];
 </section>
 
 <script>
-  const root = document.querySelector('.pc-build-sequence');
-  const details = root?.querySelector('.pc-case-view__details');
-  const title = details?.querySelector('h3');
-  const values = details?.querySelectorAll('dd');
-  const link = details?.querySelector('.pc-build-sequence__chapter-link');
+  const root = document.querySelector<HTMLElement>('.pc-build-sequence');
+  const details = root?.querySelector<HTMLElement>('.pc-case-view__details');
+  const title = details?.querySelector<HTMLHeadingElement>('h3');
+  const values = details?.querySelectorAll<HTMLElement>('dd');
+  const link = details?.querySelector<HTMLAnchorElement>('.pc-build-sequence__chapter-link');
 
-  function setActive(button) {
+  function setActive(button: HTMLElement) {
     if (!details || !title || !values || values.length < 3 || !link) return;
 
-    root?.querySelectorAll('.pc-build-sequence__step').forEach((item) => {
+    root?.querySelectorAll<HTMLElement>('.pc-build-sequence__step').forEach((item) => {
       item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
     });
 
@@ -115,7 +115,7 @@ const firstStep = steps[0];
     link.setAttribute('href', button.dataset.url ?? '#');
   }
 
-  root?.querySelectorAll('.pc-build-sequence__step').forEach((button) => {
+  root?.querySelectorAll<HTMLElement>('.pc-build-sequence__step').forEach((button) => {
     button.addEventListener('click', () => setActive(button));
     button.addEventListener('focus', () => setActive(button));
   });

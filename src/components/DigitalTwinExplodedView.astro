@@ -3,8 +3,10 @@ import digitalTwin from '../../data/digital-twin/build.json';
 
 const componentIds = ['case', 'psu', 'motherboard', 'cpu', 'memory', 'storage', 'gpu', 'cooler'];
 const components = componentIds
-  .map((id) => digitalTwin.components.find((component) => component.id === id))
-  .filter(Boolean);
+  .flatMap((id) => {
+    const component = digitalTwin.components.find((item) => item.id === id);
+    return component ? [component] : [];
+  });
 
 const layerMeta = new Map([
   ['case', { label: 'Case frame', x: 8, y: 13, w: 84, h: 76, dx: 0, dy: 0 }],
@@ -92,10 +94,10 @@ const layerMeta = new Map([
 </section>
 
 <script>
-  const root = document.querySelector('.pc-exploded');
-  const buttons = root?.querySelectorAll('.pc-airflow__controls button');
+  const root = document.querySelector<HTMLElement>('.pc-exploded');
+  const buttons = root?.querySelectorAll<HTMLButtonElement>('.pc-airflow__controls button');
 
-  function setMode(mode) {
+  function setMode(mode: string) {
     root?.setAttribute('data-mode', mode);
     buttons?.forEach((button) => {
       button.setAttribute('aria-pressed', button.getAttribute('data-mode') === mode ? 'true' : 'false');

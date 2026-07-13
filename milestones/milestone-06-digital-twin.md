@@ -2,9 +2,9 @@
 
 Status: Complete and published.
 
-GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/2
+GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/2>
 
-Tracking issues: https://github.com/t3lstar/PC-Build/issues/19 through https://github.com/t3lstar/PC-Build/issues/35
+Tracking issues: <https://github.com/t3lstar/PC-Build/issues/19> through <https://github.com/t3lstar/PC-Build/issues/35>
 
 ## Purpose
 
@@ -44,10 +44,10 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 
 ## Deliverables
 
-- [x] `docs/adr/0001-digital-twin-architecture.md` - accepted; Astro Starlight is the direct target platform.
+- [x] `src/content/docs/adr/0001-digital-twin-architecture.md` - accepted; Astro Starlight is the direct target platform.
 - [x] Structured build data under `data/` - verified component, connector, cable, airflow, build-sequence, BIOS-state, and reference-link dataset implemented locally for issue #21.
 - [x] JSON Schema and validation tests.
-- [x] Astro Starlight first slice - published under the MkDocs GitHub Pages artifact at `/digital-twin/first-slice/`.
+- [x] Astro Starlight first slice - published at `/digital-twin/first-slice/`.
 - [x] Accessible interactive case view.
 - [x] Clickable component inspection.
 - [x] Verified motherboard connector map.

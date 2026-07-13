@@ -159,16 +159,16 @@ const firstRoute = routes[0];
 </section>
 
 <script>
-  const root = document.querySelector('.pc-cable-routing');
-  const details = root?.querySelector('.pc-case-view__details');
-  const title = details?.querySelector('h3');
-  const values = details?.querySelectorAll('dd');
-  const paths = root?.querySelectorAll('.pc-cable-routing__path');
+  const root = document.querySelector<HTMLElement>('.pc-cable-routing');
+  const details = root?.querySelector<HTMLElement>('.pc-case-view__details');
+  const title = details?.querySelector<HTMLHeadingElement>('h3');
+  const values = details?.querySelectorAll<HTMLElement>('dd');
+  const paths = root?.querySelectorAll<HTMLElement>('.pc-cable-routing__path');
 
-  function setActive(button) {
+  function setActive(button: HTMLElement) {
     if (!details || !title || !values || values.length < 6) return;
 
-    root?.querySelectorAll('.pc-cable-routing__button').forEach((item) => {
+    root?.querySelectorAll<HTMLElement>('.pc-cable-routing__button').forEach((item) => {
       item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
     });
 
@@ -185,7 +185,7 @@ const firstRoute = routes[0];
     values[5].textContent = button.dataset.verification ?? '';
   }
 
-  root?.querySelectorAll('.pc-cable-routing__button').forEach((button) => {
+  root?.querySelectorAll<HTMLElement>('.pc-cable-routing__button').forEach((button) => {
     button.addEventListener('click', () => setActive(button));
     button.addEventListener('focus', () => setActive(button));
   });

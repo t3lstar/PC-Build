@@ -21,19 +21,20 @@ const placements = new Map([
 ]);
 
 const connectorPoints = motherboardConnectors
-  .map((connector) => {
+  .flatMap((connector) => {
     const placement = placements.get(connector.id);
     const location = locationsById.get(connector.locationId);
     return placement
-      ? {
-          ...connector,
-          ...placement,
-          zone: location?.label ?? connector.locationId,
-          fallback: location?.staticFallback ?? 'Connector zone.',
-        }
-      : undefined;
-  })
-  .filter(Boolean);
+      ? [
+          {
+            ...connector,
+            ...placement,
+            zone: location?.label ?? connector.locationId,
+            fallback: location?.staticFallback ?? 'Connector zone.',
+          },
+        ]
+      : [];
+  });
 
 const firstConnector = connectorPoints[0];
 ---
@@ -133,15 +134,15 @@ const firstConnector = connectorPoints[0];
 </section>
 
 <script>
-  const root = document.querySelector('.pc-connector-map');
-  const details = root?.querySelector('.pc-case-view__details');
-  const title = details?.querySelector('h3');
-  const values = details?.querySelectorAll('dd');
+  const root = document.querySelector<HTMLElement>('.pc-connector-map');
+  const details = root?.querySelector<HTMLElement>('.pc-case-view__details');
+  const title = details?.querySelector<HTMLHeadingElement>('h3');
+  const values = details?.querySelectorAll<HTMLElement>('dd');
 
-  function setActive(button) {
+  function setActive(button: HTMLElement) {
     if (!details || !title || !values || values.length < 5) return;
 
-    root?.querySelectorAll('.pc-connector-map__pin').forEach((item) => {
+    root?.querySelectorAll<HTMLElement>('.pc-connector-map__pin').forEach((item) => {
       item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
     });
 
@@ -153,7 +154,7 @@ const firstConnector = connectorPoints[0];
     values[4].textContent = button.dataset.fallback ?? '';
   }
 
-  root?.querySelectorAll('.pc-connector-map__pin').forEach((button, index) => {
+  root?.querySelectorAll<HTMLElement>('.pc-connector-map__pin').forEach((button, index) => {
     button.setAttribute('aria-pressed', index === 0 ? 'true' : 'false');
     button.addEventListener('click', () => setActive(button));
     button.addEventListener('focus', () => setActive(button));

@@ -9,16 +9,16 @@ usage() {
 Usage: ./scripts/build.sh <target>
 
 Targets:
-  html       Build the MkDocs HTML site.
+  html       Build the Astro Starlight HTML site.
   pdf        Deferred; PDF generation is not part of the current release.
-  printable  Build printable HTML into build/printable/.
-  all        Build HTML and printable outputs.
+  printable  Build the Astro Starlight HTML site; browser print styles are used for printing.
+  all        Build the Astro Starlight HTML site.
 USAGE
 }
 
 build_html() {
   cd "$ROOT_DIR"
-  mkdocs build --strict
+  npm run starlight:build
 }
 
 build_pdf() {
@@ -28,7 +28,7 @@ build_pdf() {
 
 build_printable() {
   cd "$ROOT_DIR"
-  mkdocs build --strict --site-dir build/printable
+  npm run starlight:build
 }
 
 case "$TARGET" in

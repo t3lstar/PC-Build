@@ -2,9 +2,9 @@
 
 Status: Complete and published.
 
-GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/1
+GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/1>
 
-Tracking issues: https://github.com/t3lstar/PC-Build/issues/5 through https://github.com/t3lstar/PC-Build/issues/18
+Tracking issues: <https://github.com/t3lstar/PC-Build/issues/5> through <https://github.com/t3lstar/PC-Build/issues/18>
 
 ## Purpose
 
@@ -39,7 +39,7 @@ Raise the existing GitHub Pages manual into publication-quality engineering docu
 ## Dependencies
 
 - Completed Milestones 1-4.
-- Existing MkDocs Material site.
+- Existing GitHub Pages documentation site.
 - Official manufacturer manuals and support pages.
 - Stable local Python 3.12 environment.
 - Node.js 24 if Node-based validation tooling is introduced.
@@ -113,7 +113,7 @@ Run the local validation wrapper when checking milestone changes:
 - [x] [#12: M5: Establish benchmark baseline methodology](https://github.com/t3lstar/PC-Build/issues/12) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#13: M5: Add documentation validation scripts](https://github.com/t3lstar/PC-Build/issues/13) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#14: M5: Implement GitHub Actions validation](https://github.com/t3lstar/PC-Build/issues/14)
-- [x] [#15: M5: Improve MkDocs Material site and print styling](https://github.com/t3lstar/PC-Build/issues/15) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
+- [x] [#15: M5: Improve site styling and print styling](https://github.com/t3lstar/PC-Build/issues/15) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#16: M5: Make HTML and PDF builds reproducible](https://github.com/t3lstar/PC-Build/issues/16) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#17: M5: Expand appendices and connector references](https://github.com/t3lstar/PC-Build/issues/17) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.
 - [x] [#18: M5: Milestone 5 final QA and release](https://github.com/t3lstar/PC-Build/issues/18) - implemented locally; GitHub issue remains open until the milestone checkpoint push passes Actions.

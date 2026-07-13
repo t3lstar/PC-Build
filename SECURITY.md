@@ -16,4 +16,3 @@ Do not include private account details, purchase information, serial numbers, li
 ## Scope
 
 Security review for this repository is limited to documentation safety, public GitHub Pages publication, and repository workflow configuration.
-

@@ -2,32 +2,32 @@
 
 Status: In progress locally.
 
-GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/3
+GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/3>
 
-Tracking issues: https://github.com/t3lstar/PC-Build/issues/36 through https://github.com/t3lstar/PC-Build/issues/44
+Tracking issues: <https://github.com/t3lstar/PC-Build/issues/36> through <https://github.com/t3lstar/PC-Build/issues/44>
 
 ## Purpose
 
-Migrate the complete PC build manual from MkDocs Material to Astro Starlight while preserving content parity, route behavior, validation, and GitHub Pages publication.
+Complete the clean Astro Starlight site with full manual source, clean routes, validation, and GitHub Pages publication.
 
 ## User Value
 
 - Readers get one consistent Starlight documentation experience.
-- The digital twin becomes part of the main documentation site rather than a separately merged slice.
+- The digital twin is part of the main documentation site.
 - Future interactive documentation can evolve without maintaining two parallel site systems.
-- Existing published URLs are preserved or deliberately redirected.
+- The repository has one clean static-site build path.
 
 ## Scope
 
-- Inventory all MkDocs and Starlight pages.
-- Port numbered build guide chapters.
-- Port appendix, ADR, project, milestone, and validation pages.
+- Inventory all Starlight pages.
+- Move build guide chapters into clean Starlight routes.
+- Move appendix, ADR, project, milestone, and validation pages into clean Starlight routes.
 - Rebuild Starlight navigation.
-- Preserve or redirect current published routes.
-- Migrate diagram, image, QR, and digital twin asset behavior.
-- Expand Starlight validation and link checks.
-- Switch GitHub Pages to Starlight-primary output only after parity is proven.
-- Retire or archive MkDocs build behavior after the production switch.
+- Use clean human-readable routes instead of numbered chapter routes.
+- Move diagram, image, QR, and digital twin assets into the Starlight asset model.
+- Expand validation and link checks.
+- Switch GitHub Pages to Starlight output.
+- Remove old source, configuration, workflow, and dependency files.
 - Record final QA and release evidence.
 
 ## Out of Scope
@@ -40,64 +40,52 @@ Migrate the complete PC build manual from MkDocs Material to Astro Starlight whi
 ## Dependencies
 
 - Milestone 6 published digital twin first slice.
-- Existing MkDocs documentation and navigation.
-- Existing Starlight first-slice scaffold.
+- Existing complete manual content.
+- Existing Starlight scaffold.
 - Node.js 24 local and CI runtime.
-- Python 3.12 `.venv` for legacy validation until MkDocs is retired.
+- Python 3.12 `.venv` for data and QR validation.
 
 ## Deliverables
 
-- [x] Migration parity inventory for issue `#36` implemented locally; GitHub issue remains open until the next checkpoint push passes Actions.
-- [ ] Full build guide chapter migration.
-- [ ] Appendix and project page migration.
-- [ ] Full Starlight navigation.
-- [ ] Route preservation or redirect strategy.
-- [ ] Diagram and asset compatibility.
-- [ ] Expanded Starlight validation.
-- [ ] Starlight-primary GitHub Pages deployment.
-- [ ] MkDocs retirement or archive decision.
+- [x] Starlight source inventory.
+- [x] Full build guide chapter migration.
+- [x] Appendix and project page migration.
+- [x] Full Starlight navigation.
+- [x] Clean Starlight route strategy.
+- [x] Diagram and asset compatibility.
+- [x] Expanded Starlight validation.
+- [x] Starlight GitHub Pages workflow.
+- [x] Old source and build path removed.
 - [ ] Final QA report.
 
 ## Acceptance Criteria
 
-- [ ] Every MkDocs source page is either migrated to Starlight or explicitly archived.
-- [ ] Every important published MkDocs route is preserved or has a documented compatibility route.
-- [ ] Starlight navigation exposes the full manual.
-- [ ] Digital twin remains published and accessible.
-- [ ] Diagram and image assets render correctly.
-- [ ] Starlight validation covers migrated pages, internal links, and critical assets.
-- [ ] GitHub Pages deploys the Starlight-primary site successfully.
+- [x] Every source page is available under `src/content/docs/` or deliberately removed as obsolete.
+- [x] Numbered chapter routes are removed in favour of clean Starlight routes.
+- [x] Starlight navigation exposes the full manual.
+- [x] Digital twin remains published and accessible locally.
+- [x] Diagram and image assets render from `public/assets/`.
+- [x] Validation covers pages, internal links, Markdown linting, Astro checks, and critical assets.
+- [ ] GitHub Pages deploys the Starlight site successfully.
 - [ ] Milestone 7 issues are closed only after live deployment verification.
 
 ## Issue Breakdown
 
-- [x] [#36: M7: Create Starlight migration parity inventory](https://github.com/t3lstar/PC-Build/issues/36) - implemented locally; GitHub issue remains open until the next checkpoint push passes Actions.
-- [ ] [#37: M7: Port build guide chapters to Starlight](https://github.com/t3lstar/PC-Build/issues/37)
-- [ ] [#38: M7: Port appendix and project docs to Starlight](https://github.com/t3lstar/PC-Build/issues/38)
-- [ ] [#39: M7: Rebuild Starlight navigation and route strategy](https://github.com/t3lstar/PC-Build/issues/39)
-- [ ] [#40: M7: Migrate diagrams and asset behavior to Starlight](https://github.com/t3lstar/PC-Build/issues/40)
-- [ ] [#41: M7: Expand Starlight validation and link checks](https://github.com/t3lstar/PC-Build/issues/41)
-- [ ] [#42: M7: Switch GitHub Pages deployment to Starlight](https://github.com/t3lstar/PC-Build/issues/42)
-- [ ] [#43: M7: Retire or archive MkDocs build path](https://github.com/t3lstar/PC-Build/issues/43)
+- [x] [#36: M7: Create Starlight migration parity inventory](https://github.com/t3lstar/PC-Build/issues/36) - implemented locally.
+- [x] [#37: M7: Port build guide chapters to Starlight](https://github.com/t3lstar/PC-Build/issues/37) - implemented locally.
+- [x] [#38: M7: Port appendix and project docs to Starlight](https://github.com/t3lstar/PC-Build/issues/38) - implemented locally.
+- [x] [#39: M7: Rebuild Starlight navigation and route strategy](https://github.com/t3lstar/PC-Build/issues/39) - implemented locally.
+- [x] [#40: M7: Migrate diagrams and asset behavior to Starlight](https://github.com/t3lstar/PC-Build/issues/40) - implemented locally.
+- [x] [#41: M7: Expand Starlight validation and link checks](https://github.com/t3lstar/PC-Build/issues/41) - implemented locally.
+- [x] [#42: M7: Switch GitHub Pages deployment to Starlight](https://github.com/t3lstar/PC-Build/issues/42) - implemented locally.
+- [x] [#43: M7: Remove old build path](https://github.com/t3lstar/PC-Build/issues/43) - implemented locally.
 - [ ] [#44: M7: Full Starlight migration final QA and release](https://github.com/t3lstar/PC-Build/issues/44)
-
-## Implementation Order
-
-1. Complete parity inventory.
-2. Port build guide chapters.
-3. Port appendix and project docs.
-4. Rebuild navigation and route compatibility.
-5. Migrate diagrams and assets.
-6. Expand Starlight validation.
-7. Switch GitHub Pages deployment.
-8. Retire or archive MkDocs.
-9. Final QA and release.
 
 ## Completion Checklist
 
-- [ ] Update `MILESTONES.md`.
-- [ ] Update README and CONTRIBUTING.
-- [ ] Validate local Starlight build.
-- [ ] Validate route and asset parity.
+- [x] Update `MILESTONES.md`.
+- [x] Update README and CONTRIBUTING.
+- [x] Validate local Starlight build.
+- [x] Validate route and asset parity.
 - [ ] Verify GitHub Pages deployment.
 - [ ] Close Milestone 7 issues only after deployment evidence is recorded.

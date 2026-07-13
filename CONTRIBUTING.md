@@ -12,28 +12,27 @@ Follow these rules when adding or changing documentation.
 
 ## Local Environment
 
-- Use Python 3.12 for the local documentation environment.
-- Use Node.js 24 if Node-based tooling is added or used locally.
+- Use Node.js 24 for Astro Starlight.
+- Use Python 3.12 for digital twin data and QR validation.
 - Use a local Python virtual environment named `.venv`.
 - Keep the repository checkout on the local drive, not inside iCloud Drive or another synced folder.
+- Install Node dependencies with `npm ci`.
 - Prefer `uv venv --python 3.12 .venv` and `uv pip install -r requirements.txt` when `uv` is available.
-- Do not install documentation dependencies into the system Python environment.
-- Install dependencies with `python -m pip install -r requirements.txt` after activating `.venv`.
-- Install Node dependencies with `npm install` before working on the Astro Starlight first slice.
+- Do not install Python dependencies into the system Python environment.
 
 ## Documentation Drift
 
 - Update project documentation when new durable information is discovered.
 - Keep tooling versions, build assumptions, compatibility notes, workflow decisions, and accepted alternatives in tracked files.
 - Do not leave important project knowledge only in chat history.
-- Update `docs/project/milestone-05-06-validation-report.md` when validation commands, outcomes, warnings, or blockers change.
-- Update `docs/project/verification-register.md` when a technical claim is verified, remains pending, or is deliberately deferred.
+- Update `src/content/docs/project/starlight-migration-inventory.md` when Starlight source layout, route, asset, or validation coverage changes.
+- Update `src/content/docs/project/verification-register.md` when a technical claim is verified, remains pending, or is deliberately deferred.
 
 ## Issue Workflow
 
 - Read `AGENTS.md` and `MILESTONES.md` before starting an issue.
 - Use the matching GitHub issue as the work boundary.
-- Preserve completed Milestones 1-4 unless the user explicitly changes direction.
+- Preserve completed milestones unless the user explicitly changes direction.
 - Extend existing chapters, appendices, project pages, scripts, or workflows before creating parallel duplicates.
 - Close an issue only after its acceptance criteria and validation notes are satisfied.
 - Keep `milestones/` and `MILESTONES.md` current when milestone scope or issue status changes.
@@ -43,12 +42,11 @@ Follow these rules when adding or changing documentation.
 Use local commits for milestone implementation work and push only at deliberate milestone checkpoints.
 
 - Commit locally after each completed issue or coherent issue group.
-- Run `./scripts/build.sh html` locally before each local commit.
+- Run `./scripts/validate.sh all` locally before each milestone checkpoint push.
 - Keep GitHub issues open while their commits are local-only.
 - Do not close GitHub issues until the relevant commits have been pushed and GitHub Actions has passed.
 - Push once per milestone, or at an agreed checkpoint, instead of pushing after every issue.
 - Push earlier if a change needs GitHub Pages review, GitHub Actions validation, or remote backup before continuing.
-- Keep `docs/project/milestone-05-06-validation-report.md` current while working locally so the eventual push has a complete validation trail.
 
 ## Technical Verification
 
@@ -59,7 +57,7 @@ Use local commits for milestone implementation work and push only at deliberate 
 
 ## Chapter Structure
 
-Every main chapter must include:
+Every main chapter should include:
 
 - Introduction
 - Purpose
@@ -75,7 +73,7 @@ Every main chapter must include:
 
 ## Buying Links
 
-- Keep exact component identification and purchase links in `docs/appendix/bill-of-materials.md`.
+- Keep exact component identification and purchase links in `src/content/docs/appendix/bill-of-materials.md`.
 - Prefer manufacturer product pages for stable references.
 - Prefer amazon.co.uk for retailer links.
 - Treat retailer links as convenience links because price, stock, and listing details can change.
@@ -86,6 +84,7 @@ Every main chapter must include:
 - Use technically accurate diagrams.
 - Use SVG for vector diagrams where possible.
 - Keep Mermaid and PlantUML source files when diagrams are added.
+- Store reader-facing assets under `public/assets/`.
 - Do not use AI-generated artwork for technical diagrams.
 - Use the final-build reference image only as a visual target where appropriate.
 
@@ -94,11 +93,23 @@ Every main chapter must include:
 Run local validation before committing documentation changes:
 
 ```bash
+npm ci
 source .venv/bin/activate
 ./scripts/validate.sh all
 ```
 
-Use `./scripts/build.sh html` when you only need to rebuild the MkDocs site. Use `./scripts/validate.sh docs` when you only need the repository structure and local Markdown link checks. Use `./scripts/validate.sh data` when you only need digital twin JSON Schema and cross-reference validation. Use `./scripts/validate.sh qrcodes` after changing official links or QR assets.
+The `all` target validates digital twin data, QR assets, Astro/Starlight type health, Markdown linting, static site generation, local links, clean route expectations, and critical generated assets.
+
+Useful focused commands:
+
+```bash
+npm run check
+npm run check:astro
+npm run lint:markdown
+./scripts/validate.sh starlight
+./scripts/validate.sh data
+./scripts/validate.sh qrcodes
+```
 
 QR code SVG assets under `public/assets/qrcodes/` are generated from `data/digital-twin/build.json` by `scripts/generate-qrcodes.py`. Regenerate them with:
 
@@ -106,22 +117,4 @@ QR code SVG assets under `public/assets/qrcodes/` are generated from `data/digit
 python scripts/generate-qrcodes.py
 ```
 
-Use this command when validating the Astro Starlight first slice:
-
-```bash
-./scripts/validate.sh starlight
-```
-
-The Starlight validation target builds the static site and then checks the digital twin source and generated HTML for required interactive sections, accessibility markers, static fallbacks, reduced-motion styling, and QR asset references.
-
-Use this command after `./scripts/build.sh html` when you need to reproduce the combined GitHub Pages artifact locally:
-
-```bash
-./scripts/build-digital-twin-site.sh
-```
-
-This builds Starlight into `dist/` and merges the digital twin route and assets into the MkDocs `site/` directory.
-
-If a change introduces new tooling, document the command and expected result in `docs/project/milestone-05-06-validation-report.md`.
-
-Do not commit generated `site/` or `dist/` output.
+Do not commit generated `dist/`, `dist/`, or `build/` output.

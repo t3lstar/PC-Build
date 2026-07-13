@@ -6,7 +6,7 @@
     "siteUrl": "https://t3lstar.github.io/PC-Build/",
     "status": "draft",
     "lastVerified": "2026-07-13 16:27 BST",
-    "sourceAdr": "docs/adr/0001-digital-twin-architecture.md",
+    "sourceAdr": "src/content/docs/adr/0001-digital-twin-architecture.md",
     "notes": [
       "Milestone 6 issue #21 verified dataset for component identity, connector names, cable dependencies, airflow roles, build sequence, and BIOS training states.",
       "Exact interactive x/y coordinates remain future digital twin work and are deliberately marked partially verified or deferred where appropriate."
@@ -19,14 +19,14 @@
       "name": "AMD Ryzen 7 7800X3D",
       "model": "100-100000910WOF",
       "role": "AM5 gaming CPU installed in the motherboard socket.",
-      "chapter": "docs/07-cpu-installation.md",
+      "chapter": "src/content/docs/build-guide/cpu-installation.md",
       "manufacturerUrl": "https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-7-7800x3d.html",
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md",
+            "ref": "src/content/docs/appendix/bill-of-materials.md",
             "note": "Primary component list identifies the exact CPU and AM5 compatibility."
           }
         ]
@@ -38,14 +38,14 @@
       "name": "ARCTIC Liquid Freezer III Pro 360",
       "model": "ACFRE00180A",
       "role": "360mm AIO liquid cooler mounted in the top radiator position.",
-      "chapter": "docs/13-aio-installation.md",
+      "chapter": "src/content/docs/build-guide/aio-installation.md",
       "manufacturerUrl": "https://www.arctic.de/en/Liquid-Freezer-III-Pro-360/ACFRE00180A",
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "AIO AM5 support, radiator dimensions, top-radiator compatibility, and acceptable cable paths are verified."
           }
         ]
@@ -57,14 +57,14 @@
       "name": "Gigabyte B850 AORUS Elite WiFi7",
       "model": "B850 AORUS ELITE WIFI7 rev. 1.x",
       "role": "Central AM5 motherboard for CPU, memory, SSD, GPU, headers, and power connections.",
-      "chapter": "docs/03-motherboard-overview.md",
+      "chapter": "src/content/docs/build-guide/motherboard-overview.md",
       "manufacturerUrl": "https://www.gigabyte.com/Motherboard/B850-AORUS-ELITE-WIFI7-rev-1x/sp",
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Motherboard connector/header inventory is verified for the static guide."
           }
         ]
@@ -76,14 +76,14 @@
       "name": "G.SKILL Flare X5 32GB DDR5-6000 CL30",
       "model": "F5-6000J3038F16GX2-FX5",
       "role": "Two-module AMD EXPO DDR5 kit installed in slots DDR5_A2 and DDR5_B2.",
-      "chapter": "docs/08-memory-installation.md",
+      "chapter": "src/content/docs/build-guide/memory-installation.md",
       "manufacturerUrl": "https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5",
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "G.SKILL QVL lists the motherboard for this kit and the manual verifies A2/B2 slot guidance."
           }
         ]
@@ -95,14 +95,14 @@
       "name": "Samsung 990 EVO Plus 2TB NVMe SSD",
       "model": "MZ-V9S2T0",
       "role": "M.2 2280 NVMe boot SSD installed in the preferred CPU-connected M2A_CPU slot.",
-      "chapter": "docs/09-m2-installation.md",
+      "chapter": "src/content/docs/build-guide/m2-installation.md",
       "manufacturerUrl": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf",
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "M2A_CPU is verified as the preferred CPU-connected M.2 slot for the boot NVMe SSD."
           }
         ]
@@ -114,14 +114,14 @@
       "name": "Gigabyte Radeon RX 9060 XT Gaming OC 16GB",
       "model": "GV-R9060XTGAMING-OC-16GD",
       "role": "Primary graphics card installed in the motherboard primary PCIe x16 slot.",
-      "chapter": "docs/14-gpu-installation.md",
+      "chapter": "src/content/docs/build-guide/gpu-installation.md",
       "manufacturerUrl": "https://www.gigabyte.com/Graphics-Card/GV-R9060XTGAMING-OC-16GD/sp",
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md",
+            "ref": "src/content/docs/appendix/bill-of-materials.md",
             "note": "Compatibility summary verifies GPU length, PCIe slot fit, and PSU capacity."
           }
         ]
@@ -133,14 +133,14 @@
       "name": "Lian Li O11 Dynamic Mini V2 Flow",
       "model": "O11DMIV2FX",
       "role": "Case, airflow frame, radiator mount, and cable-routing enclosure.",
-      "chapter": "docs/04-case-overview.md",
+      "chapter": "src/content/docs/build-guide/case-overview.md",
       "manufacturerUrl": "https://lian-li.com/product/o11-dynamic-mini-v2/",
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Case fan count, ATX support, GPU clearance, PSU clearance, and top radiator support are verified for the static guide."
           }
         ]
@@ -152,14 +152,14 @@
       "name": "ASUS TUF Gaming 1000W Gold",
       "model": "TUF-GAMING-1000G",
       "role": "Fully modular ATX power supply for motherboard, CPU, GPU, and optional accessory power.",
-      "chapter": "docs/11-psu-installation.md",
+      "chapter": "src/content/docs/build-guide/psu-installation.md",
       "manufacturerUrl": "https://www.asus.com/us/motherboards-components/power-supply-units/tuf-gaming/tuf-gaming-1000g/techspec/",
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md",
+            "ref": "src/content/docs/appendix/bill-of-materials.md",
             "note": "Compatibility summary verifies case clearance and power headroom."
           }
         ]
@@ -171,7 +171,7 @@
       "name": "Windows 11 Pro",
       "model": "USB installation media",
       "role": "Operating system installed from an existing Windows 11 Pro USB installer.",
-      "chapter": "docs/21-windows-installation.md",
+      "chapter": "src/content/docs/build-guide/windows-installation.md",
       "manufacturerUrl": "https://www.microsoft.com/en-us/software-download/windows11",
       "evidence": {
         "state": "verified",
@@ -196,7 +196,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Connector identity is verified; exact digital twin coordinates remain pending."
           }
         ]
@@ -212,7 +212,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Connector names and routing guidance are verified; exact visual coordinates are future work."
           }
         ]
@@ -228,7 +228,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "F_PANEL labels and polarity caution are verified; exact rendered map remains future work."
           }
         ]
@@ -245,7 +245,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Acceptable headers are verified; exact x/y placement is future digital twin work."
           }
         ]
@@ -262,7 +262,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Motherboard manual verifies A2/B2 installation guidance for two DIMMs."
           }
         ]
@@ -279,7 +279,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "M2A_CPU is verified as the preferred boot SSD slot."
           }
         ]
@@ -296,7 +296,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Primary PCIe x16 slot usage is verified for the static guide."
           }
         ]
@@ -313,7 +313,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/14-gpu-installation.md",
+            "ref": "src/content/docs/build-guide/gpu-installation.md",
             "note": "GPU installation guidance is documented; exact visual position remains future work."
           }
         ]
@@ -330,7 +330,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "AIO and case top-radiator fit is verified as compatible and clearance-sensitive."
           }
         ]
@@ -347,7 +347,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Planned layout is documented as three bottom intake fans."
           }
         ]
@@ -364,7 +364,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Planned layout is documented as two side intake fans."
           }
         ]
@@ -381,7 +381,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/15-cable-routing.md",
+            "ref": "src/content/docs/build-guide/cable-routing.md",
             "note": "Routing rules are documented; exact cable paths remain physical-build verified."
           }
         ]
@@ -398,7 +398,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "PSU cable types are documented; exact modular panel positions remain future work."
           }
         ]
@@ -419,7 +419,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Header identity and use are verified; exact visual coordinate is pending."
           }
         ]
@@ -438,7 +438,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Header use is documented; exact visual coordinate is pending future digital twin verification."
           }
         ]
@@ -457,7 +457,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Verified as the simple AIO all-in-one cable path."
           }
         ]
@@ -476,7 +476,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Verified as a 4-pin fan-capable optional individual-control header."
           }
         ]
@@ -495,7 +495,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Verified as fan/water-cooling pump capable for optional individual control."
           }
         ]
@@ -514,7 +514,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Manual labels and LED polarity caution are verified."
           }
         ]
@@ -533,7 +533,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Internal USB 3.x header is verified from motherboard connector inventory."
           }
         ]
@@ -552,7 +552,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Internal USB-C header is verified from motherboard connector inventory."
           }
         ]
@@ -571,7 +571,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "HD audio header is verified from motherboard connector inventory."
           }
         ]
@@ -590,7 +590,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Verified as the preferred CPU-connected boot SSD slot."
           }
         ]
@@ -609,7 +609,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Primary PCIe x16 slot usage is verified for the GPU."
           }
         ]
@@ -628,7 +628,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Verified as a required slot for the two-DIMM memory kit."
           }
         ]
@@ -647,7 +647,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Verified as a required slot for the two-DIMM memory kit."
           }
         ]
@@ -666,7 +666,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md",
+            "ref": "src/content/docs/appendix/bill-of-materials.md",
             "note": "GPU specification is documented as requiring one 8-pin PCIe power connector."
           }
         ]
@@ -685,7 +685,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "PSU cable requirement is documented; exact modular panel coordinate remains future work."
           }
         ]
@@ -704,7 +704,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "PSU cable requirement is documented; exact modular panel coordinate remains future work."
           }
         ]
@@ -723,7 +723,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "PSU cable requirement is documented; exact modular panel coordinate remains future work."
           }
         ]
@@ -765,7 +765,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Cable type and routing dependency are documented; exact route coordinates are future work."
           }
         ]
@@ -787,7 +787,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Routing dependency is documented; exact route coordinates are pending."
           }
         ]
@@ -809,7 +809,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Cable type and handling rule are documented; exact route coordinates are future work."
           }
         ]
@@ -831,7 +831,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Front-panel labels and LED polarity caution are verified; exact cable coordinate is future work."
           }
         ]
@@ -853,7 +853,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Header and handling rule are verified; exact cable coordinate is future work."
           }
         ]
@@ -875,7 +875,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Header and routing dependency are verified; exact cable coordinate is future work."
           }
         ]
@@ -896,7 +896,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md",
+            "ref": "src/content/docs/appendix/connectors-cables.md",
             "note": "Header and routing guidance are verified; exact cable coordinate is future work."
           }
         ]
@@ -918,7 +918,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "ARCTIC and Gigabyte documentation verify this as an acceptable simple control path."
           }
         ]
@@ -957,7 +957,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Planned layout is documented as three bottom intake fans."
           }
         ]
@@ -974,7 +974,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Planned layout is documented as two side intake fans."
           }
         ]
@@ -991,7 +991,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Planned airflow role is verified for the static guide and final fan direction remains a physical check."
           }
         ]
@@ -1003,14 +1003,14 @@
       "id": "confirm-parts-tools",
       "order": 1,
       "label": "Confirm parts and tools",
-      "chapter": "docs/06-build-preparation.md",
+      "chapter": "src/content/docs/build-guide/build-preparation.md",
       "componentIds": ["cpu", "cooler", "motherboard", "memory", "storage", "gpu", "case", "psu", "operating-system"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/06-build-preparation.md"
+            "ref": "src/content/docs/build-guide/build-preparation.md"
           }
         ]
       }
@@ -1019,14 +1019,14 @@
       "id": "prepare-workspace",
       "order": 2,
       "label": "Prepare workspace and case",
-      "chapter": "docs/06-build-preparation.md",
+      "chapter": "src/content/docs/build-guide/build-preparation.md",
       "componentIds": ["case"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/06-build-preparation.md"
+            "ref": "src/content/docs/build-guide/build-preparation.md"
           }
         ]
       }
@@ -1035,14 +1035,14 @@
       "id": "install-cpu",
       "order": 3,
       "label": "Install CPU in AM5 socket",
-      "chapter": "docs/07-cpu-installation.md",
+      "chapter": "src/content/docs/build-guide/cpu-installation.md",
       "componentIds": ["cpu", "motherboard"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/07-cpu-installation.md"
+            "ref": "src/content/docs/build-guide/cpu-installation.md"
           }
         ]
       }
@@ -1051,14 +1051,14 @@
       "id": "install-memory",
       "order": 4,
       "label": "Install DDR5 in A2 and B2",
-      "chapter": "docs/08-memory-installation.md",
+      "chapter": "src/content/docs/build-guide/memory-installation.md",
       "componentIds": ["memory", "motherboard"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "A2/B2 slot guidance is verified."
           }
         ]
@@ -1068,14 +1068,14 @@
       "id": "install-ssd",
       "order": 5,
       "label": "Install Samsung NVMe SSD",
-      "chapter": "docs/09-m2-installation.md",
+      "chapter": "src/content/docs/build-guide/m2-installation.md",
       "componentIds": ["storage", "motherboard"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "M2A_CPU is verified as the preferred boot SSD slot."
           }
         ]
@@ -1085,14 +1085,14 @@
       "id": "prepare-psu-cables",
       "order": 6,
       "label": "Prepare PSU cables",
-      "chapter": "docs/11-psu-installation.md",
+      "chapter": "src/content/docs/build-guide/psu-installation.md",
       "componentIds": ["psu"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md"
+            "ref": "src/content/docs/appendix/connectors-cables.md"
           }
         ]
       }
@@ -1101,14 +1101,14 @@
       "id": "install-motherboard",
       "order": 7,
       "label": "Install motherboard into case",
-      "chapter": "docs/12-motherboard-installation.md",
+      "chapter": "src/content/docs/build-guide/motherboard-installation.md",
       "componentIds": ["motherboard", "case"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/12-motherboard-installation.md"
+            "ref": "src/content/docs/build-guide/motherboard-installation.md"
           }
         ]
       }
@@ -1117,14 +1117,14 @@
       "id": "install-top-aio",
       "order": 8,
       "label": "Install top AIO",
-      "chapter": "docs/13-aio-installation.md",
+      "chapter": "src/content/docs/build-guide/aio-installation.md",
       "componentIds": ["cooler", "case", "motherboard"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Top 360mm radiator fit and cable path are verified as compatible and clearance-sensitive."
           }
         ]
@@ -1134,14 +1134,14 @@
       "id": "install-gpu",
       "order": 9,
       "label": "Install GPU",
-      "chapter": "docs/14-gpu-installation.md",
+      "chapter": "src/content/docs/build-guide/gpu-installation.md",
       "componentIds": ["gpu", "motherboard", "psu"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/14-gpu-installation.md"
+            "ref": "src/content/docs/build-guide/gpu-installation.md"
           }
         ]
       }
@@ -1150,14 +1150,14 @@
       "id": "connect-cables",
       "order": 10,
       "label": "Connect cables",
-      "chapter": "docs/15-cable-routing.md",
+      "chapter": "src/content/docs/build-guide/cable-routing.md",
       "componentIds": ["motherboard", "case", "psu", "gpu", "cooler"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/connectors-cables.md"
+            "ref": "src/content/docs/appendix/connectors-cables.md"
           }
         ]
       }
@@ -1166,14 +1166,14 @@
       "id": "first-boot",
       "order": 11,
       "label": "First boot",
-      "chapter": "docs/17-first-boot.md",
+      "chapter": "src/content/docs/build-guide/first-boot.md",
       "componentIds": ["motherboard", "cpu", "memory", "storage", "gpu", "psu"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/17-first-boot.md"
+            "ref": "src/content/docs/build-guide/first-boot.md"
           }
         ]
       }
@@ -1182,14 +1182,14 @@
       "id": "bios-checks",
       "order": 12,
       "label": "BIOS checks",
-      "chapter": "docs/18-bios.md",
+      "chapter": "src/content/docs/build-guide/bios.md",
       "componentIds": ["motherboard", "cpu", "memory", "storage"],
       "evidence": {
         "state": "partially_verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "Q-Flash behavior is verified; exact menu names may vary by firmware version."
           }
         ]
@@ -1199,7 +1199,7 @@
       "id": "install-windows",
       "order": 13,
       "label": "Install Windows",
-      "chapter": "docs/21-windows-installation.md",
+      "chapter": "src/content/docs/build-guide/windows-installation.md",
       "componentIds": ["operating-system", "storage"],
       "evidence": {
         "state": "verified",
@@ -1216,14 +1216,14 @@
       "id": "install-drivers",
       "order": 14,
       "label": "Install drivers",
-      "chapter": "docs/20-driver-installation.md",
+      "chapter": "src/content/docs/build-guide/driver-installation.md",
       "componentIds": ["motherboard", "gpu", "operating-system"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/20-driver-installation.md"
+            "ref": "src/content/docs/build-guide/driver-installation.md"
           }
         ]
       }
@@ -1232,14 +1232,14 @@
       "id": "enable-expo",
       "order": 15,
       "label": "Enable EXPO",
-      "chapter": "docs/19-expo.md",
+      "chapter": "src/content/docs/build-guide/expo.md",
       "componentIds": ["memory", "motherboard"],
       "evidence": {
         "state": "partially_verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "EXPO support is verified; exact BIOS menu path remains firmware-version dependent."
           }
         ]
@@ -1249,14 +1249,14 @@
       "id": "benchmark-baseline",
       "order": 16,
       "label": "Benchmark baseline",
-      "chapter": "docs/23-benchmarks.md",
+      "chapter": "src/content/docs/build-guide/benchmarks.md",
       "componentIds": ["cpu", "cooler", "memory", "storage", "gpu"],
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/23-benchmarks.md",
+            "ref": "src/content/docs/build-guide/benchmarks.md",
             "note": "Benchmark procedure is verified; real scores are intentionally not invented."
           }
         ]
@@ -1275,7 +1275,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/17-first-boot.md"
+            "ref": "src/content/docs/build-guide/first-boot.md"
           }
         ]
       }
@@ -1291,7 +1291,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/21-windows-installation.md",
+            "ref": "src/content/docs/build-guide/windows-installation.md",
             "note": "USB installation media is assumed; exact BIOS menu path depends on firmware version."
           }
         ]
@@ -1308,7 +1308,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/21-windows-installation.md",
+            "ref": "src/content/docs/build-guide/windows-installation.md",
             "note": "Boot behavior is documented; exact BIOS menu path depends on firmware version."
           }
         ]
@@ -1325,7 +1325,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/19-expo.md"
+            "ref": "src/content/docs/build-guide/expo.md"
           }
         ]
       }
@@ -1341,7 +1341,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/19-expo.md"
+            "ref": "src/content/docs/build-guide/expo.md"
           }
         ]
       }
@@ -1357,7 +1357,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "EXPO support is verified; exact menu names remain firmware-version dependent."
           }
         ]
@@ -1374,7 +1374,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/18-bios.md",
+            "ref": "src/content/docs/build-guide/bios.md",
             "note": "Rollback guidance is documented; exact board procedure should be checked against the installed board/manual before interactive training is finalized."
           }
         ]
@@ -1393,7 +1393,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md"
+            "ref": "src/content/docs/appendix/bill-of-materials.md"
           }
         ]
       }
@@ -1409,7 +1409,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md"
+            "ref": "src/content/docs/appendix/bill-of-materials.md"
           }
         ]
       }
@@ -1425,7 +1425,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md"
+            "ref": "src/content/docs/appendix/bill-of-materials.md"
           }
         ]
       }
@@ -1441,7 +1441,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/verification-register.md",
+            "ref": "src/content/docs/project/verification-register.md",
             "note": "QVL compatibility is verified."
           }
         ]
@@ -1458,7 +1458,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md"
+            "ref": "src/content/docs/appendix/bill-of-materials.md"
           }
         ]
       }
@@ -1474,7 +1474,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md"
+            "ref": "src/content/docs/appendix/bill-of-materials.md"
           }
         ]
       }
@@ -1490,7 +1490,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md"
+            "ref": "src/content/docs/appendix/bill-of-materials.md"
           }
         ]
       }
@@ -1506,7 +1506,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md"
+            "ref": "src/content/docs/appendix/bill-of-materials.md"
           }
         ]
       }
@@ -1522,7 +1522,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/bill-of-materials.md"
+            "ref": "src/content/docs/appendix/bill-of-materials.md"
           }
         ]
       }
@@ -1538,7 +1538,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/drivers.md",
+            "ref": "src/content/docs/appendix/drivers.md",
             "note": "Official source for motherboard BIOS, chipset package, LAN, WLAN, Bluetooth, audio, utilities, and manuals."
           }
         ]
@@ -1555,7 +1555,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/drivers.md",
+            "ref": "src/content/docs/appendix/drivers.md",
             "note": "Official source for AMD chipset and Radeon graphics driver packages."
           }
         ]
@@ -1572,7 +1572,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/drivers.md",
+            "ref": "src/content/docs/appendix/drivers.md",
             "note": "Optional SSD health and firmware utility source."
           }
         ]
@@ -1589,7 +1589,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/appendix/drivers.md",
+            "ref": "src/content/docs/appendix/drivers.md",
             "note": "Official operating system update channel for OS, security, framework, and some device drivers."
           }
         ]
@@ -1605,7 +1605,7 @@
         "sources": [
           {
             "type": "repository",
-            "ref": "docs/project/milestone-05-final-qa.md"
+            "ref": "src/content/docs/project/starlight-migration-inventory.md"
           }
         ]
       }

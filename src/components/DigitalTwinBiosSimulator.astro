@@ -76,17 +76,17 @@ const firstState = states[0];
 </section>
 
 <script>
-  const root = document.querySelector('.pc-bios-sim');
-  const screen = root?.querySelector('.pc-bios-sim__screen');
-  const eyebrow = screen?.querySelector('.pc-bios-sim__eyebrow');
-  const title = screen?.querySelector('h3');
-  const copy = screen?.querySelector('p');
-  const values = screen?.querySelectorAll('dd');
+  const root = document.querySelector<HTMLElement>('.pc-bios-sim');
+  const screen = root?.querySelector<HTMLElement>('.pc-bios-sim__screen');
+  const eyebrow = screen?.querySelector<HTMLElement>('.pc-bios-sim__eyebrow');
+  const title = screen?.querySelector<HTMLHeadingElement>('h3');
+  const copy = screen?.querySelector<HTMLParagraphElement>('p');
+  const values = screen?.querySelectorAll<HTMLElement>('dd');
 
-  function setState(button) {
+  function setState(button: HTMLElement) {
     if (!screen || !eyebrow || !title || !copy || !values || values.length < 2) return;
 
-    root?.querySelectorAll('.pc-bios-sim__states button').forEach((item) => {
+    root?.querySelectorAll<HTMLElement>('.pc-bios-sim__states button').forEach((item) => {
       item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
     });
 
@@ -97,7 +97,7 @@ const firstState = states[0];
     values[1].textContent = button.dataset.next ?? '';
   }
 
-  root?.querySelectorAll('.pc-bios-sim__states button').forEach((button) => {
+  root?.querySelectorAll<HTMLElement>('.pc-bios-sim__states button').forEach((button) => {
     button.addEventListener('click', () => setState(button));
     button.addEventListener('focus', () => setState(button));
   });

@@ -12,13 +12,18 @@ const guidance = new Map([
 ]);
 
 const sources = sourceIds
-  .map((id) => digitalTwin.links.find((link) => link.id === id))
-  .filter(Boolean)
-  .map((link) => ({
-    ...link,
-    component: link.componentId ? componentById.get(link.componentId)?.name ?? link.componentId : 'Platform',
-    guidance: guidance.get(link.id) ?? 'Use as an official source.',
-  }));
+  .flatMap((id) => {
+    const link = digitalTwin.links.find((item) => item.id === id);
+    return link
+      ? [
+          {
+            ...link,
+            component: link.componentId ? componentById.get(link.componentId)?.name ?? link.componentId : 'Platform',
+            guidance: guidance.get(link.id) ?? 'Use as an official source.',
+          },
+        ]
+      : [];
+  });
 ---
 
 <section class="pc-driver-dashboard" aria-labelledby="pc-driver-dashboard-heading">

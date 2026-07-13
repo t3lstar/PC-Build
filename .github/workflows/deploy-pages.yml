@@ -45,20 +45,17 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
-      - name: Build MkDocs site
-        run: ./scripts/build.sh html
-
-      - name: Merge Starlight digital twin
-        run: ./scripts/build-digital-twin-site.sh
+      - name: Validate Starlight site
+        run: ./scripts/validate.sh all
 
       - name: Add GitHub Pages marker
-        run: touch site/.nojekyll
+        run: touch dist/.nojekyll
 
       - name: Upload Pages artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v5
         with:
-          path: site
+          path: dist
 
   deploy:
     name: Deploy to GitHub Pages

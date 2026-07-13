@@ -11,21 +11,15 @@ Usage: ./scripts/validate.sh <target>
 Targets:
   data  Validate digital twin JSON data against JSON Schema.
   qrcodes  Validate generated official-link QR code assets.
-  docs  Validate required files, MkDocs nav targets, and local Markdown links.
-  html  Build the MkDocs HTML site with strict mode.
-  starlight  Build and validate the Astro Starlight digital twin.
-  all   Run data validation, QR validation, docs validation, and the HTML build.
+  html       Build the Astro Starlight HTML site.
+  starlight  Check, lint, build, and validate the Astro Starlight site.
+  all        Run data validation, QR validation, and Starlight validation.
 USAGE
 }
 
 validate_data() {
   cd "$ROOT_DIR"
   "${PYTHON:-python3}" scripts/validate-data.py
-}
-
-validate_docs() {
-  cd "$ROOT_DIR"
-  "${PYTHON:-python3}" scripts/validate-docs.py
 }
 
 validate_qrcodes() {
@@ -40,6 +34,7 @@ validate_html() {
 
 validate_starlight() {
   cd "$ROOT_DIR"
+  npm run check
   npm run starlight:build
   "${PYTHON:-python3}" scripts/validate-starlight.py
 }
@@ -51,9 +46,6 @@ case "$TARGET" in
   qrcodes)
     validate_qrcodes
     ;;
-  docs)
-    validate_docs
-    ;;
   html)
     validate_html
     ;;
@@ -63,8 +55,7 @@ case "$TARGET" in
   all)
     validate_data
     validate_qrcodes
-    validate_docs
-    validate_html
+    validate_starlight
     ;;
   *)
     usage

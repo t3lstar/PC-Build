@@ -185,15 +185,15 @@ const viewZones = zones.map((zone) => {
 </section>
 
 <script>
-  const root = document.querySelector('.pc-case-view');
-  const details = root?.querySelector('.pc-case-view__details');
-  const title = details?.querySelector('h3');
-  const values = details?.querySelectorAll('dd');
+  const root = document.querySelector<HTMLElement>('.pc-case-view');
+  const details = root?.querySelector<HTMLElement>('.pc-case-view__details');
+  const title = details?.querySelector<HTMLHeadingElement>('h3');
+  const values = details?.querySelectorAll<HTMLElement>('dd');
 
-  function setActive(button) {
+  function setActive(button: HTMLElement) {
     if (!details || !title || !values || values.length < 4) return;
 
-    root?.querySelectorAll('.pc-case-view__hotspot').forEach((item) => {
+    root?.querySelectorAll<HTMLElement>('.pc-case-view__hotspot').forEach((item) => {
       item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
     });
 
@@ -204,7 +204,7 @@ const viewZones = zones.map((zone) => {
     values[3].textContent = button.dataset.verification ?? '';
   }
 
-  root?.querySelectorAll('.pc-case-view__hotspot').forEach((button, index) => {
+  root?.querySelectorAll<HTMLElement>('.pc-case-view__hotspot').forEach((button, index) => {
     button.setAttribute('aria-pressed', index === 0 ? 'true' : 'false');
     button.addEventListener('click', () => setActive(button));
     button.addEventListener('focus', () => setActive(button));

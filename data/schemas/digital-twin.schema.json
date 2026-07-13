@@ -85,7 +85,7 @@
     },
     "repoPath": {
       "type": "string",
-      "pattern": "^(docs|data|scripts|milestones|\\.github|assets)/.+|^[A-Z0-9_.-]+\\.md$"
+      "pattern": "^(src/content/docs|public/assets|data|scripts|milestones|\\.github)/.+|^[A-Z0-9_.-]+\\.md$"
     },
     "verificationState": {
       "enum": ["verified", "partially_verified", "pending", "deferred"]

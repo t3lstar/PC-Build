@@ -97,12 +97,12 @@ const zones = digitalTwin.airflow.map((zone) => ({
 </section>
 
 <script>
-  const root = document.querySelector('.pc-airflow');
-  const buttons = root?.querySelectorAll('.pc-airflow__controls button');
-  const arrows = root?.querySelectorAll('.pc-airflow__arrow');
-  const cards = root?.querySelectorAll('.pc-airflow__zones article');
+  const root = document.querySelector<HTMLElement>('.pc-airflow');
+  const buttons = root?.querySelectorAll<HTMLButtonElement>('.pc-airflow__controls button');
+  const arrows = root?.querySelectorAll<HTMLElement>('.pc-airflow__arrow');
+  const cards = root?.querySelectorAll<HTMLElement>('.pc-airflow__zones article');
 
-  function setFilter(filter) {
+  function setFilter(filter: string) {
     buttons?.forEach((button) => {
       button.setAttribute('aria-pressed', button.getAttribute('data-filter') === filter ? 'true' : 'false');
     });

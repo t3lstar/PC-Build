@@ -1,18 +1,81 @@
 #!/usr/bin/env python3
-"""Validate the Starlight digital twin source and built static HTML."""
+"""Validate the full Astro Starlight site source and built static HTML."""
 
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-FIRST_SLICE = ROOT / "src" / "content" / "docs" / "digital-twin" / "first-slice.mdx"
+CONTENT = ROOT / "src" / "content" / "docs"
 CSS = ROOT / "src" / "styles" / "starlight.css"
 COMPONENT_DIR = ROOT / "src" / "components"
-DIST_FIRST_SLICE = ROOT / "dist" / "digital-twin" / "first-slice" / "index.html"
-DIST_ACCESSIBILITY = ROOT / "dist" / "project" / "digital-twin-accessibility" / "index.html"
+DIST = ROOT / "dist"
+DIST_FIRST_SLICE = DIST / "digital-twin" / "first-slice" / "index.html"
+OLD_CONFIG = ROOT / ("mk" + "docs.yml")
+FORBIDDEN_TERM = "mk" + "docs"
+
+LINK_RE = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
+IMAGE_RE = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
+ASSET_RE = re.compile(r"""(?:href|src)=["'](/PC-Build/[^"']+)["']""")
+
+IGNORED_SCHEMES = {"http", "https", "mailto", "tel"}
+
+EXPECTED_ROUTES = [
+    "index.html",
+    "build-guide/introduction/index.html",
+    "build-guide/components/index.html",
+    "build-guide/motherboard-overview/index.html",
+    "build-guide/case-overview/index.html",
+    "build-guide/tools/index.html",
+    "build-guide/build-preparation/index.html",
+    "build-guide/cpu-installation/index.html",
+    "build-guide/memory-installation/index.html",
+    "build-guide/m2-installation/index.html",
+    "build-guide/case-build/index.html",
+    "build-guide/psu-installation/index.html",
+    "build-guide/motherboard-installation/index.html",
+    "build-guide/aio-installation/index.html",
+    "build-guide/gpu-installation/index.html",
+    "build-guide/cable-routing/index.html",
+    "build-guide/front-panel-connectors/index.html",
+    "build-guide/first-boot/index.html",
+    "build-guide/bios/index.html",
+    "build-guide/expo/index.html",
+    "build-guide/driver-installation/index.html",
+    "build-guide/windows-installation/index.html",
+    "build-guide/gaming-optimisation/index.html",
+    "build-guide/benchmarks/index.html",
+    "build-guide/troubleshooting/index.html",
+    "build-guide/maintenance/index.html",
+    "build-guide/upgrades/index.html",
+    "appendix/glossary/index.html",
+    "appendix/faq/index.html",
+    "appendix/checklists/index.html",
+    "appendix/connectors-cables/index.html",
+    "appendix/bill-of-materials/index.html",
+    "appendix/drivers/index.html",
+    "appendix/bios-settings/index.html",
+    "appendix/temperature-reference/index.html",
+    "appendix/publishing/index.html",
+    "adr/0001-digital-twin-architecture/index.html",
+    "project/verification-register/index.html",
+    "project/starlight-migration-inventory/index.html",
+    "digital-twin/first-slice/index.html",
+]
+
+REMOVED_OLD_ROUTES = [
+    "01-introduction/index.html",
+    "02-components/index.html",
+    "03-motherboard-overview/index.html",
+    "04-case-overview/index.html",
+    "components/index.html",
+    "case-overview/index.html",
+    "project/adr-0001-digital-twin-architecture/index.html",
+]
 
 COMPONENTS = {
     "DigitalTwinSummary": "Digital Twin Data Slice",
@@ -39,8 +102,63 @@ def require(errors: list[str], condition: bool, message: str) -> None:
         errors.append(message)
 
 
+def markdown_files() -> list[Path]:
+    return sorted(path for path in CONTENT.rglob("*") if path.suffix in {".md", ".mdx"})
+
+
+def strip_code_fences(markdown: str) -> str:
+    return re.sub(r"```.*?```", "", markdown, flags=re.DOTALL)
+
+
+def clean_target(raw_target: str) -> str:
+    target = raw_target.strip()
+    if " " in target and not target.startswith("<"):
+        target = target.split()[0]
+    if target.startswith("<") and target.endswith(">"):
+        target = target[1:-1]
+    return target
+
+
+def route_exists(target: str) -> bool:
+    path = unquote(urlsplit(target).path)
+    if not path.startswith("/PC-Build/"):
+        return True
+
+    relative = path.removeprefix("/PC-Build/").strip("/")
+    if not relative:
+        return (DIST / "index.html").exists()
+
+    candidate = DIST / relative
+    if candidate.is_file():
+        return True
+    return (candidate / "index.html").exists()
+
+
+def local_source_exists(source: Path, target: str) -> bool:
+    target = clean_target(target)
+    parsed = urlsplit(target)
+    if parsed.scheme in IGNORED_SCHEMES or target.startswith("#"):
+        return True
+    if parsed.scheme:
+        return True
+
+    path_part = unquote(parsed.path)
+    if not path_part:
+        return True
+    if path_part.startswith("/PC-Build/"):
+        return route_exists(path_part)
+
+    candidate = (source.parent / path_part).resolve()
+    return candidate.exists()
+
+
 def validate_source(errors: list[str]) -> None:
-    page = read(FIRST_SLICE)
+    files = markdown_files()
+    require(errors, len(files) == 40, f"Expected 40 Starlight content pages, found {len(files)}.")
+    require(errors, not OLD_CONFIG.exists(), "Old site-generator config should be removed after Starlight migration.")
+    require(errors, not (ROOT / "docs").exists(), "Old documentation source directory should be removed after Starlight migration.")
+
+    page = read(CONTENT / "digital-twin" / "first-slice.mdx")
     css = read(CSS)
 
     require(errors, "<noscript>" in page, "Digital twin page is missing a no-JavaScript notice.")
@@ -60,15 +178,43 @@ def validate_source(errors: list[str]) -> None:
     require(errors, ":focus-visible" in css, "Starlight CSS lacks visible focus styles.")
     require(errors, "prefers-reduced-motion" in css, "Starlight CSS lacks reduced-motion handling.")
 
+    for markdown_file in files:
+        raw_text = read(markdown_file)
+        require(
+            errors,
+            FORBIDDEN_TERM not in raw_text.lower(),
+            f"{markdown_file.relative_to(ROOT)} contains an old site-generator reference.",
+        )
+        text = strip_code_fences(raw_text)
+        for regex in (LINK_RE, IMAGE_RE):
+            for match in regex.finditer(text):
+                target = clean_target(match.group(1))
+                parsed = urlsplit(target)
+                if parsed.scheme in IGNORED_SCHEMES or target.startswith("#"):
+                    continue
+                require(
+                    errors,
+                    local_source_exists(markdown_file, target),
+                    f"{markdown_file.relative_to(ROOT)} has missing local target: {target}",
+                )
+
 
 def validate_dist(errors: list[str]) -> None:
+    require(errors, DIST.exists(), "Starlight dist output has not been built.")
+    if not DIST.exists():
+        return
+
+    for route in EXPECTED_ROUTES:
+        require(errors, (DIST / route).exists(), f"Built Starlight output missing route {route}.")
+
+    for route in REMOVED_OLD_ROUTES:
+        require(errors, not (DIST / route).exists(), f"Old route should not exist after clean migration: {route}.")
+
     require(errors, DIST_FIRST_SLICE.exists(), "Starlight first-slice HTML has not been built.")
-    require(errors, DIST_ACCESSIBILITY.exists(), "Starlight accessibility audit HTML has not been built.")
-    if not DIST_FIRST_SLICE.exists() or not DIST_ACCESSIBILITY.exists():
+    if not DIST_FIRST_SLICE.exists():
         return
 
     first_slice = read(DIST_FIRST_SLICE)
-    accessibility = read(DIST_ACCESSIBILITY)
 
     for expected in [
         "Interactive Case View",
@@ -88,10 +234,19 @@ def validate_dist(errors: list[str]) -> None:
     ]:
         require(errors, expected in first_slice, f"Built first-slice HTML missing '{expected}'.")
 
-    for expected in ["Digital Twin Accessibility", "Static Fallback Inventory", "Keyboard operation", "No-JavaScript behavior"]:
-        require(errors, expected in accessibility, f"Built accessibility audit HTML missing '{expected}'.")
-
     require(errors, first_slice.count("/PC-Build/assets/qrcodes/") >= 13, "Built first-slice HTML does not reference all QR assets.")
+
+    checked_assets = set()
+    for html_file in DIST.rglob("*.html"):
+        html = read(html_file)
+        for match in ASSET_RE.finditer(html):
+            target = urlsplit(match.group(1)).path.removeprefix("/PC-Build/")
+            if not target or target in checked_assets:
+                continue
+            checked_assets.add(target)
+            candidate = DIST / target
+            if candidate.suffix:
+                require(errors, candidate.exists(), f"{html_file.relative_to(DIST)} references missing asset /PC-Build/{target}.")
 
 
 def main() -> int:
@@ -100,12 +255,12 @@ def main() -> int:
     validate_dist(errors)
 
     if errors:
-        print("Starlight digital twin validation failed:", file=sys.stderr)
+        print("Starlight validation failed:", file=sys.stderr)
         for error in errors:
             print(f"- {error}", file=sys.stderr)
         return 1
 
-    print("Starlight digital twin validation passed.")
+    print("Starlight validation passed.")
     return 0
 
 

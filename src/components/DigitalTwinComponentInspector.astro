@@ -85,16 +85,16 @@ const firstComponent = components[0];
 </section>
 
 <script>
-  const root = document.querySelector('.pc-component-inspector');
-  const details = root?.querySelector('.pc-case-view__details');
-  const title = details?.querySelector('h3');
-  const values = details?.querySelectorAll('dd');
-  const link = details?.querySelector('.pc-component-inspector__link');
+  const root = document.querySelector<HTMLElement>('.pc-component-inspector');
+  const details = root?.querySelector<HTMLElement>('.pc-case-view__details');
+  const title = details?.querySelector<HTMLHeadingElement>('h3');
+  const values = details?.querySelectorAll<HTMLElement>('dd');
+  const link = details?.querySelector<HTMLAnchorElement>('.pc-component-inspector__link');
 
-  function setActive(button) {
+  function setActive(button: HTMLElement) {
     if (!details || !title || !values || values.length < 5 || !link) return;
 
-    root?.querySelectorAll('.pc-component-inspector__buttons button').forEach((item) => {
+    root?.querySelectorAll<HTMLElement>('.pc-component-inspector__buttons button').forEach((item) => {
       item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
     });
 
@@ -107,7 +107,7 @@ const firstComponent = components[0];
     link.setAttribute('href', button.dataset.url ?? '#');
   }
 
-  root?.querySelectorAll('.pc-component-inspector__buttons button').forEach((button) => {
+  root?.querySelectorAll<HTMLElement>('.pc-component-inspector__buttons button').forEach((button) => {
     button.addEventListener('click', () => setActive(button));
     button.addEventListener('focus', () => setActive(button));
   });

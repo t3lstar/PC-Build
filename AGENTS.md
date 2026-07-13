@@ -1,287 +1,141 @@
-You are an expert technical writer, PC hardware engineer and documentation architect.
+You are an expert technical writer, PC hardware engineer, and documentation architect.
 
-Your goal is to create a professional documentation repository for my custom gaming PC build.
+Your goal is to maintain a professional Astro Starlight documentation repository for my custom gaming PC build.
 
-The documentation should be comparable in quality to official documentation from Corsair, ASUS, Lian Li, Gigabyte or Microsoft Learn.
+The documentation should be comparable in quality to official documentation from Corsair, ASUS, Lian Li, Gigabyte, or Microsoft Learn.
 
 The repository must be designed so it can evolve over time as hardware changes.
 
---------------------------------------------------
-SESSION REHYDRATION
---------------------------------------------------
+## Session Rehydration
 
-At the start of every new session, or after any context reset or compaction, read the following files before making changes:
+At the start of every new session, or after any context reset or compaction, read these files before making changes:
 
-1. AGENTS.md
-2. MILESTONES.md
+1. `AGENTS.md`
+2. `MILESTONES.md`
 
-Use MILESTONES.md as the current project roadmap, including project notes, assumptions, milestone scope and acceptance criteria.
+Use `MILESTONES.md` as the current project roadmap, including project notes, assumptions, milestone scope, issue status, and acceptance criteria.
 
-Do not recreate project decisions that are already captured in MILESTONES.md. Preserve those decisions unless the user explicitly changes them.
+Do not recreate project decisions that are already captured in `MILESTONES.md`. Preserve those decisions unless the user explicitly changes them.
 
-When a new project requirement, environment constraint, tooling version, compatibility note, workflow decision or implementation assumption is discovered, update the relevant project documentation in the same change.
+When a new project requirement, environment constraint, tooling version, compatibility note, workflow decision, or implementation assumption is discovered, update the relevant project documentation in the same change.
 
-Examples include Python versions, Node.js versions, GitHub Pages behavior, build tooling constraints, component compatibility notes and accepted alternatives.
+Examples include Python versions, Node.js versions, GitHub Pages behavior, build tooling constraints, component compatibility notes, accepted alternatives, and validation commands.
 
 Do not leave durable project knowledge only in chat history.
 
-Milestones 1-4 are complete for the GitHub Pages HTML release. Preserve that work and extend it through:
+Use `MILESTONES.md`, `milestones/`, and `src/content/docs/project/` as the planning source of truth.
 
-1. Milestone 5 - Professional Engineering Edition
-2. Milestone 6 - Interactive Digital Twin Edition
+## Build Specification
 
-Use `MILESTONES.md`, `milestones/`, and `docs/project/` as the planning source of truth for those later milestones.
+- CPU: AMD Ryzen 7 7800X3D
+- CPU cooler: ARCTIC Liquid Freezer III Pro 360
+- Motherboard: Gigabyte B850 AORUS Elite WiFi7
+- Memory: 32GB DDR5-6000 CL30 AMD EXPO
+- SSD: Samsung 990 EVO Plus 2TB NVMe
+- GPU: Gigabyte Radeon RX 9060 XT Gaming OC 16GB
+- Case: Lian Li O11 Dynamic Mini V2 Flow
+- Power supply: ASUS TUF Gaming 1000W Gold
+- Operating system: Windows 11 Pro
+- Installation media: assume Windows 11 Pro is already on a USB flash drive.
 
-Do not recreate the repository, duplicate active pages, or overwrite good existing content when extending the project.
+## Source Layout
 
-Keep source files and generated output separate:
+- Starlight content source lives in `src/content/docs/`.
+- Interactive Astro components live in `src/components/`.
+- Site styling lives in `src/styles/starlight.css`.
+- Public images, diagrams, icons, and QR assets live in `public/assets/`.
+- Digital twin data and schema live in `data/digital-twin/`.
+- Detailed milestone plans live in `milestones/`.
+- Generated output lives in `dist/`, `site/`, or `build/` and should not be committed.
 
-- Source documentation lives in `docs/`, `milestones/`, root project files, scripts, and workflow files.
-- Generated MkDocs output lives in `site/` and should not be committed.
-- Future generated PDF, printable, diagram, QR, or digital twin outputs must have documented output locations before they are committed.
+The canonical home page is `src/content/docs/index.md`.
 
---------------------------------------------------
-BUILD SPECIFICATION
---------------------------------------------------
+The public GitHub Pages site is built from Astro Starlight output in `dist/`.
 
-CPU
-AMD Ryzen 7 7800X3D
+## Local Environment
 
-CPU Cooler
-ARCTIC Liquid Freezer III Pro 360
+Use Node.js 24 for Astro Starlight tooling.
 
-Motherboard
-Gigabyte B850 AORUS Elite WiFi7
+Use Python 3.12 for digital twin data and QR validation.
 
-Memory
-32GB DDR5-6000 CL30 AMD EXPO
+Use a local `.venv` for Python dependencies. Do not install Python packages into the system Python environment.
 
-SSD
-Samsung 990 EVO Plus 2TB NVMe
+Keep the working copy on the local drive, not inside iCloud Drive or another synced folder.
 
-GPU
-Gigabyte Radeon RX 9060 XT Gaming OC 16GB
+## Build and Validation
 
-Case
-Lian Li O11 Dynamic Mini V2 Flow
+Use one parameterized build script at `scripts/build.sh` with these targets:
 
-Power Supply
-ASUS TUF Gaming 1000W Gold
+- `html`
+- `pdf`
+- `printable`
+- `all`
 
-Operating System
-Windows 11 Pro
+PDF generation is deferred.
 
---------------------------------------------------
-PROJECT STRUCTURE
---------------------------------------------------
+Use `./scripts/validate.sh all` before publishing or checkpoint pushes. The validation path must cover:
 
-Create the following repository.
+- Digital twin JSON Schema and cross-reference validation.
+- QR asset validation.
+- `astro check`.
+- `markdownlint-cli2`.
+- Starlight static build.
+- Clean route checks.
+- Local source link checks.
+- Critical generated asset checks.
 
-PC-Build/
-
-README.md
-
-CONTRIBUTING.md
-
-requirements.txt
-
-docs/
-
-index.md
-
-01-introduction.md
-
-02-components.md
-
-03-motherboard-overview.md
-
-04-case-overview.md
-
-05-tools.md
-
-06-build-preparation.md
-
-07-cpu-installation.md
-
-08-memory-installation.md
-
-09-m2-installation.md
-
-10-case-build.md
-
-11-psu-installation.md
-
-12-motherboard-installation.md
-
-13-aio-installation.md
-
-14-gpu-installation.md
-
-15-cable-routing.md
-
-16-front-panel-connectors.md
-
-17-first-boot.md
-
-18-bios.md
-
-19-expo.md
-
-20-driver-installation.md
-
-21-windows-installation.md
-
-22-gaming-optimisation.md
-
-23-benchmarks.md
-
-24-troubleshooting.md
-
-25-maintenance.md
-
-26-upgrades.md
-
-docs/appendix/
-
-glossary.md
-
-faq.md
-
-checklists.md
-
-bill-of-materials.md
-
-drivers.md
-
-bios-settings.md
-
-temperature-reference.md
-
-publishing.md
-
-docs/assets/
-
-images/
-
-diagrams/
-
-icons/
-
-scripts/
-
-build.sh
-
-mkdocs.yml
-
-Implementation notes:
-
-Use docs/index.md as the MkDocs home page.
-
-Keep README.md as the GitHub repository overview.
-
-Keep rendered appendix pages under docs/appendix/ so MkDocs can include them in the generated site.
-
-Keep rendered documentation assets under docs/assets/ so images and diagrams resolve cleanly in MkDocs.
-
-Use a single parameterized build script at scripts/build.sh with the following targets:
-
-html
-
-pdf
-
-printable
-
-all
-
-Include requirements.txt for MkDocs and documentation build dependencies.
-
-Use a local Python virtual environment named .venv for local documentation builds.
-
-Use Python 3.12 for local documentation builds to match GitHub Actions.
-
-Use Node.js 24 for any local Node-based tooling to match GitHub Actions runtime expectations.
-
-Do not install Python packages into the system Python environment.
-
---------------------------------------------------
-PUBLICATION
---------------------------------------------------
+## Publication
 
 The documentation should be publicly available through GitHub Pages.
 
 Use GitHub Actions for publication:
 
-Pull requests should build the MkDocs site but not deploy it.
+- Pull requests should validate and build the Starlight site but not deploy it.
+- Pushes to `main` should validate, build, and deploy the Starlight site to GitHub Pages.
 
-Pushes to main should build the MkDocs site and deploy it to GitHub Pages.
+Assume the GitHub owner is `t3lstar`. If the repository name remains `PC-Build`, the default public site URL is `https://t3lstar.github.io/PC-Build/`.
 
-Use the default GitHub Pages URL first. Do not require a custom domain during Milestone 1.
+Ensure the published site output includes `.nojekyll`.
 
-Assume the GitHub owner is t3lstar. If the repository name remains PC-Build, the default public site URL should be https://t3lstar.github.io/PC-Build/.
+Document the publication workflow in `src/content/docs/appendix/publishing.md`.
 
-Ensure the published site output includes .nojekyll.
-
-Document the publication workflow in docs/appendix/publishing.md.
-
---------------------------------------------------
-PROJECT PLANNING
---------------------------------------------------
+## Project Planning
 
 Maintain milestone planning in:
 
-MILESTONES.md
+- `MILESTONES.md`
+- `milestones/`
+- `src/content/docs/project/`
 
-milestones/
+Use `src/content/docs/project/verification-register.md` for claims that still need official-source verification.
 
-docs/project/
-
-Use docs/project/repository-audit.md for repository audit findings.
-
-Use docs/project/verification-register.md for claims that still need official-source verification.
-
-Use docs/project/milestone-05-06-validation-report.md for validation commands and outcomes during Milestones 5 and 6.
+Use `src/content/docs/project/starlight-migration-inventory.md` for current Starlight migration state and validation coverage.
 
 GitHub issues for milestone work should include summary, user value, scope, out of scope, dependencies, implementation notes, acceptance criteria, validation steps, documentation impact, risks or open questions, and definition of done.
 
 Use checkboxes for acceptance criteria.
 
---------------------------------------------------
-DOCUMENTATION REQUIREMENTS
---------------------------------------------------
+## Documentation Requirements
 
-Every chapter should include
+Every main chapter should include:
 
-Introduction
-
-Purpose
-
-Estimated time
-
-Difficulty
-
-Required tools
-
-Warnings
-
-Step-by-step instructions
-
-Verification checklist
-
-Common mistakes
-
-Expected result
-
-Next chapter
+- Introduction
+- Purpose
+- Estimated time
+- Difficulty
+- Required tools
+- Warnings
+- Step-by-step instructions
+- Verification checklist
+- Common mistakes
+- Expected result
+- Next chapter
 
 Use direct instructional language throughout. For example, write "Install the CPU into the AM5 socket." rather than conversational phrasing.
 
-Milestone 1 placeholder pages should include these required headings so Milestone 2 can fill content into a consistent structure.
+## Bill of Materials
 
---------------------------------------------------
-BILL OF MATERIALS
---------------------------------------------------
-
-Maintain a dedicated buying guide at docs/appendix/bill-of-materials.md.
+Maintain a dedicated buying guide at `src/content/docs/appendix/bill-of-materials.md`.
 
 The bill of materials should identify the exact intended components and acceptable alternatives where applicable.
 
@@ -289,7 +143,7 @@ Prefer manufacturer product pages for stable reference links.
 
 Prefer amazon.co.uk for retailer purchase links.
 
-Retailer links should be treated as convenience links because prices, stock and listings may change.
+Retailer links should be treated as convenience links because prices, stock, and listings may change.
 
 Compatibility notes should state the verification result and evidence. Do not leave compatibility work to the reader with vague instructions such as "check the QVL" when it can be verified and documented in the repository.
 
@@ -301,61 +155,21 @@ Do not fabricate technical details, connector positions, benchmark scores, URLs,
 
 Use official manufacturer documentation as the authoritative source where available.
 
-Clearly mark unresolved or unverified claims in docs/project/verification-register.md.
+Clearly mark unresolved or unverified claims in `src/content/docs/project/verification-register.md`.
 
 Product images are visual aids only. Model numbers and official documentation remain the source of truth.
 
---------------------------------------------------
-DIAGRAMS
---------------------------------------------------
+## Diagrams
 
-Create vector diagrams (SVG) wherever possible.
+Create vector diagrams as SVG wherever possible.
 
-Create Mermaid diagrams for
+Retain Mermaid and PlantUML source files under `public/assets/diagrams/` when they are useful for maintenance.
 
-Build sequence
+Reader-facing diagrams should embed rendered SVG assets so diagrams are directly visible on the live site.
 
-Airflow
+Diagrams must be technically accurate, readable in the live theme, and traceable to their source where applicable.
 
-Boot process
-
-Driver installation order
-
-Create PlantUML diagrams for
-
-Hardware layout
-
-Power flow
-
-Boot flow
-
-BIOS sequence
-
-Create SVG diagrams for
-
-Motherboard headers
-
-Fan layout
-
-Cable routing
-
-Front panel connectors
-
-PCIe slots
-
-Memory slots
-
-M.2 slots
-
-PSU cable routing
-
-Airflow
-
-Do NOT use AI-generated artwork.
-
-Diagrams must be technically accurate.
-
-For reader-facing diagrams, keep source and rendered assets traceable. Mermaid and PlantUML source files should remain in docs/assets/diagrams/ and rendered SVGs should remain visible in the site.
+Do not use AI-generated artwork for technical diagrams.
 
 For future interactive or digital twin diagrams:
 
@@ -365,143 +179,83 @@ For future interactive or digital twin diagrams:
 - Respect reduced-motion preferences.
 - Do not use heavy 3D tooling unless an accepted ADR demonstrates a clear user benefit.
 
---------------------------------------------------
-BUILD ORDER
---------------------------------------------------
+## Build Order
 
-Follow this sequence
+Follow this sequence:
 
-Workspace
+1. Workspace
+2. Motherboard
+3. CPU
+4. SSD
+5. RAM
+6. Case
+7. PSU
+8. Motherboard installation
+9. Radiator
+10. Fans
+11. GPU
+12. Power cables
+13. Front panel
+14. USB
+15. WiFi antennas
+16. Cable management
+17. First boot
+18. BIOS
+19. Windows
+20. Drivers
+21. Benchmarking
 
-Motherboard
+## BIOS
 
-CPU
+Document:
 
-SSD
+- Q-Flash
+- EXPO Profile 1
+- Resize BAR
+- Secure Boot
+- TPM
+- Fan curves
+- Boot order
+- Virtualisation
+- Power settings
 
-RAM
+## Windows
 
-Case
+Document:
 
-PSU
+- Windows installation
+- Partitioning
+- Activation
+- Updates
+- AMD chipset driver
+- Gigabyte drivers
+- AMD Adrenalin
 
-Motherboard installation
+## Testing
 
-Radiator
+Include:
 
-Fans
+- Cinebench
+- CrystalDiskMark
+- OCCT
+- MemTest86
+- 3DMark
+- HWInfo
+- Expected temperature ranges
+- Benchmark baseline procedure and user-recorded results
+- Power consumption observation procedure
 
-GPU
+## Quality
 
-Power cables
-
-Front panel
-
-USB
-
-WiFi antennas
-
-Cable management
-
-First boot
-
-BIOS
-
-Windows
-
-Drivers
-
-Benchmarking
-
---------------------------------------------------
-BIOS
---------------------------------------------------
-
-Document
-
-Q-Flash
-
-EXPO Profile 1
-
-Resize BAR
-
-Secure Boot
-
-TPM
-
-Fan curves
-
-Boot order
-
-Virtualisation
-
-Power settings
-
---------------------------------------------------
-WINDOWS
---------------------------------------------------
-
-Document
-
-Windows installation
-
-Partitioning
-
-Activation
-
-Updates
-
-AMD Chipset Driver
-
-Gigabyte Drivers
-
-AMD Adrenalin
-
---------------------------------------------------
-TESTING
---------------------------------------------------
-
-Include
-
-Cinebench
-
-CrystalDiskMark
-
-OCCT
-
-MemTest86
-
-3DMark
-
-HWInfo
-
-Expected temperature ranges
-
-Benchmark baseline procedure and user-recorded results
-
-Power consumption observation procedure
-
---------------------------------------------------
-QUALITY
---------------------------------------------------
-
-Write in professional technical English.
-
-Avoid unnecessary verbosity.
-
-Assume the reader is building their first PC.
-
-Every step should be verifiable.
-
-Everything should be technically accurate.
-
-Keep the guide suitable for a first-time PC builder.
-
-Prefer official-source citations for technical claims.
-
-Avoid invented screenshots or simulated UI that could be mistaken for the exact firmware or Windows interface.
-
-If a BIOS simulator is added later, clearly label it as training material because firmware appearance and menu names may vary by BIOS version.
+- Write in professional technical English.
+- Avoid unnecessary verbosity.
+- Assume the reader is building their first PC.
+- Every step should be verifiable.
+- Everything should be technically accurate.
+- Keep the guide suitable for a first-time PC builder.
+- Prefer official-source citations for technical claims.
+- Avoid invented screenshots or simulated UI that could be mistaken for exact firmware or Windows interfaces.
+- If a BIOS simulator is added later, clearly label it as training material because firmware appearance and menu names may vary by BIOS version.
 
 Accessibility requirements for new interactive work:
 
@@ -515,31 +269,3 @@ Accessibility requirements for new interactive work:
 - Zoom tolerance
 - Static non-interactive fallback
 - Touch-friendly controls where appropriate
-
---------------------------------------------------
-OUTPUT
---------------------------------------------------
-
-Generate the complete repository.
-
-Every markdown file should be complete.
-
-Generate all Mermaid diagrams.
-
-Generate all PlantUML diagrams.
-
-Generate SVG diagrams.
-
-Configure MkDocs Material.
-
-Provide a script that generates
-
-PDF
-
-HTML documentation
-
-Printable manual
-
-Ensure all links work.
-
-The repository should be production quality and suitable for publication on GitHub.

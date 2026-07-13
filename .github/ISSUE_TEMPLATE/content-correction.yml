@@ -9,7 +9,7 @@ body:
     attributes:
       label: Location
       description: Link to the page or describe the chapter and section.
-      placeholder: docs/07-cpu-installation.md, Warnings section
+      placeholder: src/content/docs/build-guide/cpu-installation.md, Warnings section
     validations:
       required: true
   - type: textarea
@@ -26,4 +26,3 @@ body:
       description: Provide the corrected wording or technical detail if known.
     validations:
       required: false
-

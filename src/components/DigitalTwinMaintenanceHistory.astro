@@ -75,14 +75,21 @@ const templates = [
 </section>
 
 <script>
-  const root = document.querySelector('.pc-history');
-  const form = root?.querySelector('.pc-history__form');
-  const list = root?.querySelector('.pc-history__list');
-  const empty = root?.querySelector('.pc-history__empty');
-  const clearButton = root?.querySelector('[data-clear-history]');
+  type HistoryEntry = {
+    date: string;
+    type: string;
+    summary: string;
+    notes: string;
+  };
+
+  const root = document.querySelector<HTMLElement>('.pc-history');
+  const form = root?.querySelector<HTMLFormElement>('.pc-history__form');
+  const list = root?.querySelector<HTMLOListElement>('.pc-history__list');
+  const empty = root?.querySelector<HTMLElement>('.pc-history__empty');
+  const clearButton = root?.querySelector<HTMLButtonElement>('[data-clear-history]');
   const storageKey = 'pc-build-maintenance-history-v1';
 
-  function readEntries() {
+  function readEntries(): HistoryEntry[] {
     try {
       return JSON.parse(localStorage.getItem(storageKey) ?? '[]');
     } catch {
@@ -90,7 +97,7 @@ const templates = [
     }
   }
 
-  function writeEntries(entries) {
+  function writeEntries(entries: HistoryEntry[]) {
     localStorage.setItem(storageKey, JSON.stringify(entries));
   }
 
@@ -109,9 +116,9 @@ const templates = [
           <p></p>
         </article>
       `;
-      item.querySelector('h3').textContent = entry.summary;
-      item.querySelector('.pc-history__meta').textContent = `${entry.date} · ${entry.type}`;
-      item.querySelector('p:last-child').textContent = entry.notes || 'No notes recorded.';
+      item.querySelector('h3')!.textContent = entry.summary;
+      item.querySelector('.pc-history__meta')!.textContent = `${entry.date} · ${entry.type}`;
+      item.querySelector('p:last-child')!.textContent = entry.notes || 'No notes recorded.';
       list.append(item);
     });
   }

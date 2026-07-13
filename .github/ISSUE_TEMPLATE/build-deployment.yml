@@ -1,5 +1,5 @@
 name: Build or deployment issue
-description: Report MkDocs, GitHub Actions, GitHub Pages, PDF, or printable output problems.
+description: Report Starlight, GitHub Actions, GitHub Pages, PDF, or printable output problems.
 title: "Build/deployment: "
 labels:
   - build
@@ -32,4 +32,3 @@ body:
       render: text
     validations:
       required: false
-
