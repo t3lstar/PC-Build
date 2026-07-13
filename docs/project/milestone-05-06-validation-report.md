@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:05 BST.
+Status: Active validation report. Last verified: 2026-07-13 15:12 BST.
 
 ## Passed Checks
 
@@ -41,6 +41,8 @@ Status: Active validation report. Last verified: 2026-07-13 15:05 BST.
 | Local-first milestone workflow decision | User workflow decision, documented in `README.md`, `CONTRIBUTING.md`, and `docs/project/documentation-structure.md` | Future milestone work should commit locally per issue or issue group, validate locally, and push at agreed milestone checkpoints. GitHub issues should close only after pushed commits pass GitHub Actions. |
 | Milestone 5 issue #10 monitoring guide review | Manual review of `docs/22-gaming-optimisation.md`, `docs/23-benchmarks.md`, `docs/25-maintenance.md`, and `milestones/milestone-05-professional-engineering.md` | Expanded monitoring phases, baseline fields, optimisation rules, verification checklist, benchmark handoff, and maintenance comparison guidance. |
 | Local HTML build after issue #10 updates | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.97 seconds; shell wall-clock total was 1.408 seconds. |
+| Milestone 5 issue #11 maintenance schedule review | Manual review of `docs/25-maintenance.md`, `docs/appendix/checklists.md`, and `milestones/milestone-05-professional-engineering.md` | Expanded maintenance schedule, maintenance triggers, update and rollback rules, cleaning procedure, and maintenance/fault log templates. |
+| Local HTML build after issue #11 updates | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 0.95 seconds; shell wall-clock total was 1.390 seconds. |
 
 ## Warnings
 

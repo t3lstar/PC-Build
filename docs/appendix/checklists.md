@@ -1,6 +1,6 @@
 # Checklists
 
-Status: Verified Milestone 5 checklist content. Last verified: 2026-07-13 14:09 BST.
+Status: Verified Milestone 5 checklist content. Last verified: 2026-07-13 15:08 BST.
 
 ## Purpose
 
@@ -155,6 +155,7 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 
 ## Maintenance
 
+- [ ] Weekly first-month readings completed after the build.
 - [ ] Dust filters checked monthly.
 - [ ] Temperatures compared with baseline.
 - [ ] Fan noise checked for new vibration or scraping.
@@ -163,21 +164,28 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 - [ ] BIOS updated only for a documented reason.
 - [ ] Cable strain checked after moving the case.
 - [ ] Maintenance action recorded.
+- [ ] Logs do not include serial numbers, licence keys, account names, or invoice details.
 
 ## Monthly Maintenance Log Template
 
-| Date | Dust/filter state | Idle CPU/GPU temps | Fan noise | SSD free space | Action taken |
-| --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |
+| Date/time | Room temp if known | Dust/filter state | Idle CPU/GPU/SSD temps | Fan noise | SSD free space | Action taken | Next check |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
 
 ## Driver And Firmware Change Log Template
 
-| Date | Item changed | Previous version | New version | Reason | Result |
-| --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |
+| Date/time | Item changed | Previous version | New version | Source | Reason | Result | Rollback note |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
 
 ## Hardware Change Log Template
 
-| Date | Change | Parts affected | Compatibility checked | Baseline repeated | Notes |
-| --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |
+| Date/time | Change | Parts affected | Compatibility checked | Cables touched | Baseline repeated | Result | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
+
+## Fault Investigation Log Template
+
+| Date/time | Symptom | Recent change | Troubleshooting tree used | Action taken | Result | Follow-up |
+| --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |
