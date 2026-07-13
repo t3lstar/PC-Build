@@ -1,6 +1,6 @@
 # Milestone 6: Interactive Digital Twin Edition
 
-Status: Implemented locally; checkpoint push, GitHub Actions verification, production deployment switch, and issue closure remain pending.
+Status: Complete and published.
 
 GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/2
 
@@ -47,7 +47,7 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - [x] `docs/adr/0001-digital-twin-architecture.md` - accepted; Astro Starlight is the direct target platform.
 - [x] Structured build data under `data/` - verified component, connector, cable, airflow, build-sequence, BIOS-state, and reference-link dataset implemented locally for issue #21.
 - [x] JSON Schema and validation tests.
-- [x] Astro Starlight first slice - implemented locally; production deployment remains MkDocs until the Starlight switch is approved.
+- [x] Astro Starlight first slice - published under the MkDocs GitHub Pages artifact at `/digital-twin/first-slice/`.
 - [x] Accessible interactive case view.
 - [x] Clickable component inspection.
 - [x] Verified motherboard connector map.
@@ -138,8 +138,8 @@ Future commands should include interaction tests, accessibility checks, and gene
 - [x] Update `MILESTONES.md`.
 - [x] Update AGENTS guidance if implementation conventions evolve.
 - [x] Validate data, accessibility, and static-site build locally.
-- [ ] Verify GitHub Pages deployment after checkpoint push.
-- [ ] Close Milestone 6 issues only when acceptance criteria are met.
+- [x] Verify GitHub Pages deployment after checkpoint push.
+- [x] Close Milestone 6 issues only when acceptance criteria are met.
 
 ## Suggested Implementation Order
 

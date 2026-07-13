@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build MkDocs site
+    name: Build documentation site
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,8 +36,20 @@ jobs:
           python -m pip install uv
           uv pip install --system -r requirements.txt
 
-      - name: Build site
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Build MkDocs site
         run: ./scripts/build.sh html
+
+      - name: Merge Starlight digital twin
+        run: ./scripts/build-digital-twin-site.sh
 
       - name: Add GitHub Pages marker
         run: touch site/.nojekyll

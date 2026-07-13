@@ -212,7 +212,7 @@ GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/2
 
 Tracking issues: https://github.com/t3lstar/PC-Build/issues/19 through https://github.com/t3lstar/PC-Build/issues/35
 
-Status: Implemented locally; checkpoint push, GitHub Actions verification, production deployment switch, and issue closure remain pending.
+Status: Complete and published.
 
 Detailed plan: [milestones/milestone-06-digital-twin.md](milestones/milestone-06-digital-twin.md)
 

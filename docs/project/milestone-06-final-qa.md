@@ -1,10 +1,10 @@
 # Milestone 6 Final QA
 
-Status: Implemented locally. Last verified: 2026-07-13 16:44 BST.
+Status: Complete and published. Last verified: 2026-07-13 16:54 BST.
 
 ## Purpose
 
-Record the local final QA state for Milestone 6 before the checkpoint push, GitHub Actions verification, production deployment switch, and GitHub issue closure.
+Record the final QA state for Milestone 6 after the checkpoint push, GitHub Actions verification, digital twin route publication, and GitHub issue closure.
 
 ## Scope Reviewed
 
@@ -64,9 +64,9 @@ Latest local result:
 
 ## Release State
 
-Milestone 6 is implemented locally but not yet released. The current production GitHub Pages site remains the MkDocs site until the Starlight deployment switch is intentionally pushed and verified.
+Milestone 6 is released as a combined GitHub Pages artifact. MkDocs remains the main manual, and the Starlight digital twin first slice is published under `https://t3lstar.github.io/PC-Build/digital-twin/first-slice/`.
 
-GitHub issues and the GitHub milestone must remain open until:
+GitHub issues and the GitHub milestone were closed after:
 
 - The checkpoint commits are pushed to `main`.
 - GitHub Actions pass.

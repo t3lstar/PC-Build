@@ -114,6 +114,14 @@ Use this command when validating the Astro Starlight first slice:
 
 The Starlight validation target builds the static site and then checks the digital twin source and generated HTML for required interactive sections, accessibility markers, static fallbacks, reduced-motion styling, and QR asset references.
 
+Use this command after `./scripts/build.sh html` when you need to reproduce the combined GitHub Pages artifact locally:
+
+```bash
+./scripts/build-digital-twin-site.sh
+```
+
+This builds Starlight into `dist/` and merges the digital twin route and assets into the MkDocs `site/` directory.
+
 If a change introduces new tooling, document the command and expected result in `docs/project/milestone-05-06-validation-report.md`.
 
-Do not commit generated `site/` output.
+Do not commit generated `site/` or `dist/` output.

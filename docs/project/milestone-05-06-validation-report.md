@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:44 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:54 BST.
 
 ## Passed Checks
 
@@ -141,6 +141,7 @@ Status: Active validation report. Last verified: 2026-07-13 16:44 BST.
 | Starlight validation after issue #34 final QA | `. .venv/bin/activate && time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 8 static pages built in 1.80 seconds; `scripts/validate-starlight.py` passed; shell wall-clock total was 5.038 seconds. |
 | Component inspector generated HTML check | `rg -n "Component Inspector|Static Component Inspector List|aria-pressed|aria-live" dist/digital-twin/first-slice/index.html` | Passed. Built Starlight HTML contains the component inspector, static component fallback, selected-state controls, and live detail region. |
 | Starlight output size check | `du -sh dist public/assets/qrcodes src/components data/digital-twin/build.json` | Passed. Built Starlight output is 3.3M; committed QR SVG assets are 176K; component sources are 64K; structured data file is 52K. |
+| Combined Pages artifact build | `. .venv/bin/activate && ./scripts/build.sh html && ./scripts/build-digital-twin-site.sh` | Builds MkDocs into `site/`, builds Starlight into `dist/`, and merges the digital twin route and assets into `site/` for GitHub Pages publication. |
 
 ## Warnings
 

@@ -1,6 +1,6 @@
 # Publishing
 
-Status: Published HTML content. Last verified: 2026-07-13 15:16 BST.
+Status: Published HTML content. Last verified: 2026-07-13 16:54 BST.
 
 ## Purpose
 
@@ -11,8 +11,8 @@ Document how the public GitHub Pages site is built and deployed.
 - Repository owner: `t3lstar`.
 - Repository: `PC-Build`.
 - Public site URL: `https://t3lstar.github.io/PC-Build/`.
-- Pull requests build the MkDocs site but do not deploy it.
-- Pushes to `main` build the MkDocs site and deploy it to GitHub Pages.
+- Pull requests build the MkDocs site, build the Starlight digital twin slice, merge the digital twin into the site artifact, and do not deploy it.
+- Pushes to `main` build the same combined artifact and deploy it to GitHub Pages.
 - The deployment workflow adds `.nojekyll` to the published output.
 
 ## Local Build
@@ -41,11 +41,13 @@ Supported targets:
 | Node.js | 24 |
 | Python environment | Local `.venv` |
 | MkDocs output | `site/` |
+| Starlight output | `dist/` |
+| Published digital twin route | `site/digital-twin/first-slice/` |
 | Printable HTML output | `build/printable/` |
 
 Do not install MkDocs dependencies into system Python.
 
-`site/` and `build/` are generated outputs and should not be committed. GitHub Pages publishes only the HTML site from `site/`; printable output is a local release artifact unless a future workflow publishes it deliberately.
+`site/`, `dist/`, and `build/` are generated outputs and should not be committed. GitHub Pages publishes the combined HTML site from `site/`; printable output is a local release artifact unless a future workflow publishes it deliberately.
 
 The printable target builds the same documentation into `build/printable/` using the tracked print CSS in `docs/assets/stylesheets/theme.css`.
 
@@ -56,11 +58,14 @@ PDF generation is deferred by project decision. The script keeps the `pdf` targe
 1. Pull request opened or updated.
 2. GitHub Actions checks out the repository.
 3. Python dependencies are installed from `requirements.txt`.
-4. MkDocs builds the site.
-5. Pull request workflow stops after validation.
-6. Push to `main` repeats the build.
-7. Deployment workflow uploads the built site as a Pages artifact.
-8. GitHub Pages serves the result at the public URL.
+4. Node dependencies are installed from `package-lock.json`.
+5. MkDocs builds the manual into `site/`.
+6. Starlight builds the digital twin into `dist/`.
+7. `./scripts/build-digital-twin-site.sh` merges `dist/digital-twin/`, `dist/_astro/`, `dist/pagefind/`, and QR assets into `site/`.
+8. Pull request workflow stops after validation.
+9. Push to `main` repeats the build.
+10. Deployment workflow uploads the built site as a Pages artifact.
+11. GitHub Pages serves the result at the public URL.
 
 ## Verification
 
@@ -69,5 +74,6 @@ PDF generation is deferred by project decision. The script keeps the `pdf` targe
 - Local `./scripts/build.sh all` succeeds.
 - GitHub Actions build succeeds.
 - The deployed site returns HTTP 200.
+- The deployed digital twin returns HTTP 200 at `https://t3lstar.github.io/PC-Build/digital-twin/first-slice/`.
 - Navigation includes all chapter and appendix pages.
 - `.nojekyll` is included in the deployed output.

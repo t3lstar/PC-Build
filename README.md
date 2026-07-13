@@ -8,7 +8,7 @@ The intended public site URL is `https://t3lstar.github.io/PC-Build/`.
 
 ## Current Roadmap Status
 
-The project is split into staged milestones. Milestones 1-5 are complete for the published GitHub Pages HTML site. Milestone 6 is in progress locally.
+The project is split into staged milestones. Milestones 1-5 are complete for the published GitHub Pages HTML site. Milestone 6 adds the published Starlight digital twin first slice.
 
 | Milestone | Status | Tracker |
 | --- | --- | --- |
@@ -100,7 +100,7 @@ npm install
 ./scripts/validate.sh starlight
 ```
 
-The Starlight first slice builds to `dist/` and then runs source/built-output checks for the digital twin's interaction structure, accessibility markers, static fallbacks, and QR asset references. MkDocs remains the production GitHub Pages path until the Starlight migration slice is approved and the deployment workflow is switched.
+The Starlight first slice builds to `dist/` and then runs source/built-output checks for the digital twin's interaction structure, accessibility markers, static fallbacks, and QR asset references. The GitHub Pages workflow keeps MkDocs as the main manual and merges the Starlight digital twin route into the published artifact.
 
 The first slice currently uses Astro `7.0.7`, Starlight `0.41.3`, and MDX `7.0.2`. Local Node tooling should remain compatible with the repository Node.js 24 target.
 
