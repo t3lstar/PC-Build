@@ -1,0 +1,140 @@
+---
+const templates = [
+  'Monthly maintenance',
+  'Driver or firmware change',
+  'Hardware upgrade',
+  'Thermal check',
+  'Fault investigation',
+];
+---
+
+<section class="pc-history" aria-labelledby="pc-history-heading">
+  <div class="pc-case-view__header">
+    <div>
+      <h2 id="pc-history-heading">Maintenance and Upgrade History</h2>
+      <p>
+        Record local notes for maintenance, driver changes, hardware upgrades, thermal checks, and
+        fault investigations. Entries stay in this browser only.
+      </p>
+    </div>
+    <span class="pc-status">local only</span>
+  </div>
+
+  <form class="pc-history__form" aria-label="Add maintenance or upgrade history entry">
+    <label>
+      Date
+      <input name="date" type="date" required />
+    </label>
+    <label>
+      Type
+      <select name="type" required>
+        {templates.map((template) => <option value={template}>{template}</option>)}
+      </select>
+    </label>
+    <label>
+      Summary
+      <input name="summary" type="text" maxlength="120" required />
+    </label>
+    <label>
+      Notes
+      <textarea name="notes" rows="4" maxlength="600"></textarea>
+    </label>
+    <div class="pc-history__actions">
+      <button type="submit">Add Entry</button>
+      <button type="button" data-clear-history>Clear Local Entries</button>
+    </div>
+  </form>
+
+  <div class="pc-history__empty" role="status">
+    No local history entries are stored in this browser.
+  </div>
+
+  <ol class="pc-history__list" aria-label="Stored maintenance and upgrade history entries"></ol>
+
+  <details class="pc-case-view__fallback">
+    <summary>Printable History Template</summary>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Summary</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>YYYY-MM-DD</td>
+          <td>Monthly maintenance</td>
+          <td>Filters cleaned and temperatures checked</td>
+          <td>Record dust state, temperatures, fan noise, SSD free space, update state, and result.</td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<script>
+  const root = document.querySelector('.pc-history');
+  const form = root?.querySelector('.pc-history__form');
+  const list = root?.querySelector('.pc-history__list');
+  const empty = root?.querySelector('.pc-history__empty');
+  const clearButton = root?.querySelector('[data-clear-history]');
+  const storageKey = 'pc-build-maintenance-history-v1';
+
+  function readEntries() {
+    try {
+      return JSON.parse(localStorage.getItem(storageKey) ?? '[]');
+    } catch {
+      return [];
+    }
+  }
+
+  function writeEntries(entries) {
+    localStorage.setItem(storageKey, JSON.stringify(entries));
+  }
+
+  function render() {
+    if (!list || !empty) return;
+    const entries = readEntries();
+    list.innerHTML = '';
+    empty.hidden = entries.length > 0;
+
+    entries.forEach((entry) => {
+      const item = document.createElement('li');
+      item.innerHTML = `
+        <article>
+          <h3></h3>
+          <p class="pc-history__meta"></p>
+          <p></p>
+        </article>
+      `;
+      item.querySelector('h3').textContent = entry.summary;
+      item.querySelector('.pc-history__meta').textContent = `${entry.date} · ${entry.type}`;
+      item.querySelector('p:last-child').textContent = entry.notes || 'No notes recorded.';
+      list.append(item);
+    });
+  }
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(form);
+    const entry = {
+      date: data.get('date')?.toString() ?? '',
+      type: data.get('type')?.toString() ?? '',
+      summary: data.get('summary')?.toString() ?? '',
+      notes: data.get('notes')?.toString() ?? '',
+    };
+    const entries = [entry, ...readEntries()].slice(0, 50);
+    writeEntries(entries);
+    form.reset();
+    render();
+  });
+
+  clearButton?.addEventListener('click', () => {
+    localStorage.removeItem(storageKey);
+    render();
+  });
+
+  render();
+</script>

@@ -967,3 +967,109 @@
   justify-self: start;
   font-weight: 800;
 }
+
+.pc-history {
+  margin: 2rem 0;
+}
+
+.pc-history__form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .45rem;
+  padding: 1rem;
+  background: var(--sl-color-gray-6);
+}
+
+.pc-history__form label {
+  display: grid;
+  gap: .35rem;
+  font-weight: 800;
+}
+
+.pc-history__form label:nth-child(3),
+.pc-history__form label:nth-child(4) {
+  grid-column: 1 / -1;
+}
+
+.pc-history__form input,
+.pc-history__form select,
+.pc-history__form textarea {
+  width: 100%;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .35rem;
+  padding: .55rem;
+  background: var(--sl-color-black);
+  color: var(--sl-color-white);
+  font: inherit;
+}
+
+.pc-history__form input:focus-visible,
+.pc-history__form select:focus-visible,
+.pc-history__form textarea:focus-visible {
+  outline: 3px solid var(--sl-color-accent);
+  outline-offset: 2px;
+}
+
+.pc-history__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.pc-history__actions button {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .35rem;
+  padding: .5rem .75rem;
+  background: var(--sl-color-accent);
+  color: #001018;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.pc-history__actions button:last-child {
+  background: var(--sl-color-gray-6);
+  color: inherit;
+}
+
+.pc-history__actions button:focus-visible {
+  outline: 3px solid var(--sl-color-accent-high);
+  outline-offset: 2px;
+}
+
+.pc-history__empty {
+  margin: 1rem 0;
+  color: var(--sl-color-gray-3);
+}
+
+.pc-history__list {
+  display: grid;
+  gap: .75rem;
+  padding-left: 1.25rem;
+}
+
+.pc-history__list article {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: .45rem;
+  padding: .85rem;
+  background: var(--sl-color-gray-6);
+}
+
+.pc-history__list h3 {
+  margin-top: 0;
+}
+
+.pc-history__meta {
+  color: var(--sl-color-accent-high);
+  font-weight: 800;
+}
+
+@media (max-width: 44rem) {
+  .pc-history__form {
+    grid-template-columns: 1fr;
+  }
+}

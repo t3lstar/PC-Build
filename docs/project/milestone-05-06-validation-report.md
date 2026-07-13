@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 16:31 BST.
+Status: Active validation report. Last verified: 2026-07-13 16:33 BST.
 
 ## Passed Checks
 
@@ -125,6 +125,10 @@ Status: Active validation report. Last verified: 2026-07-13 16:31 BST.
 | Local full validation after issue #30 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; QR code validation passed; documentation validation passed; MkDocs reported 1.52 seconds; shell wall-clock total was 2.608 seconds. |
 | Starlight validation after issue #30 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 2.77 seconds; shell wall-clock total was 6.155 seconds. |
 | Official-link QR code generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Official-Link QR Codes`, `Static QR Link List`, and QR image paths for `gigabyte-support`, `amd-drivers-support`, and `windows-update`. |
+| Milestone 6 issue #31 maintenance and upgrade history review | Manual review of `src/components/DigitalTwinMaintenanceHistory.astro`, `src/content/docs/digital-twin/first-slice.mdx`, `src/styles/starlight.css`, `docs/25-maintenance.md`, and `docs/26-upgrades.md` | Added a browser-local maintenance and upgrade history widget using `localStorage`, with entry form, local clear action, empty state, stored-entry list, and printable history template fallback. |
+| Local full validation after issue #31 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Digital twin data validation passed; QR code validation passed; documentation validation passed; MkDocs reported 1.38 seconds; shell wall-clock total was 2.398 seconds. |
+| Starlight validation after issue #31 updates | `time ./scripts/validate.sh starlight` from `/Users/simondawson/Herd/PC-Build` | Passed. Astro reported 7 pages built in 1.79 seconds; shell wall-clock total was 4.835 seconds. |
+| Maintenance history generated HTML check | `curl -L -s http://127.0.0.1:4321/PC-Build/digital-twin/first-slice/` with content search | Passed. Generated page contains `Maintenance and Upgrade History`, `Printable History Template`, `Monthly maintenance`, `Clear Local Entries`, and `No local history`. |
 
 ## Warnings
 

@@ -13,6 +13,7 @@ import DigitalTwinExplodedView from '../../../components/DigitalTwinExplodedView
 import DigitalTwinBiosSimulator from '../../../components/DigitalTwinBiosSimulator.astro';
 import DigitalTwinDriverDashboard from '../../../components/DigitalTwinDriverDashboard.astro';
 import DigitalTwinQrCodes from '../../../components/DigitalTwinQrCodes.astro';
+import DigitalTwinMaintenanceHistory from '../../../components/DigitalTwinMaintenanceHistory.astro';
 
 This page proves that Starlight can render interactive components from the framework-neutral digital twin data model.
 
@@ -36,6 +37,8 @@ This page proves that Starlight can render interactive components from the frame
 
 <DigitalTwinQrCodes />
 
+<DigitalTwinMaintenanceHistory />
+
 ## Static Fallback
 
 If JavaScript is unavailable, this page must still explain the state of the digital twin data:
@@ -53,3 +56,4 @@ If JavaScript is unavailable, this page must still explain the state of the digi
 - Educational BIOS simulator includes a static BIOS training flow.
 - Driver and firmware dashboard includes a static official-source list.
 - QR code section includes a static official-link list.
+- Maintenance and upgrade history includes a printable table template.
