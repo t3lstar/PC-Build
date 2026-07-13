@@ -33,6 +33,10 @@
   padding-bottom: .25rem;
 }
 
+.md-typeset h3 {
+  font-weight: 750;
+}
+
 .md-typeset a {
   color: var(--pc-accent-strong);
 }
@@ -45,6 +49,11 @@
 
 .md-typeset table:not([class]) th {
   background: rgba(8, 145, 178, .12);
+}
+
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  vertical-align: top;
 }
 
 .md-typeset img[src*="assets/diagrams"],
@@ -146,6 +155,11 @@
   cursor: pointer;
 }
 
+.pc-lightbox__close:focus-visible {
+  outline: 3px solid var(--pc-accent-strong);
+  outline-offset: 3px;
+}
+
 .md-typeset .task-list-control .task-list-indicator::before {
   background-color: var(--pc-accent);
 }
@@ -199,4 +213,80 @@
   border: 1px solid var(--pc-border);
   border-radius: .4rem;
   background: var(--pc-panel);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media print {
+  :root,
+  [data-md-color-scheme="slate"] {
+    --pc-accent: #075985;
+    --pc-accent-strong: #075985;
+    --pc-panel: #ffffff;
+    --pc-border: #94a3b8;
+  }
+
+  .md-header,
+  .md-sidebar,
+  .md-tabs,
+  .md-footer,
+  .md-top,
+  .pc-diagram-hint,
+  .pc-lightbox {
+    display: none !important;
+  }
+
+  .md-main__inner,
+  .md-content,
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  .md-typeset {
+    color: #0f172a !important;
+    font-size: 10pt;
+  }
+
+  .md-typeset a {
+    color: #075985 !important;
+    text-decoration: underline;
+  }
+
+  .md-typeset h1,
+  .md-typeset h2,
+  .md-typeset h3 {
+    color: #0f172a !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .md-typeset table:not([class]),
+  .md-typeset pre,
+  .md-typeset img[src*="assets/diagrams"],
+  .md-typeset img[src*="assets/images"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .md-typeset table:not([class]) {
+    font-size: 8.5pt;
+  }
+
+  .md-typeset img[src*="assets/diagrams"],
+  .md-typeset img[src*="assets/images"] {
+    max-height: 7.5in;
+    padding: .25rem;
+    background: #ffffff !important;
+  }
 }

@@ -44,6 +44,7 @@ This project is delivered in controlled milestones so the repository can be buil
 - Use the tracked MkDocs theme configuration and `docs/assets/stylesheets/theme.css` for site-level visual styling.
 - Use `docs/project/repository-audit.md`, `docs/project/verification-register.md`, and `docs/project/milestone-05-06-validation-report.md` for Milestones 5 and 6 planning and validation.
 - Keep detailed Milestone 5 and Milestone 6 plans under `milestones/`.
+- Astro Starlight is a possible future migration path because it may fit richer interactive documentation, but do not migrate during Milestone 5. Evaluate it with a proof-of-concept after Milestone 5 is complete.
 
 ## Milestone 1: Repository Scaffolding
 

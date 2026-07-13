@@ -1,6 +1,6 @@
 # Milestone 5 and 6 Validation Report
 
-Status: Active validation report. Last verified: 2026-07-13 15:14 BST.
+Status: Active validation report. Last verified: 2026-07-13 15:16 BST.
 
 ## Passed Checks
 
@@ -48,6 +48,8 @@ Status: Active validation report. Last verified: 2026-07-13 15:14 BST.
 | Local HTML build after issue #12 updates | `. .venv/bin/activate && time ./scripts/build.sh html` from `/Users/simondawson/Herd/PC-Build` | Passed. MkDocs reported 1.04 seconds; shell wall-clock total was 1.494 seconds. |
 | Milestone 5 issue #13 validation tooling review | Manual review of `scripts/validate-docs.py`, `scripts/validate.sh`, `README.md`, `CONTRIBUTING.md`, `docs/project/documentation-structure.md`, and `milestones/milestone-05-professional-engineering.md` | Added dependency-light docs validation for required files, MkDocs nav targets, local Markdown links, plus a local `./scripts/validate.sh all` wrapper. |
 | Local full validation after issue #13 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 0.87 seconds; shell wall-clock total was 1.214 seconds. |
+| Milestone 5 issue #15 site and print styling review | Manual review of `mkdocs.yml`, `docs/assets/stylesheets/theme.css`, `MILESTONES.md`, and `milestones/milestone-05-professional-engineering.md` | Added Material code-copy/search/navigation features, print CSS, reduced-motion handling, table/diagram print rules, and documented that Astro Starlight migration is deferred to a future proof-of-concept. |
+| Local full validation after issue #15 updates | `. .venv/bin/activate && time ./scripts/validate.sh all` from `/Users/simondawson/Herd/PC-Build` | Passed. Documentation validation passed; MkDocs reported 0.86 seconds; shell wall-clock total was 1.200 seconds. |
 
 ## Warnings
 
