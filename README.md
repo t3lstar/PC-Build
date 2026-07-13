@@ -8,7 +8,7 @@ The intended public site URL is `https://t3lstar.github.io/PC-Build/`.
 
 ## Current Roadmap Status
 
-The project is split into staged milestones. Milestones 1-5 are complete for the published GitHub Pages HTML site. Milestone 6 adds the published Starlight digital twin first slice.
+The project is split into staged milestones. Milestones 1-6 are complete for the published GitHub Pages HTML site and digital twin first slice. Milestone 7 migrates the complete manual to Astro Starlight.
 
 | Milestone | Status | Tracker |
 | --- | --- | --- |
@@ -17,7 +17,8 @@ The project is split into staged milestones. Milestones 1-5 are complete for the
 | 3. Technical diagrams | Complete | [Issue #2](https://github.com/t3lstar/PC-Build/issues/2) |
 | 4. Polish | Complete for GitHub Pages HTML | [Issue #3](https://github.com/t3lstar/PC-Build/issues/3) |
 | 5. Professional Engineering Edition | Complete and published | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/1) |
-| 6. Interactive Digital Twin Edition | In progress locally | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/2) |
+| 6. Interactive Digital Twin Edition | Complete and published | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/2) |
+| 7. Full Starlight Migration | In progress locally | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/3) |
 
 See `MILESTONES.md` for the current roadmap, assumptions, and acceptance criteria.
 
@@ -115,7 +116,9 @@ The first slice currently uses Astro `7.0.7`, Starlight `0.41.3`, and MDX `7.0.2
 
 Milestone 5 added professional engineering documentation, validation automation, verification tracking, printable output, and long-term maintenance records. PDF generation remains deferred.
 
-Milestone 6 focuses on an accessible, static-site-compatible Astro Starlight digital twin backed by framework-neutral verified build data.
+Milestone 6 delivered an accessible, static-site-compatible Astro Starlight digital twin backed by framework-neutral verified build data.
+
+Milestone 7 migrates the complete manual from MkDocs Material to Astro Starlight while preserving routes, assets, validation, and GitHub Pages publication.
 
 ## Contribution Workflow
 

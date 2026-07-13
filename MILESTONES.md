@@ -46,6 +46,7 @@ This project is delivered in controlled milestones so the repository can be buil
 - Keep detailed Milestone 5 and Milestone 6 plans under `milestones/`.
 - Astro Starlight is the accepted Milestone 6 target platform for the interactive digital twin. Keep digital twin data framework-neutral, but implement the interactive site with Starlight after a controlled first slice proves GitHub Pages deployment, navigation, diagrams, validation, accessibility, and static fallbacks.
 - Milestone 6 QR code SVG assets are generated from official links in `data/digital-twin/build.json` by `scripts/generate-qrcodes.py`. Committed QR assets and their manifest live under `public/assets/qrcodes/` for the Starlight site and are validated by `./scripts/validate.sh qrcodes`.
+- Milestone 7 migrates the complete manual from MkDocs to Astro Starlight. Preserve existing published routes or document compatibility routes before switching GitHub Pages to Starlight-primary output.
 
 ## Milestone 1: Repository Scaffolding
 
@@ -227,3 +228,25 @@ Add an accurate, maintainable interactive representation of the PC that suppleme
 - Static fallbacks remain available.
 - Keyboard navigation, visible focus indicators, and reduced-motion behavior work.
 - The site remains static and deployable through GitHub Pages.
+
+## Milestone 7: Full Starlight Migration
+
+GitHub milestone: https://github.com/t3lstar/PC-Build/milestone/3
+
+Tracking issues: https://github.com/t3lstar/PC-Build/issues/36 through https://github.com/t3lstar/PC-Build/issues/44
+
+Status: In progress locally.
+
+Detailed plan: [milestones/milestone-07-full-starlight-migration.md](milestones/milestone-07-full-starlight-migration.md)
+
+Migrate the complete manual from MkDocs Material to Astro Starlight while preserving content parity, route behavior, validation, assets, and GitHub Pages publication.
+
+### Acceptance Criteria
+
+- Every MkDocs source page is either migrated to Starlight or explicitly archived.
+- Existing important published routes are preserved or have compatibility routes.
+- Starlight navigation exposes the full manual.
+- Digital twin remains published and accessible.
+- Diagram and image assets render correctly.
+- Starlight validation covers migrated pages, internal links, and critical assets.
+- GitHub Pages deploys the Starlight-primary site successfully.
