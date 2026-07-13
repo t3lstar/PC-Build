@@ -1,7 +1,6 @@
 ---
 title: "Checklists"
 ---
-Status: Verified Milestone 5 checklist content. Last verified: 2026-07-13 15:10 BST.
 
 ## Purpose
 

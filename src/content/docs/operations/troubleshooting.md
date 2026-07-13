@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 ---
-Status: Published Operations content. Last verified: 2026-07-13 18:39 BST.
 
 ## Introduction
 

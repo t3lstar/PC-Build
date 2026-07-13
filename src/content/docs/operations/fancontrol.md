@@ -1,7 +1,6 @@
 ---
 title: "FanControl Configuration"
 ---
-Status: Published HTML content. Last reviewed: 2026-07-13 18:34 BST.
 
 ## Introduction
 

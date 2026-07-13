@@ -1,7 +1,6 @@
 ---
 title: "Connector and Cable Reference"
 ---
-Status: Verified Milestone 5 content. Last verified: 2026-07-13 15:21 BST.
 
 ## Purpose
 

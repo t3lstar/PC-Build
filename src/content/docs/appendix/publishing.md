@@ -1,7 +1,6 @@
 ---
 title: "Publishing"
 ---
-Status: Published HTML content. Last verified: 2026-07-13 18:06 BST.
 
 ## Purpose
 

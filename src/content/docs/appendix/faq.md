@@ -1,7 +1,6 @@
 ---
 title: "FAQ"
 ---
-Status: Published HTML content. Last reviewed: 2026-07-13 13:53 BST.
 
 ## Purpose
 

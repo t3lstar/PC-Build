@@ -1,7 +1,6 @@
 ---
 title: "AIO Installation"
 ---
-Status: Verified Milestone 5 content. Last verified: 2026-07-13 13:42 BST.
 
 ## Introduction
 

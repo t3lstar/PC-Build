@@ -1,7 +1,6 @@
 ---
 title: "Benchmark Baseline"
 ---
-Status: Published HTML content. Last reviewed: 2026-07-13 18:38 BST.
 
 ## Introduction
 
