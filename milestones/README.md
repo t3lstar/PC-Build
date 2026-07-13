@@ -8,7 +8,7 @@ This folder contains detailed milestone plans that extend the summary roadmap in
 - [Milestone 6: Interactive Digital Twin Edition](milestone-06-digital-twin.md)
 - [Milestone 7: Full Starlight Migration](milestone-07-full-starlight-migration.md)
 
-Milestones 1-6 are complete and remain documented in `MILESTONES.md`. Milestone 7 is published; GitHub issue and milestone closure is the remaining administrative step.
+Milestones 1-7 are complete and remain documented in `MILESTONES.md`.
 
 Repository-only records:
 

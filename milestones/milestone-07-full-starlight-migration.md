@@ -1,6 +1,6 @@
 # Milestone 7: Full Starlight Migration
 
-Status: Published; final issue closure pending.
+Status: Complete and published.
 
 GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/3>
 
@@ -68,7 +68,7 @@ Complete the clean Astro Starlight site with full manual source, clean routes, v
 - [x] Diagram and image assets render from `public/assets/`.
 - [x] Validation covers pages, internal links, Markdown linting, Astro checks, and critical assets.
 - [x] GitHub Pages deploys the Starlight site successfully.
-- [ ] Milestone 7 issues are closed only after live deployment verification.
+- [x] Milestone 7 issues are closed only after live deployment verification.
 
 ## Issue Breakdown
 
@@ -80,15 +80,18 @@ Complete the clean Astro Starlight site with full manual source, clean routes, v
 - [x] [#41: M7: Expand Starlight validation and link checks](https://github.com/t3lstar/PC-Build/issues/41) - implemented locally.
 - [x] [#42: M7: Switch GitHub Pages deployment to Starlight](https://github.com/t3lstar/PC-Build/issues/42) - implemented locally.
 - [x] [#43: M7: Remove old build path](https://github.com/t3lstar/PC-Build/issues/43) - implemented locally.
-- [ ] [#44: M7: Full Starlight migration final QA and release](https://github.com/t3lstar/PC-Build/issues/44)
+- [x] [#44: M7: Full Starlight migration final QA and release](https://github.com/t3lstar/PC-Build/issues/44)
 
 ## Release Evidence
 
 - Local validation passed with `. .venv/bin/activate && ./scripts/validate.sh all`.
 - GitHub Actions deployment passed for run `29269556163` after the clean migration.
 - GitHub Actions deployment passed for run `29269908759` after restoring image enlargement.
+- GitHub Actions deployment passed for run `29270161125` after removing internal records from the public Starlight site.
 - Live GitHub Pages serves the Starlight site and the restored image lightbox script.
 - Public project-management pages were removed from the reader site when they no longer added value.
+- GitHub issues `#36` through `#44` are closed.
+- GitHub Milestone 7 is closed.
 
 ## Completion Checklist
 
@@ -97,4 +100,4 @@ Complete the clean Astro Starlight site with full manual source, clean routes, v
 - [x] Validate local Starlight build.
 - [x] Validate route and asset parity.
 - [x] Verify GitHub Pages deployment.
-- [ ] Close Milestone 7 issues only after deployment evidence is recorded.
+- [x] Close Milestone 7 issues only after deployment evidence is recorded.

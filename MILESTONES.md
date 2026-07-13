@@ -98,11 +98,11 @@ GitHub milestone: <https://github.com/t3lstar/PC-Build/milestone/3>
 
 Tracking issues: <https://github.com/t3lstar/PC-Build/issues/36> through <https://github.com/t3lstar/PC-Build/issues/44>
 
-Status: Published; final issue closure pending.
+Status: Complete and published.
 
 Detailed plan: [milestones/milestone-07-full-starlight-migration.md](milestones/milestone-07-full-starlight-migration.md)
 
-Complete the clean Astro Starlight site with source parity, clean routes, validation, assets, and GitHub Pages publication. Public pages are limited to the reader guide, appendix, and digital twin; project-management records stay in `milestones/`.
+Completed the clean Astro Starlight site with source parity, clean routes, validation, assets, and GitHub Pages publication. Public pages are limited to the reader guide, appendix, and digital twin; project-management records stay in `milestones/`.
 
 ### Acceptance Criteria
 
