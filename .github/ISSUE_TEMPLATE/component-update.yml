@@ -1,0 +1,28 @@
+name: Component compatibility or update
+description: Report component availability, compatibility, or substitution information.
+title: "Component update: "
+labels:
+  - compatibility
+body:
+  - type: input
+    id: component
+    attributes:
+      label: Component
+      placeholder: RAM, SSD, GPU, case, motherboard
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Change or concern
+      description: Describe the component update, compatibility concern, or acceptable alternative.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or references
+      description: Link manufacturer pages, manuals, retailer listings, or compatibility documentation.
+    validations:
+      required: false
+

@@ -23,6 +23,7 @@ This project will be delivered in four milestones so the repository can be built
 - Include `requirements.txt` for MkDocs and documentation build dependencies.
 - Use Python 3.12, Node.js 24, and a local `.venv` for local dependencies; ignore `.venv` in Git.
 - Include `CONTRIBUTING.md` with documentation rules.
+- Include public repository hygiene files: `LICENSE`, `SECURITY.md`, and GitHub issue templates.
 - In Milestone 1, create diagram folders only. Do not create empty diagram placeholder files.
 - Publish the documentation as a public GitHub Pages site using GitHub Actions.
 - Use the default GitHub Pages URL first; defer any custom domain.
@@ -65,6 +66,8 @@ Create the documentation repository structure and make it ready for content.
 
 ## Milestone 2: Core Content
 
+Tracking issue: https://github.com/t3lstar/PC-Build/issues/1
+
 Write the complete technical documentation for each chapter.
 
 ### Scope
@@ -95,6 +98,8 @@ Write the complete technical documentation for each chapter.
 - Cross-links between chapters are present and useful.
 
 ## Milestone 3: Technical Diagrams
+
+Tracking issue: https://github.com/t3lstar/PC-Build/issues/2
 
 Add technically accurate diagrams that support the written build guide.
 
@@ -130,6 +135,8 @@ Add technically accurate diagrams that support the written build guide.
 - No AI-generated artwork is used.
 
 ## Milestone 4: Polish
+
+Tracking issue: https://github.com/t3lstar/PC-Build/issues/3
 
 Refine the documentation into a publication-ready manual.
 

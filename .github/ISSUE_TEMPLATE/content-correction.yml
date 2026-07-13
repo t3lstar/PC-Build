@@ -1,0 +1,29 @@
+name: Content correction
+description: Report incorrect, unclear, or incomplete documentation.
+title: "Content correction: "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Link to the page or describe the chapter and section.
+      placeholder: docs/07-cpu-installation.md, Warnings section
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Issue
+      description: Explain what is incorrect, unclear, or missing.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: Provide the corrected wording or technical detail if known.
+    validations:
+      required: false
+

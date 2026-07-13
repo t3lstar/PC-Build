@@ -1,0 +1,33 @@
+name: Diagram task
+description: Request or correct a Mermaid, PlantUML, or SVG diagram.
+title: "Diagram: "
+labels:
+  - diagram
+body:
+  - type: dropdown
+    id: diagram_type
+    attributes:
+      label: Diagram type
+      options:
+        - Mermaid
+        - PlantUML
+        - SVG
+        - Screenshot
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Describe what the diagram should show or what is wrong with the existing diagram.
+    validations:
+      required: true
+  - type: textarea
+    id: accuracy_notes
+    attributes:
+      label: Accuracy notes
+      description: Include manuals, measurements, connector labels, or layout references where relevant.
+    validations:
+      required: false
+

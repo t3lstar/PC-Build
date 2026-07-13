@@ -1,0 +1,35 @@
+name: Build or deployment issue
+description: Report MkDocs, GitHub Actions, GitHub Pages, PDF, or printable output problems.
+title: "Build/deployment: "
+labels:
+  - build
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Local build
+        - GitHub Actions
+        - GitHub Pages
+        - PDF generation
+        - Printable manual
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Describe the failure or incorrect output.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output
+      description: Paste logs, command output, or links to failed workflow runs.
+      render: text
+    validations:
+      required: false
+

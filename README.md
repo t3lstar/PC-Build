@@ -17,6 +17,10 @@ The project is split into four milestones:
 
 See `MILESTONES.md` for the current roadmap, assumptions, and acceptance criteria.
 
+## License
+
+This documentation is published under the MIT License. See `LICENSE`.
+
 ## Repository Layout
 
 ```text
