@@ -26,7 +26,7 @@ Retailer links are convenience links. Confirm seller, price, warranty terms, del
 - Amazon UK purchase link: [Amazon UK](https://www.amazon.co.uk/gp/product/B0DQM8GPR7/ref=ox_sc_act_title_8?smid=A3P5ROKL5A1OLE&th=1).
 - Compatibility status: Compatible with Ryzen 7000-series CPUs, DDR5 memory, ATX cases, and Windows 11.
 
-#### Memory: 32GB DDR5-6000 CL30 AMD EXPO
+#### Memory: G.SKILL Trident Z5 Neo RGB 32GB DDR5-6000 CL30 AMD EXPO
 
 - Exact model or target specification: Preferred kit G.SKILL Trident Z5 Neo RGB `F5-6000J3038F16GX2-TZ5NR`; 2 x 16GB; DDR5-6000 CL30-38-38-96; 1.35V; AMD EXPO.
 - Manufacturer reference: [G.SKILL Trident Z5 Neo RGB](https://www.gskill.com/product/165/390/1661410135/F5-6000J3038F16GX2-TZ5NR).

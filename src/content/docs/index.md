@@ -15,7 +15,7 @@ The image below is the ChatGPT-generated visual reference for the intended compl
 - CPU: AMD Ryzen 7 7800X3D
 - CPU cooler: ARCTIC Liquid Freezer III Pro 360
 - Motherboard: Gigabyte B850 AORUS Elite WiFi7
-- Memory: 32GB DDR5-6000 CL30 AMD EXPO
+- Memory: G.SKILL Trident Z5 Neo RGB 32GB DDR5-6000 CL30 AMD EXPO
 - SSD: Samsung 990 PRO 2TB NVMe
 - GPU: Gigabyte Radeon RX 9060 XT Gaming OC 16GB
 - Case: Lian Li O11 Dynamic Mini V2 Flow
