@@ -21,7 +21,7 @@ This appendix identifies connector names and safe routing rules. It does not pro
 | Internal USB 3.x header  | Front USB-A ports                              | Align carefully before applying pressure. Do not bend header pins.                                | Verified from motherboard connector inventory.                         |
 | Internal USB-C header    | Front USB-C port                               | Align straight and avoid side load.                                                               | Verified from motherboard connector inventory.                         |
 | HD audio header          | Front audio jack                               | Route away from fans and high-tension power cable bundles.                                        | Verified from motherboard connector inventory.                         |
-| `M2A_CPU`                | Boot NVMe SSD                                  | Preferred slot for the Samsung 990 EVO Plus boot drive. Use the motherboard heatsink.             | Verified as CPU-connected M.2 slot.                                    |
+| `M2A_CPU`                | Boot NVMe SSD                                  | Preferred slot for the Samsung 990 PRO boot drive. Use the motherboard heatsink.                  | Verified as CPU-connected M.2 slot.                                    |
 | Primary PCIe x16 slot    | Graphics card                                  | Install GPU in the primary slot and connect monitor to GPU outputs.                               | Verified from motherboard connector inventory.                         |
 
 ## PSU Cable Reference

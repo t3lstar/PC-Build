@@ -37,6 +37,8 @@ This project is delivered in controlled milestones so the repository can be buil
 - QR code SVG assets are generated from official links in `data/digital-twin/build.json` by `scripts/generate-qrcodes.py`. Committed QR assets and their manifest live under `public/assets/qrcodes/`.
 - Milestone 7 uses a clean Starlight information architecture. Numbered chapter routes are not preserved.
 - Milestone 8 adds `src/content/docs/operations/` as the first-class post-build operating handbook.
+- Current selected RAM is G.SKILL Trident Z5 Neo RGB `F5-6000J3038F16GX2-TZ5NR`, verified by G.SKILL product data and QVL for `B850 AORUS ELITE WIFI7`.
+- Current selected SSD is Samsung 990 PRO 2TB `MZ-V9P2T0BW`, verified by Samsung 990 PRO data sheet Rev. 2.0.
 
 ## Milestone 1: Repository Scaffolding
 

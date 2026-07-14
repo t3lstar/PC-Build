@@ -8,7 +8,7 @@ This chapter installs Windows 11 Pro from the USB installer that is already assu
 
 ## Purpose
 
-Create a clean Windows installation on the Samsung 990 EVO Plus 2TB NVMe SSD.
+Create a clean Windows installation on the Samsung 990 PRO 2TB NVMe SSD.
 
 ## Estimated Time
 
@@ -39,7 +39,7 @@ Beginner to moderate.
 2. Boot the system and choose the USB installer from the boot menu.
 3. Select Windows 11 Pro when prompted for edition.
 4. Choose custom installation.
-5. Select the Samsung 990 EVO Plus 2TB NVMe SSD.
+5. Select the Samsung 990 PRO 2TB NVMe SSD.
 6. Delete existing partitions only if this is a new or intentionally wiped drive.
 7. Install Windows to the unallocated space on the SSD.
 8. Let setup copy files and reboot.
@@ -53,7 +53,7 @@ Beginner to moderate.
 
 - [ ] Windows boots from the NVMe SSD.
 - [ ] Windows edition is Pro.
-- [ ] The installation drive is the Samsung 990 EVO Plus.
+- [ ] The installation drive is the Samsung 990 PRO.
 - [ ] Network is available.
 - [ ] Windows Update runs successfully.
 - [ ] Windows activation is complete or clearly pending.

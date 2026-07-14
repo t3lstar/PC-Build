@@ -54,7 +54,7 @@ Diagram sources: [boot-process.mmd](/PC-Build/assets/diagrams/mermaid/boot-proce
 10. Enter BIOS using the motherboard setup key when prompted.
 11. Confirm the CPU is detected as Ryzen 7 7800X3D.
 12. Confirm both memory modules are detected at default speed.
-13. Confirm the Samsung 990 EVO Plus is detected.
+13. Confirm the Samsung 990 PRO is detected.
 14. Confirm CPU temperature is reasonable in BIOS.
 15. Shut down if any fan or pump is not detected.
 

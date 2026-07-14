@@ -6,7 +6,7 @@ title: "Components"
 
 This chapter identifies the hardware used in the build and explains the role of each component before installation begins.
 
-Use this chapter with the [Bill of Materials](/PC-Build/appendix/bill-of-materials/), which contains exact model numbers, manufacturer references, Amazon UK links, and accepted RAM or SSD alternatives.
+Use this chapter with the [Bill of Materials](/PC-Build/appendix/bill-of-materials/), which contains exact model numbers, manufacturer references, and Amazon UK links for the locked component set.
 
 ## Visual Reference
 
@@ -28,12 +28,8 @@ Use these images to identify the real component families before opening packagin
     <figcaption><strong>Motherboard:</strong> Gigabyte B850 AORUS Elite WiFi7. Source: <a href="https://www.gigabyte.com/Motherboard/B850-AORUS-ELITE-WIFI7-rev-1x">Gigabyte</a>.</figcaption>
   </figure>
   <figure>
-    <img src="https://www.gskill.com/_upload/images/167349124210.png" alt="G.SKILL Flare X5 DDR5 memory product image">
-    <figcaption><strong>Memory:</strong> G.SKILL Flare X5 DDR5-6000 CL30 32GB kit. Source: <a href="https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5">G.SKILL</a>.</figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.samsung.com/is/image/samsung/p6pim/au/mz-v9s2t0bw/gallery/au-990-evo-plus-nvme-m2-ssd-525138-mz-v9s2t0bw-543796407?$1164_776_PNG$" alt="Samsung 990 EVO Plus 2TB NVMe SSD product image">
-    <figcaption><strong>SSD:</strong> Samsung 990 EVO Plus 2TB NVMe. Source: <a href="https://www.samsung.com/au/memory-storage/nvme-ssd/990-evo-plus-2tb-nvme-pcie-gen-4-mz-v9s2t0bw/">Samsung</a>.</figcaption>
+    <img src="https://images.samsung.com/is/image/samsung/p6pim/uk/mz-v9p2t0bw/gallery/uk-990pro-nvme-m2-ssd-mz-v9p2t0bw-534234852?$1164_776_PNG$" alt="Samsung 990 PRO 2TB NVMe SSD product image">
+    <figcaption><strong>SSD:</strong> Samsung 990 PRO 2TB NVMe. Source: <a href="https://www.samsung.com/uk/memory-storage/nvme-ssd/990-pro-2tb-nvme-pcie-gen-4-mz-v9p2t0bw/">Samsung</a>.</figcaption>
   </figure>
   <figure>
     <img src="https://www.gigabyte.com/FileUpload/Global/KeyFeature/4043/innergigabyte/images/kv-img.png" alt="Gigabyte Radeon RX 9060 XT Gaming OC 16G graphics card product image">
@@ -72,7 +68,7 @@ Beginner.
 
 - Do not open anti-static bags until the build workspace is ready.
 - Do not install parts before confirming the exact model numbers.
-- Do not substitute RAM or SSD models unless they meet the requirements in the bill of materials.
+- Do not substitute RAM or SSD models unless the bill of materials is deliberately updated and reverified.
 - Do not rely only on retailer titles. Check manufacturer model numbers.
 
 ## Step-by-Step Instructions

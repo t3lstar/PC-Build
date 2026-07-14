@@ -4,7 +4,7 @@ title: "M.2 SSD Installation"
 
 ## Introduction
 
-This chapter installs the Samsung 990 EVO Plus 2TB NVMe SSD into a motherboard M.2 slot.
+This chapter installs the Samsung 990 PRO 2TB NVMe SSD into a motherboard M.2 slot.
 
 ## Purpose
 
@@ -22,7 +22,7 @@ Beginner to moderate.
 
 - Precision Phillips screwdriver if the M.2 heatsink uses screws.
 - Anti-static wrist strap.
-- Samsung 990 EVO Plus 2TB SSD.
+- Samsung 990 PRO 2TB SSD.
 - Gigabyte B850 AORUS Elite WiFi7 user manual.
 
 ## Warnings
@@ -39,7 +39,7 @@ Beginner to moderate.
 2. Remove the M.2 heatsink covering `M2A_CPU`.
 3. Confirm the slot is set for an 80mm `2280` drive position.
 4. Remove any protective film from the heatsink thermal pad.
-5. Hold the Samsung 990 EVO Plus by its edges.
+5. Hold the Samsung 990 PRO by its edges.
 6. Insert the SSD into the M.2 connector at a shallow angle.
 7. Lower the free end of the SSD onto the standoff or latch point.
 8. Secure the SSD with the motherboard latch or screw.
@@ -67,12 +67,12 @@ Beginner to moderate.
 
 ## Expected Result
 
-The Samsung 990 EVO Plus 2TB drive is installed under a motherboard heatsink and ready to be detected during BIOS and Windows setup.
+The Samsung 990 PRO 2TB drive is installed under a motherboard heatsink and ready to be detected during BIOS and Windows setup.
 
 ## Sources Reviewed
 
 - [Gigabyte B850 AORUS Elite WiFi7 user manual 1101](https://download.gigabyte.com/FileList/Manual/mb_manual_b850-aorus-elite-wf7_1101_e.pdf)
-- [Samsung 990 EVO Plus data sheet](https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf)
+- [Samsung 990 PRO data sheet](https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_pro_datasheet_rev.2.0.pdf)
 
 ## Next Chapter
 

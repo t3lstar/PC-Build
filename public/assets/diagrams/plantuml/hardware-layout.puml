@@ -7,7 +7,7 @@ rectangle "Lian Li O11 Dynamic Mini V2 Flow" {
   rectangle "Gigabyte B850 AORUS Elite WiFi7" as Motherboard {
     rectangle "AM5 socket\nRyzen 7 7800X3D" as CPU
     rectangle "DDR5 A2/B2\n32GB kit" as RAM
-    rectangle "M.2 NVMe\nSamsung 990 EVO Plus 2TB" as SSD
+    rectangle "M.2 NVMe\nSamsung 990 PRO 2TB" as SSD
     rectangle "Primary PCIe x16\nRX 9060 XT" as GPU
   }
   rectangle "Bottom reverse-blade intake fans" as BottomFans

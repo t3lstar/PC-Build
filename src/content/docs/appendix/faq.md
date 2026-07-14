@@ -30,7 +30,7 @@ Connect the monitor to the graphics card.
 
 ### Can I use another SSD?
 
-Yes, if it is an M.2 2280 NVMe SSD with suitable capacity, performance, and thermal behavior. See the bill of materials for accepted alternatives.
+Not for the locked build. Use the Samsung 990 PRO 2TB model listed in the bill of materials unless component selection is deliberately reopened and reverified.
 
 ### Can I add another RAM kit later?
 

@@ -62,7 +62,7 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 - [ ] Ryzen 7 7800X3D is aligned and installed without force.
 - [ ] Socket cover stored.
 - [ ] DDR5 memory is installed in `A2` and `B2`.
-- [ ] Samsung 990 EVO Plus is installed in `M2A_CPU`.
+- [ ] Samsung 990 PRO is installed in `M2A_CPU`.
 - [ ] M.2 thermal pad film removed.
 - [ ] M.2 heatsink is reinstalled.
 - [ ] No screws or loose parts are under the motherboard.

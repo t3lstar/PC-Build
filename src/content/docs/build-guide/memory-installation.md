@@ -35,7 +35,7 @@ Beginner.
 
 ## Step-by-Step Instructions
 
-1. Confirm the kit is the approved 2 x 16GB DDR5-6000 CL30 kit from the bill of materials. The preferred G.SKILL Flare X5 `F5-6000J3038F16GX2-FX5` kit is listed by G.SKILL for the Gigabyte B850 AORUS Elite WiFi7.
+1. Confirm the kit is the locked 2 x 16GB DDR5-6000 CL30 kit from the bill of materials. The G.SKILL Trident Z5 Neo RGB `F5-6000J3038F16GX2-TZ5NR` kit is listed by G.SKILL for the Gigabyte B850 AORUS Elite WiFi7.
 2. Locate the four DIMM slots beside the CPU socket.
 3. For two modules, use the motherboard-recommended paired slots: `A2` and `B2`.
 4. Open the retaining latches for those slots.
@@ -67,7 +67,7 @@ The DDR5 memory kit is installed in the correct dual-channel slots and ready for
 
 ## Sources Reviewed
 
-- [G.SKILL Flare X5 `F5-6000J3038F16GX2-FX5` QVL](https://www.gskill.com/qvl/165/396/1673491242/F5-6000J3038F16GX2-FX5-QVL)
+- [G.SKILL Trident Z5 Neo RGB `F5-6000J3038F16GX2-TZ5NR` QVL](https://www.gskill.com/qvl/165/390/1661410135/F5-6000J3038F16GX2-TZ5NR-QVL)
 - [Gigabyte B850 AORUS Elite WiFi7 user manual 1101](https://download.gigabyte.com/FileList/Manual/mb_manual_b850-aorus-elite-wf7_1101_e.pdf)
 
 ## Next Chapter

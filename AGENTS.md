@@ -19,7 +19,7 @@ Do not recreate project decisions that are already captured in `MILESTONES.md`. 
 
 When a new project requirement, environment constraint, tooling version, compatibility note, workflow decision, or implementation assumption is discovered, update the relevant project documentation in the same change.
 
-Examples include Python versions, Node.js versions, GitHub Pages behavior, build tooling constraints, component compatibility notes, accepted alternatives, and validation commands.
+Examples include Python versions, Node.js versions, GitHub Pages behavior, build tooling constraints, locked component choices, component compatibility notes, and validation commands.
 
 Do not leave durable project knowledge only in chat history.
 
@@ -30,8 +30,8 @@ Use `MILESTONES.md` and `milestones/` as the planning source of truth.
 - CPU: AMD Ryzen 7 7800X3D
 - CPU cooler: ARCTIC Liquid Freezer III Pro 360
 - Motherboard: Gigabyte B850 AORUS Elite WiFi7
-- Memory: 32GB DDR5-6000 CL30 AMD EXPO
-- SSD: Samsung 990 EVO Plus 2TB NVMe
+- Memory: G.SKILL Trident Z5 Neo RGB 32GB DDR5-6000 CL30 AMD EXPO `F5-6000J3038F16GX2-TZ5NR`
+- SSD: Samsung 990 PRO 2TB NVMe `MZ-V9P2T0BW`
 - GPU: Gigabyte Radeon RX 9060 XT Gaming OC 16GB
 - Case: Lian Li O11 Dynamic Mini V2 Flow
 - Power supply: ASUS TUF Gaming 1000W Gold
@@ -141,7 +141,7 @@ Operations chapters should keep post-build guidance separate from build steps. U
 
 Maintain a dedicated buying guide at `src/content/docs/appendix/bill-of-materials.md`.
 
-The bill of materials should identify the exact intended components and acceptable alternatives where applicable.
+The bill of materials should identify the exact intended components for the locked build.
 
 Prefer manufacturer product pages for stable reference links.
 
@@ -153,7 +153,7 @@ Compatibility notes should state the verification result and evidence. Do not le
 
 Do not scatter retailer links throughout installation chapters unless there is a strong reason.
 
-RAM and SSD alternatives are acceptable when they preserve the intended platform requirements and performance class.
+RAM and SSD alternatives are not part of the locked build unless the user explicitly reopens component selection.
 
 Do not fabricate technical details, connector positions, benchmark scores, URLs, screenshots, compatibility claims, BIOS menu names, or hardware measurements.
 

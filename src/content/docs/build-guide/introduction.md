@@ -58,7 +58,7 @@ See [Tools](/PC-Build/build-guide/tools/) and the [Bill of Materials](/PC-Build/
 Diagram source: [build-sequence.mmd](/PC-Build/assets/diagrams/mermaid/build-sequence.mmd)
 
 1. Review the build specification in [Components](/PC-Build/build-guide/components/).
-2. Confirm exact models and compatible alternatives in the [Bill of Materials](/PC-Build/appendix/bill-of-materials/).
+2. Confirm the exact locked component models in the [Bill of Materials](/PC-Build/appendix/bill-of-materials/).
 3. Gather tools and prepare the workspace.
 4. Install CPU, memory, and SSD on the motherboard before the board goes into the case.
 5. Prepare the case and PSU cable paths.
@@ -76,7 +76,7 @@ Diagram source: [build-sequence.mmd](/PC-Build/assets/diagrams/mermaid/build-seq
 - [ ] Required tools are available.
 - [ ] Windows 11 Pro USB installer is available.
 - [ ] Component model numbers are confirmed.
-- [ ] RAM and SSD alternatives, if used, meet the documented requirements.
+- [ ] RAM and SSD model numbers match the locked bill of materials.
 - [ ] The first boot plan keeps EXPO disabled until default stability is confirmed.
 - [ ] Benchmark and maintenance records will be kept after assembly.
 

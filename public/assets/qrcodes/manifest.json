@@ -52,11 +52,11 @@
       "file": "gigabyte-support.svg"
     },
     {
-      "id": "gskill-flare-x5",
-      "label": "G.SKILL Flare X5 F5-6000J3038F16GX2-FX5",
-      "url": "https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5",
+      "id": "gskill-trident-z5-neo-rgb",
+      "label": "G.SKILL Trident Z5 Neo RGB F5-6000J3038F16GX2-TZ5NR",
+      "url": "https://www.gskill.com/product/165/390/1661410135/F5-6000J3038F16GX2-TZ5NR",
       "kind": "manufacturer",
-      "file": "gskill-flare-x5.svg"
+      "file": "gskill-trident-z5-neo-rgb.svg"
     },
     {
       "id": "lian-li-case",
@@ -66,11 +66,11 @@
       "file": "lian-li-case.svg"
     },
     {
-      "id": "samsung-990-evo-plus",
-      "label": "Samsung 990 EVO Plus data sheet",
-      "url": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf",
+      "id": "samsung-990-pro",
+      "label": "Samsung 990 PRO data sheet",
+      "url": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_pro_datasheet_rev.2.0.pdf",
       "kind": "manufacturer",
-      "file": "samsung-990-evo-plus.svg"
+      "file": "samsung-990-pro.svg"
     },
     {
       "id": "samsung-magician",

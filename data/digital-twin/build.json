@@ -5,7 +5,7 @@
     "project": "Custom Gaming PC Build Manual",
     "siteUrl": "https://t3lstar.github.io/PC-Build/",
     "status": "draft",
-    "lastVerified": "2026-07-13 16:27 BST",
+    "lastVerified": "2026-07-14 00:00 BST",
     "sourceAdr": "milestones/adr-0001-digital-twin-architecture.md",
     "notes": [
       "Milestone 6 issue #21 verified dataset for component identity, connector names, cable dependencies, airflow roles, build sequence, and BIOS training states.",
@@ -73,18 +73,18 @@
     {
       "id": "memory",
       "category": "memory",
-      "name": "G.SKILL Flare X5 32GB DDR5-6000 CL30",
-      "model": "F5-6000J3038F16GX2-FX5",
+      "name": "G.SKILL Trident Z5 Neo RGB 32GB DDR5-6000 CL30",
+      "model": "F5-6000J3038F16GX2-TZ5NR",
       "role": "Two-module AMD EXPO DDR5 kit installed in slots DDR5_A2 and DDR5_B2.",
       "chapter": "src/content/docs/build-guide/memory-installation.md",
-      "manufacturerUrl": "https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5",
+      "manufacturerUrl": "https://www.gskill.com/product/165/390/1661410135/F5-6000J3038F16GX2-TZ5NR",
       "evidence": {
         "state": "verified",
         "sources": [
           {
             "type": "repository",
             "ref": "milestones/verification-register.md",
-            "note": "G.SKILL QVL lists the motherboard for this kit and the manual verifies A2/B2 slot guidance."
+            "note": "G.SKILL QVL lists the motherboard for this locked kit and the manual verifies A2/B2 slot guidance."
           }
         ]
       }
@@ -92,11 +92,11 @@
     {
       "id": "storage",
       "category": "storage",
-      "name": "Samsung 990 EVO Plus 2TB NVMe SSD",
-      "model": "MZ-V9S2T0",
+      "name": "Samsung 990 PRO 2TB NVMe SSD",
+      "model": "MZ-V9P2T0BW",
       "role": "M.2 2280 NVMe boot SSD installed in the preferred CPU-connected M2A_CPU slot.",
       "chapter": "src/content/docs/build-guide/m2-installation.md",
-      "manufacturerUrl": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf",
+      "manufacturerUrl": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_pro_datasheet_rev.2.0.pdf",
       "evidence": {
         "state": "verified",
         "sources": [
@@ -1431,9 +1431,9 @@
       }
     },
     {
-      "id": "gskill-flare-x5",
-      "label": "G.SKILL Flare X5 F5-6000J3038F16GX2-FX5",
-      "url": "https://www.gskill.com/product/165/396/1673491242/F5-6000J3038F16GX2-FX5",
+      "id": "gskill-trident-z5-neo-rgb",
+      "label": "G.SKILL Trident Z5 Neo RGB F5-6000J3038F16GX2-TZ5NR",
+      "url": "https://www.gskill.com/product/165/390/1661410135/F5-6000J3038F16GX2-TZ5NR",
       "kind": "manufacturer",
       "componentId": "memory",
       "evidence": {
@@ -1442,15 +1442,15 @@
           {
             "type": "repository",
             "ref": "milestones/verification-register.md",
-            "note": "QVL compatibility is verified."
+            "note": "QVL compatibility is verified for the locked kit."
           }
         ]
       }
     },
     {
-      "id": "samsung-990-evo-plus",
-      "label": "Samsung 990 EVO Plus data sheet",
-      "url": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_evo_plus_datasheet_rev.1.0.pdf",
+      "id": "samsung-990-pro",
+      "label": "Samsung 990 PRO data sheet",
+      "url": "https://download.semiconductor.samsung.com/resources/data-sheet/samsung_nvme_ssd_990_pro_datasheet_rev.2.0.pdf",
       "kind": "manufacturer",
       "componentId": "storage",
       "evidence": {
