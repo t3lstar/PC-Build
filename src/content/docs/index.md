@@ -12,14 +12,14 @@ The image below is the ChatGPT-generated visual reference for the intended compl
 
 ## Build Specification
 
-- CPU: AMD Ryzen 7 7800X3D
-- CPU cooler: ARCTIC Liquid Freezer III Pro 360
-- Motherboard: Gigabyte B850 AORUS Elite WiFi7
-- Memory: G.SKILL Trident Z5 Neo RGB 32GB DDR5-6000 CL30 AMD EXPO
-- SSD: Samsung 990 PRO 2TB NVMe
-- GPU: Gigabyte Radeon RX 9060 XT Gaming OC 16GB
-- Case: Lian Li O11 Dynamic Mini V2 Flow
-- Power supply: ASUS TUF Gaming 1000W Gold
+- CPU: AMD Ryzen 7 7800X3D [100-100000910WOF]
+- CPU cooler: ARCTIC Liquid Freezer III Pro 360 [ACFRE00180A]
+- Motherboard: Gigabyte B850 AORUS Elite WiFi7 [B850 AORUS ELITE WIFI7 rev. 1.x]
+- Memory: G.SKILL Trident Z5 Neo RGB 32GB DDR5-6000 CL30 AMD EXPO [F5-6000J3038F16GX2-TZ5NR]
+- SSD: Samsung 990 PRO 2TB NVMe [MZ-V9P2T0BW]
+- GPU: Gigabyte Radeon RX 9060 XT Gaming OC 16GB [GV-R9060XTGAMING-OC-16GD]
+- Case: Lian Li O11 Dynamic Mini V2 Flow [O11DMIV2FX]
+- Power supply: ASUS TUF Gaming 1000W Gold [TUF-GAMING-1000G]
 - Operating system: Windows 11 Pro on USB installation media
 
 ## Start Here
