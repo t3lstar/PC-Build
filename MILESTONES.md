@@ -18,6 +18,7 @@ This project is delivered in controlled milestones so the repository can be buil
 - Use one parameterized build script at `scripts/build.sh` with `html`, `pdf`, `printable`, and `all` targets.
 - PDF generation is deferred.
 - Use Python 3.12, Node.js 24, and a local `.venv` for local dependencies.
+- `scripts/validate.sh` uses `.venv/bin/python` automatically when that interpreter exists, unless `PYTHON` is explicitly set.
 - Include `CONTRIBUTING.md` with documentation rules.
 - Include public repository hygiene files: `LICENSE`, `SECURITY.md`, and GitHub issue templates.
 - Publish the documentation as a public GitHub Pages site using GitHub Actions.

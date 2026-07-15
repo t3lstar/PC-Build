@@ -4,6 +4,15 @@ set -euo pipefail
 TARGET="${1:-all}"
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
+PYTHON_BIN="${PYTHON:-}"
+if [[ -z "$PYTHON_BIN" ]]; then
+  if [[ -x "$ROOT_DIR/.venv/bin/python" ]]; then
+    PYTHON_BIN="$ROOT_DIR/.venv/bin/python"
+  else
+    PYTHON_BIN="python3"
+  fi
+fi
+
 usage() {
   cat <<'USAGE'
 Usage: ./scripts/validate.sh <target>
@@ -19,12 +28,12 @@ USAGE
 
 validate_data() {
   cd "$ROOT_DIR"
-  "${PYTHON:-python3}" scripts/validate-data.py
+  "$PYTHON_BIN" scripts/validate-data.py
 }
 
 validate_qrcodes() {
   cd "$ROOT_DIR"
-  "${PYTHON:-python3}" scripts/generate-qrcodes.py --check
+  "$PYTHON_BIN" scripts/generate-qrcodes.py --check
 }
 
 validate_html() {
@@ -36,7 +45,7 @@ validate_starlight() {
   cd "$ROOT_DIR"
   npm run check
   npm run starlight:build
-  "${PYTHON:-python3}" scripts/validate-starlight.py
+  "$PYTHON_BIN" scripts/validate-starlight.py
 }
 
 case "$TARGET" in

@@ -20,11 +20,11 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 
 - [ ] CPU model is AMD Ryzen 7 7800X3D.
 - [ ] Motherboard model is Gigabyte B850 AORUS Elite WiFi7 rev. 1.x.
-- [ ] Memory is an approved 2 x 16GB DDR5-6000 CL30 AMD EXPO kit from the bill of materials.
-- [ ] SSD is a 2TB M.2 2280 NVMe drive, not SATA M.2.
+- [ ] Memory is G.SKILL Trident Z5 Neo RGB 32GB DDR5-6000 CL30 AMD EXPO `F5-6000J3038F16GX2-TZ5NR`.
+- [ ] SSD is Samsung 990 PRO 2TB NVMe `MZ-V9P2T0BW`, not a SATA M.2 drive.
 - [ ] GPU listing is the Gigabyte Radeon RX 9060 XT Gaming OC 16GB model.
 - [ ] Case is Lian Li O11 Dynamic Mini V2 Flow, black Flow SKU `O11DMIV2FX` if matching the documented build.
-- [ ] PSU is ASUS TUF Gaming 1000W Gold or a documented compatible equivalent.
+- [ ] PSU is ASUS TUF Gaming 1000W Gold `TUF-GAMING-1000G`.
 - [ ] Retailer listings match exact model numbers.
 - [ ] Return windows and warranty terms are understood.
 - [ ] Windows 11 Pro USB installer is already available.
@@ -61,10 +61,10 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 - [ ] AM5 socket is inspected before CPU installation.
 - [ ] Ryzen 7 7800X3D is aligned and installed without force.
 - [ ] Socket cover stored.
-- [ ] DDR5 memory is installed in `A2` and `B2`.
 - [ ] Samsung 990 PRO is installed in `M2A_CPU`.
 - [ ] M.2 thermal pad film removed.
 - [ ] M.2 heatsink is reinstalled.
+- [ ] DDR5 memory is installed in `A2` and `B2`.
 - [ ] No screws or loose parts are under the motherboard.
 
 ## Case Prep

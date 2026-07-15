@@ -66,8 +66,8 @@ Moderate because the AM5 socket contacts are delicate.
 
 ## Expected Result
 
-The Ryzen 7 7800X3D is locked into the AM5 socket and ready for memory, SSD, and cooler installation.
+The Ryzen 7 7800X3D is locked into the AM5 socket and ready for SSD, memory, and cooler installation.
 
 ## Next Chapter
 
-Continue to [Memory Installation](/PC-Build/build-guide/memory-installation/).
+Continue to [M.2 SSD Installation](/PC-Build/build-guide/m2-installation/).

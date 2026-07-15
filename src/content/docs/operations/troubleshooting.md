@@ -149,7 +149,7 @@ Source: [troubleshooting-windows-driver.mmd](/PC-Build/assets/diagrams/mermaid/t
 | ------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------- |
 | No power                              | PSU, front-panel connector, wall power          | PSU switch, wall socket, 24-pin, front-panel power switch pins.              |
 | Powers on, no display                 | GPU, memory training, monitor path              | Display cable in GPU, GPU power, wait for DDR5 training, RAM seating.        |
-| Boot loop after EXPO                  | Memory profile                                  | Clear CMOS, boot defaults, confirm approved kit and slots.                   |
+| Boot loop after EXPO                  | Memory profile                                  | Clear CMOS, boot defaults, confirm the locked RAM kit and slots.             |
 | SSD missing                           | M.2 installation                                | Slot seating, M.2 latch/screw, BIOS storage page.                            |
 | High CPU temperature                  | Cooler                                          | Pump/fan header, cold-plate film, mounting pressure, radiator fans.          |
 | Front USB not working                 | Front-panel cable                               | USB header seating, bent pins, Windows driver status.                        |

@@ -156,4 +156,4 @@ The system has a documented stable baseline for temperatures, memory, storage, C
 
 ## Next Chapter
 
-Continue to [Troubleshooting](/PC-Build/operations/troubleshooting/).
+Continue to [Maintenance Schedule](/PC-Build/operations/maintenance-schedule/).

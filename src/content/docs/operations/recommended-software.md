@@ -33,6 +33,16 @@ Beginner to moderate.
 - Do not install multiple tools that control the same fan or GPU setting at the same time.
 - Keep optional cleanup tools such as DDU uninstalled until needed.
 
+## Step-by-Step Instructions
+
+1. Create a restore point before optional utilities are installed.
+2. Install only the essential tools required for monitoring, drivers, storage health, and fan control.
+3. Add recommended benchmarking or convenience tools only when they support a clear workflow.
+4. Keep troubleshooting-only tools uninstalled until a fault requires them.
+5. Record each installed tool, source, version, and removal path.
+6. Disable unnecessary startup behaviour after installation.
+7. Remove any tool that duplicates another tool's control of fans, GPU tuning, overlays, or driver cleanup.
+
 ## Software Reference
 
 Use each entry to confirm the official source, safe setup, update cadence, and removal path before installing the tool.

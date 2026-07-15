@@ -98,4 +98,4 @@ FanControl provides predictable quiet, gaming, and stress-test behaviour without
 
 ## Next Chapter
 
-Continue to [Benchmark Baseline](/PC-Build/operations/benchmark-baseline/).
+Continue to [Windows 11 Pro Optimisation](/PC-Build/operations/windows-optimisation/).

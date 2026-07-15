@@ -39,7 +39,7 @@ Beginner to moderate.
 - Do not use third-party game booster tools.
 - Do not tune the GPU, fan curves, EXPO, and Windows settings at the same time.
 
-## Optimisation Order
+## Step-by-Step Instructions
 
 Use this order so each change has a clear reason:
 

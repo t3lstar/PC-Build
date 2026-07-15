@@ -22,7 +22,7 @@ Document BIOS settings for first boot, Windows 11 Pro installation, EXPO, fan mo
 
 ## EXPO Setting
 
-Enable the AMD EXPO profile for the approved RAM kit only after:
+Enable the AMD EXPO profile for the locked G.SKILL Trident Z5 Neo RGB `F5-6000J3038F16GX2-TZ5NR` RAM kit only after:
 
 - CPU is detected correctly.
 - 32GB memory is detected in `A2` and `B2`.

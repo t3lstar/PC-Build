@@ -87,4 +87,4 @@ The PC can recover from driver faults, Windows issues, failed storage, lost sett
 
 ## Next Chapter
 
-Continue to [Security](/PC-Build/operations/security/).
+Continue to [SSD Storage Plan](/PC-Build/operations/storage-plan/).

@@ -76,4 +76,4 @@ The Samsung 990 PRO 2TB drive is installed under a motherboard heatsink and read
 
 ## Next Chapter
 
-Continue to [Case Build](/PC-Build/build-guide/case-build/).
+Continue to [Memory Installation](/PC-Build/build-guide/memory-installation/).

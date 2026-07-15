@@ -8,7 +8,7 @@ This chapter enables the DDR5 EXPO memory profile after the system has already b
 
 ## Purpose
 
-Run the approved DDR5 kit at its intended DDR5-6000 CL30 profile while preserving a clear rollback path if memory training fails.
+Run the locked G.SKILL Trident Z5 Neo RGB `F5-6000J3038F16GX2-TZ5NR` DDR5 kit at its intended DDR5-6000 CL30 profile while preserving a clear rollback path if memory training fails.
 
 ## Estimated Time
 
@@ -70,7 +70,7 @@ Moderate.
 
 ## Expected Result
 
-The system runs the approved DDR5 memory kit using its EXPO profile and remains bootable.
+The system runs the locked G.SKILL DDR5 memory kit using its EXPO profile and remains bootable.
 
 ## Next Chapter
 

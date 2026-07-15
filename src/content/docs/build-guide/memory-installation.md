@@ -50,7 +50,7 @@ Beginner.
 - [ ] Modules are installed in `A2` and `B2`.
 - [ ] Both latches are fully locked.
 - [ ] Both modules are level and fully seated.
-- [ ] The memory kit is matched and approved.
+- [ ] The memory kit is the locked G.SKILL Trident Z5 Neo RGB `F5-6000J3038F16GX2-TZ5NR` kit.
 - [ ] No EXPO settings have been changed yet.
 
 ## Common Mistakes
@@ -72,4 +72,4 @@ The DDR5 memory kit is installed in the correct dual-channel slots and ready for
 
 ## Next Chapter
 
-Continue to [M.2 SSD Installation](/PC-Build/build-guide/m2-installation/).
+Continue to [Case Build](/PC-Build/build-guide/case-build/).
