@@ -12,36 +12,43 @@ Use this chapter with the [Bill of Materials](/PC-Build/appendix/bill-of-materia
 
 Use these images to identify the real component families before opening packaging. Product photography can change on manufacturer websites, so match model numbers against the [Bill of Materials](/PC-Build/appendix/bill-of-materials/) before purchase or installation.
 
-![Final build visual reference](/PC-Build/assets/images/final-build-reference.png)
+<figure class="pc-component-overview">
+  <img src="/PC-Build/assets/images/final-build-reference.png" alt="Final build visual reference">
+  <figcaption>Completed build layout reference.</figcaption>
+</figure>
 
 <div class="pc-component-gallery">
   <figure>
-    <img src="https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2505503-ryzen-7-7800x3d-og.jpg" alt="AMD Ryzen 7 7800X3D product image">
-    <figcaption><strong>CPU:</strong> AMD Ryzen 7 7800X3D. Source: <a href="https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-7-7800x3d.html">AMD</a>.</figcaption>
+    <img src="/PC-Build/assets/images/components/amd-ryzen-7-7800x3d.jpg" alt="AMD Ryzen 7 7800X3D product image">
+    <figcaption><strong>CPU:</strong> AMD Ryzen 7 7800X3D. Reference: <a href="https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-7-7800x3d.html">AMD</a>.</figcaption>
   </figure>
   <figure>
-    <img src="https://www.arctic.de/media/ea/1c/c7/1780903910/Liquid_Freezer_III_Pro_360_Black_g00_eha_award.png" alt="ARCTIC Liquid Freezer III Pro 360 product image">
-    <figcaption><strong>CPU cooler:</strong> ARCTIC Liquid Freezer III Pro 360. Source: <a href="https://www.arctic.de/en/Liquid-Freezer-III-Pro-360/ACFRE00180A">ARCTIC</a>.</figcaption>
+    <img src="/PC-Build/assets/images/components/arctic-liquid-freezer-iii-pro-360.png" alt="ARCTIC Liquid Freezer III Pro 360 product image">
+    <figcaption><strong>CPU cooler:</strong> ARCTIC Liquid Freezer III Pro 360. Reference: <a href="https://www.arctic.de/en/Liquid-Freezer-III-Pro-360/ACFRE00180A">ARCTIC</a>.</figcaption>
   </figure>
   <figure>
-    <img src="https://www.gigabyte.com/FileUpload/Global/KeyFeature/3841/innergigabyte/images/product/hero.png" alt="Gigabyte B850 AORUS Elite WiFi7 motherboard product image">
-    <figcaption><strong>Motherboard:</strong> Gigabyte B850 AORUS Elite WiFi7. Source: <a href="https://www.gigabyte.com/Motherboard/B850-AORUS-ELITE-WIFI7-rev-1x">Gigabyte</a>.</figcaption>
+    <img src="/PC-Build/assets/images/components/build-motherboard.png" alt="Gigabyte B850 AORUS Elite WiFi7 installed motherboard reference">
+    <figcaption><strong>Motherboard:</strong> Gigabyte B850 AORUS Elite WiFi7. Reference: <a href="https://www.gigabyte.com/Motherboard/B850-AORUS-ELITE-WIFI7-rev-1x">Gigabyte</a>.</figcaption>
   </figure>
   <figure>
-    <img src="https://images.samsung.com/is/image/samsung/p6pim/uk/mz-v9p2t0bw/gallery/uk-990pro-nvme-m2-ssd-mz-v9p2t0bw-534234852?$1164_776_PNG$" alt="Samsung 990 PRO 2TB NVMe SSD product image">
-    <figcaption><strong>SSD:</strong> Samsung 990 PRO 2TB NVMe. Source: <a href="https://www.samsung.com/uk/memory-storage/nvme-ssd/990-pro-2tb-nvme-pcie-gen-4-mz-v9p2t0bw/">Samsung</a>.</figcaption>
+    <img src="/PC-Build/assets/images/components/build-memory.png" alt="G.SKILL Trident Z5 Neo RGB installed memory reference">
+    <figcaption><strong>Memory:</strong> G.SKILL Trident Z5 Neo RGB 32GB DDR5-6000 CL30. Reference: <a href="https://www.gskill.com/product/165/390/1661410135/F5-6000J3038F16GX2-TZ5NR">G.SKILL</a>.</figcaption>
   </figure>
   <figure>
-    <img src="https://www.gigabyte.com/FileUpload/Global/KeyFeature/4043/innergigabyte/images/kv-img.png" alt="Gigabyte Radeon RX 9060 XT Gaming OC 16G graphics card product image">
-    <figcaption><strong>GPU:</strong> Gigabyte Radeon RX 9060 XT Gaming OC 16GB. Source: <a href="https://www.gigabyte.com/Graphics-Card/GV-R9060XTGAMING-OC-16GD">Gigabyte</a>.</figcaption>
+    <img src="/PC-Build/assets/images/components/samsung-990-pro-2tb.png" alt="Samsung 990 PRO 2TB NVMe SSD product image">
+    <figcaption><strong>SSD:</strong> Samsung 990 PRO 2TB NVMe. Reference: <a href="https://www.samsung.com/uk/memory-storage/nvme-ssd/990-pro-2tb-nvme-pcie-gen-4-mz-v9p2t0bw/">Samsung</a>.</figcaption>
   </figure>
   <figure>
-    <img src="https://lian-li.com/wp-content/uploads/2025/07/o11dmini_005-1.jpg" alt="Lian Li O11 Dynamic Mini V2 Flow case product image">
-    <figcaption><strong>Case:</strong> Lian Li O11 Dynamic Mini V2 Flow. Source: <a href="https://lian-li.com/product/o11-dynamic-mini-v2/">Lian Li</a>.</figcaption>
+    <img src="/PC-Build/assets/images/components/build-gpu.png" alt="Gigabyte Radeon RX 9060 XT Gaming OC 16GB installed graphics card reference">
+    <figcaption><strong>GPU:</strong> Gigabyte Radeon RX 9060 XT Gaming OC 16GB. Reference: <a href="https://www.gigabyte.com/Graphics-Card/GV-R9060XTGAMING-OC-16GD">Gigabyte</a>.</figcaption>
   </figure>
   <figure>
-    <img src="https://dlcdnwebimgs.asus.com/files/media/48fda3de-36a7-42ca-84a9-61ca965d9e26/v1/img/TUF-Gaming-Gold-PSU-KV-1000W.jpg" alt="ASUS TUF Gaming 1000W Gold power supply product image">
-    <figcaption><strong>Power supply:</strong> ASUS TUF Gaming 1000W Gold. Source: <a href="https://www.asus.com/us/motherboards-components/power-supply-units/tuf-gaming/tuf-gaming-1000g/">ASUS</a>.</figcaption>
+    <img src="/PC-Build/assets/images/components/lian-li-o11-dynamic-mini-v2-flow-dark.png" alt="Lian Li O11 Dynamic Mini V2 Flow case product image">
+    <figcaption><strong>Case:</strong> Lian Li O11 Dynamic Mini V2 Flow. Reference: <a href="https://lian-li.com/product/o11-dynamic-mini-v2/">Lian Li</a>.</figcaption>
+  </figure>
+  <figure>
+    <img src="/PC-Build/assets/images/components/asus-tuf-gaming-1000g.jpg" alt="ASUS TUF Gaming 1000W Gold power supply product image">
+    <figcaption><strong>Power supply:</strong> ASUS TUF Gaming 1000W Gold. Reference: <a href="https://www.asus.com/us/motherboards-components/power-supply-units/tuf-gaming/tuf-gaming-1000g/">ASUS</a>.</figcaption>
   </figure>
 </div>
 
@@ -77,8 +84,8 @@ Beginner.
 2. Confirm the CPU is the AMD Ryzen 7 7800X3D.
 3. Confirm the CPU cooler is the ARCTIC Liquid Freezer III Pro 360.
 4. Confirm the motherboard is the Gigabyte B850 AORUS Elite WiFi7.
-5. Confirm the memory is a matched 32GB DDR5 kit, preferably 2 x 16GB DDR5-6000 CL30 with AMD EXPO.
-6. Confirm the SSD is a 2TB M.2 2280 NVMe drive.
+5. Confirm the memory is the G.SKILL Trident Z5 Neo RGB 32GB DDR5-6000 CL30 AMD EXPO kit.
+6. Confirm the SSD is the Samsung 990 PRO 2TB M.2 2280 NVMe drive.
 7. Confirm the GPU is the Gigabyte Radeon RX 9060 XT Gaming OC 16GB.
 8. Confirm the case is the Lian Li O11 Dynamic Mini V2 Flow.
 9. Confirm the PSU is the ASUS TUF Gaming 1000W Gold.
