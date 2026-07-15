@@ -49,7 +49,7 @@ See [Tools](/PC-Build/build-guide/tools/) and the [Bill of Materials](/PC-Build/
 - Do not reuse modular PSU cables from another power supply.
 - Do not enable EXPO before the system boots successfully at default settings.
 - Do not update BIOS unless there is a documented reason.
-- Keep invoices, serial numbers, and personal licence information out of the public repository.
+- Keep invoices, serial numbers, and personal licence information private.
 
 ## Step-by-Step Instructions
 

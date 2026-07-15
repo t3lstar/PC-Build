@@ -37,8 +37,6 @@ Moderate.
 
 ![BIOS sequence diagram](/PC-Build/assets/diagrams/svg/bios-sequence.svg)
 
-PlantUML source: [bios-sequence.puml](/PC-Build/assets/diagrams/plantuml/bios-sequence.puml)
-
 1. Enter BIOS after first boot.
 2. Load optimized defaults if the board has been used before.
 3. Confirm system date and time.

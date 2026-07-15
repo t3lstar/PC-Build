@@ -99,7 +99,7 @@ Run tests in this order so failures are easier to isolate.
 | -------------- | -------------- | -------------- | -------------- | -------------- | -------- | ------------- | ----------------- | --------------- | -------------- | -------------- | -------------- | --------------------- |
 | _Record value_ | _Record value_ | _Record value_ | _Record value_ | _Record value_ | _On/off_ | _Record test_ | _Record settings_ | _Record result_ | _Record value_ | _Record value_ | _Record value_ | _Record observations_ |
 
-Store benchmark logs privately if they contain personal details. The public repository should contain methodology, not private machine identifiers.
+Store benchmark logs privately if they contain serial numbers, account names, screenshots, or other personal details.
 
 ## Pass Criteria
 

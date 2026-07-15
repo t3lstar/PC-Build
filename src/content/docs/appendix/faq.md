@@ -32,6 +32,10 @@ Connect the monitor to the graphics card.
 
 Not for the locked build. Use the Samsung 990 PRO 2TB model listed in the bill of materials unless component selection is deliberately reopened and reverified.
 
+### Should I split the SSD into OS and data partitions?
+
+No. Use one main `C:` volume on the Samsung 990 PRO unless you have a specific recovery workflow that requires partition separation. A separate partition on the same SSD is not a backup. See [SSD Storage Plan](/PC-Build/operations/storage-plan/).
+
 ### Can I add another RAM kit later?
 
 Avoid adding a separate kit. Replace the full memory kit with a verified matched kit if upgrading capacity.

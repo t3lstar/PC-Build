@@ -196,4 +196,4 @@ An all-in-one toolkit such as the [iFixit Pro Tech Toolkit](https://www.amazon.c
 - Confirm the GPU listing is the 16GB model, not the 8GB model.
 - Confirm the SSD listing is the 2TB model.
 - Confirm the PSU listing is the ASUS TUF Gaming 1000W Gold, not a lower-wattage variant.
-- Keep invoices and serial numbers outside the public repository.
+- Keep invoices and serial numbers private.

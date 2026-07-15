@@ -41,8 +41,6 @@ Beginner.
 
 ![Power flow diagram](/PC-Build/assets/diagrams/svg/power-flow.svg)
 
-PlantUML source: [power-flow.puml](/PC-Build/assets/diagrams/plantuml/power-flow.puml)
-
 1. Confirm the PSU is the ASUS TUF Gaming 1000W Gold.
 2. Confirm the PSU is unplugged and switched off.
 3. Connect the required modular cables before mounting if access is easier:

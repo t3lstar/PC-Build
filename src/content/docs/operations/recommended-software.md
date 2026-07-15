@@ -35,7 +35,7 @@ Beginner to moderate.
 
 ## Software Reference
 
-The entries below use the same fields for each application so the guidance stays complete without forcing a wide table into the reading column.
+Use each entry to confirm the official source, safe setup, update cadence, and removal path before installing the tool.
 
 ### Essential
 

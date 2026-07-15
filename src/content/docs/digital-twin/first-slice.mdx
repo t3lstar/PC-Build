@@ -1,6 +1,6 @@
 ---
-title: Digital Twin First Slice
-description: Data-backed Starlight first slice for the interactive digital twin.
+title: Interactive Digital Twin
+description: Interactive component, connector, airflow, BIOS, driver, QR, and maintenance reference for the build.
 ---
 
 import DigitalTwinSummary from '../../../components/DigitalTwinSummary.astro';
@@ -16,7 +16,7 @@ import DigitalTwinDriverDashboard from '../../../components/DigitalTwinDriverDas
 import DigitalTwinQrCodes from '../../../components/DigitalTwinQrCodes.astro';
 import DigitalTwinMaintenanceHistory from '../../../components/DigitalTwinMaintenanceHistory.astro';
 
-This page proves that Starlight can render interactive components from the framework-neutral digital twin data model.
+Use this page to inspect the build components, connector references, cable routes, airflow plan, BIOS training flow, driver sources, QR links, and maintenance log template.
 
 <noscript>
   <div class="pc-noscript">
@@ -51,20 +51,16 @@ This page proves that Starlight can render interactive components from the frame
 
 ## Static Fallback
 
-If JavaScript is unavailable, this page must still explain the state of the digital twin data:
+If JavaScript is unavailable, use the static fallback information below:
 
-- Component and connector data is validated by JSON Schema.
-- Component inspector includes a static component list.
-- Exact connector coordinates remain pending or partially verified.
-- Cable routes are represented as source data before detailed path interaction is added.
-- Airflow has text fallback content before animation is added.
-- The case view includes a static zone list.
-- The connector map includes a static connector list.
-- Cable-routing mode includes a static cable route list.
-- Guided build-sequence mode includes a static ordered list.
-- Airflow visualisation includes a static airflow list.
-- Exploded assembly view includes a static assembly-layer list.
-- Educational BIOS simulator includes a static BIOS training flow.
-- Driver and firmware dashboard includes a static official-source list.
-- QR code section includes a static official-link list.
-- Maintenance and upgrade history includes a printable table template.
+- Component inspector: static component list.
+- Case view: static zone list.
+- Connector map: static connector list.
+- Cable routing: static cable route list.
+- Guided build sequence: static ordered list.
+- Airflow visualisation: static airflow list.
+- Exploded assembly view: static assembly-layer list.
+- BIOS simulator: static BIOS training flow.
+- Driver and firmware dashboard: static official-source list.
+- QR code section: static official-link list.
+- Maintenance and upgrade history: printable table template.

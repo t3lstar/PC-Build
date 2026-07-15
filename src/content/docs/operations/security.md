@@ -40,7 +40,7 @@ Beginner to moderate.
 | Windows Security | Use Microsoft Defender/Windows Security unless there is a specific requirement for another suite. | Windows Security dashboard has no unresolved action. |
 | Secure Boot | Keep enabled unless a documented tool requires a temporary change. | BIOS and Windows System Information show expected state. |
 | TPM | Keep enabled for Windows 11 security and BitLocker support. | Windows Security and TPM management detect TPM. |
-| BitLocker | Use if encryption is desired; store recovery key safely first. | Recovery key is accessible outside the PC. |
+| BitLocker | Optional. Use if drive encryption is desired after the system is stable; store recovery key safely first. | Recovery key is accessible outside the PC. |
 | Password manager | Use browser or dedicated password manager with strong unique passwords. | Important accounts have unique passwords. |
 | Two-factor authentication | Enable on Microsoft, email, Steam, Epic, GitHub, and other important accounts. | Recovery codes are stored safely. |
 | Browser security | Keep browser updated, minimise extensions, and avoid download ads. | Browser update status is current. |
@@ -52,8 +52,8 @@ Beginner to moderate.
 1. Run Windows Update until no required restart remains.
 2. Open Windows Security and resolve active warnings.
 3. Confirm Secure Boot and TPM are enabled.
-4. Decide whether to enable BitLocker.
-5. Store BitLocker recovery keys outside the PC before firmware changes.
+4. Decide whether to enable [BitLocker Drive Encryption](/PC-Build/operations/bitlocker/).
+5. Store BitLocker recovery keys outside the PC before firmware changes if BitLocker is enabled.
 6. Enable two-factor authentication for important accounts.
 7. Review browser extensions and remove unused ones.
 8. Bookmark official driver and support sources from [Driver Strategy](/PC-Build/operations/driver-strategy/).

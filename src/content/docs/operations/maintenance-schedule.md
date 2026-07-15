@@ -8,7 +8,7 @@ This chapter defines routine care for the completed PC.
 
 ## Purpose
 
-Keep temperatures, airflow, storage health, driver state, and documentation records under control over time.
+Keep temperatures, airflow, storage health, driver state, and maintenance records under control over time.
 
 ## Estimated Time
 
@@ -44,7 +44,7 @@ Beginner.
 6. Every 3-6 months, power down, unplug, open the case, and clean dust filters.
 7. Hold fans still and clear dust from fan blades and radiator fins.
 8. Check cable ties and straps for pressure or rubbing.
-9. Check SSD free space and health using vendor or monitoring software.
+9. Check SSD free space, storage layout, and health using vendor or monitoring software.
 10. Record any BIOS, driver, hardware, or cooling changes.
 
 Use the maintenance log templates in the [checklists appendix](/PC-Build/appendix/checklists/) to record monthly checks, driver/firmware changes, and hardware changes.
@@ -61,7 +61,7 @@ Use the maintenance log templates in the [checklists appendix](/PC-Build/appendi
 - Before long benchmark sessions: confirm radiator path is clear and monitoring software can see CPU, GPU, SSD, and fan readings.
 - Before BIOS updates: read release notes and confirm the update is relevant.
 - After driver updates: record the previous version, new version, reason, and result. Re-run a short stability check if the update affects chipset, GPU, network, or storage drivers.
-- After hardware changes: re-run baseline checks, update documentation, and compare with the previous benchmark baseline.
+- After hardware changes: re-run baseline checks, update your build notes, and compare with the previous benchmark baseline.
 
 ## Checklist By Interval
 
@@ -73,6 +73,7 @@ Use the maintenance log templates in the [checklists appendix](/PC-Build/appendi
 | Drivers | Record chipset, GPU, network, audio. | Watch for obvious issues. | Review versions. | Update if release notes justify it. | Revalidate if updated. | Review driver strategy. |
 | Windows | Fully update after build. | Check restart state. | Patch normally. | Review feature update timing. | Check recovery options. | Review installed apps. |
 | SSD health | Record Samsung Magician state. | Check free space. | Check health and temperature. | Check firmware notes. | Run benchmark only if needed. | Review storage capacity. |
+| Storage layout | Confirm main `C:` volume. | No routine change. | Check library and capture locations. | Archive old captures. | Review large folders. | Plan second physical drive if needed. |
 | Benchmark verification | Capture baseline. | No routine retest. | Retest only if symptoms exist. | Retest after driver/firmware changes. | Retest after cooling changes. | Refresh baseline if system changed. |
 | Cable inspection | Inspect after cable management. | Listen for fan contact. | Visual check if panels are open. | Inspect ties and grommets. | Inspect strain and rubbing. | Review before upgrades. |
 | Fan inspection | Record baseline noise. | Listen for new noise. | Check speeds. | Clean blades. | Clean and inspect bearings/noise. | Review curves. |
@@ -94,7 +95,7 @@ Perform an out-of-schedule maintenance check when any of these occur:
 
 ## What To Record
 
-Keep logs concise. Do not publish serial numbers, licence keys, account names, screenshots with personal data, or invoice details in the public repository.
+Keep logs concise. Do not share serial numbers, licence keys, account names, screenshots with personal data, or invoice details.
 
 | Log                         | Record                                                                                     |
 | --------------------------- | ------------------------------------------------------------------------------------------ |
@@ -133,6 +134,7 @@ Keep logs concise. Do not publish serial numbers, licence keys, account names, s
 - [ ] Fans spin normally.
 - [ ] Temperatures are consistent with baseline.
 - [ ] SSD has sufficient free space.
+- [ ] Game libraries and captures follow the SSD storage plan.
 - [ ] Windows Update state is known.
 - [ ] Driver and BIOS changes are recorded.
 - [ ] No cable is rubbing against a fan.

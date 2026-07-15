@@ -14,7 +14,7 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 - Mark an item complete only when it has been physically checked.
 - Write down any failed item before continuing.
 - Stop and resolve power, cooling, connector, or firmware uncertainty before first boot.
-- Keep benchmark and maintenance results outside the public repository if they include serial numbers, account names, or personal data.
+- Keep benchmark and maintenance results private if they include serial numbers, account names, or personal data.
 
 ## Pre-Purchase Checklist
 
@@ -134,12 +134,26 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 - [ ] Windows 11 Pro installed to NVMe SSD.
 - [ ] Windows activated or activation state known.
 - [ ] Windows Update completed.
+- [ ] Windows uses one main `C:` volume on the Samsung 990 PRO.
+- [ ] SSD free-space target is understood.
 - [ ] AMD chipset driver installed.
 - [ ] Network driver working.
 - [ ] Audio driver working.
 - [ ] AMD Radeon driver installed.
 - [ ] Device Manager has no unknown devices.
 - [ ] Restore point or recovery plan exists before optional utilities.
+- [ ] BitLocker remains off until Windows, drivers, Secure Boot, TPM, and recovery-key storage are stable.
+
+## SSD Storage Checklist
+
+- [ ] Windows was installed to unallocated space on the Samsung 990 PRO.
+- [ ] Windows-created system partitions were left intact.
+- [ ] Main usable storage remains `C:`.
+- [ ] Samsung Magician detects the SSD and reports health.
+- [ ] Important files are backed up outside the SSD.
+- [ ] Game library location is known.
+- [ ] Capture and export archive plan is known.
+- [ ] SSD free space is checked before large game installs.
 
 ## Benchmark and Handover
 
@@ -167,6 +181,15 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 - [ ] Cable strain checked after moving the case.
 - [ ] Maintenance action recorded.
 - [ ] Logs do not include serial numbers, licence keys, account names, or invoice details.
+
+## Optional BitLocker Checklist
+
+- [ ] BitLocker decision is recorded privately.
+- [ ] Important files are backed up before encryption.
+- [ ] Recovery key is stored outside the PC.
+- [ ] Recovery key can be retrieved from another device.
+- [ ] BitLocker state is checked before BIOS, TPM, Secure Boot, or motherboard changes.
+- [ ] Recovery key, recovery ID, and screenshots are kept private.
 
 ## Monthly Maintenance Log Template
 

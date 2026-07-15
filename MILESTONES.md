@@ -39,6 +39,8 @@ This project is delivered in controlled milestones so the repository can be buil
 - Milestone 8 adds `src/content/docs/operations/` as the first-class post-build operating handbook.
 - Current selected RAM is G.SKILL Trident Z5 Neo RGB `F5-6000J3038F16GX2-TZ5NR`, verified by G.SKILL product data and QVL for `B850 AORUS ELITE WIFI7`.
 - Current selected SSD is Samsung 990 PRO 2TB `MZ-V9P2T0BW`, verified by Samsung 990 PRO data sheet Rev. 2.0.
+- BitLocker is documented as optional Windows 11 Pro drive encryption. Enable it only after Windows, drivers, Secure Boot, TPM, activation, backup, and recovery-key storage are stable and verified.
+- SSD storage guidance uses one main `C:` volume on the Samsung 990 PRO by default. Do not split OS and data partitions on the single SSD unless a future workflow explicitly reopens that decision.
 
 ## Milestone 1: Repository Scaffolding
 

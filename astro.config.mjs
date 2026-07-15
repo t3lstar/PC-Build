@@ -67,6 +67,8 @@ export default defineConfig({
             { label: 'Benchmark Baseline', slug: 'operations/benchmark-baseline' },
             { label: 'Maintenance Schedule', slug: 'operations/maintenance-schedule' },
             { label: 'Backup and Recovery', slug: 'operations/backup-recovery' },
+            { label: 'SSD Storage Plan', slug: 'operations/storage-plan' },
+            { label: 'BitLocker Drive Encryption', slug: 'operations/bitlocker' },
             { label: 'Security', slug: 'operations/security' },
             { label: 'Troubleshooting', slug: 'operations/troubleshooting' },
             { label: 'Upgrade Planning', slug: 'operations/upgrade-planning' },

@@ -51,8 +51,6 @@ Beginner.
 
 ![Hardware layout diagram](/PC-Build/assets/diagrams/svg/hardware-layout.svg)
 
-PlantUML source: [hardware-layout.puml](/PC-Build/assets/diagrams/plantuml/hardware-layout.puml)
-
 1. Place the motherboard box on a stable table.
 2. Place the motherboard on top of the box with the rear I/O ports facing left.
 3. Locate the AM5 CPU socket in the upper centre of the board.

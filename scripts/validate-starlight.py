@@ -58,6 +58,8 @@ EXPECTED_ROUTES = [
     "operations/benchmark-baseline/index.html",
     "operations/maintenance-schedule/index.html",
     "operations/backup-recovery/index.html",
+    "operations/storage-plan/index.html",
+    "operations/bitlocker/index.html",
     "operations/security/index.html",
     "operations/troubleshooting/index.html",
     "operations/upgrade-planning/index.html",
@@ -186,7 +188,7 @@ def local_source_exists(source: Path, target: str) -> bool:
 
 def validate_source(errors: list[str]) -> None:
     files = markdown_files()
-    require(errors, len(files) == 45, f"Expected 45 Starlight content pages, found {len(files)}.")
+    require(errors, len(files) == 47, f"Expected 47 Starlight content pages, found {len(files)}.")
     require(errors, not OLD_CONFIG.exists(), "Old site-generator config should be removed after Starlight migration.")
     require(errors, not (ROOT / "docs").exists(), "Old documentation source directory should be removed after Starlight migration.")
 

@@ -48,6 +48,8 @@ Beginner to moderate.
 11. Connect to the network.
 12. Run Windows Update before installing optional applications or games.
 13. Activate Windows 11 Pro.
+14. Leave BitLocker off until Windows, drivers, Secure Boot, TPM, and basic stability are confirmed.
+15. Keep the default single main `C:` volume unless the [SSD Storage Plan](/PC-Build/operations/storage-plan/) is deliberately changed later.
 
 ## Verification Checklist
 
@@ -58,18 +60,23 @@ Beginner to moderate.
 - [ ] Windows Update runs successfully.
 - [ ] Windows activation is complete or clearly pending.
 - [ ] No unnecessary setup media remains selected as first boot device.
+- [ ] BitLocker is left off until the optional BitLocker guide is completed.
+- [ ] Windows created the required system partitions automatically.
+- [ ] Main usable storage is the `C:` volume.
 
 ## Common Mistakes
 
 - Installing the wrong Windows edition.
 - Leaving the USB installer as the first boot device.
 - Deleting partitions on the wrong drive.
+- Creating separate OS and data partitions without a clear reason.
 - Installing applications before Windows Update and drivers.
 - Forgetting to activate Windows.
+- Enabling BitLocker before the recovery key has been stored safely.
 
 ## Expected Result
 
-Windows 11 Pro is installed cleanly on the NVMe SSD and ready for driver installation.
+Windows 11 Pro is installed cleanly on the NVMe SSD and ready for driver installation. Storage planning and BitLocker remain optional post-build operations chapters.
 
 ## Next Chapter
 

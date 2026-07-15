@@ -50,7 +50,7 @@ Beginner to moderate.
 3. Choose file backup coverage for documents, saved games, photos, config exports, and maintenance logs.
 4. Create a Windows recovery drive.
 5. Confirm BitLocker state before BIOS or TPM changes.
-6. Back up the BitLocker recovery key outside the PC.
+6. If BitLocker is enabled, back up the BitLocker recovery key outside the PC.
 7. Export or record FanControl, benchmark, and BIOS settings where possible.
 8. Test that backups can be browsed and at least one harmless file can be restored.
 9. Record the date of the last successful recovery test.

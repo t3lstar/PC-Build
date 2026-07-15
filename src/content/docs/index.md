@@ -6,7 +6,7 @@ This site is the build manual for a custom Windows 11 Pro gaming PC based on AMD
 
 ## Final Build Reference
 
-The image below is the ChatGPT-generated visual reference for the intended completed build. Use it as a layout and appearance target only; use the exact model numbers in the [Bill of Materials](/PC-Build/appendix/bill-of-materials/) as the source of truth.
+The image below is a visual reference for the intended completed build. Use it as a layout and appearance target only; use the exact model numbers in the [Bill of Materials](/PC-Build/appendix/bill-of-materials/) as the authoritative reference.
 
 ![Final build visual reference](/PC-Build/assets/images/final-build-reference.png)
 
