@@ -19,11 +19,11 @@
   margin-right: .35rem;
 }
 
-.sl-markdown-content table {
-  display: block;
-  width: max-content;
+.sl-markdown-content table:not(:where(.not-content *)) {
+  width: auto;
   max-width: 100%;
-  overflow-x: auto;
+  display: table;
+  overflow-x: visible;
   border-collapse: collapse;
   white-space: normal;
 }
@@ -37,6 +37,20 @@
 .sl-markdown-content th:first-child,
 .sl-markdown-content td:first-child {
   min-width: 9rem;
+}
+
+@media (max-width: 44rem) {
+  .sl-markdown-content table:not(:where(.not-content *)) {
+    display: block;
+    width: fit-content;
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 72rem) {
+  [data-has-sidebar][data-has-toc] .main-pane {
+    --sl-content-margin-inline: 0 auto;
+  }
 }
 
 .sl-markdown-content h2 {
