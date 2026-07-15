@@ -4,21 +4,9 @@ This repository contains a professional build manual and interactive digital twi
 
 The documentation is built with Astro Starlight and published to GitHub Pages at <https://t3lstar.github.io/PC-Build/>.
 
-## Current Roadmap Status
+## Project Records
 
-The project is split into staged milestones. Milestones 1-6 are complete for the published GitHub Pages HTML site and digital twin first slice. Milestone 7 migrates the complete manual to Astro Starlight.
-
-| Milestone                           | Status                         | Tracker                                                             |
-| ----------------------------------- | ------------------------------ | ------------------------------------------------------------------- |
-| 1. Repository scaffolding           | Complete                       | [Issue #4](https://github.com/t3lstar/PC-Build/issues/4)            |
-| 2. Core content                     | Complete                       | [Issue #1](https://github.com/t3lstar/PC-Build/issues/1)            |
-| 3. Technical diagrams               | Complete                       | [Issue #2](https://github.com/t3lstar/PC-Build/issues/2)            |
-| 4. Polish                           | Complete for GitHub Pages HTML | [Issue #3](https://github.com/t3lstar/PC-Build/issues/3)            |
-| 5. Professional Engineering Edition | Complete and published         | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/1) |
-| 6. Interactive Digital Twin Edition | Complete and published         | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/2) |
-| 7. Full Starlight Migration         | In progress locally            | [GitHub milestone](https://github.com/t3lstar/PC-Build/milestone/3) |
-
-See `MILESTONES.md` for the current roadmap, assumptions, and acceptance criteria.
+The published manual is the source for reader-facing build, operations, appendix, and digital twin content. Historical milestone plans, project assumptions, verification notes, and acceptance criteria are kept in `MILESTONES.md` and `milestones/`.
 
 ## Repository Layout
 
@@ -82,11 +70,10 @@ The `pdf` target is deferred. The `printable` target currently builds the Starli
 Run local validation:
 
 ```bash
-source .venv/bin/activate
 ./scripts/validate.sh all
 ```
 
-This validates digital twin JSON data, generated QR assets, Astro/Starlight type health, Markdown linting, the static Starlight build, local links, clean route expectations, and critical generated assets.
+This validates digital twin JSON data, generated QR assets, Astro/Starlight type health, Markdown linting, the static Starlight build, local links, clean route expectations, and critical generated assets. The validation script uses `.venv/bin/python` automatically when it exists, unless `PYTHON` is explicitly set.
 
 Useful focused commands:
 
