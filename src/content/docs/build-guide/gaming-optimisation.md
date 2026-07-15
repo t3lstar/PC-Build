@@ -54,7 +54,7 @@ Record these values before optimisation so later problems have a comparison poin
 | Cooling       | AIO pump reading if exposed, radiator fan response, case fan response, noise    | BIOS, monitoring software, physical inspection      |
 | Software      | Chipset driver version, Radeon driver version, major launcher versions          | Driver installers, AMD Radeon Software, notes file  |
 
-Use the [temperature reference](/PC-Build/appendix/temperature-reference/) for expected temperature ranges and action points. Use the [benchmark baseline](/PC-Build/operations/benchmark-baseline/) for repeatable load testing after this optimisation pass.
+Use the [Windows 11 Pro Optimisation](/PC-Build/operations/windows-optimisation/) chapter for detailed Windows setting paths. Use the [temperature reference](/PC-Build/appendix/temperature-reference/) for expected temperature ranges and action points. Use the [benchmark baseline](/PC-Build/operations/benchmark-baseline/) for repeatable load testing after this optimisation pass.
 
 ## Optimisation Rules
 
@@ -77,7 +77,7 @@ Use the [temperature reference](/PC-Build/appendix/temperature-reference/) for e
 7. Record idle readings after 10 minutes at the Windows desktop.
 8. Confirm the NVMe SSD has enough free space for Windows updates, game installs, captures, and shader caches.
 9. Set game libraries to the NVMe SSD unless a later storage expansion changes the plan.
-10. Review startup applications and disable non-essential launch-at-login entries.
+10. Review startup applications and disable non-essential launch-at-login entries using [Windows 11 Pro Optimisation](/PC-Build/operations/windows-optimisation/).
 11. Enable Windows Game Mode.
 12. Leave Hardware-Accelerated GPU Scheduling unchanged unless you are deliberately testing it as a single recorded change.
 13. Use balanced or high-performance Windows power behaviour according to the intended noise and performance preference.
@@ -139,4 +139,4 @@ The system has a recorded, stable gaming baseline covering Windows state, driver
 
 ## Next Chapter
 
-Continue to [Operations Overview](/PC-Build/operations/overview/).
+Continue to [Windows 11 Pro Optimisation](/PC-Build/operations/windows-optimisation/).

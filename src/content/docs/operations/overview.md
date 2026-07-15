@@ -41,6 +41,7 @@ Beginner.
 | Maintenance | Clean and inspect the case on a schedule, with extra checks after dust, moves, hardware changes, or new fan noise. |
 | Monitoring | Watch trends, not isolated single readings. Record abnormal values with workload and room context. |
 | Software lifecycle | Keep essential tools installed; keep stress-test and cleanup tools available only when useful. |
+| Windows optimisation | Change Windows settings conservatively after drivers are stable; avoid debloat scripts and service-disabling guides. |
 | Firmware lifecycle | Update BIOS and SSD firmware for documented fixes, stability, compatibility, or security reasons. |
 | Storage layout | Use one main `C:` volume on the single Samsung 990 PRO unless a future second physical drive changes the storage plan. |
 | Backup strategy | Maintain restore points, file backups, recovery media, and BitLocker recovery-key access before problems occur. |
@@ -56,17 +57,19 @@ Beginner.
 4. Configure monitoring and alert habits using [Monitoring](/PC-Build/operations/monitoring/).
 5. Configure fan behaviour only after default thermal behaviour is understood.
 6. Create a restore point and confirm backup coverage before optional software or major drivers.
-7. Confirm the [SSD Storage Plan](/PC-Build/operations/storage-plan/) before installing large game libraries or capture tools.
-8. Decide whether to enable [BitLocker Drive Encryption](/PC-Build/operations/bitlocker/) after Windows and drivers are stable.
-9. Follow the [Maintenance Schedule](/PC-Build/operations/maintenance-schedule/) after the first week of use.
-10. Use [Driver Strategy](/PC-Build/operations/driver-strategy/) before changing chipset, GPU, BIOS, SSD firmware, or Windows feature state.
-11. Use [Troubleshooting](/PC-Build/operations/troubleshooting/) when symptoms appear.
-12. Use [Upgrade Planning](/PC-Build/operations/upgrade-planning/) before buying replacement hardware.
+7. Apply [Windows 11 Pro Optimisation](/PC-Build/operations/windows-optimisation/) after drivers are stable.
+8. Confirm the [SSD Storage Plan](/PC-Build/operations/storage-plan/) before installing large game libraries or capture tools.
+9. Decide whether to enable [BitLocker Drive Encryption](/PC-Build/operations/bitlocker/) after Windows and drivers are stable.
+10. Follow the [Maintenance Schedule](/PC-Build/operations/maintenance-schedule/) after the first week of use.
+11. Use [Driver Strategy](/PC-Build/operations/driver-strategy/) before changing chipset, GPU, BIOS, SSD firmware, or Windows feature state.
+12. Use [Troubleshooting](/PC-Build/operations/troubleshooting/) when symptoms appear.
+13. Use [Upgrade Planning](/PC-Build/operations/upgrade-planning/) before buying replacement hardware.
 
 ## Verification Checklist
 
 - [ ] Baseline readings are recorded.
 - [ ] Essential software sources are known.
+- [ ] Windows optimisation settings are reviewed after drivers are stable.
 - [ ] Restore-point and backup approach is known.
 - [ ] SSD storage layout and free-space target are known.
 - [ ] BitLocker decision and recovery-key storage approach are known.

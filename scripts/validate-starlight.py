@@ -55,6 +55,7 @@ EXPECTED_ROUTES = [
     "operations/driver-strategy/index.html",
     "operations/monitoring/index.html",
     "operations/fancontrol/index.html",
+    "operations/windows-optimisation/index.html",
     "operations/benchmark-baseline/index.html",
     "operations/maintenance-schedule/index.html",
     "operations/backup-recovery/index.html",
@@ -188,7 +189,7 @@ def local_source_exists(source: Path, target: str) -> bool:
 
 def validate_source(errors: list[str]) -> None:
     files = markdown_files()
-    require(errors, len(files) == 47, f"Expected 47 Starlight content pages, found {len(files)}.")
+    require(errors, len(files) == 48, f"Expected 48 Starlight content pages, found {len(files)}.")
     require(errors, not OLD_CONFIG.exists(), "Old site-generator config should be removed after Starlight migration.")
     require(errors, not (ROOT / "docs").exists(), "Old documentation source directory should be removed after Starlight migration.")
 

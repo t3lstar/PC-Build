@@ -41,6 +41,7 @@ This project is delivered in controlled milestones so the repository can be buil
 - Current selected SSD is Samsung 990 PRO 2TB `MZ-V9P2T0BW`, verified by Samsung 990 PRO data sheet Rev. 2.0.
 - BitLocker is documented as optional Windows 11 Pro drive encryption. Enable it only after Windows, drivers, Secure Boot, TPM, activation, backup, and recovery-key storage are stable and verified.
 - SSD storage guidance uses one main `C:` volume on the Samsung 990 PRO by default. Do not split OS and data partitions on the single SSD unless a future workflow explicitly reopens that decision.
+- Windows 11 Pro optimisation is conservative and post-driver: update Windows, confirm devices, create a restore point, review startup apps, display, Game Mode, storage, privacy, and power settings, and avoid debloat scripts or security-disabling tweaks.
 
 ## Milestone 1: Repository Scaffolding
 

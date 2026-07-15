@@ -64,6 +64,7 @@ export default defineConfig({
             { label: 'Driver Strategy', slug: 'operations/driver-strategy' },
             { label: 'Monitoring', slug: 'operations/monitoring' },
             { label: 'FanControl Configuration', slug: 'operations/fancontrol' },
+            { label: 'Windows 11 Pro Optimisation', slug: 'operations/windows-optimisation' },
             { label: 'Benchmark Baseline', slug: 'operations/benchmark-baseline' },
             { label: 'Maintenance Schedule', slug: 'operations/maintenance-schedule' },
             { label: 'Backup and Recovery', slug: 'operations/backup-recovery' },

@@ -144,6 +144,19 @@ Use these checklists alongside the chapter instructions. Do not use them as a su
 - [ ] Restore point or recovery plan exists before optional utilities.
 - [ ] BitLocker remains off until Windows, drivers, Secure Boot, TPM, and recovery-key storage are stable.
 
+## Windows Optimisation Checklist
+
+- [ ] Restore point exists before optional utilities are installed.
+- [ ] Monitor resolution and refresh rate are correct.
+- [ ] Game Mode is enabled.
+- [ ] Startup apps are reviewed in Settings or Task Manager.
+- [ ] Required security, audio, GPU, backup, and peripheral apps still start correctly.
+- [ ] Windows Security remains enabled.
+- [ ] Power mode is left at the default or changed with a recorded reason.
+- [ ] HDR state is recorded if enabled.
+- [ ] Privacy and notification settings are reviewed without breaking required apps.
+- [ ] No debloat script, registry cleaner, game booster, or generic driver updater is installed.
+
 ## SSD Storage Checklist
 
 - [ ] Windows was installed to unallocated space on the Samsung 990 PRO.
